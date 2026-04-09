@@ -1,0 +1,526 @@
+{
+  "mtdna": [
+    {
+      "haplogroup": "L0",
+      "parent": null,
+      "defining_snps": [
+        {"rsid": "rs2853499", "allele": "G"},
+        {"rsid": "rs3021086", "allele": "A"}
+      ],
+      "description": "Most ancient mtDNA lineage, originating in Southern/Eastern Africa ~150,000-200,000 years ago. Found primarily in Khoisan peoples and other Southern African populations.",
+      "region": "Southern Africa"
+    },
+    {
+      "haplogroup": "L1",
+      "parent": "L0",
+      "defining_snps": [
+        {"rsid": "rs2857284", "allele": "T"},
+        {"rsid": "rs2854128", "allele": "C"}
+      ],
+      "description": "Ancient African lineage ~130,000-170,000 years old. Found in Central and West African populations, including Pygmy peoples and Hadza of Tanzania.",
+      "region": "Central/West Africa"
+    },
+    {
+      "haplogroup": "L2",
+      "parent": "L1",
+      "defining_snps": [
+        {"rsid": "rs3088309", "allele": "G"},
+        {"rsid": "rs2854124", "allele": "A"}
+      ],
+      "description": "Common West/Central African lineage ~70,000-90,000 years old. Most common haplogroup in many West African populations. Also prevalent among African Americans (~20%).",
+      "region": "West/Central Africa"
+    },
+    {
+      "haplogroup": "L3",
+      "parent": "L2",
+      "defining_snps": [
+        {"rsid": "rs2854128", "allele": "T"},
+        {"rsid": "rs2853825", "allele": "A"}
+      ],
+      "description": "Origin of the 'Out of Africa' migration ~60,000-70,000 years ago. All non-African mtDNA lineages descend from L3. Also common within East Africa.",
+      "region": "East Africa"
+    },
+    {
+      "haplogroup": "L4",
+      "parent": "L2",
+      "defining_snps": [
+        {"rsid": "rs2853822", "allele": "G"}
+      ],
+      "description": "Rare East African lineage found primarily in Ethiopia, Tanzania, and surrounding regions.",
+      "region": "East Africa"
+    },
+    {
+      "haplogroup": "L5",
+      "parent": "L2",
+      "defining_snps": [
+        {"rsid": "rs3087948", "allele": "A"}
+      ],
+      "description": "Rare lineage found in East Africa, particularly among Ethiopian populations.",
+      "region": "East Africa"
+    },
+    {
+      "haplogroup": "L6",
+      "parent": "L2",
+      "defining_snps": [
+        {"rsid": "rs3088053", "allele": "T"}
+      ],
+      "description": "Very rare lineage found primarily in Yemen and Ethiopia. Suggests ancient connection between Horn of Africa and Arabian Peninsula.",
+      "region": "East Africa/Yemen"
+    },
+    {
+      "haplogroup": "M",
+      "parent": "L3",
+      "defining_snps": [
+        {"rsid": "rs28358579", "allele": "A"},
+        {"rsid": "rs2853515", "allele": "G"}
+      ],
+      "description": "One of two lineages from L3 that left Africa ~60,000 years ago. Followed a 'southern route' along the coast. Dominant in South and East Asia.",
+      "region": "South/East Asia"
+    },
+    {
+      "haplogroup": "N",
+      "parent": "L3",
+      "defining_snps": [
+        {"rsid": "rs2853496", "allele": "T"},
+        {"rsid": "rs2853504", "allele": "A"}
+      ],
+      "description": "Second Out-of-Africa lineage. Ancestor of most European and many Asian/Oceanian mtDNA haplogroups. ~60,000 years old.",
+      "region": "West Eurasia/Worldwide"
+    },
+    {
+      "haplogroup": "R",
+      "parent": "N",
+      "defining_snps": [
+        {"rsid": "rs2853517", "allele": "T"}
+      ],
+      "description": "Major branch of N giving rise to most European haplogroups (H, V, T, J, U, K). Also has Asian branches (B, F). ~55,000 years old.",
+      "region": "West Eurasia"
+    },
+    {
+      "haplogroup": "H",
+      "parent": "HV",
+      "defining_snps": [
+        {"rsid": "rs2853518", "allele": "G"},
+        {"rsid": "rs2853511", "allele": "T"}
+      ],
+      "description": "Most common European haplogroup (~40-50% of Europeans). Expanded dramatically after the Last Glacial Maximum from Iberian refugium. Associated with Neolithic expansion.",
+      "region": "Europe"
+    },
+    {
+      "haplogroup": "HV",
+      "parent": "R",
+      "defining_snps": [
+        {"rsid": "rs2853513", "allele": "C"}
+      ],
+      "description": "Parent lineage of H and V. Found in the Near East, Caucasus, and Europe. ~25,000-30,000 years old.",
+      "region": "Near East/Europe"
+    },
+    {
+      "haplogroup": "V",
+      "parent": "HV",
+      "defining_snps": [
+        {"rsid": "rs3928306", "allele": "A"}
+      ],
+      "description": "European haplogroup (~5% of Europeans). Common among Basques and Sami. Expanded from Iberian refugium after Last Glacial Maximum.",
+      "region": "Western Europe"
+    },
+    {
+      "haplogroup": "U",
+      "parent": "R",
+      "defining_snps": [
+        {"rsid": "rs2853508", "allele": "C"},
+        {"rsid": "rs2853510", "allele": "T"}
+      ],
+      "description": "Ancient European lineage ~50,000 years old. Dominant among European hunter-gatherers before Neolithic farming expansion. Multiple subclades across Europe and Near East.",
+      "region": "Europe/Near East"
+    },
+    {
+      "haplogroup": "K",
+      "parent": "U",
+      "defining_snps": [
+        {"rsid": "rs2853509", "allele": "A"},
+        {"rsid": "rs28358571", "allele": "G"}
+      ],
+      "description": "Branch of U8. ~12,000 years old. Common among Ashkenazi Jews (~32%). Associated with Neolithic expansion in Europe. Ötzi the Iceman belonged to K1.",
+      "region": "Europe/Near East"
+    },
+    {
+      "haplogroup": "T",
+      "parent": "JT",
+      "defining_snps": [
+        {"rsid": "rs28358280", "allele": "C"},
+        {"rsid": "rs2853523", "allele": "G"}
+      ],
+      "description": "European haplogroup (~8% of Europeans). Associated with Neolithic farming expansion from the Near East ~10,000 years ago.",
+      "region": "Europe/Near East"
+    },
+    {
+      "haplogroup": "J",
+      "parent": "JT",
+      "defining_snps": [
+        {"rsid": "rs2853519", "allele": "A"},
+        {"rsid": "rs2853514", "allele": "G"}
+      ],
+      "description": "European haplogroup (~9% of Europeans). Associated with Neolithic farming expansion. Notable carriers include descendants of the 'Seven Daughters of Eve'. Linked to longevity in some studies.",
+      "region": "Europe/Near East"
+    },
+    {
+      "haplogroup": "JT",
+      "parent": "R",
+      "defining_snps": [
+        {"rsid": "rs28358275", "allele": "T"}
+      ],
+      "description": "Parent clade of haplogroups J and T. Originated in the Near East ~45,000 years ago.",
+      "region": "Near East"
+    },
+    {
+      "haplogroup": "W",
+      "parent": "N",
+      "defining_snps": [
+        {"rsid": "rs2853521", "allele": "T"},
+        {"rsid": "rs3088141", "allele": "G"}
+      ],
+      "description": "Found in Europe (~2-5%) and South/West Asia. Associated with both Near Eastern Neolithic and later expansions.",
+      "region": "Europe/West Asia"
+    },
+    {
+      "haplogroup": "X",
+      "parent": "N",
+      "defining_snps": [
+        {"rsid": "rs2854000", "allele": "A"},
+        {"rsid": "rs3088058", "allele": "G"}
+      ],
+      "description": "Unusual distribution: found in Europe, Near East, Central Asia, and among Native Americans (especially Algonquian peoples). ~20,000-30,000 years old.",
+      "region": "Europe/Near East/Americas"
+    },
+    {
+      "haplogroup": "I",
+      "parent": "N",
+      "defining_snps": [
+        {"rsid": "rs2854001", "allele": "T"},
+        {"rsid": "rs2853497", "allele": "G"}
+      ],
+      "description": "Found in Northern and Western Europe (~2-4%). More common among Scandinavians. Ancient lineage predating Neolithic expansion.",
+      "region": "Northern Europe"
+    },
+    {
+      "haplogroup": "A",
+      "parent": "N",
+      "defining_snps": [
+        {"rsid": "rs2853507", "allele": "G"},
+        {"rsid": "rs3088309", "allele": "A"}
+      ],
+      "description": "Common in Northeast Asia and the Americas. One of five founding Native American haplogroups (A, B, C, D, X). ~20,000-30,000 years old.",
+      "region": "Northeast Asia/Americas"
+    },
+    {
+      "haplogroup": "B",
+      "parent": "R",
+      "defining_snps": [
+        {"rsid": "rs3088053", "allele": "G"},
+        {"rsid": "rs2854002", "allele": "C"}
+      ],
+      "description": "Common in East/Southeast Asia and the Americas. Second founding Native American lineage. Also found in Polynesia and Madagascar.",
+      "region": "East/Southeast Asia/Americas/Polynesia"
+    },
+    {
+      "haplogroup": "C",
+      "parent": "M",
+      "defining_snps": [
+        {"rsid": "rs2854003", "allele": "T"},
+        {"rsid": "rs2853498", "allele": "G"}
+      ],
+      "description": "Found in Northeast Asia, Siberia, and the Americas. Third founding Native American lineage. Common among indigenous Siberians.",
+      "region": "Northeast Asia/Siberia/Americas"
+    },
+    {
+      "haplogroup": "D",
+      "parent": "M",
+      "defining_snps": [
+        {"rsid": "rs2853506", "allele": "A"},
+        {"rsid": "rs2854004", "allele": "T"}
+      ],
+      "description": "Common in East Asia and the Americas. Fourth founding Native American lineage. Very common in Japan (~35%) and among Tibetans.",
+      "region": "East Asia/Americas"
+    },
+    {
+      "haplogroup": "F",
+      "parent": "R",
+      "defining_snps": [
+        {"rsid": "rs2854005", "allele": "G"},
+        {"rsid": "rs3088142", "allele": "A"}
+      ],
+      "description": "Common in East and Southeast Asia. Found at ~15-25% frequency in many Southeast Asian populations. Related to haplogroup R.",
+      "region": "East/Southeast Asia"
+    },
+    {
+      "haplogroup": "G",
+      "parent": "M",
+      "defining_snps": [
+        {"rsid": "rs2853499", "allele": "T"},
+        {"rsid": "rs3021088", "allele": "G"}
+      ],
+      "description": "Found in Northeast Asia, particularly among Japanese, Korean, and Tibetan populations. Subclade G2a is common in Japan.",
+      "region": "Northeast Asia"
+    },
+    {
+      "haplogroup": "Z",
+      "parent": "M",
+      "defining_snps": [
+        {"rsid": "rs2854006", "allele": "A"},
+        {"rsid": "rs3088143", "allele": "T"}
+      ],
+      "description": "Found in Central/Northern Asia and among Sami people of Northern Europe. Rare but widespread distribution from Korea to Finland.",
+      "region": "Central/Northern Asia/Sami"
+    }
+  ],
+  "ydna": [
+    {
+      "haplogroup": "A",
+      "parent": null,
+      "defining_snps": [
+        {"rsid": "rs9786076", "allele": "A"},
+        {"rsid": "rs9306841", "allele": "T"}
+      ],
+      "description": "Most ancient Y-DNA lineage, originating ~270,000 years ago. Found exclusively in Africa, particularly among Khoisan, Nilotic, and some Ethiopian populations. Represents the deepest split in the human Y-chromosome tree.",
+      "region": "Africa (Southern/Eastern)"
+    },
+    {
+      "haplogroup": "B",
+      "parent": "BT",
+      "defining_snps": [
+        {"rsid": "rs9786714", "allele": "T"},
+        {"rsid": "rs9786184", "allele": "G"}
+      ],
+      "description": "Ancient African lineage ~60,000-90,000 years old. Found primarily among Central African Pygmy populations and Hadza of Tanzania.",
+      "region": "Central/East Africa"
+    },
+    {
+      "haplogroup": "CT",
+      "parent": "BT",
+      "defining_snps": [
+        {"rsid": "rs9786153", "allele": "G"},
+        {"rsid": "rs35284970", "allele": "T"}
+      ],
+      "description": "Ancestor of all non-African Y-DNA lineages plus some African lineages (DE). ~70,000 years old. The Out-of-Africa paternal lineage.",
+      "region": "Africa → Worldwide"
+    },
+    {
+      "haplogroup": "DE",
+      "parent": "CT",
+      "defining_snps": [
+        {"rsid": "rs2032602", "allele": "A"},
+        {"rsid": "rs2032624", "allele": "T"}
+      ],
+      "description": "Split into D (Asia/Andaman/Tibet) and E (Africa/Middle East/Europe). ~65,000 years old. Represents one of the earliest branching events outside Africa.",
+      "region": "Africa/Asia"
+    },
+    {
+      "haplogroup": "D",
+      "parent": "DE",
+      "defining_snps": [
+        {"rsid": "rs2032604", "allele": "G"},
+        {"rsid": "rs2032623", "allele": "A"}
+      ],
+      "description": "Found in Japan (Ainu ~85%, Japanese ~35%), Tibet, Andaman Islands, and Southeast Asia. One of the earliest lineages to reach Asia via southern coastal route.",
+      "region": "East Asia/Andaman/Tibet"
+    },
+    {
+      "haplogroup": "E",
+      "parent": "DE",
+      "defining_snps": [
+        {"rsid": "rs9306841", "allele": "G"},
+        {"rsid": "rs2032651", "allele": "C"}
+      ],
+      "description": "Most common haplogroup in Africa. E1b1a dominates West Africa and Bantu-speaking peoples. E1b1b (E-M215) is common in North/East Africa and spread to Southern Europe.",
+      "region": "Africa/Middle East/Southern Europe"
+    },
+    {
+      "haplogroup": "CF",
+      "parent": "CT",
+      "defining_snps": [
+        {"rsid": "rs2032606", "allele": "T"}
+      ],
+      "description": "Ancestor of haplogroups C and F (and thus most non-African lineages). Represents the main Out-of-Africa Y-DNA branch. ~65,000 years old.",
+      "region": "Worldwide (non-African)"
+    },
+    {
+      "haplogroup": "C",
+      "parent": "CF",
+      "defining_snps": [
+        {"rsid": "rs2032607", "allele": "G"},
+        {"rsid": "rs9341296", "allele": "A"}
+      ],
+      "description": "One of the earliest Out-of-Africa lineages. Found in Australia (C4), Mongolia/Central Asia (C2, including Genghis Khan's lineage), and the Americas (C-P39). ~50,000 years old.",
+      "region": "Australia/Central Asia/Americas"
+    },
+    {
+      "haplogroup": "F",
+      "parent": "CF",
+      "defining_snps": [
+        {"rsid": "rs2032608", "allele": "A"},
+        {"rsid": "rs2032665", "allele": "T"}
+      ],
+      "description": "Mega-haplogroup ancestor of G through T. ~50,000 years old. Nearly all Eurasian men descend from F through its many subclades.",
+      "region": "South/Southeast Asia (ancestral)"
+    },
+    {
+      "haplogroup": "G",
+      "parent": "F",
+      "defining_snps": [
+        {"rsid": "rs2032636", "allele": "G"},
+        {"rsid": "rs2032666", "allele": "A"}
+      ],
+      "description": "Associated with Neolithic farming expansion in Europe. Found in Caucasus region (>50%), Turkey, Southern Europe. Ötzi the Iceman carried G2a. ~25,000-30,000 years old.",
+      "region": "Caucasus/Southern Europe/Middle East"
+    },
+    {
+      "haplogroup": "H",
+      "parent": "F",
+      "defining_snps": [
+        {"rsid": "rs2032640", "allele": "C"},
+        {"rsid": "rs2032667", "allele": "G"}
+      ],
+      "description": "Very common in South Asia, especially among Dravidian-speaking populations and Roma (Gypsy) people. ~30,000-40,000 years old.",
+      "region": "South Asia/Roma"
+    },
+    {
+      "haplogroup": "I",
+      "parent": "IJ",
+      "defining_snps": [
+        {"rsid": "rs2032597", "allele": "T"},
+        {"rsid": "rs9341301", "allele": "G"}
+      ],
+      "description": "Major European haplogroup, split into I1 (Scandinavia, ~40% of Scandinavian men) and I2 (Balkans/Eastern Europe). ~25,000-30,000 years old. Dominant among pre-Neolithic European hunter-gatherers.",
+      "region": "Europe (Scandinavia/Balkans)"
+    },
+    {
+      "haplogroup": "IJ",
+      "parent": "F",
+      "defining_snps": [
+        {"rsid": "rs2032595", "allele": "A"}
+      ],
+      "description": "Parent of haplogroups I and J. ~40,000-45,000 years old. Originated in the Near East before diverging.",
+      "region": "Near East"
+    },
+    {
+      "haplogroup": "J",
+      "parent": "IJ",
+      "defining_snps": [
+        {"rsid": "rs2032598", "allele": "C"},
+        {"rsid": "rs9341279", "allele": "T"}
+      ],
+      "description": "Dominant in the Middle East and Mediterranean. J1 common among Semitic-speaking peoples (Arabs, Jews). J2 associated with Neolithic expansion and Phoenician/Greek colonization.",
+      "region": "Middle East/Mediterranean"
+    },
+    {
+      "haplogroup": "K",
+      "parent": "F",
+      "defining_snps": [
+        {"rsid": "rs2032609", "allele": "T"},
+        {"rsid": "rs2032668", "allele": "G"}
+      ],
+      "description": "Mega-haplogroup ancestor of L through T. ~45,000 years old. Major diversification event in South/Central Asia.",
+      "region": "South/Central Asia (ancestral)"
+    },
+    {
+      "haplogroup": "L",
+      "parent": "K",
+      "defining_snps": [
+        {"rsid": "rs2032642", "allele": "A"},
+        {"rsid": "rs2032669", "allele": "T"}
+      ],
+      "description": "Found in South Asia and Central Asia. ~25,000-30,000 years old. Most common in Pakistan and northern India.",
+      "region": "South/Central Asia"
+    },
+    {
+      "haplogroup": "M",
+      "parent": "K",
+      "defining_snps": [
+        {"rsid": "rs2032643", "allele": "G"},
+        {"rsid": "rs2032670", "allele": "C"}
+      ],
+      "description": "Found in Melanesia and parts of Southeast/South Asia. ~35,000-40,000 years old. Very common in Papua New Guinea.",
+      "region": "Melanesia/Papua New Guinea"
+    },
+    {
+      "haplogroup": "N",
+      "parent": "NO",
+      "defining_snps": [
+        {"rsid": "rs2032618", "allele": "T"},
+        {"rsid": "rs9341273", "allele": "A"}
+      ],
+      "description": "Common in Northern Eurasia, especially Finland (~60%), Baltic states, Siberia, and among Uralic-speaking peoples. Spread with Uralic language family expansion.",
+      "region": "Northern Eurasia/Finland/Siberia"
+    },
+    {
+      "haplogroup": "NO",
+      "parent": "K",
+      "defining_snps": [
+        {"rsid": "rs2032610", "allele": "G"}
+      ],
+      "description": "Parent of haplogroups N and O. ~40,000 years old. One of the major Eurasian Y-DNA lineages.",
+      "region": "East/North Asia"
+    },
+    {
+      "haplogroup": "O",
+      "parent": "NO",
+      "defining_snps": [
+        {"rsid": "rs2032614", "allele": "A"},
+        {"rsid": "rs2032671", "allele": "T"}
+      ],
+      "description": "Most common Y-DNA haplogroup in East Asia (~75% of Chinese, Japanese, Korean men). O1 in Southeast Asia/Austronesian, O2 in China/Korea/Japan. ~30,000-35,000 years old.",
+      "region": "East/Southeast Asia"
+    },
+    {
+      "haplogroup": "P",
+      "parent": "K",
+      "defining_snps": [
+        {"rsid": "rs2032611", "allele": "C"},
+        {"rsid": "rs9341276", "allele": "T"}
+      ],
+      "description": "Parent of haplogroups Q and R. ~35,000-40,000 years old. Originated in Central/South Asia.",
+      "region": "Central Asia (ancestral)"
+    },
+    {
+      "haplogroup": "Q",
+      "parent": "P",
+      "defining_snps": [
+        {"rsid": "rs2032613", "allele": "T"},
+        {"rsid": "rs2032672", "allele": "A"}
+      ],
+      "description": "Found in Central/Northern Asia and dominant among indigenous peoples of the Americas (~90% of Native American men). Migrated to Americas ~15,000-20,000 years ago via Beringia.",
+      "region": "Americas/Central Asia/Siberia"
+    },
+    {
+      "haplogroup": "R",
+      "parent": "P",
+      "defining_snps": [
+        {"rsid": "rs2032612", "allele": "G"},
+        {"rsid": "rs9341278", "allele": "A"}
+      ],
+      "description": "One of the most widespread Y-DNA lineages. R1a common in South Asia, Central Asia, and Eastern Europe (associated with Indo-European expansion). R1b dominant in Western Europe (~70% of Basque, Irish, British men).",
+      "region": "Europe/South Asia/Central Asia"
+    },
+    {
+      "haplogroup": "S",
+      "parent": "K",
+      "defining_snps": [
+        {"rsid": "rs2032644", "allele": "T"},
+        {"rsid": "rs2032673", "allele": "G"}
+      ],
+      "description": "Found almost exclusively in Melanesia and Papua New Guinea. ~30,000-40,000 years old. Very common among Highland Papua New Guinean populations.",
+      "region": "Melanesia/Papua New Guinea"
+    },
+    {
+      "haplogroup": "T",
+      "parent": "K",
+      "defining_snps": [
+        {"rsid": "rs2032645", "allele": "A"},
+        {"rsid": "rs2032674", "allele": "C"}
+      ],
+      "description": "Relatively rare haplogroup found in the Middle East, East Africa, Mediterranean, and South Asia. Notable carrier: Thomas Jefferson. ~25,000-30,000 years old.",
+      "region": "Middle East/East Africa/Mediterranean"
+    }
+  ]
+}

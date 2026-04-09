@@ -1,0 +1,170 @@
+{
+  "Breast Cancer": {
+    "general_population_rate": 0.125,
+    "description": "Lifetime risk of developing breast cancer. Risk increases significantly with BRCA1/2 mutations, family history, and hormonal factors.",
+    "age_factor": "Risk increases with age; median diagnosis age is 62. Annual mammography recommended starting at 40-50.",
+    "sex_factor": "Female: ~12.5% lifetime risk. Male: ~0.1% lifetime risk."
+  },
+  "Ovarian Cancer": {
+    "general_population_rate": 0.013,
+    "description": "Lifetime risk of ovarian cancer. Often diagnosed at advanced stage due to lack of effective screening.",
+    "age_factor": "Peak incidence ages 55-64. Risk increases with age and nulliparity.",
+    "sex_factor": "Female only. BRCA1 carriers: 40-60% lifetime risk. BRCA2 carriers: 15-30% lifetime risk."
+  },
+  "Prostate Cancer": {
+    "general_population_rate": 0.125,
+    "description": "Lifetime risk of prostate cancer in men. One of the most common cancers worldwide.",
+    "age_factor": "Rare before age 40. Risk increases sharply after 50. Median age at diagnosis: 66.",
+    "sex_factor": "Male only. African American men: ~1.7x higher incidence than Caucasian men."
+  },
+  "Colorectal Cancer": {
+    "general_population_rate": 0.043,
+    "description": "Lifetime risk of colorectal cancer. Screening significantly reduces mortality through early detection and polyp removal.",
+    "age_factor": "Risk increases after age 50. Screening recommended starting at 45. Rising incidence in younger adults.",
+    "sex_factor": "Males: ~4.5% lifetime risk. Females: ~4.1% lifetime risk."
+  },
+  "Lung Cancer": {
+    "general_population_rate": 0.065,
+    "description": "Lifetime risk of lung cancer. Leading cause of cancer death worldwide. Primarily driven by smoking.",
+    "age_factor": "Most cases diagnosed after age 65. Average age at diagnosis: 70.",
+    "sex_factor": "Males: ~6.7% lifetime risk. Females: ~6.1% lifetime risk. Non-smokers: ~0.2-0.4% lifetime risk."
+  },
+  "Coronary Artery Disease": {
+    "general_population_rate": 0.065,
+    "description": "Prevalence of coronary artery disease in adults. Leading cause of death globally.",
+    "age_factor": "Risk doubles each decade after age 45. Majority of events occur after age 65.",
+    "sex_factor": "Males: ~7.4% prevalence. Females: ~5.3% prevalence. Female risk increases sharply post-menopause."
+  },
+  "Type 2 Diabetes": {
+    "general_population_rate": 0.105,
+    "description": "Prevalence of type 2 diabetes in adults. Prevalence is rapidly increasing worldwide due to obesity and sedentary lifestyles.",
+    "age_factor": "Prevalence increases with age: 4.2% ages 18-44, 17.5% ages 45-64, 26.8% ages 65+.",
+    "sex_factor": "Males: ~11.3%. Females: ~9.0%. Higher prevalence in certain ethnic groups."
+  },
+  "Alzheimer's Disease": {
+    "general_population_rate": 0.10,
+    "description": "Lifetime risk of Alzheimer's disease after age 45. Most common cause of dementia, affecting memory, thinking, and behavior.",
+    "age_factor": "Prevalence doubles every 5 years after age 65. ~5% at 65, ~30% at 85. Average age of onset: 75.",
+    "sex_factor": "Females: ~12% lifetime risk. Males: ~9% lifetime risk. Women's higher risk partly due to longer lifespan."
+  },
+  "Parkinson's Disease": {
+    "general_population_rate": 0.015,
+    "description": "Lifetime risk of Parkinson's disease. Second most common neurodegenerative disorder after Alzheimer's.",
+    "age_factor": "Mean age of onset: 60. Prevalence: ~1% over age 60, ~4% over age 80. Early-onset (<50) accounts for ~10% of cases.",
+    "sex_factor": "Males: ~2% lifetime risk. Females: ~1.3% lifetime risk. Male:female ratio approximately 1.5:1."
+  },
+  "Atrial Fibrillation": {
+    "general_population_rate": 0.033,
+    "description": "Prevalence of atrial fibrillation in adults. Most common sustained cardiac arrhythmia. Major risk factor for stroke.",
+    "age_factor": "Prevalence increases with age: 0.1% under 55, 3.8% ages 60-69, 9% ages 80+. Lifetime risk ~25%.",
+    "sex_factor": "Males: ~3.8% prevalence. Females: ~2.5% prevalence."
+  },
+  "Celiac Disease": {
+    "general_population_rate": 0.01,
+    "description": "Prevalence of celiac disease. Autoimmune disorder triggered by dietary gluten in genetically susceptible individuals (HLA-DQ2/DQ8 positive).",
+    "age_factor": "Can present at any age. Bimodal distribution: childhood (8-12 months after gluten introduction) and ages 30-50.",
+    "sex_factor": "Females: ~1.5x more commonly diagnosed than males. True prevalence may be similar."
+  },
+  "Hereditary Hemochromatosis": {
+    "general_population_rate": 0.005,
+    "description": "Prevalence of hereditary hemochromatosis (clinical disease). HFE C282Y homozygosity affects ~1 in 200 Northern Europeans, but clinical penetrance is ~28% in males, ~1% in females.",
+    "age_factor": "Clinical presentation typically ages 40-60 in males, post-menopausal in females (menstruation is protective).",
+    "sex_factor": "Males: ~28% penetrance for C282Y homozygotes. Females: ~1% penetrance due to menstrual iron loss."
+  },
+  "Venous Thromboembolism": {
+    "general_population_rate": 0.002,
+    "description": "Annual incidence of VTE (DVT and PE). Third most common cardiovascular disease. Factor V Leiden and prothrombin G20210A are major genetic risk factors.",
+    "age_factor": "Incidence increases exponentially with age: ~0.01% under 40, ~0.1% ages 40-59, ~1% over 80.",
+    "sex_factor": "Slightly higher in males overall. Higher in females during reproductive years (pregnancy, oral contraceptives)."
+  },
+  "Age-Related Macular Degeneration": {
+    "general_population_rate": 0.085,
+    "description": "Prevalence of AMD in adults over 40. Leading cause of vision loss in people over 50 in developed countries.",
+    "age_factor": "Prevalence: ~2% ages 50-59, ~7% ages 60-69, ~15% ages 70-79, ~25% ages 80+.",
+    "sex_factor": "Females: slightly higher prevalence, possibly due to longer lifespan."
+  },
+  "Inflammatory Bowel Disease (Crohn's)": {
+    "general_population_rate": 0.003,
+    "description": "Prevalence of Crohn's disease. Chronic inflammatory condition of the GI tract with genetic and environmental components.",
+    "age_factor": "Bimodal age distribution: peak onset 15-30 years, second peak 50-70 years.",
+    "sex_factor": "Slightly more common in females. Geographic variation: highest in Northern Europe and North America."
+  },
+  "Inflammatory Bowel Disease (Ulcerative Colitis)": {
+    "general_population_rate": 0.003,
+    "description": "Prevalence of ulcerative colitis. Chronic inflammation of the colon and rectum.",
+    "age_factor": "Peak onset ages 15-30 with second smaller peak ages 50-70.",
+    "sex_factor": "Males and females equally affected."
+  },
+  "Multiple Sclerosis": {
+    "general_population_rate": 0.001,
+    "description": "Prevalence of multiple sclerosis. Autoimmune disease affecting the central nervous system myelin sheath.",
+    "age_factor": "Typically diagnosed between ages 20-40. Rarely presents before 10 or after 60.",
+    "sex_factor": "Females: 2-3x more common than males. Female:male ratio has been increasing over time."
+  },
+  "Rheumatoid Arthritis": {
+    "general_population_rate": 0.01,
+    "description": "Prevalence of rheumatoid arthritis. Chronic autoimmune inflammatory disorder affecting joints.",
+    "age_factor": "Peak onset ages 30-60. Prevalence increases with age, reaching ~2% in those over 60.",
+    "sex_factor": "Females: 2-3x more common than males. Gender gap narrows with advancing age."
+  },
+  "Cystic Fibrosis": {
+    "general_population_rate": 0.0004,
+    "description": "Birth prevalence of cystic fibrosis. Most common life-limiting autosomal recessive condition in Caucasians. Carrier frequency ~1 in 25.",
+    "age_factor": "Diagnosed in infancy/childhood via newborn screening. Median survival now >50 years with modern therapies.",
+    "sex_factor": "Males and females equally affected. Males typically infertile. Females may have reduced fertility."
+  },
+  "Sickle Cell Disease": {
+    "general_population_rate": 0.0005,
+    "description": "Birth prevalence in the US. Much higher in African Americans (~1 in 365). Sickle cell trait (carrier) affects ~8% of African Americans.",
+    "age_factor": "Diagnosed at birth via newborn screening. Symptoms begin at 5-6 months when fetal hemoglobin declines.",
+    "sex_factor": "Males and females equally affected (autosomal recessive)."
+  },
+  "Alpha-1 Antitrypsin Deficiency": {
+    "general_population_rate": 0.001,
+    "description": "Prevalence of severe AAT deficiency (Pi*ZZ). Significantly underdiagnosed; estimated that only 10% of affected individuals are diagnosed.",
+    "age_factor": "Lung disease typically presents ages 30-50, especially in smokers. Liver disease can present at any age.",
+    "sex_factor": "Males and females equally affected genetically. Males may develop lung disease earlier due to higher smoking rates."
+  },
+  "G6PD Deficiency": {
+    "general_population_rate": 0.048,
+    "description": "Global prevalence of G6PD deficiency. Most common enzyme deficiency worldwide, affecting ~400 million people. Prevalence varies greatly by geography.",
+    "age_factor": "Present from birth. Hemolytic crises can occur at any age upon exposure to triggers.",
+    "sex_factor": "X-linked: primarily affects males. Carrier females may have variable expression due to X-inactivation."
+  },
+  "Familial Hypercholesterolemia": {
+    "general_population_rate": 0.004,
+    "description": "Prevalence of heterozygous familial hypercholesterolemia (1 in 250). Homozygous FH is rare (~1 in 300,000). Most individuals are undiagnosed.",
+    "age_factor": "Elevated LDL present from birth. Untreated men: MI risk by age 50 is ~50%. Untreated women: MI risk by age 60 is ~30%.",
+    "sex_factor": "Males: earlier cardiovascular events. Females: protection before menopause."
+  },
+  "Hereditary Thrombophilia": {
+    "general_population_rate": 0.05,
+    "description": "Combined prevalence of Factor V Leiden and Prothrombin G20210A heterozygosity in Caucasian populations.",
+    "age_factor": "First VTE event typically ages 20-50. Risk increases with age, surgery, immobility, and pregnancy.",
+    "sex_factor": "Females at higher risk during reproductive years due to pregnancy and oral contraceptive use."
+  },
+  "Melanoma": {
+    "general_population_rate": 0.025,
+    "description": "Lifetime risk of melanoma. Incidence has been rising steadily. UV exposure is the primary modifiable risk factor.",
+    "age_factor": "Can occur at any age. Median age at diagnosis: 65. One of the most common cancers in young adults.",
+    "sex_factor": "Males: higher lifetime risk (~2.8%). Females: lower lifetime risk (~1.8%). Males more likely to have fatal melanoma."
+  },
+  "Type 1 Diabetes": {
+    "general_population_rate": 0.005,
+    "description": "Prevalence of type 1 diabetes. Autoimmune destruction of pancreatic beta cells. Strong HLA association.",
+    "age_factor": "Peak incidence ages 4-7 and 10-14. Increasingly diagnosed in adults. Can occur at any age.",
+    "sex_factor": "Slightly more common in males in populations of European ancestry."
+  },
+  "Obesity": {
+    "general_population_rate": 0.42,
+    "description": "Prevalence of obesity (BMI ≥30) in US adults. Major risk factor for cardiovascular disease, diabetes, and cancer.",
+    "age_factor": "Prevalence: ~40% ages 20-39, ~44% ages 40-59, ~42% ages 60+.",
+    "sex_factor": "Females: ~41.9%. Males: ~43.0%. Severe obesity (BMI ≥40) more common in females."
+  },
+  "Osteoporosis": {
+    "general_population_rate": 0.10,
+    "description": "Prevalence of osteoporosis in adults over 50. Major cause of fractures in elderly.",
+    "age_factor": "Prevalence increases with age: ~10% ages 50-59, ~18% ages 60-69, ~35% ages 70+.",
+    "sex_factor": "Females: ~25% over age 50. Males: ~5% over age 50. Post-menopausal bone loss is a major factor."
+  }
+}

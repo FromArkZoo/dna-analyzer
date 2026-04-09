@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Analyzer — Personal Genomics Report</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+</head>
+<body>
+
+<!-- Medical Disclaimer Banner -->
+<div id="disclaimer-banner" class="disclaimer-banner">
+    <div class="disclaimer-content">
+        <span class="disclaimer-icon">&#9888;</span>
+        <div>
+            <strong>Medical Disclaimer:</strong> This report is for <em>educational and informational purposes only</em>.
+            It is <strong>not</strong> a medical diagnosis and should not replace professional medical advice.
+            Always consult a qualified healthcare provider before making health decisions based on genetic data.
+        </div>
+        <button class="disclaimer-close" onclick="this.parentElement.parentElement.classList.add('collapsed')" title="Minimize">&times;</button>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="app-header">
+    <div class="header-inner">
+        <div class="logo">
+            <span class="logo-icon">&#x1F9EC;</span>
+            <h1>DNA Analyzer</h1>
+            <span class="logo-subtitle">Personal Genomics Report</span>
+        </div>
+        <div class="header-actions" id="header-actions" style="display:none;">
+            <button class="btn btn-outline" id="btn-export" onclick="window.print()" title="Print / Export PDF">
+                &#128438; Export
+            </button>
+            <button class="btn btn-outline" id="btn-new" onclick="resetApp()">
+                &#x2795; New Analysis
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Upload Section -->
+<main>
+    <section id="upload-section" class="upload-section">
+        <div class="upload-container">
+            <div class="upload-hero">
+                <div class="upload-dna-icon">&#x1F9EC;</div>
+                <h2>Upload Your DNA Data</h2>
+                <p>Upload your raw DNA file from AncestryDNA, 23andMe, or similar services.<br>
+                   Your data is processed <strong>locally</strong> and never leaves this machine.</p>
+            </div>
+            <div class="upload-dropzone" id="dropzone">
+                <div class="dropzone-content">
+                    <div class="dropzone-icon">&#128193;</div>
+                    <p class="dropzone-text">Drag &amp; drop your DNA file here</p>
+                    <p class="dropzone-subtext">or</p>
+                    <label class="btn btn-primary" for="file-input">Choose File</label>
+                    <input type="file" id="file-input" accept=".txt,.csv,.tsv,.zip" hidden>
+                    <p class="dropzone-formats">Supported: .txt, .csv, .tsv, .zip</p>
+                </div>
+            </div>
+            <div id="upload-error" class="upload-error" style="display:none;"></div>
+        </div>
+    </section>
+
+    <!-- Loading Section -->
+    <section id="loading-section" class="loading-section" style="display:none;">
+        <div class="loading-container">
+            <div class="dna-helix-loader">
+                <div class="helix-strand strand-left"></div>
+                <div class="helix-strand strand-right"></div>
+            </div>
+            <h2 class="loading-title">Analyzing Your DNA</h2>
+            <p class="loading-subtitle" id="loading-status">Parsing genotype data...</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <p class="loading-note">This may take a moment depending on file size.</p>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results-section" class="results-section" style="display:none;">
+
+        <!-- Tab Navigation -->
+        <nav class="tab-nav" id="tab-nav">
+            <button class="tab-btn active" data-tab="overview">
+                <span class="tab-icon">&#x1F4CA;</span> Overview
+            </button>
+            <button class="tab-btn" data-tab="health">
+                <span class="tab-icon">&#x1F3E5;</span> Health Risks
+            </button>
+            <button class="tab-btn" data-tab="pharma">
+                <span class="tab-icon">&#x1F48A;</span> Pharmacogenomics
+            </button>
+            <button class="tab-btn" data-tab="traits">
+                <span class="tab-icon">&#x1F9EC;</span> Traits
+            </button>
+            <button class="tab-btn" data-tab="ancestry">
+                <span class="tab-icon">&#x1F30D;</span> Ancestry
+            </button>
+        </nav>
+
+        <!-- Overview Tab -->
+        <div class="tab-content active" id="tab-overview">
+            <!-- Plain-language intro -->
+            <div class="overview-intro">
+                <h2>Your DNA Report Summary</h2>
+                <p>We scanned your genetic data against medical research databases. Below is a summary of what we found.
+                   Click on any tab above to explore the details. Remember: genetics is only one piece of the puzzle &mdash;
+                   lifestyle, environment, and family history all matter too.</p>
+            </div>
+
+            <div class="summary-grid">
+                <div class="summary-card summary-critical">
+                    <div class="summary-number" id="stat-critical">0</div>
+                    <div class="summary-label">Critical Alerts</div>
+                    <div class="summary-desc">Genetic variants linked to serious health conditions that may warrant a conversation with your doctor.</div>
+                </div>
+                <div class="summary-card summary-high">
+                    <div class="summary-number" id="stat-high">0</div>
+                    <div class="summary-label">High Risk</div>
+                    <div class="summary-desc">Variants associated with elevated risk for certain conditions. Having these doesn't mean you will develop the condition.</div>
+                </div>
+                <div class="summary-card summary-drugs">
+                    <div class="summary-number" id="stat-drugs">0</div>
+                    <div class="summary-label">Drug Sensitivities</div>
+                    <div class="summary-desc">Your genes may affect how you metabolize certain medications. This can mean a drug works differently for you than for others.</div>
+                </div>
+                <div class="summary-card summary-traits">
+                    <div class="summary-number" id="stat-traits">0</div>
+                    <div class="summary-label">Traits Analyzed</div>
+                    <div class="summary-desc">Fun and interesting genetic traits like caffeine sensitivity, earwax type, eye color tendencies, and more.</div>
+                </div>
+            </div>
+
+            <!-- Critical Alerts Panel -->
+            <div id="critical-alerts-panel" class="critical-alerts-panel" style="display:none;">
+                <h3 class="section-title section-title-critical">&#9888; Critical Alerts</h3>
+                <div id="critical-alerts-list" class="critical-alerts-list"></div>
+            </div>
+
+            <!-- Severity Distribution -->
+            <div class="overview-charts">
+                <div class="chart-card">
+                    <h3 class="section-title">Risk Severity Distribution</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="chart-severity-donut"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3 class="section-title">Variants Analyzed</h3>
+                    <div class="variants-summary" id="variants-summary">
+                        <div class="variant-stat">
+                            <span class="variant-stat-number" id="stat-total-variants">0</span>
+                            <span class="variant-stat-label">Total Variants Read</span>
+                        </div>
+                        <div class="variant-stat">
+                            <span class="variant-stat-number" id="stat-matched-variants">0</span>
+                            <span class="variant-stat-label">Matched to Database</span>
+                        </div>
+                        <div class="variant-stat">
+                            <span class="variant-stat-number" id="stat-health-findings">0</span>
+                            <span class="variant-stat-label">Health Findings</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Health Risks Tab -->
+        <div class="tab-content" id="tab-health">
+            <div class="section-intro">
+                <h2>Health Risk Variants</h2>
+                <p>These are genetic variants in your DNA that have been linked to health conditions in published medical research.
+                   Each card shows a gene, the associated condition, and how significant the finding is.</p>
+                <div class="section-intro-legend">
+                    <strong>What the severity levels mean:</strong>
+                    <ul>
+                        <li><span class="severity-badge severity-CRITICAL">Critical</span> Variants strongly linked to serious conditions &mdash; discuss with your doctor</li>
+                        <li><span class="severity-badge severity-HIGH">High</span> Notable risk elevation or important carrier status</li>
+                        <li><span class="severity-badge severity-MODERATE">Moderate</span> Modest risk increase &mdash; worth being aware of</li>
+                        <li><span class="severity-badge severity-LOW">Low</span> Minor risk factor &mdash; common in the general population</li>
+                        <li><span class="severity-badge severity-PROTECTIVE">Protective</span> Good news! This variant is associated with reduced risk</li>
+                    </ul>
+                    <p><strong>Zygosity:</strong> "Heterozygous" means you carry one copy of the variant (usually lower impact). "Homozygous" means you carry two copies (usually higher impact).</p>
+                </div>
+            </div>
+            <div class="tab-toolbar">
+                <div class="search-box">
+                    <span class="search-icon">&#128269;</span>
+                    <input type="text" id="health-search" placeholder="Search by gene, condition, or rsid..." class="search-input">
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Severity:</label>
+                    <select id="health-severity-filter" class="filter-select">
+                        <option value="all">All</option>
+                        <option value="CRITICAL">Critical</option>
+                        <option value="HIGH">High</option>
+                        <option value="MODERATE">Moderate</option>
+                        <option value="LOW">Low</option>
+                        <option value="PROTECTIVE">Protective</option>
+                    </select>
+                </div>
+            </div>
+            <div class="disclaimer-inline">
+                &#9888; These results are based on published research associations and do <strong>not</strong> constitute a diagnosis.
+                A consumer DNA test only checks a tiny fraction of your genome &mdash; a "clear" result does <strong>not</strong> mean zero risk.
+            </div>
+            <div id="health-results" class="results-list"></div>
+            <div id="health-empty" class="empty-state" style="display:none;">
+                No health risks match your filters.
+            </div>
+        </div>
+
+        <!-- Pharmacogenomics Tab -->
+        <div class="tab-content" id="tab-pharma">
+            <div class="section-intro">
+                <h2>Pharmacogenomics (Drug Sensitivities)</h2>
+                <p>Your genes affect how your body processes medications. Some people break down drugs faster or slower
+                   than average, which can make a standard dose too strong, too weak, or even dangerous.</p>
+                <div class="section-intro-legend">
+                    <strong>What the metabolizer types mean:</strong>
+                    <ul>
+                        <li><strong>Poor Metabolizer</strong> &mdash; Your body breaks down the drug very slowly. Standard doses may build up and cause stronger side effects.</li>
+                        <li><strong>Intermediate Metabolizer</strong> &mdash; Somewhat slower processing. You may need a lower dose than typical.</li>
+                        <li><strong>Normal Metabolizer</strong> &mdash; You process the drug as expected. Standard dosing is likely appropriate.</li>
+                        <li><strong>Rapid / Ultra-rapid Metabolizer</strong> &mdash; Your body breaks down the drug very quickly. Standard doses may be less effective, or in some cases (like codeine), dangerously converted to active forms.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-toolbar">
+                <div class="search-box">
+                    <span class="search-icon">&#128269;</span>
+                    <input type="text" id="pharma-search" placeholder="Search by gene or medication..." class="search-input">
+                </div>
+            </div>
+            <div class="disclaimer-inline">
+                &#9888; <strong>Never</strong> change or stop medications based on this report. Always discuss with your physician or pharmacist first.
+            </div>
+            <div id="pharma-critical-panel" class="critical-alerts-panel" style="display:none;">
+                <h3 class="section-title section-title-critical">&#9888; Critical Drug-Gene Interactions</h3>
+                <div id="pharma-critical-list"></div>
+            </div>
+            <div id="pharma-results" class="results-list"></div>
+            <div id="pharma-empty" class="empty-state" style="display:none;">
+                No pharmacogenomics results match your search.
+            </div>
+        </div>
+
+        <!-- Traits Tab -->
+        <div class="tab-content" id="tab-traits">
+            <div class="section-intro">
+                <h2>Genetic Traits</h2>
+                <p>These are fun, well-studied genetic traits. Unlike health risks, most of these are harmless characteristics
+                   determined partly by your DNA. The "population frequency" bar shows how common your variant is.</p>
+            </div>
+            <div class="tab-toolbar">
+                <div class="traits-category-tabs" id="traits-category-tabs">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="nutrition">Nutrition</button>
+                    <button class="category-btn" data-category="physical">Physical</button>
+                    <button class="category-btn" data-category="athletic">Athletic</button>
+                    <button class="category-btn" data-category="sleep">Sleep</button>
+                    <button class="category-btn" data-category="behavioral">Behavioral</button>
+                </div>
+            </div>
+            <div id="traits-results" class="traits-grid"></div>
+            <div id="traits-empty" class="empty-state" style="display:none;">
+                No traits match this category.
+            </div>
+        </div>
+
+        <!-- Ancestry Tab -->
+        <div class="tab-content" id="tab-ancestry">
+            <div class="section-intro">
+                <h2>Ancestry &amp; Origins</h2>
+                <p>Your DNA carries traces of your ancient ancestors' migrations. Haplogroups are deep ancestral lineages
+                   passed down through your mother (mtDNA) and father (Y-DNA, males only). These trace back thousands of years
+                   and tell you about the geographic origins of your direct maternal and paternal lines.</p>
+            </div>
+            <div class="disclaimer-inline">
+                &#9888; Ancestry estimates are rough approximations from a limited set of markers. They may differ significantly from other services
+                that use more advanced methods. Think of these as broad strokes, not a detailed portrait.
+            </div>
+
+            <!-- Haplogroups -->
+            <div class="haplogroup-panels" id="haplogroup-panels">
+                <div class="haplogroup-card" id="maternal-haplogroup">
+                    <div class="haplogroup-header">
+                        <span class="haplogroup-icon">&#9792;</span>
+                        <h3>Maternal Haplogroup (mtDNA)</h3>
+                    </div>
+                    <div class="haplogroup-name" id="maternal-hg-name">—</div>
+                    <div class="haplogroup-desc" id="maternal-hg-desc"></div>
+                </div>
+                <div class="haplogroup-card" id="paternal-haplogroup">
+                    <div class="haplogroup-header">
+                        <span class="haplogroup-icon">&#9794;</span>
+                        <h3>Paternal Haplogroup (Y-DNA)</h3>
+                    </div>
+                    <div class="haplogroup-name" id="paternal-hg-name">—</div>
+                    <div class="haplogroup-desc" id="paternal-hg-desc"></div>
+                </div>
+            </div>
+
+            <!-- Ancestry Composition -->
+            <div class="ancestry-composition" id="ancestry-composition-section" style="display:none;">
+                <h3 class="section-title">Ancestry Composition</h3>
+                <div class="chart-wrapper chart-wrapper-wide">
+                    <canvas id="chart-ancestry-bar"></canvas>
+                </div>
+            </div>
+
+            <!-- PRS Section -->
+            <div class="prs-section" id="prs-section" style="display:none;">
+                <h3 class="section-title">Polygenic Risk Scores</h3>
+                <p class="prs-explanation">Polygenic risk scores estimate your genetic predisposition relative to a reference population. Higher percentile = higher genetic predisposition.</p>
+                <div class="prs-grid" id="prs-grid"></div>
+            </div>
+
+            <!-- Coverage -->
+            <div class="coverage-section" id="coverage-section" style="display:none;">
+                <h3 class="section-title">Analysis Coverage</h3>
+                <div id="coverage-indicators" class="coverage-indicators"></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="app-footer">
+    <div class="footer-inner">
+        <div class="footer-privacy">
+            &#x1F512; <strong>Privacy:</strong> All analysis is performed locally on this machine.
+            Your DNA data is never transmitted over the internet or stored on external servers.
+        </div>
+        <div class="footer-disclaimer">
+            This tool is for educational purposes only. Not a medical device. Not FDA approved.
+        </div>
+    </div>
+</footer>
+
+<script src="/static/lib/chart.min.js"></script>
+<script src="/static/js/charts.js"></script>
+<script src="/static/js/app.js"></script>
+</body>
+</html>

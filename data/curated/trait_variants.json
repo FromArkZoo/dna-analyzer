@@ -1,0 +1,1757 @@
+[
+  {
+    "rsid": "rs762551",
+    "gene": "CYP1A2",
+    "trait": "Caffeine Metabolism Speed",
+    "category": "Nutrition",
+    "genotype_results": {
+      "AA": "Fast caffeine metabolizer — rapid clearance. Can typically tolerate higher caffeine intake without adverse cardiovascular effects.",
+      "AC": "Moderate caffeine metabolizer — intermediate clearance speed.",
+      "CC": "Slow caffeine metabolizer — caffeine stays in system longer. Associated with increased heart attack risk with high coffee consumption (>3 cups/day)."
+    },
+    "description": "Determines how quickly your body breaks down caffeine. Fast metabolizers can drink more coffee without jitteriness; slow metabolizers may experience prolonged effects and should limit intake.",
+    "population_frequency": 0.46,
+    "confidence": "High",
+    "source": "Cornelis et al., JAMA 2006"
+  },
+  {
+    "rsid": "rs4988235",
+    "gene": "MCM6/LCT",
+    "trait": "Lactose Tolerance",
+    "category": "Nutrition",
+    "genotype_results": {
+      "AA": "Lactase persistent — can digest dairy into adulthood without issues.",
+      "AG": "Lactase persistent — can digest dairy normally.",
+      "GG": "Lactose intolerant — lactase production declines after childhood. Dairy consumption may cause bloating, gas, and digestive discomfort."
+    },
+    "description": "Controls whether you continue producing the lactase enzyme into adulthood. The A allele arose ~10,000 years ago in European dairy-farming populations.",
+    "population_frequency": 0.50,
+    "confidence": "High",
+    "source": "Enattah et al., Nature Genetics 2002"
+  },
+  {
+    "rsid": "rs671",
+    "gene": "ALDH2",
+    "trait": "Alcohol Flush Reaction",
+    "category": "Nutrition",
+    "genotype_results": {
+      "GG": "Normal ALDH2 activity — efficient acetaldehyde metabolism. No flush reaction.",
+      "GA": "Reduced ALDH2 activity — facial flushing, nausea after drinking alcohol. ~6x increased esophageal cancer risk with regular drinking.",
+      "AA": "Non-functional ALDH2 — severe alcohol intolerance. Strong flushing, rapid heart rate, nausea. Strongly protective against alcoholism but elevated cancer risk if drinking."
+    },
+    "description": "The 'Asian flush' gene. Determines how efficiently you break down acetaldehyde, a toxic alcohol metabolite. Common in East Asian populations (~30-50% carry at least one A allele).",
+    "population_frequency": 0.18,
+    "confidence": "High",
+    "source": "Brooks et al., PLoS Medicine 2009"
+  },
+  {
+    "rsid": "rs72921001",
+    "gene": "OR6A2",
+    "trait": "Cilantro Taste Perception",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Likely perceives cilantro as fresh and herbal — normal cilantro enjoyment.",
+      "CA": "May have mild soapy perception of cilantro.",
+      "AA": "Likely perceives cilantro as soapy or unpleasant — genetic basis for cilantro aversion."
+    },
+    "description": "Variant in an olfactory receptor gene that affects perception of aldehyde chemicals in cilantro leaves. About 14% of people of European ancestry report cilantro tastes like soap.",
+    "population_frequency": 0.15,
+    "confidence": "Moderate",
+    "source": "Eriksson et al., Flavour 2012"
+  },
+  {
+    "rsid": "rs713598",
+    "gene": "TAS2R38",
+    "trait": "Bitter Taste Perception (PTC/PROP)",
+    "category": "Nutrition",
+    "genotype_results": {
+      "GG": "Non-taster — cannot taste PTC/PROP bitterness. May have higher tolerance for bitter vegetables (broccoli, Brussels sprouts, kale).",
+      "GC": "Medium taster — moderate perception of bitterness.",
+      "CC": "Super-taster — strong perception of bitter compounds. May dislike cruciferous vegetables, black coffee, grapefruit, and dark chocolate."
+    },
+    "description": "Part of the TAS2R38 bitter taste receptor. Super-tasters experience more intense bitter flavors, which can influence dietary choices and nutritional patterns.",
+    "population_frequency": 0.50,
+    "confidence": "High",
+    "source": "Kim et al., Science 2003"
+  },
+  {
+    "rsid": "rs234706",
+    "gene": "CBS",
+    "trait": "Vitamin B6 Metabolism",
+    "category": "Nutrition",
+    "genotype_results": {
+      "GG": "Normal CBS activity. Standard B6 and homocysteine metabolism.",
+      "GA": "Slightly increased CBS activity. May have faster homocysteine clearance.",
+      "AA": "Increased CBS activity — faster homocysteine to cysteine conversion. May deplete vitamin B6 more rapidly."
+    },
+    "description": "Cystathionine beta-synthase variant affecting vitamin B6 utilization and homocysteine metabolism pathway.",
+    "population_frequency": 0.40,
+    "confidence": "Moderate",
+    "source": "Kraus et al., Hum Mutat 1999"
+  },
+  {
+    "rsid": "rs602662",
+    "gene": "FUT2",
+    "trait": "Vitamin B12 Absorption",
+    "category": "Nutrition",
+    "genotype_results": {
+      "AA": "Normal B12 levels expected.",
+      "AG": "Slightly lower average B12 levels.",
+      "GG": "Non-secretor status — associated with lower vitamin B12 levels. May benefit from B12 supplementation or monitoring."
+    },
+    "description": "FUT2 secretor status affects gut microbiome composition and vitamin B12 absorption efficiency.",
+    "population_frequency": 0.35,
+    "confidence": "Moderate",
+    "source": "Hazra et al., Nature Genetics 2008"
+  },
+  {
+    "rsid": "rs12934922",
+    "gene": "BCMO1",
+    "trait": "Beta-Carotene to Vitamin A Conversion",
+    "category": "Nutrition",
+    "genotype_results": {
+      "AA": "Normal beta-carotene conversion — efficiently converts plant-based carotenoids to vitamin A.",
+      "AT": "Reduced conversion efficiency (~32% reduction). May benefit from preformed vitamin A sources (eggs, dairy, liver).",
+      "TT": "Significantly reduced conversion (~69% reduction). Poor converter — plant-based carotenoids are less effective vitamin A sources."
+    },
+    "description": "Determines how efficiently you convert beta-carotene (carrots, sweet potatoes) into active vitamin A. Poor converters may need animal-sourced vitamin A or supplements.",
+    "population_frequency": 0.42,
+    "confidence": "High",
+    "source": "Leung et al., FASEB J 2009"
+  },
+  {
+    "rsid": "rs7501331",
+    "gene": "BCMO1",
+    "trait": "Beta-Carotene Conversion (Secondary)",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Normal conversion efficiency.",
+      "CT": "Modestly reduced beta-carotene conversion.",
+      "TT": "Reduced conversion — combined with rs12934922 variants may significantly impair vitamin A production from plant sources."
+    },
+    "description": "Second BCMO1 variant affecting beta-carotene to vitamin A conversion. Effects are additive with rs12934922.",
+    "population_frequency": 0.24,
+    "confidence": "Moderate",
+    "source": "Leung et al., FASEB J 2009"
+  },
+  {
+    "rsid": "rs2282679",
+    "gene": "GC",
+    "trait": "Vitamin D Levels",
+    "category": "Nutrition",
+    "genotype_results": {
+      "TT": "Normal vitamin D binding protein — standard vitamin D levels expected.",
+      "TG": "Modestly lower vitamin D levels.",
+      "GG": "Lower vitamin D binding protein levels — associated with ~25% lower serum 25(OH)D. Higher supplementation may be needed."
+    },
+    "description": "Variant in vitamin D binding protein (GC globulin) affecting circulating vitamin D levels. One of the strongest genetic determinants of vitamin D status.",
+    "population_frequency": 0.30,
+    "confidence": "High",
+    "source": "Wang et al., Lancet 2010"
+  },
+  {
+    "rsid": "rs1544410",
+    "gene": "VDR",
+    "trait": "Vitamin D Receptor Sensitivity",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Normal VDR function — standard vitamin D response.",
+      "CT": "Slightly altered VDR function.",
+      "TT": "Altered vitamin D receptor — may need higher vitamin D levels for optimal bone health and immune function."
+    },
+    "description": "Vitamin D receptor variant affecting calcium absorption and bone mineral density.",
+    "population_frequency": 0.35,
+    "confidence": "Moderate",
+    "source": "Uitterlinden et al., Gene 2004"
+  },
+  {
+    "rsid": "rs1801394",
+    "gene": "MTRR",
+    "trait": "Vitamin B12 Utilization",
+    "category": "Nutrition",
+    "genotype_results": {
+      "AA": "Normal methionine synthase reductase — efficient B12 recycling.",
+      "AG": "Slightly reduced B12 recycling efficiency.",
+      "GG": "Reduced MTRR activity — less efficient B12 utilization. May benefit from higher B12 intake, especially methylcobalamin form."
+    },
+    "description": "Affects how efficiently your body recycles vitamin B12 in the methionine cycle. Important for methylation and homocysteine control.",
+    "population_frequency": 0.45,
+    "confidence": "Moderate",
+    "source": "Wilson et al., QJM 1999"
+  },
+  {
+    "rsid": "rs4654748",
+    "gene": "NBPF3/ALPL",
+    "trait": "Vitamin B6 Levels",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Higher average vitamin B6 levels.",
+      "CT": "Average vitamin B6 levels.",
+      "TT": "Lower average vitamin B6 levels — may benefit from B6 supplementation."
+    },
+    "description": "Common variant associated with circulating vitamin B6 (pyridoxal 5'-phosphate) levels.",
+    "population_frequency": 0.48,
+    "confidence": "Moderate",
+    "source": "Tanaka et al., Am J Hum Genet 2009"
+  },
+  {
+    "rsid": "rs174547",
+    "gene": "FADS1",
+    "trait": "Omega-3 Fatty Acid Conversion",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Efficient conversion of plant omega-3 (ALA) to EPA/DHA. Higher arachidonic acid levels.",
+      "CT": "Intermediate omega-3 conversion efficiency.",
+      "TT": "Less efficient ALA to EPA/DHA conversion. May benefit more from direct fish oil supplementation rather than plant-based omega-3 sources."
+    },
+    "description": "Affects desaturase enzyme activity that converts plant-based omega-3 (ALA from flax, chia) into the active EPA/DHA forms found in fish oil.",
+    "population_frequency": 0.35,
+    "confidence": "High",
+    "source": "Tanaka et al., PLoS Genetics 2009"
+  },
+  {
+    "rsid": "rs1800588",
+    "gene": "LIPC",
+    "trait": "HDL Cholesterol Response to Diet",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Lower HDL cholesterol. Benefits most from dietary fat reduction to improve lipid profile.",
+      "CT": "Intermediate HDL levels.",
+      "TT": "Higher HDL cholesterol. Less responsive to dietary fat manipulation. HDL levels are more genetically determined."
+    },
+    "description": "Hepatic lipase variant affecting HDL metabolism and dietary fat response. Influences how much your cholesterol levels change with diet.",
+    "population_frequency": 0.22,
+    "confidence": "Moderate",
+    "source": "Ordovas et al., JAMA 2002"
+  },
+  {
+    "rsid": "rs5400",
+    "gene": "SLC2A2/GLUT2",
+    "trait": "Sugar Consumption Tendency",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Normal glucose sensing in brain and gut.",
+      "CT": "Slightly altered glucose transport.",
+      "TT": "Altered glucose transporter — associated with higher habitual sugar consumption (~5-10% more daily sugar intake)."
+    },
+    "description": "GLUT2 glucose transporter variant affecting brain glucose sensing and dietary sugar preferences.",
+    "population_frequency": 0.13,
+    "confidence": "Moderate",
+    "source": "Eny et al., Am J Clin Nutr 2008"
+  },
+  {
+    "rsid": "rs1761667",
+    "gene": "CD36",
+    "trait": "Fat Taste Sensitivity",
+    "category": "Nutrition",
+    "genotype_results": {
+      "GG": "Higher fat taste sensitivity — can detect low concentrations of fatty acids. May naturally prefer lower-fat foods.",
+      "GA": "Intermediate fat taste sensitivity.",
+      "AA": "Reduced fat taste sensitivity — cannot detect fat as easily. May prefer higher-fat foods for satisfaction."
+    },
+    "description": "Fat taste receptor variant affecting oral fat perception. People with reduced sensitivity may consume more dietary fat to achieve satisfaction.",
+    "population_frequency": 0.48,
+    "confidence": "Moderate",
+    "source": "Pepino et al., J Lipid Res 2012"
+  },
+  {
+    "rsid": "rs12913832",
+    "gene": "HERC2/OCA2",
+    "trait": "Eye Color",
+    "category": "Physical",
+    "genotype_results": {
+      "GG": "Blue or light-colored eyes (~72% probability of blue eyes).",
+      "GA": "Green, hazel, or intermediate eye color. Variable expression.",
+      "AA": "Brown eyes (~95% probability of brown eyes)."
+    },
+    "description": "The single most important genetic variant for eye color. Controls OCA2 expression, which determines melanin production in the iris.",
+    "population_frequency": 0.40,
+    "confidence": "High",
+    "source": "Eiberg et al., Hum Genet 2008"
+  },
+  {
+    "rsid": "rs1805007",
+    "gene": "MC1R",
+    "trait": "Red Hair / Fair Skin",
+    "category": "Physical",
+    "genotype_results": {
+      "CC": "Normal MC1R function — eumelanin production (darker pigmentation).",
+      "CT": "Carrier — may have reddish hair tones, fair skin, freckling. Mild increase in melanoma risk.",
+      "TT": "Two MC1R variants — likely red hair, very fair skin, heavy freckling. ~3-4x melanoma risk."
+    },
+    "description": "Major red hair variant. Shifts melanin production from dark eumelanin to red/yellow pheomelanin. One of several MC1R variants contributing to red hair phenotype.",
+    "population_frequency": 0.08,
+    "confidence": "High",
+    "source": "Valverde et al., Nature Genetics 1995"
+  },
+  {
+    "rsid": "rs12821256",
+    "gene": "KITLG",
+    "trait": "Blond Hair",
+    "category": "Physical",
+    "genotype_results": {
+      "CC": "No effect on hair color from this variant.",
+      "CT": "Slightly lighter hair color tendency.",
+      "TT": "Associated with blond hair. Affects hair follicle melanocyte regulation through KITLG enhancer."
+    },
+    "description": "Regulatory variant affecting KITLG expression specifically in hair follicles. One of several variants contributing to blond hair in Europeans.",
+    "population_frequency": 0.15,
+    "confidence": "Moderate",
+    "source": "Guenther et al., Nature Genetics 2014"
+  },
+  {
+    "rsid": "rs1426654",
+    "gene": "SLC24A5",
+    "trait": "Skin Pigmentation",
+    "category": "Physical",
+    "genotype_results": {
+      "AA": "Light skin pigmentation — European-type. Reduced melanin in skin.",
+      "AG": "Intermediate skin pigmentation.",
+      "GG": "Darker skin pigmentation — ancestral allele. Higher melanin production."
+    },
+    "description": "The most significant single variant for light skin pigmentation in European populations. Nearly fixed for the A allele in Europeans, nearly absent in West Africans and East Asians.",
+    "population_frequency": 0.55,
+    "confidence": "High",
+    "source": "Lamason et al., Science 2005"
+  },
+  {
+    "rsid": "rs16891982",
+    "gene": "SLC45A2",
+    "trait": "Skin Pigmentation (Secondary)",
+    "category": "Physical",
+    "genotype_results": {
+      "GG": "Light skin — derived European allele.",
+      "GC": "Intermediate pigmentation.",
+      "CC": "Darker skin — ancestral allele."
+    },
+    "description": "Second major skin pigmentation gene. Works together with SLC24A5 to determine melanin production in skin.",
+    "population_frequency": 0.45,
+    "confidence": "High",
+    "source": "Branicki et al., BMC Genetics 2008"
+  },
+  {
+    "rsid": "rs17822931",
+    "gene": "ABCC11",
+    "trait": "Earwax Type / Body Odor",
+    "category": "Physical",
+    "genotype_results": {
+      "CC": "Wet, sticky earwax. Normal apocrine gland secretion and body odor.",
+      "CT": "Wet earwax type (C is dominant).",
+      "TT": "Dry, flaky earwax. Reduced body odor — fewer apocrine secretions. Common in East Asian populations (~80-95%)."
+    },
+    "description": "Controls apocrine gland secretion type. The T allele reduces ABCC11 transporter function, leading to dry earwax and less body odor. Also affects axillary (underarm) sweat composition.",
+    "population_frequency": 0.30,
+    "confidence": "High",
+    "source": "Yoshiura et al., Nature Genetics 2006"
+  },
+  {
+    "rsid": "rs3827760",
+    "gene": "EDAR",
+    "trait": "Hair Thickness / Sweat Glands",
+    "category": "Physical",
+    "genotype_results": {
+      "CC": "Standard hair thickness and sweat gland density.",
+      "CT": "Slightly thicker hair.",
+      "TT": "Thicker, straighter hair. Increased sweat gland density. Shovel-shaped incisors. Common in East Asian and Native American populations."
+    },
+    "description": "EDAR variant affecting ectodermal development. The derived T allele increases hair shaft diameter, affects tooth morphology, and increases eccrine sweat gland density.",
+    "population_frequency": 0.15,
+    "confidence": "High",
+    "source": "Fujimoto et al., J Hum Genet 2008"
+  },
+  {
+    "rsid": "rs17646946",
+    "gene": "GJB2",
+    "trait": "Freckling Tendency",
+    "category": "Physical",
+    "genotype_results": {
+      "AA": "Lower freckling tendency.",
+      "AG": "Moderate freckling tendency.",
+      "GG": "Higher freckling tendency, especially with sun exposure."
+    },
+    "description": "Variant associated with freckling density, particularly in sun-exposed areas.",
+    "population_frequency": 0.30,
+    "confidence": "Moderate",
+    "source": "Sulem et al., Nature Genetics 2007"
+  },
+  {
+    "rsid": "rs2228479",
+    "gene": "MC1R",
+    "trait": "Skin Sensitivity to Sun",
+    "category": "Physical",
+    "genotype_results": {
+      "GG": "Normal UV sensitivity — standard sun response.",
+      "GA": "Slightly increased sun sensitivity.",
+      "AA": "Increased sun sensitivity — burns more easily. Higher UV damage susceptibility."
+    },
+    "description": "MC1R variant affecting melanocortin receptor function and UV response. Contributes to sun sensitivity independent of hair/skin color.",
+    "population_frequency": 0.08,
+    "confidence": "Moderate",
+    "source": "Bastiaens et al., J Invest Dermatol 2001"
+  },
+  {
+    "rsid": "rs1800407",
+    "gene": "OCA2",
+    "trait": "Eye Color Modifier (Green Eyes)",
+    "category": "Physical",
+    "genotype_results": {
+      "GG": "Standard eye color (brown if no blue-eye alleles).",
+      "GA": "May have lighter eye color — increased chance of green or hazel eyes.",
+      "AA": "Strongly associated with green/hazel eyes and lighter iris pigmentation."
+    },
+    "description": "OCA2 variant that modifies eye color, particularly contributing to green eye color. Works in combination with HERC2 rs12913832.",
+    "population_frequency": 0.08,
+    "confidence": "Moderate",
+    "source": "Duffy et al., Am J Hum Genet 2007"
+  },
+  {
+    "rsid": "rs4778138",
+    "gene": "OCA2",
+    "trait": "Eye Color (Additional Modifier)",
+    "category": "Physical",
+    "genotype_results": {
+      "GG": "Contributes to lighter eye color.",
+      "GA": "Intermediate effect.",
+      "AA": "Contributes to darker eye color."
+    },
+    "description": "Second OCA2 variant contributing to iris pigmentation variation.",
+    "population_frequency": 0.45,
+    "confidence": "Moderate",
+    "source": "Liu et al., PLoS Genetics 2010"
+  },
+  {
+    "rsid": "rs1042602",
+    "gene": "TYR",
+    "trait": "Skin and Eye Pigmentation",
+    "category": "Physical",
+    "genotype_results": {
+      "CC": "Standard tyrosinase activity — normal melanin production.",
+      "CA": "Slightly reduced melanin — may have lighter complexion.",
+      "AA": "Reduced tyrosinase activity — lighter skin and eye color."
+    },
+    "description": "Tyrosinase is the rate-limiting enzyme in melanin synthesis. This variant affects overall pigmentation levels.",
+    "population_frequency": 0.30,
+    "confidence": "Moderate",
+    "source": "Sulem et al., Nature Genetics 2007"
+  },
+  {
+    "rsid": "rs1805009",
+    "gene": "MC1R",
+    "trait": "Red Hair (D294H Variant)",
+    "category": "Physical",
+    "genotype_results": {
+      "CC": "Normal MC1R function.",
+      "CG": "Carrier — possible reddish tones, increased sun sensitivity.",
+      "GG": "Strong red hair variant — likely red/auburn hair with fair skin."
+    },
+    "description": "Another major MC1R red hair variant (D294H). One of the 'R' (strong) MC1R variants.",
+    "population_frequency": 0.02,
+    "confidence": "High",
+    "source": "Valverde et al., Nature Genetics 1995"
+  },
+  {
+    "rsid": "rs2733832",
+    "gene": "TYRP1",
+    "trait": "Hair Color (Brown vs Blond)",
+    "category": "Physical",
+    "genotype_results": {
+      "AA": "Contributes to darker hair color.",
+      "AG": "Intermediate hair pigmentation.",
+      "GG": "Associated with lighter/blond hair."
+    },
+    "description": "TYRP1 variant contributing to eumelanin levels in hair. Part of the polygenic basis of hair color variation.",
+    "population_frequency": 0.30,
+    "confidence": "Moderate",
+    "source": "Sulem et al., Nature Genetics 2007"
+  },
+  {
+    "rsid": "rs7349332",
+    "gene": "TERT-CLPTM1L",
+    "trait": "Male Pattern Baldness",
+    "category": "Physical",
+    "genotype_results": {
+      "TT": "Lower risk of early-onset baldness.",
+      "TC": "Moderate baldness risk.",
+      "CC": "Increased risk of male pattern baldness."
+    },
+    "description": "One of several genetic variants contributing to androgenetic alopecia. Hair loss is highly polygenic.",
+    "population_frequency": 0.30,
+    "confidence": "Moderate",
+    "source": "Heilmann et al., Nature Communications 2013"
+  },
+  {
+    "rsid": "rs6152",
+    "gene": "AR",
+    "trait": "Male Pattern Baldness (X-linked)",
+    "category": "Physical",
+    "genotype_results": {
+      "GG": "Increased risk of androgenetic alopecia — higher androgen receptor sensitivity.",
+      "GA": "Moderate baldness risk.",
+      "AA": "Lower risk of male pattern baldness."
+    },
+    "description": "Androgen receptor variant on X chromosome. Strongest single genetic predictor of male pattern baldness. Inherited from mother's side.",
+    "population_frequency": 0.45,
+    "confidence": "High",
+    "source": "Hillmer et al., Nature Genetics 2005"
+  },
+  {
+    "rsid": "rs1800414",
+    "gene": "OCA2",
+    "trait": "Skin Lightening (East Asian)",
+    "category": "Physical",
+    "genotype_results": {
+      "AA": "Standard pigmentation.",
+      "AG": "Slightly lighter skin.",
+      "GG": "Lighter skin pigmentation — variant common in East Asian populations contributing to lighter skin tone."
+    },
+    "description": "OCA2 variant selected for lighter pigmentation in East Asian populations, through a different mechanism than European skin lightening variants.",
+    "population_frequency": 0.20,
+    "confidence": "High",
+    "source": "Edwards et al., PLoS Genetics 2010"
+  },
+  {
+    "rsid": "rs11803731",
+    "gene": "TCHH",
+    "trait": "Hair Curliness",
+    "category": "Physical",
+    "genotype_results": {
+      "AA": "Straight hair tendency.",
+      "AT": "Slightly wavy hair.",
+      "TT": "Curly or wavy hair tendency — trichohyalin protein variant affecting hair cross-linking."
+    },
+    "description": "Variant in trichohyalin, a structural protein in hair follicles. Affects hair fiber shape and curliness in European populations.",
+    "population_frequency": 0.15,
+    "confidence": "Moderate",
+    "source": "Medland et al., J Invest Dermatol 2009"
+  },
+  {
+    "rsid": "rs1815739",
+    "gene": "ACTN3",
+    "trait": "Muscle Fiber Type (Speed vs Endurance)",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Full alpha-actinin-3 expression in fast-twitch fibers — sprint/power advantage. Over-represented in Olympic sprinters.",
+      "CT": "Intermediate — mix of fast and slow-twitch properties. Versatile athletic profile.",
+      "TT": "No alpha-actinin-3 (R577X) — endurance advantage. Better muscle efficiency for sustained activity. Over-represented in elite endurance athletes."
+    },
+    "description": "The 'speed gene'. ACTN3 protein is exclusively expressed in fast-twitch muscle fibers. The X allele (T) causes a beneficial shift toward slow-twitch, oxidative muscle properties.",
+    "population_frequency": 0.42,
+    "confidence": "High",
+    "source": "Yang et al., Am J Hum Genet 2003"
+  },
+  {
+    "rsid": "rs4994",
+    "gene": "ADRB3",
+    "trait": "Endurance / Fat Metabolism",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Normal beta-3 adrenergic receptor — standard fat mobilization during exercise.",
+      "CT": "Slightly altered fat metabolism efficiency.",
+      "TT": "Trp64Arg variant — altered fat mobilization. May have less efficient fat burning during endurance exercise. Higher BMI association in some studies."
+    },
+    "description": "Beta-3 adrenergic receptor variant affecting fat metabolism and thermogenesis. The Arg64 variant may impair lipolysis during exercise.",
+    "population_frequency": 0.10,
+    "confidence": "Moderate",
+    "source": "Miwa et al., Clin Genet 1999"
+  },
+  {
+    "rsid": "rs1799752",
+    "gene": "ACE",
+    "trait": "Endurance Performance / VO2max",
+    "category": "Athletic",
+    "genotype_results": {
+      "II": "Insertion/Insertion — lower ACE activity. Endurance advantage. Better altitude acclimatization. Over-represented in elite endurance athletes.",
+      "ID": "Intermediate ACE levels — balanced athletic profile.",
+      "DD": "Deletion/Deletion — higher ACE activity. Power/strength advantage. Better muscle strength response to training."
+    },
+    "description": "ACE insertion/deletion polymorphism. The I allele reduces ACE activity, favoring endurance capacity; the D allele increases ACE and favors power/strength development.",
+    "population_frequency": 0.47,
+    "confidence": "High",
+    "source": "Montgomery et al., Nature 1998"
+  },
+  {
+    "rsid": "rs8192678",
+    "gene": "PPARGC1A",
+    "trait": "Aerobic Capacity / Mitochondrial Function",
+    "category": "Athletic",
+    "genotype_results": {
+      "GG": "Normal PGC-1alpha function — standard mitochondrial biogenesis.",
+      "GA": "Slightly reduced PGC-1alpha activity.",
+      "AA": "Gly482Ser variant — reduced mitochondrial biogenesis response to training. May have lower VO2max improvement with endurance training."
+    },
+    "description": "PGC-1alpha is the master regulator of mitochondrial biogenesis. This variant affects how well your muscles adapt to endurance training.",
+    "population_frequency": 0.36,
+    "confidence": "Moderate",
+    "source": "Lucia et al., J Appl Physiol 2005"
+  },
+  {
+    "rsid": "rs1800169",
+    "gene": "BDNF",
+    "trait": "Exercise-Induced Mood Improvement",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Normal BDNF secretion — standard mood improvement from exercise.",
+      "CT": "Slightly reduced BDNF release.",
+      "TT": "Val66Met — reduced activity-dependent BDNF secretion. May experience less 'runner's high' but exercise is still beneficial."
+    },
+    "description": "BDNF (brain-derived neurotrophic factor) affects neuroplasticity and mood. The Met66 variant reduces activity-dependent BDNF release, potentially affecting exercise-related mood benefits.",
+    "population_frequency": 0.20,
+    "confidence": "Moderate",
+    "source": "Egan et al., Cell 2003"
+  },
+  {
+    "rsid": "rs1800012",
+    "gene": "COL1A1",
+    "trait": "Injury Risk (Tendon/Ligament)",
+    "category": "Athletic",
+    "genotype_results": {
+      "GG": "Normal collagen type 1 — standard tendon and ligament strength.",
+      "GT": "Slightly altered collagen structure.",
+      "TT": "Altered collagen — associated with reduced risk of ACL tears and Achilles tendon injuries, but potentially weaker bones."
+    },
+    "description": "Collagen type I variant affecting connective tissue composition. Paradoxically, the T allele is associated with more flexible tendons (fewer ruptures) but reduced bone mineral density.",
+    "population_frequency": 0.20,
+    "confidence": "Moderate",
+    "source": "Posthumus et al., Br J Sports Med 2009"
+  },
+  {
+    "rsid": "rs7460",
+    "gene": "COL5A1",
+    "trait": "Flexibility / Tendon Properties",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Normal range of motion and tendon stiffness.",
+      "CT": "Slightly increased flexibility.",
+      "TT": "Increased flexibility — associated with greater range of motion. Reduced risk of tendinopathy. Common in endurance athletes."
+    },
+    "description": "Collagen type V variant affecting tendon mechanical properties and flexibility. May influence injury risk and athletic performance.",
+    "population_frequency": 0.40,
+    "confidence": "Moderate",
+    "source": "Collins et al., Br J Sports Med 2009"
+  },
+  {
+    "rsid": "rs660339",
+    "gene": "UCP2",
+    "trait": "Metabolic Efficiency",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Normal metabolic coupling — standard energy efficiency.",
+      "CT": "Slightly altered energy metabolism.",
+      "TT": "Ala55Val — increased mitochondrial uncoupling. May burn more calories at rest (higher metabolic rate) but less energy-efficient for endurance."
+    },
+    "description": "Uncoupling protein 2 variant affecting metabolic efficiency. Affects how tightly mitochondria couple energy production to ATP synthesis.",
+    "population_frequency": 0.40,
+    "confidence": "Low",
+    "source": "Esterbauer et al., Nature Genetics 2001"
+  },
+  {
+    "rsid": "rs2104772",
+    "gene": "TNC",
+    "trait": "Achilles Tendon Injury Risk",
+    "category": "Athletic",
+    "genotype_results": {
+      "TT": "Lower risk of Achilles tendinopathy.",
+      "TA": "Moderate risk.",
+      "AA": "Increased risk of Achilles tendon injuries — altered tenascin C in tendon extracellular matrix."
+    },
+    "description": "Tenascin C variant affecting tendon extracellular matrix composition and injury susceptibility.",
+    "population_frequency": 0.35,
+    "confidence": "Moderate",
+    "source": "Mokone et al., Br J Sports Med 2006"
+  },
+  {
+    "rsid": "rs4680",
+    "gene": "COMT",
+    "trait": "Warrior vs Worrier (Stress Response)",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Val/Val — 'Warrior': Faster dopamine clearance. Better stress resilience and performance under pressure. Lower baseline cognitive performance in calm settings.",
+      "GA": "Val/Met — Balanced: Intermediate dopamine metabolism. Good balance of stress resilience and cognitive performance.",
+      "AA": "Met/Met — 'Worrier': Slower dopamine clearance. Superior working memory, attention, and planning in calm settings. More anxiety-prone under stress."
+    },
+    "description": "COMT catechol-O-methyltransferase determines dopamine breakdown speed in the prefrontal cortex. Affects stress response, cognitive performance, and pain sensitivity.",
+    "population_frequency": 0.50,
+    "confidence": "High",
+    "source": "Stein et al., Am J Med Genet 2006"
+  },
+  {
+    "rsid": "rs53576",
+    "gene": "OXTR",
+    "trait": "Empathy / Social Bonding",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Higher empathy, better social skills, more optimistic. Greater oxytocin receptor expression — stronger social bonding.",
+      "GA": "Intermediate empathy and social behavior.",
+      "AA": "Lower empathy scores on average. May have less social reward sensitivity. Not a deficiency — may be more independent-minded."
+    },
+    "description": "Oxytocin receptor variant affecting social behavior. GG individuals tend to score higher on empathy measures, handle stress better with social support, and are better at reading emotional cues.",
+    "population_frequency": 0.40,
+    "confidence": "Moderate",
+    "source": "Rodrigues et al., PNAS 2009"
+  },
+  {
+    "rsid": "rs4570625",
+    "gene": "TPH2",
+    "trait": "Emotional Reactivity",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Normal serotonin synthesis — standard emotional regulation.",
+      "GT": "Slightly increased emotional reactivity.",
+      "TT": "Higher amygdala reactivity to emotional stimuli — more emotionally responsive. May experience stronger emotional reactions to negative events."
+    },
+    "description": "Tryptophan hydroxylase 2 variant affecting brain serotonin synthesis. Associated with differences in emotional processing and amygdala activation.",
+    "population_frequency": 0.20,
+    "confidence": "Moderate",
+    "source": "Brown et al., Mol Psychiatry 2005"
+  },
+  {
+    "rsid": "rs6265",
+    "gene": "BDNF",
+    "trait": "Memory and Learning",
+    "category": "Behavioral",
+    "genotype_results": {
+      "CC": "Normal BDNF secretion — standard memory function and neuroplasticity.",
+      "CT": "Slightly reduced activity-dependent BDNF release. Subtle effects on memory encoding.",
+      "TT": "Val66Met — reduced BDNF secretion. May have slightly lower episodic memory performance. Higher susceptibility to anxiety. Exercise is particularly beneficial."
+    },
+    "description": "BDNF Val66Met variant affecting brain-derived neurotrophic factor release. Influences memory formation, learning, and stress resilience.",
+    "population_frequency": 0.20,
+    "confidence": "High",
+    "source": "Egan et al., Cell 2003"
+  },
+  {
+    "rsid": "rs25531",
+    "gene": "SLC6A4",
+    "trait": "Stress Sensitivity (Serotonin Transporter)",
+    "category": "Behavioral",
+    "genotype_results": {
+      "TT": "Short/low-expression allele — higher stress sensitivity. More reactive to environmental stressors. May be more susceptible to depression after adverse life events.",
+      "TC": "Intermediate serotonin transporter expression.",
+      "CC": "Long/high-expression allele — more resilient to stress. Lower depression risk after adverse events."
+    },
+    "description": "Functional variant in serotonin transporter gene promoter. Modulates how much serotonin is recycled at synapses, affecting mood regulation and stress vulnerability.",
+    "population_frequency": 0.43,
+    "confidence": "Moderate",
+    "source": "Caspi et al., Science 2003"
+  },
+  {
+    "rsid": "rs1800955",
+    "gene": "DRD4",
+    "trait": "Novelty Seeking / Risk-Taking",
+    "category": "Behavioral",
+    "genotype_results": {
+      "TT": "Higher DRD4 expression — potentially increased novelty seeking, curiosity, and exploratory behavior.",
+      "TC": "Intermediate novelty-seeking tendency.",
+      "CC": "Lower DRD4 expression — may be more cautious and risk-averse."
+    },
+    "description": "Dopamine receptor D4 promoter variant affecting receptor expression. Associated with personality traits related to novelty seeking and exploration.",
+    "population_frequency": 0.40,
+    "confidence": "Low",
+    "source": "Ebstein et al., Nature Genetics 1996"
+  },
+  {
+    "rsid": "rs4307059",
+    "gene": "CDCA7/SP4",
+    "trait": "Perfect Pitch (Musical Ability)",
+    "category": "Behavioral",
+    "genotype_results": {
+      "CC": "Standard pitch discrimination ability.",
+      "CT": "Slightly enhanced pitch discrimination.",
+      "TT": "Associated with enhanced pitch discrimination ability — not perfect pitch alone, but contributes to musical aptitude."
+    },
+    "description": "One of several genetic variants associated with perfect pitch (absolute pitch). Musical ability is highly polygenic and requires early training.",
+    "population_frequency": 0.35,
+    "confidence": "Low",
+    "source": "Theusch et al., Am J Hum Genet 2009"
+  },
+  {
+    "rsid": "rs2760118",
+    "gene": "CLOCK",
+    "trait": "Circadian Rhythm Preference",
+    "category": "Sleep",
+    "genotype_results": {
+      "CC": "Standard circadian rhythm.",
+      "CT": "Slight tendency toward evening chronotype.",
+      "TT": "Evening chronotype preference — natural tendency to stay up later and wake later ('night owl')."
+    },
+    "description": "CLOCK gene variant affecting circadian rhythm. Night owls have different clock gene expression patterns than early birds.",
+    "population_frequency": 0.30,
+    "confidence": "Moderate",
+    "source": "Katzenberg et al., Sleep 1998"
+  },
+  {
+    "rsid": "rs1801260",
+    "gene": "CLOCK",
+    "trait": "Morning vs Evening Person",
+    "category": "Sleep",
+    "genotype_results": {
+      "AA": "Morning chronotype tendency — natural early riser.",
+      "AG": "Intermediate — adaptable to various schedules.",
+      "GG": "Evening chronotype — 'night owl'. Difficulty waking early. Peak performance later in the day."
+    },
+    "description": "Classic CLOCK gene variant. The 3111C allele (G) is associated with eveningness, delayed sleep phase, and reduced sleep duration.",
+    "population_frequency": 0.28,
+    "confidence": "Moderate",
+    "source": "Katzenberg et al., Sleep 1998"
+  },
+  {
+    "rsid": "rs73598374",
+    "gene": "ADA",
+    "trait": "Deep Sleep Quality",
+    "category": "Sleep",
+    "genotype_results": {
+      "CC": "Normal adenosine deaminase activity — standard deep sleep patterns.",
+      "CT": "Reduced ADA activity (~20-30% less). Slower adenosine clearance — increased slow-wave (deep) sleep.",
+      "TT": "Significantly reduced ADA activity. More deep sleep — higher sleep pressure, more intense slow-wave sleep."
+    },
+    "description": "Adenosine deaminase variant affecting adenosine metabolism in the brain. Adenosine is the primary sleep pressure molecule — slower clearance means more deep sleep.",
+    "population_frequency": 0.08,
+    "confidence": "High",
+    "source": "Rétey et al., PNAS 2005"
+  },
+  {
+    "rsid": "rs57875989",
+    "gene": "DEC2/BHLHE41",
+    "trait": "Short Sleeper Gene",
+    "category": "Sleep",
+    "genotype_results": {
+      "CC": "Normal sleep duration requirement (~7-9 hours).",
+      "CT": "May require slightly less sleep than average.",
+      "TT": "Natural short sleeper — can function well on 4-6 hours of sleep. Very rare variant."
+    },
+    "description": "The 'short sleeper' gene. Extremely rare variant allowing some people to function normally with significantly less sleep. Affects circadian transcription factor.",
+    "population_frequency": 0.001,
+    "confidence": "High",
+    "source": "He et al., Science 2009"
+  },
+  {
+    "rsid": "rs228697",
+    "gene": "PER3",
+    "trait": "Sleep Duration Preference",
+    "category": "Sleep",
+    "genotype_results": {
+      "CC": "Standard sleep duration preference.",
+      "CG": "Intermediate sleep characteristics.",
+      "GG": "Associated with morningness — tend to wake earlier and prefer shorter sleep duration."
+    },
+    "description": "PER3 (Period 3) is a core circadian clock gene. Variants affect sleep timing, duration, and chronotype preference.",
+    "population_frequency": 0.20,
+    "confidence": "Moderate",
+    "source": "Ebisawa et al., Am J Hum Genet 2001"
+  },
+  {
+    "rsid": "rs12927162",
+    "gene": "AHR",
+    "trait": "Sleep Timing / Chronotype",
+    "category": "Sleep",
+    "genotype_results": {
+      "TT": "Standard sleep timing.",
+      "TC": "Slightly earlier chronotype.",
+      "CC": "Morning chronotype — associated with earlier sleep and wake times."
+    },
+    "description": "Aryl hydrocarbon receptor variant affecting circadian regulation. GWAS-identified chronotype locus.",
+    "population_frequency": 0.25,
+    "confidence": "Moderate",
+    "source": "Jones et al., Nature Communications 2019"
+  },
+  {
+    "rsid": "rs2287019",
+    "gene": "CRY1",
+    "trait": "Delayed Sleep Phase",
+    "category": "Sleep",
+    "genotype_results": {
+      "CC": "Normal sleep phase timing.",
+      "CT": "Slightly delayed sleep onset.",
+      "TT": "Tendency toward delayed sleep phase — difficulty falling asleep at conventional times."
+    },
+    "description": "Cryptochrome 1 variant affecting the negative limb of the circadian clock. Associated with delayed sleep phase disorder.",
+    "population_frequency": 0.20,
+    "confidence": "Moderate",
+    "source": "Patke et al., Cell 2017"
+  },
+  {
+    "rsid": "rs4481887",
+    "gene": "OR2M7",
+    "trait": "Asparagus Smell Detection in Urine",
+    "category": "Other",
+    "genotype_results": {
+      "GG": "Can smell asparagus metabolites in urine — may notice the distinctive smell after eating asparagus.",
+      "GA": "Intermediate ability to detect asparagus urine smell.",
+      "AA": "Cannot smell asparagus metabolites — asparagus anosmia. Unaware of the urine odor change after eating asparagus."
+    },
+    "description": "Olfactory receptor variant determining whether you can detect the sulfurous compounds in urine after eating asparagus. About 40% of people cannot smell them.",
+    "population_frequency": 0.40,
+    "confidence": "High",
+    "source": "Markt et al., BMJ 2016"
+  },
+  {
+    "rsid": "rs10427255",
+    "gene": "Near 2q22",
+    "trait": "Photic Sneeze Reflex (Sun Sneezing)",
+    "category": "Other",
+    "genotype_results": {
+      "CC": "Normal — no reflex sneezing from bright light.",
+      "CT": "May experience photic sneeze reflex.",
+      "TT": "Photic sneeze reflex — sneezing when exposed to bright light (ACHOO syndrome). Affects ~18-35% of the population."
+    },
+    "description": "Associated with autosomal dominant compulsive helio-ophthalmic outbursts of sneezing (ACHOO syndrome). The reflex is triggered by sudden exposure to bright light.",
+    "population_frequency": 0.25,
+    "confidence": "Moderate",
+    "source": "Eriksson et al., PLoS Genetics 2010"
+  },
+  {
+    "rsid": "rs4778241",
+    "gene": "OCA2",
+    "trait": "Blue vs Non-Blue Eye Color",
+    "category": "Physical",
+    "genotype_results": {
+      "AA": "Contributes to blue eye color when combined with other light-eye alleles.",
+      "AG": "May have lighter eye color.",
+      "GG": "Contributes to darker (non-blue) eye color."
+    },
+    "description": "Additional OCA2 variant contributing to eye color determination.",
+    "population_frequency": 0.40,
+    "confidence": "Moderate",
+    "source": "Liu et al., PLoS Genetics 2010"
+  },
+  {
+    "rsid": "rs7903146",
+    "gene": "TCF7L2",
+    "trait": "Carbohydrate Sensitivity / Diabetes Response",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Normal insulin secretion and glucose metabolism.",
+      "CT": "Modestly impaired insulin secretion — may benefit from moderate carb restriction.",
+      "TT": "Impaired insulin secretion — higher carbohydrate sensitivity. Low-glycemic diet particularly beneficial. ~2x T2D risk."
+    },
+    "description": "Strongest common type 2 diabetes risk variant. Affects insulin secretion in response to carbohydrate intake. Dietary carbohydrate restriction is especially beneficial for risk allele carriers.",
+    "population_frequency": 0.30,
+    "confidence": "High",
+    "source": "Grant et al., Nature Genetics 2006"
+  },
+  {
+    "rsid": "rs9939609",
+    "gene": "FTO",
+    "trait": "Appetite Regulation / Satiety",
+    "category": "Nutrition",
+    "genotype_results": {
+      "TT": "Normal appetite regulation and satiety signals.",
+      "TA": "Slightly increased appetite — ~1.5 kg higher average body weight.",
+      "AA": "Altered satiety signaling — increased appetite, ~3 kg higher average body weight. Physical activity fully attenuates this genetic effect."
+    },
+    "description": "The 'obesity gene' variant affects appetite regulation through FTO's role in ghrelin mRNA modification. Physical activity completely counteracts the genetic risk.",
+    "population_frequency": 0.42,
+    "confidence": "High",
+    "source": "Frayling et al., Science 2007"
+  },
+  {
+    "rsid": "rs1800497",
+    "gene": "ANKK1/DRD2",
+    "trait": "Reward Sensitivity / Addiction Risk",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Normal dopamine receptor density — standard reward processing.",
+      "GA": "Modestly reduced D2 receptor density — slightly increased reward-seeking.",
+      "AA": "Reduced D2 receptor density (~30-40%) — higher reward-seeking behavior. May be more susceptible to addictive behaviors including food, substances, and gambling."
+    },
+    "description": "Variant near DRD2 dopamine receptor affecting receptor density in the brain's reward circuitry. Influences response to pleasurable stimuli and addiction vulnerability.",
+    "population_frequency": 0.20,
+    "confidence": "Moderate",
+    "source": "Noble et al., Arch Gen Psychiatry 1998"
+  },
+  {
+    "rsid": "rs4570625",
+    "gene": "TPH2",
+    "trait": "Anxiety Tendency",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Normal amygdala reactivity — standard anxiety response.",
+      "GT": "Slightly heightened anxiety reactivity.",
+      "TT": "Higher amygdala activation — may be more prone to anxiety, especially in stressful environments. Not diagnostic — many factors contribute to anxiety."
+    },
+    "description": "Tryptophan hydroxylase 2 variant in serotonin synthesis pathway. Affects brain serotonin production and emotional processing in the amygdala.",
+    "population_frequency": 0.20,
+    "confidence": "Moderate",
+    "source": "Canli et al., Science 2005"
+  },
+  {
+    "rsid": "rs6313",
+    "gene": "HTR2A",
+    "trait": "Placebo Response Tendency",
+    "category": "Behavioral",
+    "genotype_results": {
+      "CC": "Lower serotonin 2A receptor expression.",
+      "CT": "Intermediate receptor levels.",
+      "TT": "Higher 5-HT2A receptor expression — associated with stronger placebo responses and more vivid dreams."
+    },
+    "description": "Serotonin 2A receptor variant. Higher expression is associated with stronger placebo effects in clinical trials and more vivid REM sleep dreaming.",
+    "population_frequency": 0.45,
+    "confidence": "Low",
+    "source": "Leuchter et al., Am J Psychiatry 2009"
+  },
+  {
+    "rsid": "rs1006737",
+    "gene": "CACNA1C",
+    "trait": "Creativity / Divergent Thinking",
+    "category": "Behavioral",
+    "genotype_results": {
+      "AA": "Standard calcium channel function.",
+      "AG": "Slightly altered brain calcium signaling.",
+      "GG": "Associated with enhanced verbal fluency and creative thinking in some studies. Also associated with slightly elevated mood disorder risk."
+    },
+    "description": "Calcium channel variant affecting neuronal signaling. Tentatively linked to creative thinking ability, but also associated with bipolar disorder susceptibility.",
+    "population_frequency": 0.30,
+    "confidence": "Low",
+    "source": "Power et al., Nat Neurosci 2015"
+  },
+  {
+    "rsid": "rs1800544",
+    "gene": "ADRA2A",
+    "trait": "Attention / Focus",
+    "category": "Behavioral",
+    "genotype_results": {
+      "CC": "Normal alpha-2A adrenergic receptor function.",
+      "CG": "Slightly altered norepinephrine signaling.",
+      "GG": "Altered prefrontal cortex norepinephrine signaling — may have difficulty with sustained attention tasks."
+    },
+    "description": "Alpha-2A adrenergic receptor variant affecting prefrontal cortex function. Influences attention regulation and response to ADHD medications like guanfacine.",
+    "population_frequency": 0.25,
+    "confidence": "Low",
+    "source": "Park et al., Pharmacogenomics 2008"
+  },
+  {
+    "rsid": "rs4680",
+    "gene": "COMT",
+    "trait": "Pain Sensitivity",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Val/Val — faster dopamine clearance, lower pain sensitivity. Better tolerance of acute pain. May need lower opioid doses.",
+      "GA": "Val/Met — intermediate pain sensitivity.",
+      "AA": "Met/Met — slower dopamine clearance, higher pain sensitivity. May experience more intense pain and require higher analgesic doses."
+    },
+    "description": "COMT Val158Met affects not only stress response but also pain perception. Met/Met individuals have higher pain sensitivity through effects on enkephalin and endorphin signaling.",
+    "population_frequency": 0.50,
+    "confidence": "Moderate",
+    "source": "Zubieta et al., Science 2003"
+  },
+  {
+    "rsid": "rs28532698",
+    "gene": "ALDOB",
+    "trait": "Sweet Taste Preference",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Normal sweet taste preference.",
+      "CA": "Slightly increased sweet preference.",
+      "AA": "Higher preference for sweet foods."
+    },
+    "description": "Variant associated with sweet food preference and consumption patterns.",
+    "population_frequency": 0.20,
+    "confidence": "Low",
+    "source": "Reed et al., Chem Senses 2006"
+  },
+  {
+    "rsid": "rs35744813",
+    "gene": "TAS2R19",
+    "trait": "Grapefruit Bitterness Perception",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Low perception of grapefruit bitterness — likely enjoys grapefruit.",
+      "CT": "Moderate bitterness perception.",
+      "TT": "Strong grapefruit bitterness perception — may dislike grapefruit and similar citrus."
+    },
+    "description": "Bitter taste receptor variant specifically affecting perception of naringin, the bitter compound in grapefruit.",
+    "population_frequency": 0.30,
+    "confidence": "Moderate",
+    "source": "Hayes et al., Chem Senses 2011"
+  },
+  {
+    "rsid": "rs1229984",
+    "gene": "ADH1B",
+    "trait": "Alcohol Metabolism Speed",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Fast alcohol metabolism — rapid alcohol to acetaldehyde conversion. Protective against alcohol dependence but causes unpleasant flushing.",
+      "CT": "Intermediate — faster than average alcohol metabolism.",
+      "TT": "Normal/slow alcohol metabolism — standard alcohol processing speed."
+    },
+    "description": "Alcohol dehydrogenase variant. The fast allele (C) is common in East Asian populations and is strongly protective against alcoholism due to unpleasant acetaldehyde accumulation.",
+    "population_frequency": 0.25,
+    "confidence": "High",
+    "source": "Li et al., Am J Hum Genet 2011"
+  },
+  {
+    "rsid": "rs2273535",
+    "gene": "AURKA",
+    "trait": "Circadian Disruption Tolerance",
+    "category": "Sleep",
+    "genotype_results": {
+      "TT": "Standard tolerance to circadian disruption.",
+      "TA": "Intermediate tolerance to shift work and jet lag.",
+      "AA": "May have better tolerance of circadian disruption — less affected by jet lag and shift work."
+    },
+    "description": "Aurora kinase A variant affecting cell cycle progression and circadian clock interaction.",
+    "population_frequency": 0.30,
+    "confidence": "Low",
+    "source": "Zhu et al., PLoS One 2008"
+  },
+  {
+    "rsid": "rs2241766",
+    "gene": "ADIPOQ",
+    "trait": "Adiponectin Levels / Metabolic Health",
+    "category": "Nutrition",
+    "genotype_results": {
+      "TT": "Normal adiponectin levels — standard metabolic profile.",
+      "TG": "Slightly lower adiponectin.",
+      "GG": "Lower adiponectin levels — associated with insulin resistance and metabolic syndrome. Weight management particularly important."
+    },
+    "description": "Adiponectin gene variant affecting this anti-inflammatory hormone's levels. Lower adiponectin is associated with obesity, insulin resistance, and cardiovascular risk.",
+    "population_frequency": 0.25,
+    "confidence": "Moderate",
+    "source": "Menzaghi et al., J Clin Endocrinol Metab 2007"
+  },
+  {
+    "rsid": "rs1801131",
+    "gene": "MTHFR",
+    "trait": "Folate Metabolism",
+    "category": "Nutrition",
+    "genotype_results": {
+      "TT": "Normal MTHFR activity at this position.",
+      "TG": "Mildly reduced MTHFR activity at A1298C locus.",
+      "GG": "Reduced MTHFR activity — compound heterozygosity with C677T significantly impairs folate metabolism."
+    },
+    "description": "Second MTHFR variant affecting folate metabolism. Primarily significant when combined with C677T variant (compound heterozygote).",
+    "population_frequency": 0.30,
+    "confidence": "Moderate",
+    "source": "van der Put et al., Am J Hum Genet 1998"
+  },
+  {
+    "rsid": "rs602662",
+    "gene": "FUT2",
+    "trait": "Norovirus Resistance",
+    "category": "Other",
+    "genotype_results": {
+      "AA": "Secretor — susceptible to norovirus infection.",
+      "AG": "Secretor — susceptible to most norovirus strains.",
+      "GG": "Non-secretor — significantly resistant to many norovirus strains. ~20% of Europeans are non-secretors."
+    },
+    "description": "FUT2 non-secretors lack ABH blood group antigens in saliva and mucosal surfaces. This makes them resistant to many norovirus strains that use these antigens for cell entry.",
+    "population_frequency": 0.35,
+    "confidence": "High",
+    "source": "Lindesmith et al., Nat Med 2003"
+  },
+  {
+    "rsid": "rs7495174",
+    "gene": "OCA2",
+    "trait": "Eye Color Modifier",
+    "category": "Physical",
+    "genotype_results": {
+      "GG": "Associated with blue eye color.",
+      "GA": "Intermediate effect on eye color.",
+      "AA": "Associated with brown eye color."
+    },
+    "description": "OCA2 regulatory variant contributing to eye color determination.",
+    "population_frequency": 0.45,
+    "confidence": "Moderate",
+    "source": "Duffy et al., Am J Hum Genet 2007"
+  },
+  {
+    "rsid": "rs2070744",
+    "gene": "NOS3",
+    "trait": "Blood Pressure / Exercise Response",
+    "category": "Athletic",
+    "genotype_results": {
+      "TT": "Normal nitric oxide production — standard vasodilation capacity.",
+      "TC": "Intermediate NO production.",
+      "CC": "Reduced NOS3 expression — lower nitric oxide production. May have less exercise-induced vasodilation and higher blood pressure tendency."
+    },
+    "description": "Endothelial nitric oxide synthase variant affecting blood vessel dilation. Influences blood pressure, exercise capacity, and cardiovascular health.",
+    "population_frequency": 0.35,
+    "confidence": "Moderate",
+    "source": "Rankinen et al., Physiol Genomics 2007"
+  },
+  {
+    "rsid": "rs1805086",
+    "gene": "MSTN",
+    "trait": "Muscle Mass / Myostatin",
+    "category": "Athletic",
+    "genotype_results": {
+      "AA": "Normal myostatin function — standard muscle growth regulation.",
+      "AG": "Slightly reduced myostatin activity — may have easier time building muscle mass.",
+      "GG": "Reduced myostatin — enhanced muscle growth potential. Myostatin is a negative regulator of muscle growth."
+    },
+    "description": "Myostatin variant affecting muscle growth regulation. Myostatin limits muscle growth — reduced function variants allow greater muscle hypertrophy response to training.",
+    "population_frequency": 0.05,
+    "confidence": "Low",
+    "source": "Santiago et al., Med Sci Sports Exerc 2011"
+  },
+  {
+    "rsid": "rs4950",
+    "gene": "NRG1",
+    "trait": "Leadership / Social Dominance",
+    "category": "Behavioral",
+    "genotype_results": {
+      "AA": "Standard neuregulin signaling.",
+      "AG": "Slightly altered social behavior tendencies.",
+      "GG": "Associated with leadership role occupancy in twin studies. May have traits that predispose to taking charge in group settings."
+    },
+    "description": "Neuregulin 1 variant tentatively associated with leadership behavior. Effect is very small and heavily influenced by environment and experience.",
+    "population_frequency": 0.35,
+    "confidence": "Low",
+    "source": "De Neve et al., Leadership Quarterly 2013"
+  },
+  {
+    "rsid": "rs1800795",
+    "gene": "IL6",
+    "trait": "Post-Exercise Recovery",
+    "category": "Athletic",
+    "genotype_results": {
+      "GG": "Higher IL-6 response to exercise — stronger inflammatory response. May need longer recovery between intense sessions.",
+      "GC": "Intermediate IL-6 response to exercise.",
+      "CC": "Lower IL-6 response to exercise — may recover faster from intense training. Less exercise-induced inflammation."
+    },
+    "description": "IL-6 variant affecting inflammatory response to exercise. Influences recovery time and muscle damage markers after intense physical activity.",
+    "population_frequency": 0.40,
+    "confidence": "Moderate",
+    "source": "Yamin et al., J Appl Physiol 2008"
+  },
+  {
+    "rsid": "rs1800629",
+    "gene": "TNF",
+    "trait": "Exercise-Induced Inflammation",
+    "category": "Athletic",
+    "genotype_results": {
+      "GG": "Normal TNF-alpha response to exercise.",
+      "GA": "Increased TNF-alpha production after exercise. May experience more post-exercise muscle soreness.",
+      "AA": "High TNF-alpha response — prolonged inflammation after intense exercise. May benefit from anti-inflammatory nutrition strategies."
+    },
+    "description": "TNF-alpha variant affecting inflammatory response magnitude. High producers may experience more delayed-onset muscle soreness and longer recovery times.",
+    "population_frequency": 0.15,
+    "confidence": "Moderate",
+    "source": "Yamin et al., J Appl Physiol 2008"
+  },
+  {
+    "rsid": "rs4988235",
+    "gene": "MCM6/LCT",
+    "trait": "Calcium Absorption from Dairy",
+    "category": "Nutrition",
+    "genotype_results": {
+      "AA": "Lactase persistent — can absorb calcium from dairy products efficiently throughout life.",
+      "AG": "Lactase persistent — dairy calcium absorption maintained.",
+      "GG": "Lactose intolerant — may have reduced calcium absorption from dairy. Consider non-dairy calcium sources or supplements."
+    },
+    "description": "Lactase persistence directly affects ability to use dairy as a calcium source. Lactose-intolerant individuals may need alternative calcium strategies for bone health.",
+    "population_frequency": 0.50,
+    "confidence": "High",
+    "source": "Enattah et al., Nature Genetics 2002"
+  },
+  {
+    "rsid": "rs2395185",
+    "gene": "HLA-DRA",
+    "trait": "Unibrow Tendency",
+    "category": "Physical",
+    "genotype_results": {
+      "CC": "Lower tendency for unibrow (synophrys).",
+      "CT": "Intermediate eyebrow pattern.",
+      "TT": "Higher tendency for connected eyebrows (unibrow)."
+    },
+    "description": "HLA region variant associated with eyebrow thickness and connectivity. One of several genes affecting facial hair patterns.",
+    "population_frequency": 0.30,
+    "confidence": "Low",
+    "source": "Adhikari et al., Nature Communications 2016"
+  },
+  {
+    "rsid": "rs17070145",
+    "gene": "KIBRA",
+    "trait": "Episodic Memory Performance",
+    "category": "Behavioral",
+    "genotype_results": {
+      "CC": "Standard memory performance.",
+      "CT": "Enhanced episodic memory — T allele carriers perform better on memory recall tasks.",
+      "TT": "Enhanced episodic memory performance — better recall of personal events and word lists in cognitive tests."
+    },
+    "description": "KIBRA protein interacts with key memory molecules in the hippocampus. T allele carriers consistently show better episodic memory performance across multiple studies.",
+    "population_frequency": 0.25,
+    "confidence": "Moderate",
+    "source": "Papassotiropoulos et al., Science 2006"
+  },
+  {
+    "rsid": "rs4778241",
+    "gene": "OCA2",
+    "trait": "Tanning Ability",
+    "category": "Physical",
+    "genotype_results": {
+      "GG": "Better tanning ability — more melanin production response to UV.",
+      "GA": "Moderate tanning ability.",
+      "AA": "Reduced tanning — tendency to burn rather than tan with sun exposure."
+    },
+    "description": "OCA2 variant affecting melanin production response to ultraviolet radiation.",
+    "population_frequency": 0.40,
+    "confidence": "Moderate",
+    "source": "Sulem et al., Nature Genetics 2007"
+  },
+  {
+    "rsid": "rs1800629",
+    "gene": "TNF",
+    "trait": "Coffee Consumption Tendency",
+    "category": "Nutrition",
+    "genotype_results": {
+      "GG": "Standard coffee consumption patterns.",
+      "GA": "May tend toward slightly lower coffee consumption.",
+      "AA": "Associated with lower habitual coffee consumption — may be more sensitive to coffee's inflammatory effects."
+    },
+    "description": "TNF-alpha variant influencing habitual coffee consumption through interaction with inflammatory pathways.",
+    "population_frequency": 0.15,
+    "confidence": "Low",
+    "source": "Cornelis et al., Mol Psychiatry 2015"
+  },
+  {
+    "rsid": "rs1800012",
+    "gene": "COL1A1",
+    "trait": "Bone Mineral Density",
+    "category": "Physical",
+    "genotype_results": {
+      "GG": "Normal bone mineral density — standard collagen type I structure.",
+      "GT": "Slightly altered collagen structure.",
+      "TT": "Lower bone mineral density — increased osteoporosis risk. Calcium and vitamin D supplementation recommended."
+    },
+    "description": "Collagen type I variant affecting bone matrix composition and density. The T allele is associated with reduced bone strength.",
+    "population_frequency": 0.20,
+    "confidence": "Moderate",
+    "source": "Mann et al., J Clin Invest 2001"
+  },
+  {
+    "rsid": "rs7566605",
+    "gene": "INSIG2",
+    "trait": "Weight Gain Tendency",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Higher tendency toward weight gain — altered insulin signaling pathway regulation.",
+      "CG": "Intermediate weight gain susceptibility.",
+      "GG": "Standard weight regulation."
+    },
+    "description": "INSIG2 variant affecting insulin-induced gene 2, which regulates lipid metabolism. CC genotype is associated with higher BMI.",
+    "population_frequency": 0.30,
+    "confidence": "Low",
+    "source": "Herbert et al., Science 2006"
+  },
+  {
+    "rsid": "rs662",
+    "gene": "PON1",
+    "trait": "Pesticide Sensitivity / Detoxification",
+    "category": "Nutrition",
+    "genotype_results": {
+      "AA": "Higher paraoxonase activity — better organophosphate pesticide detoxification.",
+      "AG": "Intermediate detoxification capacity.",
+      "GG": "Lower paraoxonase activity — slower pesticide detoxification. May benefit more from organic produce."
+    },
+    "description": "Paraoxonase 1 variant affecting ability to metabolize organophosphate pesticides and oxidized lipids. GG individuals may benefit more from choosing organic foods.",
+    "population_frequency": 0.35,
+    "confidence": "Moderate",
+    "source": "Costa et al., Annu Rev Med 2003"
+  },
+  {
+    "rsid": "rs182549",
+    "gene": "MCM6/LCT",
+    "trait": "Lactase Persistence (Alternative Marker)",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Lactase persistent — can digest lactose into adulthood.",
+      "CT": "Lactase persistent (C is dominant).",
+      "TT": "Lactose intolerant — reduced lactase production after childhood."
+    },
+    "description": "Alternative marker for lactase persistence, in linkage disequilibrium with rs4988235.",
+    "population_frequency": 0.50,
+    "confidence": "High",
+    "source": "Enattah et al., Nature Genetics 2002"
+  },
+  {
+    "rsid": "rs6025",
+    "gene": "F5",
+    "trait": "Blood Clotting Tendency",
+    "category": "Physical",
+    "genotype_results": {
+      "GG": "Normal Factor V — standard clotting regulation.",
+      "GA": "Factor V Leiden carrier — 3-8x increased clotting risk. Important for travel, surgery, and contraceptive decisions.",
+      "AA": "Homozygous Factor V Leiden — 50-80x increased clotting risk. May require prophylactic anticoagulation."
+    },
+    "description": "Factor V Leiden — the most common inherited clotting disorder. Important for understanding personal thrombosis risk, especially before surgery, long flights, or starting hormonal contraception.",
+    "population_frequency": 0.05,
+    "confidence": "High",
+    "source": "ClinVar"
+  },
+  {
+    "rsid": "rs6311",
+    "gene": "HTR2A",
+    "trait": "Impulsivity",
+    "category": "Behavioral",
+    "genotype_results": {
+      "CC": "Higher 5-HT2A expression — may have slightly higher impulsivity.",
+      "CT": "Intermediate serotonin 2A receptor levels.",
+      "TT": "Lower 5-HT2A expression — may be less impulsive."
+    },
+    "description": "Serotonin 2A receptor promoter variant affecting receptor expression. Influences impulsivity, decision-making, and response to serotonergic drugs.",
+    "population_frequency": 0.45,
+    "confidence": "Low",
+    "source": "Jakubczyk et al., J Psychiatr Res 2012"
+  },
+  {
+    "rsid": "rs2230199",
+    "gene": "C3",
+    "trait": "Immune System Strength",
+    "category": "Other",
+    "genotype_results": {
+      "CC": "Normal complement C3 function.",
+      "CG": "Fast C3 form — more active complement system. May have stronger innate immune response.",
+      "GG": "C3 fast variant — enhanced complement activation. Stronger initial immune response but may increase inflammatory risk."
+    },
+    "description": "Complement component 3 variant. The 'fast' form has higher hemolytic activity. Affects innate immune defense strength and inflammation.",
+    "population_frequency": 0.20,
+    "confidence": "Moderate",
+    "source": "Heurich et al., PNAS 2011"
+  },
+  {
+    "rsid": "rs333",
+    "gene": "CCR5",
+    "trait": "HIV Resistance",
+    "category": "Other",
+    "genotype_results": {
+      "wt/wt": "Normal CCR5 receptor — standard HIV susceptibility.",
+      "wt/Δ32": "One copy of delta-32 deletion — partial HIV resistance. Slower disease progression if infected.",
+      "Δ32/Δ32": "Homozygous CCR5-delta32 — highly resistant to HIV-1 infection (R5-tropic strains). ~1% of Northern Europeans."
+    },
+    "description": "32-base pair deletion in CCR5 co-receptor for HIV. Homozygotes are essentially immune to most HIV strains. The 'Berlin patient' was cured of HIV via transplant from a delta-32 donor.",
+    "population_frequency": 0.10,
+    "confidence": "High",
+    "source": "Dean et al., Science 1996"
+  },
+  {
+    "rsid": "rs2802292",
+    "gene": "FOXO3",
+    "trait": "Longevity",
+    "category": "Other",
+    "genotype_results": {
+      "TT": "Standard FOXO3 activity.",
+      "TG": "Modestly increased longevity association.",
+      "GG": "Associated with increased longevity — FOXO3 G allele is over-represented in centenarians across multiple populations."
+    },
+    "description": "FOXO3 is one of the most consistently replicated longevity genes across populations. The G allele enhances cellular stress resistance and DNA repair.",
+    "population_frequency": 0.30,
+    "confidence": "High",
+    "source": "Willcox et al., PNAS 2008"
+  },
+  {
+    "rsid": "rs5882",
+    "gene": "CETP",
+    "trait": "HDL Cholesterol / Longevity",
+    "category": "Other",
+    "genotype_results": {
+      "GG": "Higher CETP activity — standard HDL levels.",
+      "GA": "Intermediate CETP activity.",
+      "AA": "Reduced CETP activity — higher HDL cholesterol. Associated with longevity and cardiovascular protection."
+    },
+    "description": "CETP transfers cholesterol between lipoproteins. Reduced CETP activity raises HDL ('good') cholesterol. This variant has been associated with exceptional longevity in centenarian studies.",
+    "population_frequency": 0.30,
+    "confidence": "Moderate",
+    "source": "Barzilai et al., JAMA 2003"
+  },
+  {
+    "rsid": "rs2228570",
+    "gene": "VDR",
+    "trait": "Vitamin D Sensitivity / Immune Function",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Standard VDR start codon — normal vitamin D receptor function.",
+      "CT": "Intermediate vitamin D receptor activity.",
+      "TT": "Longer VDR protein — less active vitamin D receptor. May need higher vitamin D levels for optimal immune and bone function."
+    },
+    "description": "VDR FokI variant affecting vitamin D receptor protein length and activity. Influences bone mineral density, immune function, and cancer risk.",
+    "population_frequency": 0.35,
+    "confidence": "Moderate",
+    "source": "Uitterlinden et al., Gene 2004"
+  },
+  {
+    "rsid": "rs7041",
+    "gene": "GC",
+    "trait": "Vitamin D Transport",
+    "category": "Nutrition",
+    "genotype_results": {
+      "TT": "GC1s — higher vitamin D binding protein levels. Good vitamin D transport but may need more to achieve optimal free levels.",
+      "TG": "Intermediate binding protein levels.",
+      "GG": "GC2 — lower vitamin D binding protein. Lower total vitamin D but relatively more free (bioavailable) vitamin D."
+    },
+    "description": "Vitamin D binding protein variant affecting total and free vitamin D levels. Determines the ratio of bound to free (active) vitamin D in circulation.",
+    "population_frequency": 0.40,
+    "confidence": "Moderate",
+    "source": "Powe et al., N Engl J Med 2013"
+  },
+  {
+    "rsid": "rs10246939",
+    "gene": "TAS2R38",
+    "trait": "Broccoli/Vegetable Bitterness",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Non-taster — can eat cruciferous vegetables without strong bitterness. Likely enjoys broccoli, kale, Brussels sprouts.",
+      "CT": "Medium taster — moderate perception of vegetable bitterness.",
+      "TT": "Super-taster for glucosinolate bitterness — may avoid healthy cruciferous vegetables due to intense bitter taste."
+    },
+    "description": "Second TAS2R38 variant affecting bitter taste perception. Super-tasters may eat fewer vegetables, potentially missing cancer-protective phytochemicals.",
+    "population_frequency": 0.50,
+    "confidence": "High",
+    "source": "Kim et al., Science 2003"
+  },
+  {
+    "rsid": "rs2187668",
+    "gene": "HLA-DQA1",
+    "trait": "Gluten Sensitivity Predisposition",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "No HLA-DQ2.5 — very low risk of celiac disease.",
+      "CT": "Heterozygous HLA-DQ2.5 carrier — increased celiac disease susceptibility. ~3% lifetime risk.",
+      "TT": "Homozygous HLA-DQ2.5 — highest genetic risk for celiac disease. ~10% lifetime risk."
+    },
+    "description": "HLA-DQ2.5 determines genetic susceptibility to celiac disease (gluten intolerance). Necessary but not sufficient — most carriers never develop celiac disease.",
+    "population_frequency": 0.14,
+    "confidence": "High",
+    "source": "Sollid et al., Immunogenetics 2005"
+  },
+  {
+    "rsid": "rs1695",
+    "gene": "GSTP1",
+    "trait": "Environmental Toxin Clearance",
+    "category": "Other",
+    "genotype_results": {
+      "AA": "Higher GSTP1 activity — more efficient detoxification of environmental toxins.",
+      "AG": "Intermediate detoxification capacity.",
+      "GG": "Lower GSTP1 activity — reduced ability to detoxify polycyclic aromatic hydrocarbons, pesticides, and heavy metals."
+    },
+    "description": "Glutathione S-transferase Pi variant affecting phase II detoxification. Determines how efficiently you clear environmental chemicals and carcinogens.",
+    "population_frequency": 0.35,
+    "confidence": "Moderate",
+    "source": "Ali-Osman et al., J Biol Chem 1997"
+  },
+  {
+    "rsid": "rs7412",
+    "gene": "APOE",
+    "trait": "Dietary Fat Response",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "APOE ε4 haplotype (if rs429358=C) or ε3 — dietary fat significantly affects cholesterol levels.",
+      "CT": "May carry ε2 allele — check combined APOE genotype.",
+      "TT": "APOE ε2 carrier — more responsive to dietary cholesterol changes. Higher triglyceride risk with high-carb diets."
+    },
+    "description": "APOE genotype affects how your body handles dietary fats and cholesterol. ε4 carriers are most sensitive to saturated fat; ε2 carriers are more affected by carbohydrates.",
+    "population_frequency": 0.08,
+    "confidence": "High",
+    "source": "Minihane et al., Proc Nutr Soc 2007"
+  },
+  {
+    "rsid": "rs1800206",
+    "gene": "PPARA",
+    "trait": "Fat Metabolism Efficiency",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Normal PPAR-alpha function — standard fatty acid oxidation.",
+      "CG": "Slightly reduced fat metabolism efficiency.",
+      "GG": "Leu162Val — altered lipid metabolism. May have different response to high-fat diets and fibrate medications."
+    },
+    "description": "PPAR-alpha is a nuclear receptor controlling fat metabolism genes. This variant affects fatty acid oxidation efficiency and response to dietary fats.",
+    "population_frequency": 0.07,
+    "confidence": "Moderate",
+    "source": "Tai et al., J Clin Invest 2002"
+  },
+  {
+    "rsid": "rs1801133",
+    "gene": "MTHFR",
+    "trait": "Folate Requirement (C677T)",
+    "category": "Nutrition",
+    "genotype_results": {
+      "GG": "Normal MTHFR activity — standard folate needs (400mcg/day DFE).",
+      "GA": "Mildly reduced MTHFR (~65% activity) — may benefit from slightly higher folate intake.",
+      "AA": "Significantly reduced MTHFR (~30% activity) — higher folate needs. Consider methylfolate supplementation (600-1000mcg). Especially important before and during pregnancy."
+    },
+    "description": "The most clinically significant nutrigenomics variant. Affects conversion of folic acid to active methylfolate. TT genotype needs active folate forms.",
+    "population_frequency": 0.33,
+    "confidence": "High",
+    "source": "Frosst et al., Nature Genetics 1995"
+  },
+  {
+    "rsid": "rs4646994",
+    "gene": "ACE",
+    "trait": "Blood Pressure Response to Exercise",
+    "category": "Athletic",
+    "genotype_results": {
+      "II": "Lower ACE activity — better endurance performance. Greater blood pressure reduction with regular exercise.",
+      "ID": "Intermediate ACE levels — balanced fitness response.",
+      "DD": "Higher ACE activity — better strength/power gains from training. Less blood pressure reduction benefit from aerobic exercise."
+    },
+    "description": "ACE I/D polymorphism is one of the most studied fitness genetics markers. Influences both athletic potential and cardiovascular response to training.",
+    "population_frequency": 0.47,
+    "confidence": "Moderate",
+    "source": "Rankinen et al., Physiol Genomics 2000"
+  },
+  {
+    "rsid": "rs4253778",
+    "gene": "PPARA",
+    "trait": "Endurance Training Response",
+    "category": "Athletic",
+    "genotype_results": {
+      "GG": "Normal PPAR-alpha — good fat oxidation response to endurance training.",
+      "GC": "Intermediate training adaptation.",
+      "CC": "Reduced fat oxidation adaptation to endurance training. May need more training volume for same improvements."
+    },
+    "description": "PPAR-alpha variant affecting metabolic adaptation to endurance training. Influences fat utilization during prolonged exercise.",
+    "population_frequency": 0.15,
+    "confidence": "Low",
+    "source": "Ahmetov et al., J Strength Cond Res 2006"
+  },
+  {
+    "rsid": "rs1042714",
+    "gene": "ADRB2",
+    "trait": "Exercise Recovery / Fat Loss",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Glu27 — higher fat loss response to exercise. Better lipolysis during physical activity.",
+      "CG": "Intermediate exercise-induced fat loss.",
+      "GG": "Gln27 — reduced exercise-induced lipolysis. May need higher exercise intensity for same fat-loss benefits."
+    },
+    "description": "Beta-2 adrenergic receptor variant affecting exercise-induced fat mobilization. Glu27Gln polymorphism influences how effectively exercise triggers fat burning.",
+    "population_frequency": 0.30,
+    "confidence": "Moderate",
+    "source": "Mori et al., Pharmacogenetics 2001"
+  },
+  {
+    "rsid": "rs4626",
+    "gene": "DIO1",
+    "trait": "Thyroid Hormone Conversion",
+    "category": "Other",
+    "genotype_results": {
+      "AA": "Normal deiodinase 1 — standard T4 to T3 conversion.",
+      "AG": "Slightly altered thyroid hormone conversion.",
+      "GG": "Reduced T4 to T3 conversion — may have relatively lower T3 levels. Can affect metabolism and energy."
+    },
+    "description": "Deiodinase 1 variant affecting conversion of inactive thyroid hormone (T4) to active form (T3). May influence metabolic rate and energy levels.",
+    "population_frequency": 0.35,
+    "confidence": "Moderate",
+    "source": "Panicker et al., J Clin Endocrinol Metab 2008"
+  },
+  {
+    "rsid": "rs225014",
+    "gene": "DIO2",
+    "trait": "T4 to T3 Conversion (Brain)",
+    "category": "Other",
+    "genotype_results": {
+      "CC": "Normal deiodinase 2 — efficient brain T3 production.",
+      "CT": "Slightly reduced brain T3 conversion.",
+      "TT": "Thr92Ala — reduced brain T3 levels. May affect mood and cognition. Some patients feel better on combination T4/T3 therapy."
+    },
+    "description": "Deiodinase 2 variant primarily affecting T3 levels in the brain. The Ala92 variant may contribute to hypothyroid symptoms despite normal blood TSH.",
+    "population_frequency": 0.35,
+    "confidence": "Moderate",
+    "source": "Appelhof et al., J Clin Endocrinol Metab 2005"
+  },
+  {
+    "rsid": "rs13266634",
+    "gene": "SLC30A8",
+    "trait": "Zinc Transport / Diabetes Protection",
+    "category": "Other",
+    "genotype_results": {
+      "CC": "Normal zinc transporter — standard insulin secretion.",
+      "CT": "Intermediate zinc transport in beta cells.",
+      "TT": "Reduced ZnT8 function — modestly increased type 2 diabetes risk. Adequate zinc intake may be particularly important."
+    },
+    "description": "Zinc transporter 8 variant in pancreatic beta cells. Zinc is essential for insulin crystal formation and storage. This variant affects insulin secretion efficiency.",
+    "population_frequency": 0.30,
+    "confidence": "Moderate",
+    "source": "Sladek et al., Nature 2007"
+  },
+  {
+    "rsid": "rs7602",
+    "gene": "HIF1A",
+    "trait": "Altitude Adaptation / Oxygen Response",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Normal HIF-1alpha — standard altitude acclimatization.",
+      "CT": "Slightly enhanced hypoxic response.",
+      "TT": "Enhanced HIF response — may acclimatize to altitude faster. Better performance at high elevation."
+    },
+    "description": "Hypoxia-inducible factor 1-alpha variant affecting the body's response to low oxygen. Important for altitude athletes and high-elevation performance.",
+    "population_frequency": 0.20,
+    "confidence": "Low",
+    "source": "Döring et al., Physiol Genomics 2010"
+  },
+  {
+    "rsid": "rs6232",
+    "gene": "PCSK1",
+    "trait": "Obesity / Appetite Control",
+    "category": "Nutrition",
+    "genotype_results": {
+      "GG": "Normal prohormone convertase — standard appetite regulation.",
+      "GA": "Slightly altered prohormone processing.",
+      "AA": "Impaired prohormone processing — associated with increased obesity risk through effects on appetite hormones."
+    },
+    "description": "Prohormone convertase 1 variant affecting processing of appetite-regulating hormones including proinsulin, proglucagon, and POMC.",
+    "population_frequency": 0.07,
+    "confidence": "Moderate",
+    "source": "Benzinou et al., Nature Genetics 2008"
+  },
+  {
+    "rsid": "rs7799039",
+    "gene": "LEP",
+    "trait": "Leptin Levels / Satiety",
+    "category": "Nutrition",
+    "genotype_results": {
+      "GG": "Normal leptin production — standard satiety signaling.",
+      "GA": "Slightly lower leptin levels.",
+      "AA": "Lower leptin levels — may have reduced satiety signaling. Could contribute to overeating tendency."
+    },
+    "description": "Leptin gene promoter variant affecting leptin hormone production. Leptin signals satiety to the brain — lower levels may reduce feeling of fullness after meals.",
+    "population_frequency": 0.35,
+    "confidence": "Low",
+    "source": "Mammès et al., Hum Mol Genet 1998"
+  },
+  {
+    "rsid": "rs1137101",
+    "gene": "LEPR",
+    "trait": "Leptin Sensitivity",
+    "category": "Nutrition",
+    "genotype_results": {
+      "AA": "Normal leptin receptor — standard satiety response.",
+      "AG": "Slightly reduced leptin sensitivity.",
+      "GG": "Reduced leptin receptor function — may be less sensitive to satiety signals. Higher tendency toward weight gain."
+    },
+    "description": "Leptin receptor variant affecting how well your brain responds to leptin satiety signals. Reduced sensitivity can lead to overeating.",
+    "population_frequency": 0.25,
+    "confidence": "Moderate",
+    "source": "Chagnon et al., Mol Med 1997"
+  },
+  {
+    "rsid": "rs17782313",
+    "gene": "MC4R",
+    "trait": "Appetite and Meal Size",
+    "category": "Nutrition",
+    "genotype_results": {
+      "TT": "Normal MC4R — standard appetite regulation.",
+      "TC": "Slightly increased appetite and meal size.",
+      "CC": "Increased appetite — ~1.5 kg higher body weight per risk allele. Tendency toward larger meal portions."
+    },
+    "description": "Melanocortin 4 receptor variant affecting appetite regulation in the hypothalamus. MC4R is a critical node in the leptin-melanocortin appetite control pathway.",
+    "population_frequency": 0.25,
+    "confidence": "High",
+    "source": "Loos et al., Nature Genetics 2008"
+  },
+  {
+    "rsid": "rs4680",
+    "gene": "COMT",
+    "trait": "Estrogen Metabolism",
+    "category": "Other",
+    "genotype_results": {
+      "GG": "Val/Val — faster COMT activity. More efficient estrogen detoxification. Lower breast cancer risk from estrogen exposure.",
+      "GA": "Val/Met — intermediate estrogen metabolism.",
+      "AA": "Met/Met — slower COMT activity. Less efficient estrogen breakdown. May have slightly higher estrogen-related cancer risk."
+    },
+    "description": "COMT also metabolizes catechol estrogens. Slower metabolism (Met/Met) may lead to higher levels of potentially genotoxic estrogen metabolites.",
+    "population_frequency": 0.50,
+    "confidence": "Moderate",
+    "source": "Lavigne et al., Cancer Res 1997"
+  }
+]

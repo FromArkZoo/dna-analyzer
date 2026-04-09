@@ -1,0 +1,79 @@
+# Added by project-init batch
+
+# Dependencies
+node_modules/
+bower_components/
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+Pods/
+
+# Build / output
+dist/
+build/
+out/
+.next/
+.nuxt/
+.parcel-cache/
+target/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+
+# Godot
+.godot/
+.import/
+export_presets.cfg
+
+# Environment / secrets (safety net — never commit these)
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.pem
+*.key
+*.p12
+*.mobileprovision
+credentials.json
+secrets.json
+secrets.yml
+config.local.*
+.netrc
+
+# IDE / editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Claude Code local state (plans, notes — private)
+.claude/
+
+# Logs
+*.log
+logs/
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Misc
+.cache/
+coverage/
+
+# ---- Large reference data (added post-init) ----
+# These are downloaded / built by setup_database.py from public NIH/NCBI sources.
+# Do not commit — regenerate locally instead.
+data/reference.db
+data/reference.db-shm
+data/reference.db-wal
+data/downloads/
