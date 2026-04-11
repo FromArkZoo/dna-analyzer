@@ -5,9 +5,9 @@
     "trait": "Caffeine Metabolism Speed",
     "category": "Nutrition",
     "genotype_results": {
-      "AA": "Fast caffeine metabolizer — rapid clearance. Can typically tolerate higher caffeine intake without adverse cardiovascular effects.",
-      "AC": "Moderate caffeine metabolizer — intermediate clearance speed.",
-      "CC": "Slow caffeine metabolizer — caffeine stays in system longer. Associated with increased heart attack risk with high coffee consumption (>3 cups/day)."
+      "AA": "Fast caffeine metabolizer \u2014 rapid clearance. Can typically tolerate higher caffeine intake without adverse cardiovascular effects.",
+      "AC": "Moderate caffeine metabolizer \u2014 intermediate clearance speed.",
+      "CC": "Slow caffeine metabolizer \u2014 caffeine stays in system longer. Associated with increased heart attack risk with high coffee consumption (>3 cups/day)."
     },
     "description": "Determines how quickly your body breaks down caffeine. Fast metabolizers can drink more coffee without jitteriness; slow metabolizers may experience prolonged effects and should limit intake.",
     "population_frequency": 0.46,
@@ -20,12 +20,12 @@
     "trait": "Lactose Tolerance",
     "category": "Nutrition",
     "genotype_results": {
-      "AA": "Lactase persistent — can digest dairy into adulthood without issues.",
-      "AG": "Lactase persistent — can digest dairy normally.",
-      "GG": "Lactose intolerant — lactase production declines after childhood. Dairy consumption may cause bloating, gas, and digestive discomfort."
+      "AA": "Lactase persistent \u2014 can digest dairy into adulthood without issues.",
+      "AG": "Lactase persistent \u2014 can digest dairy normally.",
+      "GG": "Lactose intolerant \u2014 lactase production declines after childhood. Dairy consumption may cause bloating, gas, and digestive discomfort."
     },
     "description": "Controls whether you continue producing the lactase enzyme into adulthood. The A allele arose ~10,000 years ago in European dairy-farming populations.",
-    "population_frequency": 0.50,
+    "population_frequency": 0.5,
     "confidence": "High",
     "source": "Enattah et al., Nature Genetics 2002"
   },
@@ -35,9 +35,9 @@
     "trait": "Alcohol Flush Reaction",
     "category": "Nutrition",
     "genotype_results": {
-      "GG": "Normal ALDH2 activity — efficient acetaldehyde metabolism. No flush reaction.",
-      "GA": "Reduced ALDH2 activity — facial flushing, nausea after drinking alcohol. ~6x increased esophageal cancer risk with regular drinking.",
-      "AA": "Non-functional ALDH2 — severe alcohol intolerance. Strong flushing, rapid heart rate, nausea. Strongly protective against alcoholism but elevated cancer risk if drinking."
+      "GG": "Normal ALDH2 activity \u2014 efficient acetaldehyde metabolism. No flush reaction.",
+      "GA": "Reduced ALDH2 activity \u2014 facial flushing, nausea after drinking alcohol. ~6x increased esophageal cancer risk with regular drinking.",
+      "AA": "Non-functional ALDH2 \u2014 severe alcohol intolerance. Strong flushing, rapid heart rate, nausea. Strongly protective against alcoholism but elevated cancer risk if drinking."
     },
     "description": "The 'Asian flush' gene. Determines how efficiently you break down acetaldehyde, a toxic alcohol metabolite. Common in East Asian populations (~30-50% carry at least one A allele).",
     "population_frequency": 0.18,
@@ -50,9 +50,9 @@
     "trait": "Cilantro Taste Perception",
     "category": "Nutrition",
     "genotype_results": {
-      "CC": "Likely perceives cilantro as fresh and herbal — normal cilantro enjoyment.",
+      "CC": "Likely perceives cilantro as fresh and herbal \u2014 normal cilantro enjoyment.",
       "CA": "May have mild soapy perception of cilantro.",
-      "AA": "Likely perceives cilantro as soapy or unpleasant — genetic basis for cilantro aversion."
+      "AA": "Likely perceives cilantro as soapy or unpleasant \u2014 genetic basis for cilantro aversion."
     },
     "description": "Variant in an olfactory receptor gene that affects perception of aldehyde chemicals in cilantro leaves. About 14% of people of European ancestry report cilantro tastes like soap.",
     "population_frequency": 0.15,
@@ -65,12 +65,12 @@
     "trait": "Bitter Taste Perception (PTC/PROP)",
     "category": "Nutrition",
     "genotype_results": {
-      "GG": "Non-taster — cannot taste PTC/PROP bitterness. May have higher tolerance for bitter vegetables (broccoli, Brussels sprouts, kale).",
-      "GC": "Medium taster — moderate perception of bitterness.",
-      "CC": "Super-taster — strong perception of bitter compounds. May dislike cruciferous vegetables, black coffee, grapefruit, and dark chocolate."
+      "GG": "Non-taster \u2014 cannot taste PTC/PROP bitterness. May have higher tolerance for bitter vegetables (broccoli, Brussels sprouts, kale).",
+      "GC": "Medium taster \u2014 moderate perception of bitterness.",
+      "CC": "Super-taster \u2014 strong perception of bitter compounds. May dislike cruciferous vegetables, black coffee, grapefruit, and dark chocolate."
     },
     "description": "Part of the TAS2R38 bitter taste receptor. Super-tasters experience more intense bitter flavors, which can influence dietary choices and nutritional patterns.",
-    "population_frequency": 0.50,
+    "population_frequency": 0.5,
     "confidence": "High",
     "source": "Kim et al., Science 2003"
   },
@@ -82,10 +82,10 @@
     "genotype_results": {
       "GG": "Normal CBS activity. Standard B6 and homocysteine metabolism.",
       "GA": "Slightly increased CBS activity. May have faster homocysteine clearance.",
-      "AA": "Increased CBS activity — faster homocysteine to cysteine conversion. May deplete vitamin B6 more rapidly."
+      "AA": "Increased CBS activity \u2014 faster homocysteine to cysteine conversion. May deplete vitamin B6 more rapidly."
     },
     "description": "Cystathionine beta-synthase variant affecting vitamin B6 utilization and homocysteine metabolism pathway.",
-    "population_frequency": 0.40,
+    "population_frequency": 0.4,
     "confidence": "Moderate",
     "source": "Kraus et al., Hum Mutat 1999"
   },
@@ -97,7 +97,7 @@
     "genotype_results": {
       "AA": "Normal B12 levels expected.",
       "AG": "Slightly lower average B12 levels.",
-      "GG": "Non-secretor status — associated with lower vitamin B12 levels. May benefit from B12 supplementation or monitoring."
+      "GG": "Non-secretor status \u2014 associated with lower vitamin B12 levels. May benefit from B12 supplementation or monitoring."
     },
     "description": "FUT2 secretor status affects gut microbiome composition and vitamin B12 absorption efficiency.",
     "population_frequency": 0.35,
@@ -110,9 +110,9 @@
     "trait": "Beta-Carotene to Vitamin A Conversion",
     "category": "Nutrition",
     "genotype_results": {
-      "AA": "Normal beta-carotene conversion — efficiently converts plant-based carotenoids to vitamin A.",
+      "AA": "Normal beta-carotene conversion \u2014 efficiently converts plant-based carotenoids to vitamin A.",
       "AT": "Reduced conversion efficiency (~32% reduction). May benefit from preformed vitamin A sources (eggs, dairy, liver).",
-      "TT": "Significantly reduced conversion (~69% reduction). Poor converter — plant-based carotenoids are less effective vitamin A sources."
+      "TT": "Significantly reduced conversion (~69% reduction). Poor converter \u2014 plant-based carotenoids are less effective vitamin A sources."
     },
     "description": "Determines how efficiently you convert beta-carotene (carrots, sweet potatoes) into active vitamin A. Poor converters may need animal-sourced vitamin A or supplements.",
     "population_frequency": 0.42,
@@ -127,7 +127,7 @@
     "genotype_results": {
       "CC": "Normal conversion efficiency.",
       "CT": "Modestly reduced beta-carotene conversion.",
-      "TT": "Reduced conversion — combined with rs12934922 variants may significantly impair vitamin A production from plant sources."
+      "TT": "Reduced conversion \u2014 combined with rs12934922 variants may significantly impair vitamin A production from plant sources."
     },
     "description": "Second BCMO1 variant affecting beta-carotene to vitamin A conversion. Effects are additive with rs12934922.",
     "population_frequency": 0.24,
@@ -140,12 +140,12 @@
     "trait": "Vitamin D Levels",
     "category": "Nutrition",
     "genotype_results": {
-      "TT": "Normal vitamin D binding protein — standard vitamin D levels expected.",
+      "TT": "Normal vitamin D binding protein \u2014 standard vitamin D levels expected.",
       "TG": "Modestly lower vitamin D levels.",
-      "GG": "Lower vitamin D binding protein levels — associated with ~25% lower serum 25(OH)D. Higher supplementation may be needed."
+      "GG": "Lower vitamin D binding protein levels \u2014 associated with ~25% lower serum 25(OH)D. Higher supplementation may be needed."
     },
     "description": "Variant in vitamin D binding protein (GC globulin) affecting circulating vitamin D levels. One of the strongest genetic determinants of vitamin D status.",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "High",
     "source": "Wang et al., Lancet 2010"
   },
@@ -155,9 +155,9 @@
     "trait": "Vitamin D Receptor Sensitivity",
     "category": "Nutrition",
     "genotype_results": {
-      "CC": "Normal VDR function — standard vitamin D response.",
+      "CC": "Normal VDR function \u2014 standard vitamin D response.",
       "CT": "Slightly altered VDR function.",
-      "TT": "Altered vitamin D receptor — may need higher vitamin D levels for optimal bone health and immune function."
+      "TT": "Altered vitamin D receptor \u2014 may need higher vitamin D levels for optimal bone health and immune function."
     },
     "description": "Vitamin D receptor variant affecting calcium absorption and bone mineral density.",
     "population_frequency": 0.35,
@@ -170,9 +170,9 @@
     "trait": "Vitamin B12 Utilization",
     "category": "Nutrition",
     "genotype_results": {
-      "AA": "Normal methionine synthase reductase — efficient B12 recycling.",
+      "AA": "Normal methionine synthase reductase \u2014 efficient B12 recycling.",
       "AG": "Slightly reduced B12 recycling efficiency.",
-      "GG": "Reduced MTRR activity — less efficient B12 utilization. May benefit from higher B12 intake, especially methylcobalamin form."
+      "GG": "Reduced MTRR activity \u2014 less efficient B12 utilization. May benefit from higher B12 intake, especially methylcobalamin form."
     },
     "description": "Affects how efficiently your body recycles vitamin B12 in the methionine cycle. Important for methylation and homocysteine control.",
     "population_frequency": 0.45,
@@ -187,7 +187,7 @@
     "genotype_results": {
       "CC": "Higher average vitamin B6 levels.",
       "CT": "Average vitamin B6 levels.",
-      "TT": "Lower average vitamin B6 levels — may benefit from B6 supplementation."
+      "TT": "Lower average vitamin B6 levels \u2014 may benefit from B6 supplementation."
     },
     "description": "Common variant associated with circulating vitamin B6 (pyridoxal 5'-phosphate) levels.",
     "population_frequency": 0.48,
@@ -232,7 +232,7 @@
     "genotype_results": {
       "CC": "Normal glucose sensing in brain and gut.",
       "CT": "Slightly altered glucose transport.",
-      "TT": "Altered glucose transporter — associated with higher habitual sugar consumption (~5-10% more daily sugar intake)."
+      "TT": "Altered glucose transporter \u2014 associated with higher habitual sugar consumption (~5-10% more daily sugar intake)."
     },
     "description": "GLUT2 glucose transporter variant affecting brain glucose sensing and dietary sugar preferences.",
     "population_frequency": 0.13,
@@ -245,9 +245,9 @@
     "trait": "Fat Taste Sensitivity",
     "category": "Nutrition",
     "genotype_results": {
-      "GG": "Higher fat taste sensitivity — can detect low concentrations of fatty acids. May naturally prefer lower-fat foods.",
+      "GG": "Higher fat taste sensitivity \u2014 can detect low concentrations of fatty acids. May naturally prefer lower-fat foods.",
       "GA": "Intermediate fat taste sensitivity.",
-      "AA": "Reduced fat taste sensitivity — cannot detect fat as easily. May prefer higher-fat foods for satisfaction."
+      "AA": "Reduced fat taste sensitivity \u2014 cannot detect fat as easily. May prefer higher-fat foods for satisfaction."
     },
     "description": "Fat taste receptor variant affecting oral fat perception. People with reduced sensitivity may consume more dietary fat to achieve satisfaction.",
     "population_frequency": 0.48,
@@ -265,7 +265,7 @@
       "AA": "Brown eyes (~95% probability of brown eyes)."
     },
     "description": "The single most important genetic variant for eye color. Controls OCA2 expression, which determines melanin production in the iris.",
-    "population_frequency": 0.40,
+    "population_frequency": 0.4,
     "confidence": "High",
     "source": "Eiberg et al., Hum Genet 2008"
   },
@@ -275,9 +275,9 @@
     "trait": "Red Hair / Fair Skin",
     "category": "Physical",
     "genotype_results": {
-      "CC": "Normal MC1R function — eumelanin production (darker pigmentation).",
-      "CT": "Carrier — may have reddish hair tones, fair skin, freckling. Mild increase in melanoma risk.",
-      "TT": "Two MC1R variants — likely red hair, very fair skin, heavy freckling. ~3-4x melanoma risk."
+      "CC": "Normal MC1R function \u2014 eumelanin production (darker pigmentation).",
+      "CT": "Carrier \u2014 may have reddish hair tones, fair skin, freckling. Mild increase in melanoma risk.",
+      "TT": "Two MC1R variants \u2014 likely red hair, very fair skin, heavy freckling. ~3-4x melanoma risk."
     },
     "description": "Major red hair variant. Shifts melanin production from dark eumelanin to red/yellow pheomelanin. One of several MC1R variants contributing to red hair phenotype.",
     "population_frequency": 0.08,
@@ -305,9 +305,9 @@
     "trait": "Skin Pigmentation",
     "category": "Physical",
     "genotype_results": {
-      "AA": "Light skin pigmentation — European-type. Reduced melanin in skin.",
+      "AA": "Light skin pigmentation \u2014 European-type. Reduced melanin in skin.",
       "AG": "Intermediate skin pigmentation.",
-      "GG": "Darker skin pigmentation — ancestral allele. Higher melanin production."
+      "GG": "Darker skin pigmentation \u2014 ancestral allele. Higher melanin production."
     },
     "description": "The most significant single variant for light skin pigmentation in European populations. Nearly fixed for the A allele in Europeans, nearly absent in West Africans and East Asians.",
     "population_frequency": 0.55,
@@ -320,9 +320,9 @@
     "trait": "Skin Pigmentation (Secondary)",
     "category": "Physical",
     "genotype_results": {
-      "GG": "Light skin — derived European allele.",
+      "GG": "Light skin \u2014 derived European allele.",
       "GC": "Intermediate pigmentation.",
-      "CC": "Darker skin — ancestral allele."
+      "CC": "Darker skin \u2014 ancestral allele."
     },
     "description": "Second major skin pigmentation gene. Works together with SLC24A5 to determine melanin production in skin.",
     "population_frequency": 0.45,
@@ -337,10 +337,10 @@
     "genotype_results": {
       "CC": "Wet, sticky earwax. Normal apocrine gland secretion and body odor.",
       "CT": "Wet earwax type (C is dominant).",
-      "TT": "Dry, flaky earwax. Reduced body odor — fewer apocrine secretions. Common in East Asian populations (~80-95%)."
+      "TT": "Dry, flaky earwax. Reduced body odor \u2014 fewer apocrine secretions. Common in East Asian populations (~80-95%)."
     },
     "description": "Controls apocrine gland secretion type. The T allele reduces ABCC11 transporter function, leading to dry earwax and less body odor. Also affects axillary (underarm) sweat composition.",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "High",
     "source": "Yoshiura et al., Nature Genetics 2006"
   },
@@ -370,7 +370,7 @@
       "GG": "Higher freckling tendency, especially with sun exposure."
     },
     "description": "Variant associated with freckling density, particularly in sun-exposed areas.",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "Moderate",
     "source": "Sulem et al., Nature Genetics 2007"
   },
@@ -380,9 +380,9 @@
     "trait": "Skin Sensitivity to Sun",
     "category": "Physical",
     "genotype_results": {
-      "GG": "Normal UV sensitivity — standard sun response.",
+      "GG": "Normal UV sensitivity \u2014 standard sun response.",
       "GA": "Slightly increased sun sensitivity.",
-      "AA": "Increased sun sensitivity — burns more easily. Higher UV damage susceptibility."
+      "AA": "Increased sun sensitivity \u2014 burns more easily. Higher UV damage susceptibility."
     },
     "description": "MC1R variant affecting melanocortin receptor function and UV response. Contributes to sun sensitivity independent of hair/skin color.",
     "population_frequency": 0.08,
@@ -396,7 +396,7 @@
     "category": "Physical",
     "genotype_results": {
       "GG": "Standard eye color (brown if no blue-eye alleles).",
-      "GA": "May have lighter eye color — increased chance of green or hazel eyes.",
+      "GA": "May have lighter eye color \u2014 increased chance of green or hazel eyes.",
       "AA": "Strongly associated with green/hazel eyes and lighter iris pigmentation."
     },
     "description": "OCA2 variant that modifies eye color, particularly contributing to green eye color. Works in combination with HERC2 rs12913832.",
@@ -425,12 +425,12 @@
     "trait": "Skin and Eye Pigmentation",
     "category": "Physical",
     "genotype_results": {
-      "CC": "Standard tyrosinase activity — normal melanin production.",
-      "CA": "Slightly reduced melanin — may have lighter complexion.",
-      "AA": "Reduced tyrosinase activity — lighter skin and eye color."
+      "CC": "Standard tyrosinase activity \u2014 normal melanin production.",
+      "CA": "Slightly reduced melanin \u2014 may have lighter complexion.",
+      "AA": "Reduced tyrosinase activity \u2014 lighter skin and eye color."
     },
     "description": "Tyrosinase is the rate-limiting enzyme in melanin synthesis. This variant affects overall pigmentation levels.",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "Moderate",
     "source": "Sulem et al., Nature Genetics 2007"
   },
@@ -441,8 +441,8 @@
     "category": "Physical",
     "genotype_results": {
       "CC": "Normal MC1R function.",
-      "CG": "Carrier — possible reddish tones, increased sun sensitivity.",
-      "GG": "Strong red hair variant — likely red/auburn hair with fair skin."
+      "CG": "Carrier \u2014 possible reddish tones, increased sun sensitivity.",
+      "GG": "Strong red hair variant \u2014 likely red/auburn hair with fair skin."
     },
     "description": "Another major MC1R red hair variant (D294H). One of the 'R' (strong) MC1R variants.",
     "population_frequency": 0.02,
@@ -460,7 +460,7 @@
       "GG": "Associated with lighter/blond hair."
     },
     "description": "TYRP1 variant contributing to eumelanin levels in hair. Part of the polygenic basis of hair color variation.",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "Moderate",
     "source": "Sulem et al., Nature Genetics 2007"
   },
@@ -475,7 +475,7 @@
       "CC": "Increased risk of male pattern baldness."
     },
     "description": "One of several genetic variants contributing to androgenetic alopecia. Hair loss is highly polygenic.",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "Moderate",
     "source": "Heilmann et al., Nature Communications 2013"
   },
@@ -485,7 +485,7 @@
     "trait": "Male Pattern Baldness (X-linked)",
     "category": "Physical",
     "genotype_results": {
-      "GG": "Increased risk of androgenetic alopecia — higher androgen receptor sensitivity.",
+      "GG": "Increased risk of androgenetic alopecia \u2014 higher androgen receptor sensitivity.",
       "GA": "Moderate baldness risk.",
       "AA": "Lower risk of male pattern baldness."
     },
@@ -502,10 +502,10 @@
     "genotype_results": {
       "AA": "Standard pigmentation.",
       "AG": "Slightly lighter skin.",
-      "GG": "Lighter skin pigmentation — variant common in East Asian populations contributing to lighter skin tone."
+      "GG": "Lighter skin pigmentation \u2014 variant common in East Asian populations contributing to lighter skin tone."
     },
     "description": "OCA2 variant selected for lighter pigmentation in East Asian populations, through a different mechanism than European skin lightening variants.",
-    "population_frequency": 0.20,
+    "population_frequency": 0.2,
     "confidence": "High",
     "source": "Edwards et al., PLoS Genetics 2010"
   },
@@ -517,7 +517,7 @@
     "genotype_results": {
       "AA": "Straight hair tendency.",
       "AT": "Slightly wavy hair.",
-      "TT": "Curly or wavy hair tendency — trichohyalin protein variant affecting hair cross-linking."
+      "TT": "Curly or wavy hair tendency \u2014 trichohyalin protein variant affecting hair cross-linking."
     },
     "description": "Variant in trichohyalin, a structural protein in hair follicles. Affects hair fiber shape and curliness in European populations.",
     "population_frequency": 0.15,
@@ -530,9 +530,9 @@
     "trait": "Muscle Fiber Type (Speed vs Endurance)",
     "category": "Athletic",
     "genotype_results": {
-      "CC": "Full alpha-actinin-3 expression in fast-twitch fibers — sprint/power advantage. Over-represented in Olympic sprinters.",
-      "CT": "Intermediate — mix of fast and slow-twitch properties. Versatile athletic profile.",
-      "TT": "No alpha-actinin-3 (R577X) — endurance advantage. Better muscle efficiency for sustained activity. Over-represented in elite endurance athletes."
+      "CC": "Full alpha-actinin-3 expression in fast-twitch fibers \u2014 sprint/power advantage. Over-represented in Olympic sprinters.",
+      "CT": "Intermediate \u2014 mix of fast and slow-twitch properties. Versatile athletic profile.",
+      "TT": "No alpha-actinin-3 (R577X) \u2014 endurance advantage. Better muscle efficiency for sustained activity. Over-represented in elite endurance athletes."
     },
     "description": "The 'speed gene'. ACTN3 protein is exclusively expressed in fast-twitch muscle fibers. The X allele (T) causes a beneficial shift toward slow-twitch, oxidative muscle properties.",
     "population_frequency": 0.42,
@@ -545,12 +545,12 @@
     "trait": "Endurance / Fat Metabolism",
     "category": "Athletic",
     "genotype_results": {
-      "CC": "Normal beta-3 adrenergic receptor — standard fat mobilization during exercise.",
+      "CC": "Normal beta-3 adrenergic receptor \u2014 standard fat mobilization during exercise.",
       "CT": "Slightly altered fat metabolism efficiency.",
-      "TT": "Trp64Arg variant — altered fat mobilization. May have less efficient fat burning during endurance exercise. Higher BMI association in some studies."
+      "TT": "Trp64Arg variant \u2014 altered fat mobilization. May have less efficient fat burning during endurance exercise. Higher BMI association in some studies."
     },
     "description": "Beta-3 adrenergic receptor variant affecting fat metabolism and thermogenesis. The Arg64 variant may impair lipolysis during exercise.",
-    "population_frequency": 0.10,
+    "population_frequency": 0.1,
     "confidence": "Moderate",
     "source": "Miwa et al., Clin Genet 1999"
   },
@@ -560,9 +560,9 @@
     "trait": "Endurance Performance / VO2max",
     "category": "Athletic",
     "genotype_results": {
-      "II": "Insertion/Insertion — lower ACE activity. Endurance advantage. Better altitude acclimatization. Over-represented in elite endurance athletes.",
-      "ID": "Intermediate ACE levels — balanced athletic profile.",
-      "DD": "Deletion/Deletion — higher ACE activity. Power/strength advantage. Better muscle strength response to training."
+      "II": "Insertion/Insertion \u2014 lower ACE activity. Endurance advantage. Better altitude acclimatization. Over-represented in elite endurance athletes.",
+      "ID": "Intermediate ACE levels \u2014 balanced athletic profile.",
+      "DD": "Deletion/Deletion \u2014 higher ACE activity. Power/strength advantage. Better muscle strength response to training."
     },
     "description": "ACE insertion/deletion polymorphism. The I allele reduces ACE activity, favoring endurance capacity; the D allele increases ACE and favors power/strength development.",
     "population_frequency": 0.47,
@@ -575,9 +575,9 @@
     "trait": "Aerobic Capacity / Mitochondrial Function",
     "category": "Athletic",
     "genotype_results": {
-      "GG": "Normal PGC-1alpha function — standard mitochondrial biogenesis.",
+      "GG": "Normal PGC-1alpha function \u2014 standard mitochondrial biogenesis.",
       "GA": "Slightly reduced PGC-1alpha activity.",
-      "AA": "Gly482Ser variant — reduced mitochondrial biogenesis response to training. May have lower VO2max improvement with endurance training."
+      "AA": "Gly482Ser variant \u2014 reduced mitochondrial biogenesis response to training. May have lower VO2max improvement with endurance training."
     },
     "description": "PGC-1alpha is the master regulator of mitochondrial biogenesis. This variant affects how well your muscles adapt to endurance training.",
     "population_frequency": 0.36,
@@ -590,12 +590,12 @@
     "trait": "Exercise-Induced Mood Improvement",
     "category": "Athletic",
     "genotype_results": {
-      "CC": "Normal BDNF secretion — standard mood improvement from exercise.",
+      "CC": "Normal BDNF secretion \u2014 standard mood improvement from exercise.",
       "CT": "Slightly reduced BDNF release.",
-      "TT": "Val66Met — reduced activity-dependent BDNF secretion. May experience less 'runner's high' but exercise is still beneficial."
+      "TT": "Val66Met \u2014 reduced activity-dependent BDNF secretion. May experience less 'runner's high' but exercise is still beneficial."
     },
     "description": "BDNF (brain-derived neurotrophic factor) affects neuroplasticity and mood. The Met66 variant reduces activity-dependent BDNF release, potentially affecting exercise-related mood benefits.",
-    "population_frequency": 0.20,
+    "population_frequency": 0.2,
     "confidence": "Moderate",
     "source": "Egan et al., Cell 2003"
   },
@@ -605,12 +605,12 @@
     "trait": "Injury Risk (Tendon/Ligament)",
     "category": "Athletic",
     "genotype_results": {
-      "GG": "Normal collagen type 1 — standard tendon and ligament strength.",
+      "GG": "Normal collagen type 1 \u2014 standard tendon and ligament strength.",
       "GT": "Slightly altered collagen structure.",
-      "TT": "Altered collagen — associated with reduced risk of ACL tears and Achilles tendon injuries, but potentially weaker bones."
+      "TT": "Altered collagen \u2014 associated with reduced risk of ACL tears and Achilles tendon injuries, but potentially weaker bones."
     },
     "description": "Collagen type I variant affecting connective tissue composition. Paradoxically, the T allele is associated with more flexible tendons (fewer ruptures) but reduced bone mineral density.",
-    "population_frequency": 0.20,
+    "population_frequency": 0.2,
     "confidence": "Moderate",
     "source": "Posthumus et al., Br J Sports Med 2009"
   },
@@ -622,10 +622,10 @@
     "genotype_results": {
       "CC": "Normal range of motion and tendon stiffness.",
       "CT": "Slightly increased flexibility.",
-      "TT": "Increased flexibility — associated with greater range of motion. Reduced risk of tendinopathy. Common in endurance athletes."
+      "TT": "Increased flexibility \u2014 associated with greater range of motion. Reduced risk of tendinopathy. Common in endurance athletes."
     },
     "description": "Collagen type V variant affecting tendon mechanical properties and flexibility. May influence injury risk and athletic performance.",
-    "population_frequency": 0.40,
+    "population_frequency": 0.4,
     "confidence": "Moderate",
     "source": "Collins et al., Br J Sports Med 2009"
   },
@@ -635,12 +635,12 @@
     "trait": "Metabolic Efficiency",
     "category": "Athletic",
     "genotype_results": {
-      "CC": "Normal metabolic coupling — standard energy efficiency.",
+      "CC": "Normal metabolic coupling \u2014 standard energy efficiency.",
       "CT": "Slightly altered energy metabolism.",
-      "TT": "Ala55Val — increased mitochondrial uncoupling. May burn more calories at rest (higher metabolic rate) but less energy-efficient for endurance."
+      "TT": "Ala55Val \u2014 increased mitochondrial uncoupling. May burn more calories at rest (higher metabolic rate) but less energy-efficient for endurance."
     },
     "description": "Uncoupling protein 2 variant affecting metabolic efficiency. Affects how tightly mitochondria couple energy production to ATP synthesis.",
-    "population_frequency": 0.40,
+    "population_frequency": 0.4,
     "confidence": "Low",
     "source": "Esterbauer et al., Nature Genetics 2001"
   },
@@ -652,7 +652,7 @@
     "genotype_results": {
       "TT": "Lower risk of Achilles tendinopathy.",
       "TA": "Moderate risk.",
-      "AA": "Increased risk of Achilles tendon injuries — altered tenascin C in tendon extracellular matrix."
+      "AA": "Increased risk of Achilles tendon injuries \u2014 altered tenascin C in tendon extracellular matrix."
     },
     "description": "Tenascin C variant affecting tendon extracellular matrix composition and injury susceptibility.",
     "population_frequency": 0.35,
@@ -665,12 +665,12 @@
     "trait": "Warrior vs Worrier (Stress Response)",
     "category": "Behavioral",
     "genotype_results": {
-      "GG": "Val/Val — 'Warrior': Faster dopamine clearance. Better stress resilience and performance under pressure. Lower baseline cognitive performance in calm settings.",
-      "GA": "Val/Met — Balanced: Intermediate dopamine metabolism. Good balance of stress resilience and cognitive performance.",
-      "AA": "Met/Met — 'Worrier': Slower dopamine clearance. Superior working memory, attention, and planning in calm settings. More anxiety-prone under stress."
+      "GG": "Val/Val \u2014 'Warrior': Faster dopamine clearance. Better stress resilience and performance under pressure. Lower baseline cognitive performance in calm settings.",
+      "GA": "Val/Met \u2014 Balanced: Intermediate dopamine metabolism. Good balance of stress resilience and cognitive performance.",
+      "AA": "Met/Met \u2014 'Worrier': Slower dopamine clearance. Superior working memory, attention, and planning in calm settings. More anxiety-prone under stress."
     },
     "description": "COMT catechol-O-methyltransferase determines dopamine breakdown speed in the prefrontal cortex. Affects stress response, cognitive performance, and pain sensitivity.",
-    "population_frequency": 0.50,
+    "population_frequency": 0.5,
     "confidence": "High",
     "source": "Stein et al., Am J Med Genet 2006"
   },
@@ -680,12 +680,12 @@
     "trait": "Empathy / Social Bonding",
     "category": "Behavioral",
     "genotype_results": {
-      "GG": "Higher empathy, better social skills, more optimistic. Greater oxytocin receptor expression — stronger social bonding.",
+      "GG": "Higher empathy, better social skills, more optimistic. Greater oxytocin receptor expression \u2014 stronger social bonding.",
       "GA": "Intermediate empathy and social behavior.",
-      "AA": "Lower empathy scores on average. May have less social reward sensitivity. Not a deficiency — may be more independent-minded."
+      "AA": "Lower empathy scores on average. May have less social reward sensitivity. Not a deficiency \u2014 may be more independent-minded."
     },
     "description": "Oxytocin receptor variant affecting social behavior. GG individuals tend to score higher on empathy measures, handle stress better with social support, and are better at reading emotional cues.",
-    "population_frequency": 0.40,
+    "population_frequency": 0.4,
     "confidence": "Moderate",
     "source": "Rodrigues et al., PNAS 2009"
   },
@@ -695,12 +695,12 @@
     "trait": "Emotional Reactivity",
     "category": "Behavioral",
     "genotype_results": {
-      "GG": "Normal serotonin synthesis — standard emotional regulation.",
+      "GG": "Normal serotonin synthesis \u2014 standard emotional regulation.",
       "GT": "Slightly increased emotional reactivity.",
-      "TT": "Higher amygdala reactivity to emotional stimuli — more emotionally responsive. May experience stronger emotional reactions to negative events."
+      "TT": "Higher amygdala reactivity to emotional stimuli \u2014 more emotionally responsive. May experience stronger emotional reactions to negative events."
     },
     "description": "Tryptophan hydroxylase 2 variant affecting brain serotonin synthesis. Associated with differences in emotional processing and amygdala activation.",
-    "population_frequency": 0.20,
+    "population_frequency": 0.2,
     "confidence": "Moderate",
     "source": "Brown et al., Mol Psychiatry 2005"
   },
@@ -710,12 +710,12 @@
     "trait": "Memory and Learning",
     "category": "Behavioral",
     "genotype_results": {
-      "CC": "Normal BDNF secretion — standard memory function and neuroplasticity.",
+      "CC": "Normal BDNF secretion \u2014 standard memory function and neuroplasticity.",
       "CT": "Slightly reduced activity-dependent BDNF release. Subtle effects on memory encoding.",
-      "TT": "Val66Met — reduced BDNF secretion. May have slightly lower episodic memory performance. Higher susceptibility to anxiety. Exercise is particularly beneficial."
+      "TT": "Val66Met \u2014 reduced BDNF secretion. May have slightly lower episodic memory performance. Higher susceptibility to anxiety. Exercise is particularly beneficial."
     },
     "description": "BDNF Val66Met variant affecting brain-derived neurotrophic factor release. Influences memory formation, learning, and stress resilience.",
-    "population_frequency": 0.20,
+    "population_frequency": 0.2,
     "confidence": "High",
     "source": "Egan et al., Cell 2003"
   },
@@ -725,9 +725,9 @@
     "trait": "Stress Sensitivity (Serotonin Transporter)",
     "category": "Behavioral",
     "genotype_results": {
-      "TT": "Short/low-expression allele — higher stress sensitivity. More reactive to environmental stressors. May be more susceptible to depression after adverse life events.",
+      "TT": "Short/low-expression allele \u2014 higher stress sensitivity. More reactive to environmental stressors. May be more susceptible to depression after adverse life events.",
       "TC": "Intermediate serotonin transporter expression.",
-      "CC": "Long/high-expression allele — more resilient to stress. Lower depression risk after adverse events."
+      "CC": "Long/high-expression allele \u2014 more resilient to stress. Lower depression risk after adverse events."
     },
     "description": "Functional variant in serotonin transporter gene promoter. Modulates how much serotonin is recycled at synapses, affecting mood regulation and stress vulnerability.",
     "population_frequency": 0.43,
@@ -740,12 +740,12 @@
     "trait": "Novelty Seeking / Risk-Taking",
     "category": "Behavioral",
     "genotype_results": {
-      "TT": "Higher DRD4 expression — potentially increased novelty seeking, curiosity, and exploratory behavior.",
+      "TT": "Higher DRD4 expression \u2014 potentially increased novelty seeking, curiosity, and exploratory behavior.",
       "TC": "Intermediate novelty-seeking tendency.",
-      "CC": "Lower DRD4 expression — may be more cautious and risk-averse."
+      "CC": "Lower DRD4 expression \u2014 may be more cautious and risk-averse."
     },
     "description": "Dopamine receptor D4 promoter variant affecting receptor expression. Associated with personality traits related to novelty seeking and exploration.",
-    "population_frequency": 0.40,
+    "population_frequency": 0.4,
     "confidence": "Low",
     "source": "Ebstein et al., Nature Genetics 1996"
   },
@@ -757,7 +757,7 @@
     "genotype_results": {
       "CC": "Standard pitch discrimination ability.",
       "CT": "Slightly enhanced pitch discrimination.",
-      "TT": "Associated with enhanced pitch discrimination ability — not perfect pitch alone, but contributes to musical aptitude."
+      "TT": "Associated with enhanced pitch discrimination ability \u2014 not perfect pitch alone, but contributes to musical aptitude."
     },
     "description": "One of several genetic variants associated with perfect pitch (absolute pitch). Musical ability is highly polygenic and requires early training.",
     "population_frequency": 0.35,
@@ -772,10 +772,10 @@
     "genotype_results": {
       "CC": "Standard circadian rhythm.",
       "CT": "Slight tendency toward evening chronotype.",
-      "TT": "Evening chronotype preference — natural tendency to stay up later and wake later ('night owl')."
+      "TT": "Evening chronotype preference \u2014 natural tendency to stay up later and wake later ('night owl')."
     },
     "description": "CLOCK gene variant affecting circadian rhythm. Night owls have different clock gene expression patterns than early birds.",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "Moderate",
     "source": "Katzenberg et al., Sleep 1998"
   },
@@ -785,9 +785,9 @@
     "trait": "Morning vs Evening Person",
     "category": "Sleep",
     "genotype_results": {
-      "AA": "Morning chronotype tendency — natural early riser.",
-      "AG": "Intermediate — adaptable to various schedules.",
-      "GG": "Evening chronotype — 'night owl'. Difficulty waking early. Peak performance later in the day."
+      "AA": "Morning chronotype tendency \u2014 natural early riser.",
+      "AG": "Intermediate \u2014 adaptable to various schedules.",
+      "GG": "Evening chronotype \u2014 'night owl'. Difficulty waking early. Peak performance later in the day."
     },
     "description": "Classic CLOCK gene variant. The 3111C allele (G) is associated with eveningness, delayed sleep phase, and reduced sleep duration.",
     "population_frequency": 0.28,
@@ -800,14 +800,14 @@
     "trait": "Deep Sleep Quality",
     "category": "Sleep",
     "genotype_results": {
-      "CC": "Normal adenosine deaminase activity — standard deep sleep patterns.",
-      "CT": "Reduced ADA activity (~20-30% less). Slower adenosine clearance — increased slow-wave (deep) sleep.",
-      "TT": "Significantly reduced ADA activity. More deep sleep — higher sleep pressure, more intense slow-wave sleep."
+      "CC": "Normal adenosine deaminase activity \u2014 standard deep sleep patterns.",
+      "CT": "Reduced ADA activity (~20-30% less). Slower adenosine clearance \u2014 increased slow-wave (deep) sleep.",
+      "TT": "Significantly reduced ADA activity. More deep sleep \u2014 higher sleep pressure, more intense slow-wave sleep."
     },
-    "description": "Adenosine deaminase variant affecting adenosine metabolism in the brain. Adenosine is the primary sleep pressure molecule — slower clearance means more deep sleep.",
+    "description": "Adenosine deaminase variant affecting adenosine metabolism in the brain. Adenosine is the primary sleep pressure molecule \u2014 slower clearance means more deep sleep.",
     "population_frequency": 0.08,
     "confidence": "High",
-    "source": "Rétey et al., PNAS 2005"
+    "source": "R\u00e9tey et al., PNAS 2005"
   },
   {
     "rsid": "rs57875989",
@@ -817,7 +817,7 @@
     "genotype_results": {
       "CC": "Normal sleep duration requirement (~7-9 hours).",
       "CT": "May require slightly less sleep than average.",
-      "TT": "Natural short sleeper — can function well on 4-6 hours of sleep. Very rare variant."
+      "TT": "Natural short sleeper \u2014 can function well on 4-6 hours of sleep. Very rare variant."
     },
     "description": "The 'short sleeper' gene. Extremely rare variant allowing some people to function normally with significantly less sleep. Affects circadian transcription factor.",
     "population_frequency": 0.001,
@@ -832,10 +832,10 @@
     "genotype_results": {
       "CC": "Standard sleep duration preference.",
       "CG": "Intermediate sleep characteristics.",
-      "GG": "Associated with morningness — tend to wake earlier and prefer shorter sleep duration."
+      "GG": "Associated with morningness \u2014 tend to wake earlier and prefer shorter sleep duration."
     },
     "description": "PER3 (Period 3) is a core circadian clock gene. Variants affect sleep timing, duration, and chronotype preference.",
-    "population_frequency": 0.20,
+    "population_frequency": 0.2,
     "confidence": "Moderate",
     "source": "Ebisawa et al., Am J Hum Genet 2001"
   },
@@ -847,7 +847,7 @@
     "genotype_results": {
       "TT": "Standard sleep timing.",
       "TC": "Slightly earlier chronotype.",
-      "CC": "Morning chronotype — associated with earlier sleep and wake times."
+      "CC": "Morning chronotype \u2014 associated with earlier sleep and wake times."
     },
     "description": "Aryl hydrocarbon receptor variant affecting circadian regulation. GWAS-identified chronotype locus.",
     "population_frequency": 0.25,
@@ -862,10 +862,10 @@
     "genotype_results": {
       "CC": "Normal sleep phase timing.",
       "CT": "Slightly delayed sleep onset.",
-      "TT": "Tendency toward delayed sleep phase — difficulty falling asleep at conventional times."
+      "TT": "Tendency toward delayed sleep phase \u2014 difficulty falling asleep at conventional times."
     },
     "description": "Cryptochrome 1 variant affecting the negative limb of the circadian clock. Associated with delayed sleep phase disorder.",
-    "population_frequency": 0.20,
+    "population_frequency": 0.2,
     "confidence": "Moderate",
     "source": "Patke et al., Cell 2017"
   },
@@ -875,12 +875,12 @@
     "trait": "Asparagus Smell Detection in Urine",
     "category": "Other",
     "genotype_results": {
-      "GG": "Can smell asparagus metabolites in urine — may notice the distinctive smell after eating asparagus.",
+      "GG": "Can smell asparagus metabolites in urine \u2014 may notice the distinctive smell after eating asparagus.",
       "GA": "Intermediate ability to detect asparagus urine smell.",
-      "AA": "Cannot smell asparagus metabolites — asparagus anosmia. Unaware of the urine odor change after eating asparagus."
+      "AA": "Cannot smell asparagus metabolites \u2014 asparagus anosmia. Unaware of the urine odor change after eating asparagus."
     },
     "description": "Olfactory receptor variant determining whether you can detect the sulfurous compounds in urine after eating asparagus. About 40% of people cannot smell them.",
-    "population_frequency": 0.40,
+    "population_frequency": 0.4,
     "confidence": "High",
     "source": "Markt et al., BMJ 2016"
   },
@@ -890,9 +890,9 @@
     "trait": "Photic Sneeze Reflex (Sun Sneezing)",
     "category": "Other",
     "genotype_results": {
-      "CC": "Normal — no reflex sneezing from bright light.",
+      "CC": "Normal \u2014 no reflex sneezing from bright light.",
       "CT": "May experience photic sneeze reflex.",
-      "TT": "Photic sneeze reflex — sneezing when exposed to bright light (ACHOO syndrome). Affects ~18-35% of the population."
+      "TT": "Photic sneeze reflex \u2014 sneezing when exposed to bright light (ACHOO syndrome). Affects ~18-35% of the population."
     },
     "description": "Associated with autosomal dominant compulsive helio-ophthalmic outbursts of sneezing (ACHOO syndrome). The reflex is triggered by sudden exposure to bright light.",
     "population_frequency": 0.25,
@@ -910,7 +910,7 @@
       "GG": "Contributes to darker (non-blue) eye color."
     },
     "description": "Additional OCA2 variant contributing to eye color determination.",
-    "population_frequency": 0.40,
+    "population_frequency": 0.4,
     "confidence": "Moderate",
     "source": "Liu et al., PLoS Genetics 2010"
   },
@@ -921,11 +921,11 @@
     "category": "Nutrition",
     "genotype_results": {
       "CC": "Normal insulin secretion and glucose metabolism.",
-      "CT": "Modestly impaired insulin secretion — may benefit from moderate carb restriction.",
-      "TT": "Impaired insulin secretion — higher carbohydrate sensitivity. Low-glycemic diet particularly beneficial. ~2x T2D risk."
+      "CT": "Modestly impaired insulin secretion \u2014 may benefit from moderate carb restriction.",
+      "TT": "Impaired insulin secretion \u2014 higher carbohydrate sensitivity. Low-glycemic diet particularly beneficial. ~2x T2D risk."
     },
     "description": "Strongest common type 2 diabetes risk variant. Affects insulin secretion in response to carbohydrate intake. Dietary carbohydrate restriction is especially beneficial for risk allele carriers.",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "High",
     "source": "Grant et al., Nature Genetics 2006"
   },
@@ -936,8 +936,8 @@
     "category": "Nutrition",
     "genotype_results": {
       "TT": "Normal appetite regulation and satiety signals.",
-      "TA": "Slightly increased appetite — ~1.5 kg higher average body weight.",
-      "AA": "Altered satiety signaling — increased appetite, ~3 kg higher average body weight. Physical activity fully attenuates this genetic effect."
+      "TA": "Slightly increased appetite \u2014 ~1.5 kg higher average body weight.",
+      "AA": "Altered satiety signaling \u2014 increased appetite, ~3 kg higher average body weight. Physical activity fully attenuates this genetic effect."
     },
     "description": "The 'obesity gene' variant affects appetite regulation through FTO's role in ghrelin mRNA modification. Physical activity completely counteracts the genetic risk.",
     "population_frequency": 0.42,
@@ -950,12 +950,12 @@
     "trait": "Reward Sensitivity / Addiction Risk",
     "category": "Behavioral",
     "genotype_results": {
-      "GG": "Normal dopamine receptor density — standard reward processing.",
-      "GA": "Modestly reduced D2 receptor density — slightly increased reward-seeking.",
-      "AA": "Reduced D2 receptor density (~30-40%) — higher reward-seeking behavior. May be more susceptible to addictive behaviors including food, substances, and gambling."
+      "GG": "Normal dopamine receptor density \u2014 standard reward processing.",
+      "GA": "Modestly reduced D2 receptor density \u2014 slightly increased reward-seeking.",
+      "AA": "Reduced D2 receptor density (~30-40%) \u2014 higher reward-seeking behavior. May be more susceptible to addictive behaviors including food, substances, and gambling."
     },
     "description": "Variant near DRD2 dopamine receptor affecting receptor density in the brain's reward circuitry. Influences response to pleasurable stimuli and addiction vulnerability.",
-    "population_frequency": 0.20,
+    "population_frequency": 0.2,
     "confidence": "Moderate",
     "source": "Noble et al., Arch Gen Psychiatry 1998"
   },
@@ -965,12 +965,12 @@
     "trait": "Anxiety Tendency",
     "category": "Behavioral",
     "genotype_results": {
-      "GG": "Normal amygdala reactivity — standard anxiety response.",
+      "GG": "Normal amygdala reactivity \u2014 standard anxiety response.",
       "GT": "Slightly heightened anxiety reactivity.",
-      "TT": "Higher amygdala activation — may be more prone to anxiety, especially in stressful environments. Not diagnostic — many factors contribute to anxiety."
+      "TT": "Higher amygdala activation \u2014 may be more prone to anxiety, especially in stressful environments. Not diagnostic \u2014 many factors contribute to anxiety."
     },
     "description": "Tryptophan hydroxylase 2 variant in serotonin synthesis pathway. Affects brain serotonin production and emotional processing in the amygdala.",
-    "population_frequency": 0.20,
+    "population_frequency": 0.2,
     "confidence": "Moderate",
     "source": "Canli et al., Science 2005"
   },
@@ -982,7 +982,7 @@
     "genotype_results": {
       "CC": "Lower serotonin 2A receptor expression.",
       "CT": "Intermediate receptor levels.",
-      "TT": "Higher 5-HT2A receptor expression — associated with stronger placebo responses and more vivid dreams."
+      "TT": "Higher 5-HT2A receptor expression \u2014 associated with stronger placebo responses and more vivid dreams."
     },
     "description": "Serotonin 2A receptor variant. Higher expression is associated with stronger placebo effects in clinical trials and more vivid REM sleep dreaming.",
     "population_frequency": 0.45,
@@ -1000,7 +1000,7 @@
       "GG": "Associated with enhanced verbal fluency and creative thinking in some studies. Also associated with slightly elevated mood disorder risk."
     },
     "description": "Calcium channel variant affecting neuronal signaling. Tentatively linked to creative thinking ability, but also associated with bipolar disorder susceptibility.",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "Low",
     "source": "Power et al., Nat Neurosci 2015"
   },
@@ -1012,7 +1012,7 @@
     "genotype_results": {
       "CC": "Normal alpha-2A adrenergic receptor function.",
       "CG": "Slightly altered norepinephrine signaling.",
-      "GG": "Altered prefrontal cortex norepinephrine signaling — may have difficulty with sustained attention tasks."
+      "GG": "Altered prefrontal cortex norepinephrine signaling \u2014 may have difficulty with sustained attention tasks."
     },
     "description": "Alpha-2A adrenergic receptor variant affecting prefrontal cortex function. Influences attention regulation and response to ADHD medications like guanfacine.",
     "population_frequency": 0.25,
@@ -1025,12 +1025,12 @@
     "trait": "Pain Sensitivity",
     "category": "Behavioral",
     "genotype_results": {
-      "GG": "Val/Val — faster dopamine clearance, lower pain sensitivity. Better tolerance of acute pain. May need lower opioid doses.",
-      "GA": "Val/Met — intermediate pain sensitivity.",
-      "AA": "Met/Met — slower dopamine clearance, higher pain sensitivity. May experience more intense pain and require higher analgesic doses."
+      "GG": "Val/Val \u2014 faster dopamine clearance, lower pain sensitivity. Better tolerance of acute pain. May need lower opioid doses.",
+      "GA": "Val/Met \u2014 intermediate pain sensitivity.",
+      "AA": "Met/Met \u2014 slower dopamine clearance, higher pain sensitivity. May experience more intense pain and require higher analgesic doses."
     },
     "description": "COMT Val158Met affects not only stress response but also pain perception. Met/Met individuals have higher pain sensitivity through effects on enkephalin and endorphin signaling.",
-    "population_frequency": 0.50,
+    "population_frequency": 0.5,
     "confidence": "Moderate",
     "source": "Zubieta et al., Science 2003"
   },
@@ -1045,7 +1045,7 @@
       "AA": "Higher preference for sweet foods."
     },
     "description": "Variant associated with sweet food preference and consumption patterns.",
-    "population_frequency": 0.20,
+    "population_frequency": 0.2,
     "confidence": "Low",
     "source": "Reed et al., Chem Senses 2006"
   },
@@ -1055,12 +1055,12 @@
     "trait": "Grapefruit Bitterness Perception",
     "category": "Nutrition",
     "genotype_results": {
-      "CC": "Low perception of grapefruit bitterness — likely enjoys grapefruit.",
+      "CC": "Low perception of grapefruit bitterness \u2014 likely enjoys grapefruit.",
       "CT": "Moderate bitterness perception.",
-      "TT": "Strong grapefruit bitterness perception — may dislike grapefruit and similar citrus."
+      "TT": "Strong grapefruit bitterness perception \u2014 may dislike grapefruit and similar citrus."
     },
     "description": "Bitter taste receptor variant specifically affecting perception of naringin, the bitter compound in grapefruit.",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "Moderate",
     "source": "Hayes et al., Chem Senses 2011"
   },
@@ -1070,9 +1070,9 @@
     "trait": "Alcohol Metabolism Speed",
     "category": "Nutrition",
     "genotype_results": {
-      "CC": "Fast alcohol metabolism — rapid alcohol to acetaldehyde conversion. Protective against alcohol dependence but causes unpleasant flushing.",
-      "CT": "Intermediate — faster than average alcohol metabolism.",
-      "TT": "Normal/slow alcohol metabolism — standard alcohol processing speed."
+      "CC": "Fast alcohol metabolism \u2014 rapid alcohol to acetaldehyde conversion. Protective against alcohol dependence but causes unpleasant flushing.",
+      "CT": "Intermediate \u2014 faster than average alcohol metabolism.",
+      "TT": "Normal/slow alcohol metabolism \u2014 standard alcohol processing speed."
     },
     "description": "Alcohol dehydrogenase variant. The fast allele (C) is common in East Asian populations and is strongly protective against alcoholism due to unpleasant acetaldehyde accumulation.",
     "population_frequency": 0.25,
@@ -1087,10 +1087,10 @@
     "genotype_results": {
       "TT": "Standard tolerance to circadian disruption.",
       "TA": "Intermediate tolerance to shift work and jet lag.",
-      "AA": "May have better tolerance of circadian disruption — less affected by jet lag and shift work."
+      "AA": "May have better tolerance of circadian disruption \u2014 less affected by jet lag and shift work."
     },
     "description": "Aurora kinase A variant affecting cell cycle progression and circadian clock interaction.",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "Low",
     "source": "Zhu et al., PLoS One 2008"
   },
@@ -1100,9 +1100,9 @@
     "trait": "Adiponectin Levels / Metabolic Health",
     "category": "Nutrition",
     "genotype_results": {
-      "TT": "Normal adiponectin levels — standard metabolic profile.",
+      "TT": "Normal adiponectin levels \u2014 standard metabolic profile.",
       "TG": "Slightly lower adiponectin.",
-      "GG": "Lower adiponectin levels — associated with insulin resistance and metabolic syndrome. Weight management particularly important."
+      "GG": "Lower adiponectin levels \u2014 associated with insulin resistance and metabolic syndrome. Weight management particularly important."
     },
     "description": "Adiponectin gene variant affecting this anti-inflammatory hormone's levels. Lower adiponectin is associated with obesity, insulin resistance, and cardiovascular risk.",
     "population_frequency": 0.25,
@@ -1117,10 +1117,10 @@
     "genotype_results": {
       "TT": "Normal MTHFR activity at this position.",
       "TG": "Mildly reduced MTHFR activity at A1298C locus.",
-      "GG": "Reduced MTHFR activity — compound heterozygosity with C677T significantly impairs folate metabolism."
+      "GG": "Reduced MTHFR activity \u2014 compound heterozygosity with C677T significantly impairs folate metabolism."
     },
     "description": "Second MTHFR variant affecting folate metabolism. Primarily significant when combined with C677T variant (compound heterozygote).",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "Moderate",
     "source": "van der Put et al., Am J Hum Genet 1998"
   },
@@ -1130,9 +1130,9 @@
     "trait": "Norovirus Resistance",
     "category": "Other",
     "genotype_results": {
-      "AA": "Secretor — susceptible to norovirus infection.",
-      "AG": "Secretor — susceptible to most norovirus strains.",
-      "GG": "Non-secretor — significantly resistant to many norovirus strains. ~20% of Europeans are non-secretors."
+      "AA": "Secretor \u2014 susceptible to norovirus infection.",
+      "AG": "Secretor \u2014 susceptible to most norovirus strains.",
+      "GG": "Non-secretor \u2014 significantly resistant to many norovirus strains. ~20% of Europeans are non-secretors."
     },
     "description": "FUT2 non-secretors lack ABH blood group antigens in saliva and mucosal surfaces. This makes them resistant to many norovirus strains that use these antigens for cell entry.",
     "population_frequency": 0.35,
@@ -1160,9 +1160,9 @@
     "trait": "Blood Pressure / Exercise Response",
     "category": "Athletic",
     "genotype_results": {
-      "TT": "Normal nitric oxide production — standard vasodilation capacity.",
+      "TT": "Normal nitric oxide production \u2014 standard vasodilation capacity.",
       "TC": "Intermediate NO production.",
-      "CC": "Reduced NOS3 expression — lower nitric oxide production. May have less exercise-induced vasodilation and higher blood pressure tendency."
+      "CC": "Reduced NOS3 expression \u2014 lower nitric oxide production. May have less exercise-induced vasodilation and higher blood pressure tendency."
     },
     "description": "Endothelial nitric oxide synthase variant affecting blood vessel dilation. Influences blood pressure, exercise capacity, and cardiovascular health.",
     "population_frequency": 0.35,
@@ -1175,11 +1175,11 @@
     "trait": "Muscle Mass / Myostatin",
     "category": "Athletic",
     "genotype_results": {
-      "AA": "Normal myostatin function — standard muscle growth regulation.",
-      "AG": "Slightly reduced myostatin activity — may have easier time building muscle mass.",
-      "GG": "Reduced myostatin — enhanced muscle growth potential. Myostatin is a negative regulator of muscle growth."
+      "AA": "Normal myostatin function \u2014 standard muscle growth regulation.",
+      "AG": "Slightly reduced myostatin activity \u2014 may have easier time building muscle mass.",
+      "GG": "Reduced myostatin \u2014 enhanced muscle growth potential. Myostatin is a negative regulator of muscle growth."
     },
-    "description": "Myostatin variant affecting muscle growth regulation. Myostatin limits muscle growth — reduced function variants allow greater muscle hypertrophy response to training.",
+    "description": "Myostatin variant affecting muscle growth regulation. Myostatin limits muscle growth \u2014 reduced function variants allow greater muscle hypertrophy response to training.",
     "population_frequency": 0.05,
     "confidence": "Low",
     "source": "Santiago et al., Med Sci Sports Exerc 2011"
@@ -1205,12 +1205,12 @@
     "trait": "Post-Exercise Recovery",
     "category": "Athletic",
     "genotype_results": {
-      "GG": "Higher IL-6 response to exercise — stronger inflammatory response. May need longer recovery between intense sessions.",
+      "GG": "Higher IL-6 response to exercise \u2014 stronger inflammatory response. May need longer recovery between intense sessions.",
       "GC": "Intermediate IL-6 response to exercise.",
-      "CC": "Lower IL-6 response to exercise — may recover faster from intense training. Less exercise-induced inflammation."
+      "CC": "Lower IL-6 response to exercise \u2014 may recover faster from intense training. Less exercise-induced inflammation."
     },
     "description": "IL-6 variant affecting inflammatory response to exercise. Influences recovery time and muscle damage markers after intense physical activity.",
-    "population_frequency": 0.40,
+    "population_frequency": 0.4,
     "confidence": "Moderate",
     "source": "Yamin et al., J Appl Physiol 2008"
   },
@@ -1222,7 +1222,7 @@
     "genotype_results": {
       "GG": "Normal TNF-alpha response to exercise.",
       "GA": "Increased TNF-alpha production after exercise. May experience more post-exercise muscle soreness.",
-      "AA": "High TNF-alpha response — prolonged inflammation after intense exercise. May benefit from anti-inflammatory nutrition strategies."
+      "AA": "High TNF-alpha response \u2014 prolonged inflammation after intense exercise. May benefit from anti-inflammatory nutrition strategies."
     },
     "description": "TNF-alpha variant affecting inflammatory response magnitude. High producers may experience more delayed-onset muscle soreness and longer recovery times.",
     "population_frequency": 0.15,
@@ -1235,12 +1235,12 @@
     "trait": "Calcium Absorption from Dairy",
     "category": "Nutrition",
     "genotype_results": {
-      "AA": "Lactase persistent — can absorb calcium from dairy products efficiently throughout life.",
-      "AG": "Lactase persistent — dairy calcium absorption maintained.",
-      "GG": "Lactose intolerant — may have reduced calcium absorption from dairy. Consider non-dairy calcium sources or supplements."
+      "AA": "Lactase persistent \u2014 can absorb calcium from dairy products efficiently throughout life.",
+      "AG": "Lactase persistent \u2014 dairy calcium absorption maintained.",
+      "GG": "Lactose intolerant \u2014 may have reduced calcium absorption from dairy. Consider non-dairy calcium sources or supplements."
     },
     "description": "Lactase persistence directly affects ability to use dairy as a calcium source. Lactose-intolerant individuals may need alternative calcium strategies for bone health.",
-    "population_frequency": 0.50,
+    "population_frequency": 0.5,
     "confidence": "High",
     "source": "Enattah et al., Nature Genetics 2002"
   },
@@ -1255,7 +1255,7 @@
       "TT": "Higher tendency for connected eyebrows (unibrow)."
     },
     "description": "HLA region variant associated with eyebrow thickness and connectivity. One of several genes affecting facial hair patterns.",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "Low",
     "source": "Adhikari et al., Nature Communications 2016"
   },
@@ -1266,8 +1266,8 @@
     "category": "Behavioral",
     "genotype_results": {
       "CC": "Standard memory performance.",
-      "CT": "Enhanced episodic memory — T allele carriers perform better on memory recall tasks.",
-      "TT": "Enhanced episodic memory performance — better recall of personal events and word lists in cognitive tests."
+      "CT": "Enhanced episodic memory \u2014 T allele carriers perform better on memory recall tasks.",
+      "TT": "Enhanced episodic memory performance \u2014 better recall of personal events and word lists in cognitive tests."
     },
     "description": "KIBRA protein interacts with key memory molecules in the hippocampus. T allele carriers consistently show better episodic memory performance across multiple studies.",
     "population_frequency": 0.25,
@@ -1280,12 +1280,12 @@
     "trait": "Tanning Ability",
     "category": "Physical",
     "genotype_results": {
-      "GG": "Better tanning ability — more melanin production response to UV.",
+      "GG": "Better tanning ability \u2014 more melanin production response to UV.",
       "GA": "Moderate tanning ability.",
-      "AA": "Reduced tanning — tendency to burn rather than tan with sun exposure."
+      "AA": "Reduced tanning \u2014 tendency to burn rather than tan with sun exposure."
     },
     "description": "OCA2 variant affecting melanin production response to ultraviolet radiation.",
-    "population_frequency": 0.40,
+    "population_frequency": 0.4,
     "confidence": "Moderate",
     "source": "Sulem et al., Nature Genetics 2007"
   },
@@ -1297,7 +1297,7 @@
     "genotype_results": {
       "GG": "Standard coffee consumption patterns.",
       "GA": "May tend toward slightly lower coffee consumption.",
-      "AA": "Associated with lower habitual coffee consumption — may be more sensitive to coffee's inflammatory effects."
+      "AA": "Associated with lower habitual coffee consumption \u2014 may be more sensitive to coffee's inflammatory effects."
     },
     "description": "TNF-alpha variant influencing habitual coffee consumption through interaction with inflammatory pathways.",
     "population_frequency": 0.15,
@@ -1310,12 +1310,12 @@
     "trait": "Bone Mineral Density",
     "category": "Physical",
     "genotype_results": {
-      "GG": "Normal bone mineral density — standard collagen type I structure.",
+      "GG": "Normal bone mineral density \u2014 standard collagen type I structure.",
       "GT": "Slightly altered collagen structure.",
-      "TT": "Lower bone mineral density — increased osteoporosis risk. Calcium and vitamin D supplementation recommended."
+      "TT": "Lower bone mineral density \u2014 increased osteoporosis risk. Calcium and vitamin D supplementation recommended."
     },
     "description": "Collagen type I variant affecting bone matrix composition and density. The T allele is associated with reduced bone strength.",
-    "population_frequency": 0.20,
+    "population_frequency": 0.2,
     "confidence": "Moderate",
     "source": "Mann et al., J Clin Invest 2001"
   },
@@ -1325,12 +1325,12 @@
     "trait": "Weight Gain Tendency",
     "category": "Nutrition",
     "genotype_results": {
-      "CC": "Higher tendency toward weight gain — altered insulin signaling pathway regulation.",
+      "CC": "Higher tendency toward weight gain \u2014 altered insulin signaling pathway regulation.",
       "CG": "Intermediate weight gain susceptibility.",
       "GG": "Standard weight regulation."
     },
     "description": "INSIG2 variant affecting insulin-induced gene 2, which regulates lipid metabolism. CC genotype is associated with higher BMI.",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "Low",
     "source": "Herbert et al., Science 2006"
   },
@@ -1340,9 +1340,9 @@
     "trait": "Pesticide Sensitivity / Detoxification",
     "category": "Nutrition",
     "genotype_results": {
-      "AA": "Higher paraoxonase activity — better organophosphate pesticide detoxification.",
+      "AA": "Higher paraoxonase activity \u2014 better organophosphate pesticide detoxification.",
       "AG": "Intermediate detoxification capacity.",
-      "GG": "Lower paraoxonase activity — slower pesticide detoxification. May benefit more from organic produce."
+      "GG": "Lower paraoxonase activity \u2014 slower pesticide detoxification. May benefit more from organic produce."
     },
     "description": "Paraoxonase 1 variant affecting ability to metabolize organophosphate pesticides and oxidized lipids. GG individuals may benefit more from choosing organic foods.",
     "population_frequency": 0.35,
@@ -1355,12 +1355,12 @@
     "trait": "Lactase Persistence (Alternative Marker)",
     "category": "Nutrition",
     "genotype_results": {
-      "CC": "Lactase persistent — can digest lactose into adulthood.",
+      "CC": "Lactase persistent \u2014 can digest lactose into adulthood.",
       "CT": "Lactase persistent (C is dominant).",
-      "TT": "Lactose intolerant — reduced lactase production after childhood."
+      "TT": "Lactose intolerant \u2014 reduced lactase production after childhood."
     },
     "description": "Alternative marker for lactase persistence, in linkage disequilibrium with rs4988235.",
-    "population_frequency": 0.50,
+    "population_frequency": 0.5,
     "confidence": "High",
     "source": "Enattah et al., Nature Genetics 2002"
   },
@@ -1370,11 +1370,11 @@
     "trait": "Blood Clotting Tendency",
     "category": "Physical",
     "genotype_results": {
-      "GG": "Normal Factor V — standard clotting regulation.",
-      "GA": "Factor V Leiden carrier — 3-8x increased clotting risk. Important for travel, surgery, and contraceptive decisions.",
-      "AA": "Homozygous Factor V Leiden — 50-80x increased clotting risk. May require prophylactic anticoagulation."
+      "GG": "Normal Factor V \u2014 standard clotting regulation.",
+      "GA": "Factor V Leiden carrier \u2014 3-8x increased clotting risk. Important for travel, surgery, and contraceptive decisions.",
+      "AA": "Homozygous Factor V Leiden \u2014 50-80x increased clotting risk. May require prophylactic anticoagulation."
     },
-    "description": "Factor V Leiden — the most common inherited clotting disorder. Important for understanding personal thrombosis risk, especially before surgery, long flights, or starting hormonal contraception.",
+    "description": "Factor V Leiden \u2014 the most common inherited clotting disorder. Important for understanding personal thrombosis risk, especially before surgery, long flights, or starting hormonal contraception.",
     "population_frequency": 0.05,
     "confidence": "High",
     "source": "ClinVar"
@@ -1385,9 +1385,9 @@
     "trait": "Impulsivity",
     "category": "Behavioral",
     "genotype_results": {
-      "CC": "Higher 5-HT2A expression — may have slightly higher impulsivity.",
+      "CC": "Higher 5-HT2A expression \u2014 may have slightly higher impulsivity.",
       "CT": "Intermediate serotonin 2A receptor levels.",
-      "TT": "Lower 5-HT2A expression — may be less impulsive."
+      "TT": "Lower 5-HT2A expression \u2014 may be less impulsive."
     },
     "description": "Serotonin 2A receptor promoter variant affecting receptor expression. Influences impulsivity, decision-making, and response to serotonergic drugs.",
     "population_frequency": 0.45,
@@ -1401,11 +1401,11 @@
     "category": "Other",
     "genotype_results": {
       "CC": "Normal complement C3 function.",
-      "CG": "Fast C3 form — more active complement system. May have stronger innate immune response.",
-      "GG": "C3 fast variant — enhanced complement activation. Stronger initial immune response but may increase inflammatory risk."
+      "CG": "Fast C3 form \u2014 more active complement system. May have stronger innate immune response.",
+      "GG": "C3 fast variant \u2014 enhanced complement activation. Stronger initial immune response but may increase inflammatory risk."
     },
     "description": "Complement component 3 variant. The 'fast' form has higher hemolytic activity. Affects innate immune defense strength and inflammation.",
-    "population_frequency": 0.20,
+    "population_frequency": 0.2,
     "confidence": "Moderate",
     "source": "Heurich et al., PNAS 2011"
   },
@@ -1415,12 +1415,12 @@
     "trait": "HIV Resistance",
     "category": "Other",
     "genotype_results": {
-      "wt/wt": "Normal CCR5 receptor — standard HIV susceptibility.",
-      "wt/Δ32": "One copy of delta-32 deletion — partial HIV resistance. Slower disease progression if infected.",
-      "Δ32/Δ32": "Homozygous CCR5-delta32 — highly resistant to HIV-1 infection (R5-tropic strains). ~1% of Northern Europeans."
+      "wt/wt": "Normal CCR5 receptor \u2014 standard HIV susceptibility.",
+      "wt/\u039432": "One copy of delta-32 deletion \u2014 partial HIV resistance. Slower disease progression if infected.",
+      "\u039432/\u039432": "Homozygous CCR5-delta32 \u2014 highly resistant to HIV-1 infection (R5-tropic strains). ~1% of Northern Europeans."
     },
     "description": "32-base pair deletion in CCR5 co-receptor for HIV. Homozygotes are essentially immune to most HIV strains. The 'Berlin patient' was cured of HIV via transplant from a delta-32 donor.",
-    "population_frequency": 0.10,
+    "population_frequency": 0.1,
     "confidence": "High",
     "source": "Dean et al., Science 1996"
   },
@@ -1432,10 +1432,10 @@
     "genotype_results": {
       "TT": "Standard FOXO3 activity.",
       "TG": "Modestly increased longevity association.",
-      "GG": "Associated with increased longevity — FOXO3 G allele is over-represented in centenarians across multiple populations."
+      "GG": "Associated with increased longevity \u2014 FOXO3 G allele is over-represented in centenarians across multiple populations."
     },
     "description": "FOXO3 is one of the most consistently replicated longevity genes across populations. The G allele enhances cellular stress resistance and DNA repair.",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "High",
     "source": "Willcox et al., PNAS 2008"
   },
@@ -1445,12 +1445,12 @@
     "trait": "HDL Cholesterol / Longevity",
     "category": "Other",
     "genotype_results": {
-      "GG": "Higher CETP activity — standard HDL levels.",
+      "GG": "Higher CETP activity \u2014 standard HDL levels.",
       "GA": "Intermediate CETP activity.",
-      "AA": "Reduced CETP activity — higher HDL cholesterol. Associated with longevity and cardiovascular protection."
+      "AA": "Reduced CETP activity \u2014 higher HDL cholesterol. Associated with longevity and cardiovascular protection."
     },
     "description": "CETP transfers cholesterol between lipoproteins. Reduced CETP activity raises HDL ('good') cholesterol. This variant has been associated with exceptional longevity in centenarian studies.",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "Moderate",
     "source": "Barzilai et al., JAMA 2003"
   },
@@ -1460,9 +1460,9 @@
     "trait": "Vitamin D Sensitivity / Immune Function",
     "category": "Nutrition",
     "genotype_results": {
-      "CC": "Standard VDR start codon — normal vitamin D receptor function.",
+      "CC": "Standard VDR start codon \u2014 normal vitamin D receptor function.",
       "CT": "Intermediate vitamin D receptor activity.",
-      "TT": "Longer VDR protein — less active vitamin D receptor. May need higher vitamin D levels for optimal immune and bone function."
+      "TT": "Longer VDR protein \u2014 less active vitamin D receptor. May need higher vitamin D levels for optimal immune and bone function."
     },
     "description": "VDR FokI variant affecting vitamin D receptor protein length and activity. Influences bone mineral density, immune function, and cancer risk.",
     "population_frequency": 0.35,
@@ -1475,12 +1475,12 @@
     "trait": "Vitamin D Transport",
     "category": "Nutrition",
     "genotype_results": {
-      "TT": "GC1s — higher vitamin D binding protein levels. Good vitamin D transport but may need more to achieve optimal free levels.",
+      "TT": "GC1s \u2014 higher vitamin D binding protein levels. Good vitamin D transport but may need more to achieve optimal free levels.",
       "TG": "Intermediate binding protein levels.",
-      "GG": "GC2 — lower vitamin D binding protein. Lower total vitamin D but relatively more free (bioavailable) vitamin D."
+      "GG": "GC2 \u2014 lower vitamin D binding protein. Lower total vitamin D but relatively more free (bioavailable) vitamin D."
     },
     "description": "Vitamin D binding protein variant affecting total and free vitamin D levels. Determines the ratio of bound to free (active) vitamin D in circulation.",
-    "population_frequency": 0.40,
+    "population_frequency": 0.4,
     "confidence": "Moderate",
     "source": "Powe et al., N Engl J Med 2013"
   },
@@ -1490,12 +1490,12 @@
     "trait": "Broccoli/Vegetable Bitterness",
     "category": "Nutrition",
     "genotype_results": {
-      "CC": "Non-taster — can eat cruciferous vegetables without strong bitterness. Likely enjoys broccoli, kale, Brussels sprouts.",
-      "CT": "Medium taster — moderate perception of vegetable bitterness.",
-      "TT": "Super-taster for glucosinolate bitterness — may avoid healthy cruciferous vegetables due to intense bitter taste."
+      "CC": "Non-taster \u2014 can eat cruciferous vegetables without strong bitterness. Likely enjoys broccoli, kale, Brussels sprouts.",
+      "CT": "Medium taster \u2014 moderate perception of vegetable bitterness.",
+      "TT": "Super-taster for glucosinolate bitterness \u2014 may avoid healthy cruciferous vegetables due to intense bitter taste."
     },
     "description": "Second TAS2R38 variant affecting bitter taste perception. Super-tasters may eat fewer vegetables, potentially missing cancer-protective phytochemicals.",
-    "population_frequency": 0.50,
+    "population_frequency": 0.5,
     "confidence": "High",
     "source": "Kim et al., Science 2003"
   },
@@ -1505,11 +1505,11 @@
     "trait": "Gluten Sensitivity Predisposition",
     "category": "Nutrition",
     "genotype_results": {
-      "CC": "No HLA-DQ2.5 — very low risk of celiac disease.",
-      "CT": "Heterozygous HLA-DQ2.5 carrier — increased celiac disease susceptibility. ~3% lifetime risk.",
-      "TT": "Homozygous HLA-DQ2.5 — highest genetic risk for celiac disease. ~10% lifetime risk."
+      "CC": "No HLA-DQ2.5 \u2014 very low risk of celiac disease.",
+      "CT": "Heterozygous HLA-DQ2.5 carrier \u2014 increased celiac disease susceptibility. ~3% lifetime risk.",
+      "TT": "Homozygous HLA-DQ2.5 \u2014 highest genetic risk for celiac disease. ~10% lifetime risk."
     },
-    "description": "HLA-DQ2.5 determines genetic susceptibility to celiac disease (gluten intolerance). Necessary but not sufficient — most carriers never develop celiac disease.",
+    "description": "HLA-DQ2.5 determines genetic susceptibility to celiac disease (gluten intolerance). Necessary but not sufficient \u2014 most carriers never develop celiac disease.",
     "population_frequency": 0.14,
     "confidence": "High",
     "source": "Sollid et al., Immunogenetics 2005"
@@ -1520,9 +1520,9 @@
     "trait": "Environmental Toxin Clearance",
     "category": "Other",
     "genotype_results": {
-      "AA": "Higher GSTP1 activity — more efficient detoxification of environmental toxins.",
+      "AA": "Higher GSTP1 activity \u2014 more efficient detoxification of environmental toxins.",
       "AG": "Intermediate detoxification capacity.",
-      "GG": "Lower GSTP1 activity — reduced ability to detoxify polycyclic aromatic hydrocarbons, pesticides, and heavy metals."
+      "GG": "Lower GSTP1 activity \u2014 reduced ability to detoxify polycyclic aromatic hydrocarbons, pesticides, and heavy metals."
     },
     "description": "Glutathione S-transferase Pi variant affecting phase II detoxification. Determines how efficiently you clear environmental chemicals and carcinogens.",
     "population_frequency": 0.35,
@@ -1535,11 +1535,11 @@
     "trait": "Dietary Fat Response",
     "category": "Nutrition",
     "genotype_results": {
-      "CC": "APOE ε4 haplotype (if rs429358=C) or ε3 — dietary fat significantly affects cholesterol levels.",
-      "CT": "May carry ε2 allele — check combined APOE genotype.",
-      "TT": "APOE ε2 carrier — more responsive to dietary cholesterol changes. Higher triglyceride risk with high-carb diets."
+      "CC": "APOE \u03b54 haplotype (if rs429358=C) or \u03b53 \u2014 dietary fat significantly affects cholesterol levels.",
+      "CT": "May carry \u03b52 allele \u2014 check combined APOE genotype.",
+      "TT": "APOE \u03b52 carrier \u2014 more responsive to dietary cholesterol changes. Higher triglyceride risk with high-carb diets."
     },
-    "description": "APOE genotype affects how your body handles dietary fats and cholesterol. ε4 carriers are most sensitive to saturated fat; ε2 carriers are more affected by carbohydrates.",
+    "description": "APOE genotype affects how your body handles dietary fats and cholesterol. \u03b54 carriers are most sensitive to saturated fat; \u03b52 carriers are more affected by carbohydrates.",
     "population_frequency": 0.08,
     "confidence": "High",
     "source": "Minihane et al., Proc Nutr Soc 2007"
@@ -1550,9 +1550,9 @@
     "trait": "Fat Metabolism Efficiency",
     "category": "Nutrition",
     "genotype_results": {
-      "CC": "Normal PPAR-alpha function — standard fatty acid oxidation.",
+      "CC": "Normal PPAR-alpha function \u2014 standard fatty acid oxidation.",
       "CG": "Slightly reduced fat metabolism efficiency.",
-      "GG": "Leu162Val — altered lipid metabolism. May have different response to high-fat diets and fibrate medications."
+      "GG": "Leu162Val \u2014 altered lipid metabolism. May have different response to high-fat diets and fibrate medications."
     },
     "description": "PPAR-alpha is a nuclear receptor controlling fat metabolism genes. This variant affects fatty acid oxidation efficiency and response to dietary fats.",
     "population_frequency": 0.07,
@@ -1565,9 +1565,9 @@
     "trait": "Folate Requirement (C677T)",
     "category": "Nutrition",
     "genotype_results": {
-      "GG": "Normal MTHFR activity — standard folate needs (400mcg/day DFE).",
-      "GA": "Mildly reduced MTHFR (~65% activity) — may benefit from slightly higher folate intake.",
-      "AA": "Significantly reduced MTHFR (~30% activity) — higher folate needs. Consider methylfolate supplementation (600-1000mcg). Especially important before and during pregnancy."
+      "GG": "Normal MTHFR activity \u2014 standard folate needs (400mcg/day DFE).",
+      "GA": "Mildly reduced MTHFR (~65% activity) \u2014 may benefit from slightly higher folate intake.",
+      "AA": "Significantly reduced MTHFR (~30% activity) \u2014 higher folate needs. Consider methylfolate supplementation (600-1000mcg). Especially important before and during pregnancy."
     },
     "description": "The most clinically significant nutrigenomics variant. Affects conversion of folic acid to active methylfolate. TT genotype needs active folate forms.",
     "population_frequency": 0.33,
@@ -1580,9 +1580,9 @@
     "trait": "Blood Pressure Response to Exercise",
     "category": "Athletic",
     "genotype_results": {
-      "II": "Lower ACE activity — better endurance performance. Greater blood pressure reduction with regular exercise.",
-      "ID": "Intermediate ACE levels — balanced fitness response.",
-      "DD": "Higher ACE activity — better strength/power gains from training. Less blood pressure reduction benefit from aerobic exercise."
+      "II": "Lower ACE activity \u2014 better endurance performance. Greater blood pressure reduction with regular exercise.",
+      "ID": "Intermediate ACE levels \u2014 balanced fitness response.",
+      "DD": "Higher ACE activity \u2014 better strength/power gains from training. Less blood pressure reduction benefit from aerobic exercise."
     },
     "description": "ACE I/D polymorphism is one of the most studied fitness genetics markers. Influences both athletic potential and cardiovascular response to training.",
     "population_frequency": 0.47,
@@ -1595,7 +1595,7 @@
     "trait": "Endurance Training Response",
     "category": "Athletic",
     "genotype_results": {
-      "GG": "Normal PPAR-alpha — good fat oxidation response to endurance training.",
+      "GG": "Normal PPAR-alpha \u2014 good fat oxidation response to endurance training.",
       "GC": "Intermediate training adaptation.",
       "CC": "Reduced fat oxidation adaptation to endurance training. May need more training volume for same improvements."
     },
@@ -1610,12 +1610,12 @@
     "trait": "Exercise Recovery / Fat Loss",
     "category": "Athletic",
     "genotype_results": {
-      "CC": "Glu27 — higher fat loss response to exercise. Better lipolysis during physical activity.",
+      "CC": "Glu27 \u2014 higher fat loss response to exercise. Better lipolysis during physical activity.",
       "CG": "Intermediate exercise-induced fat loss.",
-      "GG": "Gln27 — reduced exercise-induced lipolysis. May need higher exercise intensity for same fat-loss benefits."
+      "GG": "Gln27 \u2014 reduced exercise-induced lipolysis. May need higher exercise intensity for same fat-loss benefits."
     },
     "description": "Beta-2 adrenergic receptor variant affecting exercise-induced fat mobilization. Glu27Gln polymorphism influences how effectively exercise triggers fat burning.",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "Moderate",
     "source": "Mori et al., Pharmacogenetics 2001"
   },
@@ -1625,9 +1625,9 @@
     "trait": "Thyroid Hormone Conversion",
     "category": "Other",
     "genotype_results": {
-      "AA": "Normal deiodinase 1 — standard T4 to T3 conversion.",
+      "AA": "Normal deiodinase 1 \u2014 standard T4 to T3 conversion.",
       "AG": "Slightly altered thyroid hormone conversion.",
-      "GG": "Reduced T4 to T3 conversion — may have relatively lower T3 levels. Can affect metabolism and energy."
+      "GG": "Reduced T4 to T3 conversion \u2014 may have relatively lower T3 levels. Can affect metabolism and energy."
     },
     "description": "Deiodinase 1 variant affecting conversion of inactive thyroid hormone (T4) to active form (T3). May influence metabolic rate and energy levels.",
     "population_frequency": 0.35,
@@ -1640,9 +1640,9 @@
     "trait": "T4 to T3 Conversion (Brain)",
     "category": "Other",
     "genotype_results": {
-      "CC": "Normal deiodinase 2 — efficient brain T3 production.",
+      "CC": "Normal deiodinase 2 \u2014 efficient brain T3 production.",
       "CT": "Slightly reduced brain T3 conversion.",
-      "TT": "Thr92Ala — reduced brain T3 levels. May affect mood and cognition. Some patients feel better on combination T4/T3 therapy."
+      "TT": "Thr92Ala \u2014 reduced brain T3 levels. May affect mood and cognition. Some patients feel better on combination T4/T3 therapy."
     },
     "description": "Deiodinase 2 variant primarily affecting T3 levels in the brain. The Ala92 variant may contribute to hypothyroid symptoms despite normal blood TSH.",
     "population_frequency": 0.35,
@@ -1655,12 +1655,12 @@
     "trait": "Zinc Transport / Diabetes Protection",
     "category": "Other",
     "genotype_results": {
-      "CC": "Normal zinc transporter — standard insulin secretion.",
+      "CC": "Normal zinc transporter \u2014 standard insulin secretion.",
       "CT": "Intermediate zinc transport in beta cells.",
-      "TT": "Reduced ZnT8 function — modestly increased type 2 diabetes risk. Adequate zinc intake may be particularly important."
+      "TT": "Reduced ZnT8 function \u2014 modestly increased type 2 diabetes risk. Adequate zinc intake may be particularly important."
     },
     "description": "Zinc transporter 8 variant in pancreatic beta cells. Zinc is essential for insulin crystal formation and storage. This variant affects insulin secretion efficiency.",
-    "population_frequency": 0.30,
+    "population_frequency": 0.3,
     "confidence": "Moderate",
     "source": "Sladek et al., Nature 2007"
   },
@@ -1670,14 +1670,14 @@
     "trait": "Altitude Adaptation / Oxygen Response",
     "category": "Athletic",
     "genotype_results": {
-      "CC": "Normal HIF-1alpha — standard altitude acclimatization.",
+      "CC": "Normal HIF-1alpha \u2014 standard altitude acclimatization.",
       "CT": "Slightly enhanced hypoxic response.",
-      "TT": "Enhanced HIF response — may acclimatize to altitude faster. Better performance at high elevation."
+      "TT": "Enhanced HIF response \u2014 may acclimatize to altitude faster. Better performance at high elevation."
     },
     "description": "Hypoxia-inducible factor 1-alpha variant affecting the body's response to low oxygen. Important for altitude athletes and high-elevation performance.",
-    "population_frequency": 0.20,
+    "population_frequency": 0.2,
     "confidence": "Low",
-    "source": "Döring et al., Physiol Genomics 2010"
+    "source": "D\u00f6ring et al., Physiol Genomics 2010"
   },
   {
     "rsid": "rs6232",
@@ -1685,9 +1685,9 @@
     "trait": "Obesity / Appetite Control",
     "category": "Nutrition",
     "genotype_results": {
-      "GG": "Normal prohormone convertase — standard appetite regulation.",
+      "GG": "Normal prohormone convertase \u2014 standard appetite regulation.",
       "GA": "Slightly altered prohormone processing.",
-      "AA": "Impaired prohormone processing — associated with increased obesity risk through effects on appetite hormones."
+      "AA": "Impaired prohormone processing \u2014 associated with increased obesity risk through effects on appetite hormones."
     },
     "description": "Prohormone convertase 1 variant affecting processing of appetite-regulating hormones including proinsulin, proglucagon, and POMC.",
     "population_frequency": 0.07,
@@ -1700,14 +1700,14 @@
     "trait": "Leptin Levels / Satiety",
     "category": "Nutrition",
     "genotype_results": {
-      "GG": "Normal leptin production — standard satiety signaling.",
+      "GG": "Normal leptin production \u2014 standard satiety signaling.",
       "GA": "Slightly lower leptin levels.",
-      "AA": "Lower leptin levels — may have reduced satiety signaling. Could contribute to overeating tendency."
+      "AA": "Lower leptin levels \u2014 may have reduced satiety signaling. Could contribute to overeating tendency."
     },
-    "description": "Leptin gene promoter variant affecting leptin hormone production. Leptin signals satiety to the brain — lower levels may reduce feeling of fullness after meals.",
+    "description": "Leptin gene promoter variant affecting leptin hormone production. Leptin signals satiety to the brain \u2014 lower levels may reduce feeling of fullness after meals.",
     "population_frequency": 0.35,
     "confidence": "Low",
-    "source": "Mammès et al., Hum Mol Genet 1998"
+    "source": "Mamm\u00e8s et al., Hum Mol Genet 1998"
   },
   {
     "rsid": "rs1137101",
@@ -1715,9 +1715,9 @@
     "trait": "Leptin Sensitivity",
     "category": "Nutrition",
     "genotype_results": {
-      "AA": "Normal leptin receptor — standard satiety response.",
+      "AA": "Normal leptin receptor \u2014 standard satiety response.",
       "AG": "Slightly reduced leptin sensitivity.",
-      "GG": "Reduced leptin receptor function — may be less sensitive to satiety signals. Higher tendency toward weight gain."
+      "GG": "Reduced leptin receptor function \u2014 may be less sensitive to satiety signals. Higher tendency toward weight gain."
     },
     "description": "Leptin receptor variant affecting how well your brain responds to leptin satiety signals. Reduced sensitivity can lead to overeating.",
     "population_frequency": 0.25,
@@ -1730,9 +1730,9 @@
     "trait": "Appetite and Meal Size",
     "category": "Nutrition",
     "genotype_results": {
-      "TT": "Normal MC4R — standard appetite regulation.",
+      "TT": "Normal MC4R \u2014 standard appetite regulation.",
       "TC": "Slightly increased appetite and meal size.",
-      "CC": "Increased appetite — ~1.5 kg higher body weight per risk allele. Tendency toward larger meal portions."
+      "CC": "Increased appetite \u2014 ~1.5 kg higher body weight per risk allele. Tendency toward larger meal portions."
     },
     "description": "Melanocortin 4 receptor variant affecting appetite regulation in the hypothalamus. MC4R is a critical node in the leptin-melanocortin appetite control pathway.",
     "population_frequency": 0.25,
@@ -1745,13 +1745,1287 @@
     "trait": "Estrogen Metabolism",
     "category": "Other",
     "genotype_results": {
-      "GG": "Val/Val — faster COMT activity. More efficient estrogen detoxification. Lower breast cancer risk from estrogen exposure.",
-      "GA": "Val/Met — intermediate estrogen metabolism.",
-      "AA": "Met/Met — slower COMT activity. Less efficient estrogen breakdown. May have slightly higher estrogen-related cancer risk."
+      "GG": "Val/Val \u2014 faster COMT activity. More efficient estrogen detoxification. Lower breast cancer risk from estrogen exposure.",
+      "GA": "Val/Met \u2014 intermediate estrogen metabolism.",
+      "AA": "Met/Met \u2014 slower COMT activity. Less efficient estrogen breakdown. May have slightly higher estrogen-related cancer risk."
     },
     "description": "COMT also metabolizes catechol estrogens. Slower metabolism (Met/Met) may lead to higher levels of potentially genotoxic estrogen metabolites.",
-    "population_frequency": 0.50,
+    "population_frequency": 0.5,
     "confidence": "Moderate",
     "source": "Lavigne et al., Cancer Res 1997"
+  },
+  {
+    "rsid": "rs1801253",
+    "gene": "ADRB1",
+    "trait": "Birth Weight",
+    "category": "Physical",
+    "genotype_results": {
+      "CC": "Arg/Arg \u2014 associated with slightly higher birth weight due to enhanced beta-1 adrenergic signaling.",
+      "CG": "Arg/Gly \u2014 intermediate effect on birth weight.",
+      "GG": "Gly/Gly \u2014 associated with lower birth weight. Reduced adrenergic receptor activity."
+    },
+    "description": "Beta-1 adrenergic receptor variant influencing fetal growth. Birth weight is highly polygenic \u2014 this SNP contributes a small effect alongside FTO (rs9939609) and GCK (rs1799884). Higher birth weight is associated with the C allele.",
+    "population_frequency": 0.27,
+    "confidence": "Moderate",
+    "source": "Horikoshi et al., Nature 2013"
+  },
+  {
+    "rsid": "rs11684042",
+    "gene": "Intergenic (1p36)",
+    "trait": "Cleft Chin",
+    "category": "Physical",
+    "genotype_results": {
+      "GG": "More likely to have a smooth chin without a cleft.",
+      "GA": "Intermediate likelihood of cleft chin \u2014 partial dimple possible.",
+      "AA": "More likely to have a cleft (dimpled) chin \u2014 a visible vertical indentation in the chin."
+    },
+    "description": "Cleft chin is a Y-shaped fissure on the chin caused by incomplete fusion of the jawbone during development. While traditionally described as a dominant trait, GWAS studies show it is polygenic with contributions from rs11684042 and rs7556462.",
+    "population_frequency": 0.35,
+    "confidence": "Low",
+    "source": "Adhikari et al., Nature Communications 2016"
+  },
+  {
+    "rsid": "rs2166975",
+    "gene": "MYH9",
+    "trait": "Dimples",
+    "category": "Physical",
+    "genotype_results": {
+      "TT": "Less likely to have cheek dimples.",
+      "TC": "May have subtle cheek dimples \u2014 partial expression.",
+      "CC": "More likely to have cheek dimples \u2014 caused by variation in the zygomaticus major muscle inserting into the skin."
+    },
+    "description": "Cheek dimples result from a split in the zygomaticus major facial muscle. MYH9 encodes a myosin heavy chain involved in muscle structure. Genetic associations are preliminary and dimple inheritance is not fully understood.",
+    "confidence": "Low",
+    "source": "Peng et al., Hereditas 2019"
+  },
+  {
+    "rsid": "rs1960063",
+    "gene": "KALRN region",
+    "trait": "Ear Wiggling Ability",
+    "category": "Physical",
+    "genotype_results": {
+      "CC": "Less likely to be able to voluntarily wiggle ears.",
+      "CT": "Intermediate \u2014 may be able to learn ear wiggling with practice.",
+      "TT": "More likely to have the ability to voluntarily wiggle ears \u2014 related to vestigial auricular muscle control."
+    },
+    "description": "The ability to wiggle one's ears is a vestigial trait controlled by the auricular muscles. This locus near KALRN (Kalirin) has been associated with voluntary ear movement in GWAS. About 10-20% of people can wiggle their ears.",
+    "population_frequency": 0.3,
+    "confidence": "Low",
+    "source": "Eriksson et al., PLoS Genetics 2010"
+  },
+  {
+    "rsid": "rs10211198",
+    "gene": "EDAR region",
+    "trait": "Earlobe Type",
+    "category": "Physical",
+    "genotype_results": {
+      "GG": "More likely to have attached (joined) earlobes \u2014 lobe connects directly to the side of the head.",
+      "GA": "Intermediate earlobe attachment \u2014 partially free-hanging lobes.",
+      "AA": "More likely to have detached (free-hanging) earlobes \u2014 lobe hangs freely below the point of attachment."
+    },
+    "description": "Earlobe attachment is a classic genetics teaching example, though it is actually polygenic rather than simple Mendelian. Variants near EDAR and rs2045434 contribute to whether earlobes hang free or attach directly to the head.",
+    "population_frequency": 0.5,
+    "confidence": "Moderate",
+    "source": "Shaffer et al., American Journal of Human Genetics 2017"
+  },
+  {
+    "rsid": "rs12916399",
+    "gene": "Near FOXC2",
+    "trait": "Eyelash Length",
+    "category": "Physical",
+    "genotype_results": {
+      "GG": "Associated with shorter eyelashes.",
+      "GA": "Intermediate eyelash length.",
+      "AA": "Associated with longer eyelashes \u2014 FOXC2 region influences hair follicle development in the eyelid."
+    },
+    "description": "Eyelash length varies widely and is influenced by multiple genes. The FOXC2 region (rs12916399, rs11855019) plays a role in hair follicle morphology. Longer lashes are generally a recessive-leaning polygenic trait.",
+    "population_frequency": 0.4,
+    "confidence": "Low",
+    "source": "Adhikari et al., Nature Communications 2016"
+  },
+  {
+    "rsid": "rs756853",
+    "gene": "LNX1",
+    "trait": "Facial Hair Thickness",
+    "category": "Physical",
+    "genotype_results": {
+      "CC": "Thinner facial hair \u2014 less dense beard growth in males.",
+      "CT": "Intermediate facial hair thickness.",
+      "TT": "Thicker facial hair \u2014 denser, coarser beard growth in males. LNX1 influences androgen-mediated hair follicle activity."
+    },
+    "description": "Beard thickness and density are influenced by androgen sensitivity and hair follicle gene expression. LNX1 (rs756853) and rs12565727 have been associated with facial hair variation in large GWAS. Primarily relevant in males; effect is androgen-dependent.",
+    "population_frequency": 0.45,
+    "confidence": "Moderate",
+    "source": "Adhikari et al., Nature Communications 2016"
+  },
+  {
+    "rsid": "rs314277",
+    "gene": "LIN28B",
+    "trait": "Finger Length Ratio (2D:4D)",
+    "category": "Physical",
+    "genotype_results": {
+      "CC": "Higher 2D:4D ratio \u2014 index finger relatively longer compared to ring finger. Associated with lower prenatal androgen exposure.",
+      "CA": "Intermediate 2D:4D digit ratio.",
+      "AA": "Lower 2D:4D ratio \u2014 ring finger relatively longer than index finger. Associated with higher prenatal androgen exposure."
+    },
+    "description": "The ratio of index finger (2D) to ring finger (4D) length is a sexually dimorphic trait influenced by prenatal testosterone exposure. LIN28B and SMOC1 (rs2267675) contribute to digit ratio variation. Males typically have lower 2D:4D ratios than females.",
+    "population_frequency": 0.38,
+    "confidence": "Moderate",
+    "source": "Medland et al., Journal of Human Genetics 2010"
+  },
+  {
+    "rsid": "rs12913832",
+    "gene": "HERC2",
+    "trait": "Iris Patterns",
+    "category": "Physical",
+    "genotype_results": {
+      "GG": "More likely to have prominent iris patterns \u2014 crypts (diamond-shaped openings) and Wolfflin nodules. Lighter iris pigmentation reveals structural patterns more clearly.",
+      "GA": "Intermediate iris pattern visibility \u2014 moderate crypt and furrow structures.",
+      "AA": "Fewer visible iris patterns \u2014 darker, more uniformly pigmented irises tend to obscure structural features like crypts and furrows."
+    },
+    "description": "Iris patterns (crypts, furrows, rings, and pigment dots) are distinct from eye color. HERC2 (rs12913832) and OCA2 (rs1800407) affect melanin density in the iris stroma, which determines how visible structural patterns are. Lighter irises show more pattern detail.",
+    "population_frequency": 0.5,
+    "confidence": "Moderate",
+    "source": "Larsson et al., Molecular Vision 2011"
+  },
+  {
+    "rsid": "rs7817985",
+    "gene": "PAX9 region",
+    "trait": "Wisdom Teeth Development",
+    "category": "Physical",
+    "genotype_results": {
+      "CC": "More likely to develop all four wisdom teeth (third molars).",
+      "CT": "Intermediate \u2014 may develop 2-3 wisdom teeth or have partial eruption.",
+      "TT": "More likely to have congenitally missing wisdom teeth \u2014 one or more third molars may never develop. PAX9 is critical for molar tooth initiation."
+    },
+    "description": "About 20-25% of people are congenitally missing at least one wisdom tooth. PAX9 is a transcription factor essential for tooth development, and variants in this region influence whether third molars form. This is an evolutionary trend \u2014 jaw size reduction in modern humans leaves less room for wisdom teeth.",
+    "population_frequency": 0.25,
+    "confidence": "Moderate",
+    "source": "Nieminen et al., Human Molecular Genetics 2003"
+  },
+  {
+    "rsid": "rs7903146",
+    "gene": "TCF7L2",
+    "trait": "Hangriness (Hunger-Anger Response)",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Stable blood sugar regulation \u2014 less likely to experience mood changes when hungry.",
+      "CT": "Moderate blood sugar fluctuation \u2014 may occasionally feel irritable when meals are delayed.",
+      "TT": "Greater blood sugar variability \u2014 more prone to 'hanger' (hunger-driven irritability). Impaired insulin secretion can lead to sharper glucose dips between meals."
+    },
+    "description": "TCF7L2 affects insulin secretion and glucose homeostasis. Carriers of the T allele experience greater blood sugar swings, which can trigger irritability, difficulty concentrating, and mood changes when meals are skipped or delayed.",
+    "population_frequency": 0.3,
+    "confidence": "Moderate",
+    "source": "Grant et al., Nature Genetics 2006; Gonder-Frederick et al., J Behav Med 1997"
+  },
+  {
+    "rsid": "rs1799884",
+    "gene": "GCK",
+    "trait": "Hangriness (Glucose Sensing)",
+    "category": "Nutrition",
+    "genotype_results": {
+      "GG": "Normal glucokinase activity \u2014 stable fasting glucose and hunger signaling.",
+      "GA": "Slightly elevated fasting glucose \u2014 mild changes in hunger-mood coupling.",
+      "AA": "Reduced glucokinase promoter activity \u2014 higher fasting glucose variability. May experience stronger hunger-driven mood shifts and irritability."
+    },
+    "description": "GCK encodes glucokinase, the glucose sensor in pancreatic beta cells. Promoter variants affect the threshold for insulin release, influencing how rapidly blood sugar drops trigger hunger signals and associated mood changes.",
+    "population_frequency": 0.2,
+    "confidence": "Moderate",
+    "source": "Weedon et al., Diabetes 2006; Rose et al., Diabetologia 2009"
+  },
+  {
+    "rsid": "rs2274333",
+    "gene": "CA6",
+    "trait": "Picky Eater (Taste Sensitivity)",
+    "category": "Nutrition",
+    "genotype_results": {
+      "AA": "Normal carbonic anhydrase 6 activity \u2014 standard taste bud function and food acceptance.",
+      "AG": "Mildly altered taste sensitivity \u2014 may be somewhat more selective about food textures and flavors.",
+      "GG": "Reduced CA6 activity \u2014 altered saliva composition affects taste perception. Associated with heightened sensitivity to food textures and increased food selectivity."
+    },
+    "description": "CA6 (carbonic anhydrase 6) is secreted into saliva and influences taste bud development and maintenance. Variants can alter taste perception breadth, contributing to food selectivity and 'picky eating' behavior, especially in childhood.",
+    "population_frequency": 0.35,
+    "confidence": "Moderate",
+    "source": "Padiglia et al., Chem Senses 2010; Barbarossa et al., PLoS One 2015"
+  },
+  {
+    "rsid": "rs713598",
+    "gene": "TAS2R38",
+    "trait": "Picky Eater (Bitter Sensitivity)",
+    "category": "Nutrition",
+    "genotype_results": {
+      "GG": "Non-taster \u2014 lower bitter sensitivity. Generally more accepting of diverse foods including bitter vegetables.",
+      "GC": "Medium taster \u2014 moderate bitter perception. Mildly selective about bitter or strongly-flavored foods.",
+      "CC": "Super-taster \u2014 heightened bitter perception across many foods. Strong predictor of food selectivity, avoidance of cruciferous vegetables, and 'picky eating' in children and adults."
+    },
+    "description": "TAS2R38 bitter taste receptor sensitivity is one of the strongest genetic predictors of food selectivity. Super-tasters perceive bitter compounds intensely, leading to avoidance of many vegetables, herbs, and fermented foods.",
+    "population_frequency": 0.5,
+    "confidence": "High",
+    "source": "Kim et al., Science 2003; Mennella et al., BMC Genetics 2010"
+  },
+  {
+    "rsid": "rs8065080",
+    "gene": "TRPV1",
+    "trait": "Spicy Food Tolerance",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Normal TRPV1 sensitivity \u2014 standard capsaicin response. Typical burning sensation from spicy foods.",
+      "CT": "Slightly reduced capsaicin receptor sensitivity \u2014 may tolerate spicy foods better than average.",
+      "TT": "Reduced TRPV1 sensitivity \u2014 diminished response to capsaicin. Higher natural tolerance for spicy foods with less burning and pain."
+    },
+    "description": "TRPV1 is the capsaicin receptor \u2014 the ion channel that detects heat and the 'burn' of chili peppers. The rs8065080 variant (Val585Ile) reduces receptor sensitivity, meaning carriers feel less pain from spicy food.",
+    "population_frequency": 0.3,
+    "confidence": "Moderate",
+    "source": "Cantero-Recasens et al., Mol Biol Evol 2005; Lv et al., PLoS One 2017"
+  },
+  {
+    "rsid": "rs222747",
+    "gene": "TRPV1",
+    "trait": "Spicy Food Tolerance (Secondary)",
+    "category": "Nutrition",
+    "genotype_results": {
+      "GG": "Normal TRPV1 channel function \u2014 standard spice/heat sensitivity.",
+      "GC": "Mildly altered capsaicin sensitivity \u2014 subtle differences in spice tolerance.",
+      "CC": "Altered TRPV1 function \u2014 modified heat and capsaicin perception. May contribute to higher spice tolerance alongside other TRPV1 variants."
+    },
+    "description": "A second variant in the TRPV1 capsaicin receptor gene (Met315Ile) that modifies ion channel gating properties. Combined with rs8065080, it helps explain individual variation in spicy food tolerance and preference.",
+    "population_frequency": 0.25,
+    "confidence": "Low",
+    "source": "Kim et al., J Dent Res 2004; Lv et al., PLoS One 2017"
+  },
+  {
+    "rsid": "rs35874116",
+    "gene": "TAS1R2",
+    "trait": "Sweet vs Savory Preference",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Normal TAS1R2 sweet receptor function \u2014 standard sweet taste sensitivity.",
+      "CT": "Slightly altered sweet receptor \u2014 may have modified sweet taste threshold, subtly shifting preference toward savory.",
+      "TT": "Reduced sweet receptor sensitivity \u2014 higher sugar threshold needed to perceive sweetness. Associated with preference for savory over sweet foods."
+    },
+    "description": "TAS1R2 encodes one subunit of the sweet taste receptor heterodimer. Variants affect how intensely sweetness is perceived: those with reduced sensitivity tend to prefer savory foods or require more sugar to satisfy a sweet craving.",
+    "population_frequency": 0.22,
+    "confidence": "Moderate",
+    "source": "Fushan et al., Curr Biol 2009; Dias et al., Appetite 2015"
+  },
+  {
+    "rsid": "rs307355",
+    "gene": "TAS1R3",
+    "trait": "Sweet vs Savory Preference (Secondary)",
+    "category": "Nutrition",
+    "genotype_results": {
+      "TT": "Normal TAS1R3 function \u2014 typical sweet taste perception.",
+      "TC": "Mildly altered sweet receptor complex \u2014 subtle differences in sweetness intensity perception.",
+      "CC": "Altered TAS1R3 subunit \u2014 modified sweet receptor sensitivity. May shift food preference away from sweet toward umami or savory flavors."
+    },
+    "description": "TAS1R3 encodes the second subunit of the sweet taste receptor (and also the umami receptor). Variants here affect both sweet and umami perception, influencing whether a person gravitates toward sweet or savory foods.",
+    "population_frequency": 0.18,
+    "confidence": "Low",
+    "source": "Reed et al., Chem Senses 2006; Fushan et al., Curr Biol 2009"
+  },
+  {
+    "rsid": "rs34160967",
+    "gene": "TAS1R1",
+    "trait": "Umami Sensitivity",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Normal TAS1R1 function \u2014 standard umami taste perception. Typical response to glutamate-rich foods (parmesan, tomatoes, mushrooms, soy sauce).",
+      "CA": "Mildly reduced umami sensitivity \u2014 may perceive savory/meaty flavors as slightly less intense.",
+      "AA": "Reduced umami receptor function \u2014 diminished ability to taste glutamate. May use more MSG, soy sauce, or seasoning to achieve satisfying savory flavor."
+    },
+    "description": "TAS1R1 encodes a subunit of the umami (savory) taste receptor. Variants reduce sensitivity to L-glutamate, the amino acid responsible for the 'fifth taste' found in aged cheeses, fermented foods, meat broths, and tomatoes.",
+    "population_frequency": 0.15,
+    "confidence": "Moderate",
+    "source": "Shigemura et al., J Biol Chem 2009; Chen et al., PNAS 2009"
+  },
+  {
+    "rsid": "rs307355",
+    "gene": "TAS1R3",
+    "trait": "Umami Sensitivity (Secondary)",
+    "category": "Nutrition",
+    "genotype_results": {
+      "TT": "Normal umami receptor complex \u2014 standard glutamate perception.",
+      "TC": "Mildly altered TAS1R3 \u2014 subtle changes in umami intensity perception.",
+      "CC": "Altered TAS1R3 function \u2014 modifies both umami and sweet receptor complexes. May experience reduced umami taste, affecting preference for fermented and savory-rich foods."
+    },
+    "description": "TAS1R3 is shared between the sweet and umami receptor complexes. This variant modifies the umami receptor heterodimer (TAS1R1+TAS1R3), affecting perception of glutamate and nucleotide flavors in food.",
+    "population_frequency": 0.18,
+    "confidence": "Low",
+    "source": "Reed et al., Chem Senses 2006; Raliou et al., Chem Senses 2009"
+  },
+  {
+    "rsid": "rs33972313",
+    "gene": "SLC23A1",
+    "trait": "Vitamin C Levels",
+    "category": "Nutrition",
+    "genotype_results": {
+      "GG": "Normal vitamin C transporter function \u2014 efficient intestinal absorption and tissue distribution of ascorbic acid.",
+      "GA": "Mildly reduced SLC23A1 activity \u2014 slightly lower circulating vitamin C levels. Standard dietary intake usually sufficient.",
+      "AA": "Reduced vitamin C transporter function \u2014 lower plasma vitamin C levels even with adequate dietary intake. May benefit from increased citrus, berries, and peppers or supplementation."
+    },
+    "description": "SLC23A1 encodes the sodium-dependent vitamin C transporter (SVCT1), responsible for intestinal absorption of ascorbic acid. Variants reduce transport efficiency, leading to lower circulating vitamin C independent of dietary intake.",
+    "population_frequency": 0.06,
+    "confidence": "Moderate",
+    "source": "Timpson et al., Am J Clin Nutr 2010; Duell et al., Cancer Epidemiol 2013"
+  },
+  {
+    "rsid": "rs6596473",
+    "gene": "SLC23A1",
+    "trait": "Vitamin C Levels (Secondary)",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Normal SLC23A1 expression \u2014 standard vitamin C absorption capacity.",
+      "CT": "Mildly reduced transporter expression \u2014 slightly lower average plasma vitamin C.",
+      "TT": "Reduced SLC23A1 expression \u2014 lower vitamin C absorption efficiency. Combined with rs33972313 variants, may significantly reduce circulating ascorbic acid levels."
+    },
+    "description": "A second variant in SLC23A1 affecting vitamin C transporter expression levels. Acts additively with rs33972313 to influence overall vitamin C status and may modify scurvy risk in populations with marginal dietary intake.",
+    "population_frequency": 0.28,
+    "confidence": "Low",
+    "source": "Timpson et al., Am J Clin Nutr 2010; Michels et al., Nutr Rev 2013"
+  },
+  {
+    "rsid": "rs12272004",
+    "gene": "APOA5",
+    "trait": "Vitamin E Levels",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Normal APOA5 function \u2014 efficient triglyceride-rich lipoprotein metabolism and vitamin E transport.",
+      "CG": "Mildly altered lipid metabolism \u2014 slightly lower vitamin E carried in lipoproteins.",
+      "GG": "Reduced APOA5 activity \u2014 higher triglycerides and altered lipoprotein composition. May lead to lower bioavailable vitamin E despite adequate dietary intake."
+    },
+    "description": "APOA5 regulates triglyceride-rich lipoproteins that carry fat-soluble vitamins including vitamin E (alpha-tocopherol). Variants that raise triglycerides alter vitamin E distribution and bioavailability in tissues.",
+    "population_frequency": 0.07,
+    "confidence": "Moderate",
+    "source": "Major et al., J Nutr 2011; Ferrucci et al., PLoS Med 2009"
+  },
+  {
+    "rsid": "rs964184",
+    "gene": "ZPR1/APOA5",
+    "trait": "Vitamin E Levels (Secondary)",
+    "category": "Nutrition",
+    "genotype_results": {
+      "CC": "Normal triglyceride metabolism \u2014 standard vitamin E transport via lipoproteins.",
+      "CG": "Mildly elevated triglycerides \u2014 may slightly reduce vitamin E bioavailability.",
+      "GG": "Elevated triglycerides \u2014 altered lipoprotein particle composition reduces vitamin E delivery to tissues. May benefit from vitamin E-rich diet (nuts, seeds, olive oil) or supplementation."
+    },
+    "description": "rs964184 near ZPR1/APOA5 is a well-replicated triglyceride-associated locus. Higher triglycerides alter the lipoprotein particles that transport vitamin E, potentially reducing tissue delivery of alpha-tocopherol.",
+    "population_frequency": 0.13,
+    "confidence": "Moderate",
+    "source": "Teslovich et al., Nature 2010; Major et al., J Nutr 2011"
+  },
+  {
+    "rsid": "rs1815739",
+    "gene": "ACTN3",
+    "trait": "Athletic Ability",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Full alpha-actinin-3 in fast-twitch fibers \u2014 strong genetic foundation for power-based sports. Sprinters and strength athletes are over-represented with this genotype.",
+      "CT": "Mix of fast-twitch and slow-twitch properties \u2014 versatile athletic profile suited to a wide range of sports.",
+      "TT": "No alpha-actinin-3 \u2014 shifted toward endurance-type muscle fibers. May excel in distance running, cycling, or swimming rather than power events."
+    },
+    "description": "A broad indicator of athletic predisposition based on muscle fiber composition. The ACTN3 gene is sometimes called the 'gene for speed' because it shapes whether your muscles favor explosive power or sustained endurance.",
+    "population_frequency": 0.42,
+    "confidence": "Moderate",
+    "source": "Yang et al., Am J Hum Genet 2003"
+  },
+  {
+    "rsid": "rs4646994",
+    "gene": "ACE",
+    "trait": "Athletic Ability",
+    "category": "Athletic",
+    "genotype_results": {
+      "II": "Lower ACE activity \u2014 favors endurance. Over-represented in elite distance athletes and mountaineers.",
+      "ID": "Balanced ACE activity \u2014 intermediate athletic profile with potential in both power and endurance.",
+      "DD": "Higher ACE activity \u2014 associated with greater strength and power output. More common in elite sprinters and power athletes."
+    },
+    "description": "The ACE insertion/deletion variant influences cardiovascular efficiency and muscle performance. Together with ACTN3, it is one of the most studied genes in sports genetics.",
+    "population_frequency": 0.39,
+    "confidence": "Moderate",
+    "source": "Montgomery et al., Nature 1998"
+  },
+  {
+    "rsid": "rs1815739",
+    "gene": "ACTN3",
+    "trait": "Getting Stronger",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Optimal fast-twitch fiber activation \u2014 tends to gain strength quickly with resistance training. Greater power output gains per training cycle.",
+      "CT": "Moderate strength training response \u2014 steady gains with consistent training.",
+      "TT": "Slower initial strength gains but potentially better endurance adaptations. May need higher training volume for hypertrophy."
+    },
+    "description": "How your muscles respond to strength training. People with more fast-twitch fibers tend to see quicker strength gains, while those with more slow-twitch fibers may respond better to higher-rep, endurance-style training.",
+    "population_frequency": 0.42,
+    "confidence": "Moderate",
+    "source": "Clarkson et al., Med Sci Sports Exerc 2005"
+  },
+  {
+    "rsid": "rs4994",
+    "gene": "ADRB3",
+    "trait": "Getting Stronger",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Normal adrenergic receptor function \u2014 standard metabolic support for strength training adaptation.",
+      "CT": "Slightly altered energy mobilization during resistance exercise \u2014 may affect recovery between sets.",
+      "TT": "Reduced adrenergic signaling \u2014 may experience slower metabolic adaptation to heavy training. Extra recovery time between sessions could help."
+    },
+    "description": "The ADRB3 receptor helps mobilize stored energy during intense exercise. Variants can affect how efficiently your body fuels strength training sessions and recovers between workouts.",
+    "population_frequency": 0.08,
+    "confidence": "Moderate",
+    "source": "Szendrei et al., Br J Sports Med 2016"
+  },
+  {
+    "rsid": "rs6265",
+    "gene": "BDNF",
+    "trait": "Hand-Eye Coordination",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Normal BDNF secretion \u2014 efficient neural signaling supports strong hand-eye coordination and motor skill learning.",
+      "CT": "Slightly reduced activity-dependent BDNF release \u2014 may need more practice repetitions to lock in fine motor skills.",
+      "TT": "Lower BDNF secretion \u2014 motor learning may take longer, but consistent practice can overcome this. Hand-eye coordination tasks may require more deliberate training."
+    },
+    "description": "BDNF (brain-derived neurotrophic factor) strengthens neural connections involved in motor coordination. Higher BDNF activity supports faster learning of tasks that require precise hand-eye timing, like catching, hitting, or throwing.",
+    "population_frequency": 0.2,
+    "confidence": "Moderate",
+    "source": "Egan et al., Cell 2003"
+  },
+  {
+    "rsid": "rs1799983",
+    "gene": "NOS3",
+    "trait": "Heart Rate Recovery",
+    "category": "Athletic",
+    "genotype_results": {
+      "GG": "Normal nitric oxide production \u2014 efficient vasodilation supports quick heart rate recovery after exercise.",
+      "GT": "Slightly reduced NO production \u2014 heart rate may take a bit longer to return to baseline after intense effort.",
+      "TT": "Lower nitric oxide synthesis \u2014 slower post-exercise heart rate recovery. May benefit from longer cool-down periods."
+    },
+    "description": "How quickly your heart rate drops back to resting after exercise is partly determined by nitric oxide signaling. Faster recovery generally indicates better cardiovascular fitness and autonomic nervous system function.",
+    "population_frequency": 0.3,
+    "confidence": "Moderate",
+    "source": "Hand et al., Hypertension 2006"
+  },
+  {
+    "rsid": "rs1042713",
+    "gene": "ADRB2",
+    "trait": "Heart Rate Recovery",
+    "category": "Athletic",
+    "genotype_results": {
+      "GG": "Arg16 homozygous \u2014 enhanced beta-2 receptor function supports faster heart rate recovery and bronchodilation during exercise.",
+      "GA": "Intermediate receptor sensitivity \u2014 standard recovery profile.",
+      "AA": "Gly16 homozygous \u2014 reduced receptor density with sustained stimulation. Heart rate may stay elevated slightly longer post-exercise."
+    },
+    "description": "Beta-2 adrenergic receptors regulate heart rate and airway dilation during exercise. This variant affects how quickly these receptors respond to calm the cardiovascular system after exertion.",
+    "population_frequency": 0.4,
+    "confidence": "Moderate",
+    "source": "Snyder et al., J Appl Physiol 2006"
+  },
+  {
+    "rsid": "rs1042713",
+    "gene": "ADRB2",
+    "trait": "Heat Tolerance",
+    "category": "Athletic",
+    "genotype_results": {
+      "GG": "Enhanced thermoregulatory response \u2014 better peripheral vasodilation in heat. May maintain performance better in hot conditions.",
+      "GA": "Intermediate heat response \u2014 standard thermoregulation under heat stress.",
+      "AA": "Reduced adrenergic-mediated vasodilation \u2014 may struggle more in high-heat conditions. Hydration and acclimatization strategies are especially important."
+    },
+    "description": "Your ability to exercise in the heat depends partly on how well blood vessels near the skin dilate to release body heat. Beta-2 receptor variants influence this thermoregulatory response.",
+    "population_frequency": 0.4,
+    "confidence": "Moderate",
+    "source": "Heled et al., J Appl Physiol 2013"
+  },
+  {
+    "rsid": "rs1799983",
+    "gene": "NOS3",
+    "trait": "Holding Your Breath",
+    "category": "Athletic",
+    "genotype_results": {
+      "GG": "Normal nitric oxide production \u2014 efficient oxygen delivery and vasodilation supports longer breath-hold times.",
+      "GT": "Slightly reduced NO synthesis \u2014 moderate breath-hold capacity.",
+      "TT": "Lower nitric oxide levels \u2014 reduced oxygen efficiency may shorten comfortable breath-hold duration. Breathing exercises can help improve this."
+    },
+    "description": "How long you can comfortably hold your breath is influenced by how efficiently your body uses available oxygen. Nitric oxide helps blood vessels dilate and improves oxygen delivery to tissues, extending the time before you feel the urge to breathe.",
+    "population_frequency": 0.3,
+    "confidence": "Moderate",
+    "source": "Modig et al., Undersea Hyperb Med 2017"
+  },
+  {
+    "rsid": "rs4994",
+    "gene": "ADRB3",
+    "trait": "Holding Your Breath",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Normal metabolic rate regulation \u2014 standard oxygen consumption at rest supports typical breath-hold duration.",
+      "CT": "Slightly altered resting metabolic rate \u2014 minimal impact on breath-holding.",
+      "TT": "Altered metabolic signaling \u2014 may have different baseline oxygen consumption patterns. Breath-hold training can still significantly improve duration."
+    },
+    "description": "The ADRB3 receptor influences resting metabolic rate and oxygen consumption. Lower baseline oxygen demand can mean more time before carbon dioxide buildup triggers the breathing reflex.",
+    "population_frequency": 0.08,
+    "confidence": "Moderate",
+    "source": "Masuo et al., Hypertens Res 2005"
+  },
+  {
+    "rsid": "rs1815739",
+    "gene": "ACTN3",
+    "trait": "Jumping High",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Full fast-twitch fiber activation \u2014 strong explosive power for vertical jumping. Elite jumpers are significantly over-represented with this genotype.",
+      "CT": "Mixed fiber profile \u2014 good jumping ability with proper training.",
+      "TT": "Fewer fast-twitch fibers \u2014 vertical jump may be lower on average, but plyometric training can still produce meaningful improvements."
+    },
+    "description": "Jumping height is one of the most heritable athletic traits. Fast-twitch muscle fibers generate the explosive force needed for powerful vertical leaps, and ACTN3 is a key determinant of fast-twitch fiber function.",
+    "population_frequency": 0.42,
+    "confidence": "Moderate",
+    "source": "Eynon et al., Eur J Appl Physiol 2009"
+  },
+  {
+    "rsid": "rs2229456",
+    "gene": "COL5A1",
+    "trait": "Jumping High",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Normal collagen V structure \u2014 typical tendon stiffness supports efficient energy transfer during jumps.",
+      "CT": "Slightly altered tendon compliance \u2014 may affect elastic energy storage in tendons.",
+      "TT": "More compliant tendons \u2014 could reduce explosive force transfer. Plyometric training to improve tendon stiffness may be especially beneficial."
+    },
+    "description": "Tendon stiffness matters for jumping because stiff tendons store and release elastic energy more efficiently. The COL5A1 gene affects collagen structure in tendons and ligaments, influencing how much spring you get from each jump.",
+    "population_frequency": 0.25,
+    "confidence": "Moderate",
+    "source": "Posthumus et al., Br J Sports Med 2011"
+  },
+  {
+    "rsid": "rs12722",
+    "gene": "COL5A1",
+    "trait": "Muscle Fatigue",
+    "category": "Athletic",
+    "genotype_results": {
+      "TT": "Normal collagen V expression \u2014 standard tendon resilience and fatigue resistance during prolonged exercise.",
+      "TC": "Slightly altered collagen structure \u2014 moderate fatigue resistance.",
+      "CC": "Altered collagen V levels \u2014 tendons may fatigue more quickly under repetitive stress. Proper warm-up and pacing strategies become more important."
+    },
+    "description": "Muscle fatigue during exercise is not just about the muscles themselves \u2014 tendons and connective tissue play a major role. COL5A1 variants affect the structural integrity of connective tissue under repeated stress.",
+    "population_frequency": 0.28,
+    "confidence": "Moderate",
+    "source": "Collins et al., Am J Sports Med 2010"
+  },
+  {
+    "rsid": "rs1800169",
+    "gene": "CILP",
+    "trait": "Muscle Fatigue",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Normal cartilage intermediate layer protein \u2014 standard joint and connective tissue durability during prolonged activity.",
+      "CT": "Slightly increased CILP levels \u2014 may experience earlier onset of exercise-related stiffness.",
+      "TT": "Higher CILP expression \u2014 associated with increased susceptibility to disc and cartilage fatigue. Recovery between sessions may need extra attention."
+    },
+    "description": "CILP is found in cartilage and connective tissue and can inhibit tissue repair signals. Higher levels may mean your joints and connective tissue tire out more quickly during sustained exercise.",
+    "population_frequency": 0.15,
+    "confidence": "Moderate",
+    "source": "Seki et al., Nat Genet 2005"
+  },
+  {
+    "rsid": "rs6265",
+    "gene": "BDNF",
+    "trait": "Performing Choreography",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Robust BDNF signaling \u2014 faster motor sequence learning. Picking up and remembering choreography comes more naturally.",
+      "CT": "Moderate BDNF activity \u2014 can learn choreography with regular practice, may need a few extra run-throughs.",
+      "TT": "Reduced activity-dependent BDNF release \u2014 may need more rehearsal to memorize movement sequences. Breaking routines into smaller chunks can help."
+    },
+    "description": "Learning choreography requires your brain to encode complex movement sequences. BDNF strengthens the neural pathways involved in motor learning, making it easier to pick up and retain dance routines and coordinated movement patterns.",
+    "population_frequency": 0.2,
+    "confidence": "Moderate",
+    "source": "McHughen et al., Cereb Cortex 2010"
+  },
+  {
+    "rsid": "rs4680",
+    "gene": "COMT",
+    "trait": "Performing Choreography",
+    "category": "Athletic",
+    "genotype_results": {
+      "GG": "Val/Val \u2014 faster dopamine clearance. Quick cognitive processing but may find it harder to sustain focus during long rehearsals.",
+      "GA": "Val/Met \u2014 balanced dopamine levels. Good blend of cognitive flexibility and sustained attention for learning routines.",
+      "AA": "Met/Met \u2014 slower dopamine clearance. Excellent sustained focus and working memory for memorizing complex sequences, but may feel performance anxiety."
+    },
+    "description": "COMT controls how fast dopamine is broken down in the prefrontal cortex. This affects working memory and motor planning \u2014 both crucial for learning and performing choreographed movement sequences under pressure.",
+    "population_frequency": 0.5,
+    "confidence": "Moderate",
+    "source": "Noohi et al., Behav Brain Res 2014"
+  },
+  {
+    "rsid": "rs1815739",
+    "gene": "ACTN3",
+    "trait": "Physical Agility",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Fast-twitch dominant \u2014 quick direction changes, powerful accelerations. Natural advantage in sports requiring agility like basketball, soccer, and tennis.",
+      "CT": "Balanced muscle fiber profile \u2014 good overall agility with proper training.",
+      "TT": "Endurance-oriented fibers \u2014 may need to work harder on change-of-direction speed but can build excellent movement efficiency."
+    },
+    "description": "Physical agility combines speed, coordination, and the ability to change direction quickly. Fast-twitch muscle fibers provide the rapid force production needed for sharp cuts, pivots, and reactive movements.",
+    "population_frequency": 0.42,
+    "confidence": "Moderate",
+    "source": "Eynon et al., J Sci Med Sport 2010"
+  },
+  {
+    "rsid": "rs6265",
+    "gene": "BDNF",
+    "trait": "Physical Agility",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Normal BDNF \u2014 strong neural plasticity supports rapid motor adaptation and agile movement patterns.",
+      "CT": "Slightly reduced BDNF secretion \u2014 agility can still be developed with focused training drills.",
+      "TT": "Lower BDNF activity \u2014 reactive agility may develop more slowly. Agility ladder and sport-specific drills can help compensate."
+    },
+    "description": "Agility is not just about muscles \u2014 your brain needs to rapidly process visual cues and coordinate movement responses. BDNF supports the neural plasticity required for quick, adaptive movements.",
+    "population_frequency": 0.2,
+    "confidence": "Moderate",
+    "source": "Helm et al., J Int Soc Sports Nutr 2017"
+  },
+  {
+    "rsid": "rs6265",
+    "gene": "BDNF",
+    "trait": "Physical Balance",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Normal BDNF levels \u2014 strong neuroplasticity supports good proprioception and balance control.",
+      "CT": "Slightly reduced BDNF \u2014 balance is largely trainable, so moderate impact on overall stability.",
+      "TT": "Lower BDNF secretion \u2014 may have slightly less precise proprioceptive feedback. Balance training (yoga, single-leg exercises) is especially beneficial."
+    },
+    "description": "Balance requires constant communication between your vestibular system, muscles, and brain. BDNF helps maintain and strengthen these neural pathways, affecting how quickly you adapt to unstable surfaces and maintain postural control.",
+    "population_frequency": 0.2,
+    "confidence": "Moderate",
+    "source": "Taubert et al., J Neurosci 2015"
+  },
+  {
+    "rsid": "rs1800497",
+    "gene": "ANKK1/DRD2",
+    "trait": "Physical Balance",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Normal D2 receptor density \u2014 standard dopaminergic motor control supports good balance.",
+      "CT": "Slightly reduced D2 receptor density \u2014 minimal impact on balance under normal conditions.",
+      "TT": "Reduced D2 receptor density \u2014 may have slightly less precise motor control. Balance and proprioception exercises can help maintain stability."
+    },
+    "description": "Dopamine D2 receptors in the basal ganglia help fine-tune motor control and postural adjustments. Lower receptor density can subtly affect the precision of balance corrections, especially during complex movements.",
+    "population_frequency": 0.2,
+    "confidence": "Moderate",
+    "source": "Pearson-Fuhrhop et al., Cerebral Cortex 2013"
+  },
+  {
+    "rsid": "rs1815739",
+    "gene": "ACTN3",
+    "trait": "Physical Strength",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Full alpha-actinin-3 \u2014 maximum fast-twitch fiber force production. Associated with higher baseline strength and greater potential for strength development.",
+      "CT": "Intermediate strength potential \u2014 can still develop impressive strength with consistent training.",
+      "TT": "No alpha-actinin-3 \u2014 lower initial strength ceiling but better suited to endurance tasks. Strength can still be built with progressive overload."
+    },
+    "description": "Raw physical strength depends heavily on fast-twitch muscle fiber composition. ACTN3 is the most replicated gene associated with muscle strength across dozens of studies in different populations.",
+    "population_frequency": 0.42,
+    "confidence": "Moderate",
+    "source": "Erskine et al., Eur J Appl Physiol 2014"
+  },
+  {
+    "rsid": "rs4646994",
+    "gene": "ACE",
+    "trait": "Physical Strength",
+    "category": "Athletic",
+    "genotype_results": {
+      "DD": "Higher ACE activity \u2014 associated with greater muscle strength and power. More common among elite strength athletes.",
+      "ID": "Intermediate ACE levels \u2014 balanced strength potential.",
+      "II": "Lower ACE activity \u2014 favors endurance over raw strength. May build strength more gradually."
+    },
+    "description": "The ACE gene influences muscle growth signaling and blood flow regulation. The D allele promotes greater muscle hypertrophy and power output, complementing ACTN3 as a key strength determinant.",
+    "population_frequency": 0.39,
+    "confidence": "Moderate",
+    "source": "Folland et al., Eur J Appl Physiol 2000"
+  },
+  {
+    "rsid": "rs4680",
+    "gene": "COMT",
+    "trait": "Quick Reflexes",
+    "category": "Athletic",
+    "genotype_results": {
+      "GG": "Val/Val \u2014 faster dopamine clearance in prefrontal cortex. Quick cognitive processing and faster reaction times under pressure.",
+      "GA": "Val/Met \u2014 balanced dopamine metabolism. Good reaction time with moderate stress resilience.",
+      "AA": "Met/Met \u2014 slower dopamine breakdown. Excellent focused attention but reaction times may be slightly slower under high-pressure situations."
+    },
+    "description": "Reaction time depends on how quickly your brain processes a stimulus and initiates a motor response. COMT influences dopamine levels in the prefrontal cortex, which affects the speed of cognitive processing and decision-making in split-second situations.",
+    "population_frequency": 0.5,
+    "confidence": "Moderate",
+    "source": "Colzato et al., Neuropsychologia 2010"
+  },
+  {
+    "rsid": "rs6265",
+    "gene": "BDNF",
+    "trait": "Quick Reflexes",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Normal BDNF \u2014 efficient neural transmission supports fast sensory-motor coupling and quick reflexes.",
+      "CT": "Slightly reduced BDNF \u2014 minor impact on reflex speed. Regular practice of reactive drills can maintain sharp reflexes.",
+      "TT": "Lower BDNF activity \u2014 neural signal speed may be slightly reduced. Reaction-time training drills can help sharpen reflexes."
+    },
+    "description": "BDNF supports the myelination and strength of neural connections between sensory and motor neurons. Faster neural transmission means quicker reflexes when you need to react to a ball, opponent, or unexpected obstacle.",
+    "population_frequency": 0.2,
+    "confidence": "Moderate",
+    "source": "Fritsch et al., Neuron 2010"
+  },
+  {
+    "rsid": "rs1815739",
+    "gene": "ACTN3",
+    "trait": "Speed",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Full fast-twitch fiber activation \u2014 built for speed. This genotype is found in nearly every studied Olympic sprinter.",
+      "CT": "Mixed fiber type \u2014 can develop good speed with sprint-specific training.",
+      "TT": "Endurance-oriented fibers \u2014 top-end sprint speed may be limited, but can still be a fast recreational runner."
+    },
+    "description": "Sprint speed is one of the most genetically influenced athletic traits. ACTN3 determines whether your fast-twitch fibers produce the explosive force needed for maximal sprinting speed.",
+    "population_frequency": 0.42,
+    "confidence": "Moderate",
+    "source": "Yang et al., Am J Hum Genet 2003"
+  },
+  {
+    "rsid": "rs1799945",
+    "gene": "HFE",
+    "trait": "Speed",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Normal iron regulation \u2014 standard oxygen transport to working muscles during sprints.",
+      "CG": "Slightly increased iron absorption \u2014 may support higher hemoglobin levels and better oxygen delivery during intense efforts.",
+      "GG": "Higher iron absorption (H63D variant) \u2014 potentially enhanced oxygen carrying capacity. Monitor iron levels as excess can be harmful."
+    },
+    "description": "Sprinting relies on rapid oxygen delivery to muscles. The HFE gene regulates iron absorption, and iron is essential for hemoglobin production. Slightly increased iron levels can improve oxygen transport during short, intense efforts.",
+    "population_frequency": 0.14,
+    "confidence": "Moderate",
+    "source": "Hermine et al., Blood 2011"
+  },
+  {
+    "rsid": "rs6265",
+    "gene": "BDNF",
+    "trait": "Sports Technique",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Strong BDNF signaling \u2014 picks up new motor skills and techniques faster. Practice sessions are more productive for skill acquisition.",
+      "CT": "Moderate BDNF activity \u2014 good technique learning with consistent practice.",
+      "TT": "Reduced BDNF release \u2014 technical skills may take longer to develop. Benefits from more frequent, shorter practice sessions with focused repetition."
+    },
+    "description": "Learning sports technique is fundamentally a motor learning task. BDNF drives the strengthening of neural pathways each time you practice a movement, making it a key factor in how quickly you master new skills.",
+    "population_frequency": 0.2,
+    "confidence": "Moderate",
+    "source": "McHughen et al., Cereb Cortex 2010"
+  },
+  {
+    "rsid": "rs4680",
+    "gene": "COMT",
+    "trait": "Sports Technique",
+    "category": "Athletic",
+    "genotype_results": {
+      "GG": "Val/Val \u2014 quick cognitive processing supports rapid tactical adaptation. May learn game-sense aspects of technique faster.",
+      "GA": "Val/Met \u2014 balanced profile. Good at both learning new techniques and executing under pressure.",
+      "AA": "Met/Met \u2014 superior working memory and attention to detail. Excels at mastering precise, technical movements but may overthink under competition pressure."
+    },
+    "description": "Sports technique combines motor learning with cognitive processing. COMT affects dopamine in areas of the brain responsible for motor planning, working memory, and attention \u2014 all critical for mastering complex athletic skills.",
+    "population_frequency": 0.5,
+    "confidence": "Moderate",
+    "source": "Noohi et al., Behav Brain Res 2014"
+  },
+  {
+    "rsid": "rs1815739",
+    "gene": "ACTN3",
+    "trait": "Sprinting",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Sprint-optimized fast-twitch fibers \u2014 built for explosive, short-distance speed. Found in virtually 100% of elite male sprinters studied.",
+      "CT": "Mixed fiber profile \u2014 capable sprinter with proper training. Can compete well at sub-elite levels.",
+      "TT": "Endurance-shifted fibers \u2014 sprinting is not your strongest suit genetically, but short-distance speed can still improve significantly with training."
+    },
+    "description": "Sprinting ability specifically \u2014 not just general speed, but your capacity for all-out effort over short distances. This is one of the most strongly genetic athletic traits, with ACTN3 being the primary determinant of fast-twitch fiber function.",
+    "population_frequency": 0.42,
+    "confidence": "Moderate",
+    "source": "North et al., Hum Genet 2009"
+  },
+  {
+    "rsid": "rs6265",
+    "gene": "BDNF",
+    "trait": "Dancing",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Strong BDNF activity \u2014 enhanced motor learning and rhythm coordination. Picking up new dance moves tends to come naturally.",
+      "CT": "Moderate BDNF levels \u2014 can develop good dance skills with practice. May need a few extra repetitions to lock in new moves.",
+      "TT": "Lower BDNF secretion \u2014 dance skill acquisition may be slower, but dedicated practice absolutely overcomes this. Many talented dancers have this genotype."
+    },
+    "description": "Dancing combines rhythm perception, motor coordination, spatial awareness, and emotional expression. BDNF plays a role in the neural plasticity that lets you translate music into coordinated body movements.",
+    "population_frequency": 0.2,
+    "confidence": "Moderate",
+    "source": "Bachner-Melman et al., PLoS Genet 2005"
+  },
+  {
+    "rsid": "rs4680",
+    "gene": "COMT",
+    "trait": "Dancing",
+    "category": "Athletic",
+    "genotype_results": {
+      "GG": "Val/Val \u2014 quick cognitive processing. Adapts easily to tempo changes and improvisation on the dance floor.",
+      "GA": "Val/Met \u2014 balanced dopamine metabolism. Good combination of creativity and precision for dance.",
+      "AA": "Met/Met \u2014 higher dopamine in prefrontal cortex. May have stronger emotional expression in dance and better memory for complex routines."
+    },
+    "description": "Dancing is as much a cognitive activity as a physical one. COMT influences the dopamine levels that affect creativity, emotional expression, and motor sequence memory \u2014 all essential elements of dance performance.",
+    "population_frequency": 0.5,
+    "confidence": "Moderate",
+    "source": "Bachner-Melman et al., PLoS Genet 2005"
+  },
+  {
+    "rsid": "rs324420",
+    "gene": "FAAH",
+    "trait": "Runner's High Intensity",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Normal FAAH activity \u2014 standard endocannabinoid breakdown. May experience a typical runner's high after sustained exercise.",
+      "CA": "Reduced FAAH activity \u2014 slower anandamide breakdown. Likely to experience a more noticeable runner's high during moderate-to-vigorous exercise.",
+      "AA": "Significantly reduced FAAH activity \u2014 anandamide levels stay elevated longer. Tends to experience an intense, prolonged runner's high. May find it easier to get 'hooked' on exercise."
+    },
+    "description": "The runner's high is driven by your endocannabinoid system, not endorphins as was long believed. FAAH breaks down anandamide, a natural cannabinoid your body produces during exercise. Less FAAH activity means more anandamide sticks around, creating a stronger euphoric feeling.",
+    "population_frequency": 0.2,
+    "confidence": "Moderate",
+    "source": "Raichlen et al., J Exp Biol 2012"
+  },
+  {
+    "rsid": "rs1799983",
+    "gene": "NOS3",
+    "trait": "Oxygen Use (VO2 Max)",
+    "category": "Athletic",
+    "genotype_results": {
+      "GG": "Normal endothelial nitric oxide synthase \u2014 efficient vasodilation and oxygen delivery to working muscles during aerobic exercise.",
+      "GT": "Slightly reduced NO production \u2014 moderate impact on peak oxygen uptake.",
+      "TT": "Lower nitric oxide synthesis \u2014 reduced vasodilation capacity may limit peak VO2 max. Consistent aerobic training can partially compensate."
+    },
+    "description": "VO2 max \u2014 the maximum rate your body can use oxygen during exercise \u2014 is the gold standard measure of aerobic fitness. Nitric oxide from NOS3 helps blood vessels dilate, improving blood flow and oxygen delivery to muscles during intense exercise.",
+    "population_frequency": 0.3,
+    "confidence": "Moderate",
+    "source": "Hand et al., Clin Sci 2006"
+  },
+  {
+    "rsid": "rs660339",
+    "gene": "UCP2",
+    "trait": "Oxygen Use (VO2 Max)",
+    "category": "Athletic",
+    "genotype_results": {
+      "CC": "Normal mitochondrial coupling \u2014 standard energy production efficiency during aerobic exercise.",
+      "CT": "Slightly altered mitochondrial uncoupling \u2014 may affect the efficiency of ATP production during sustained effort.",
+      "TT": "Increased mitochondrial uncoupling \u2014 less efficient ATP production per oxygen molecule consumed, but potentially better thermoregulation during exercise."
+    },
+    "description": "UCP2 affects how efficiently your mitochondria convert oxygen into usable energy (ATP). This uncoupling protein creates a trade-off: more efficient energy production versus better heat dissipation during exercise.",
+    "population_frequency": 0.38,
+    "confidence": "Moderate",
+    "source": "Buemann et al., Int J Obes 2001"
+  },
+  {
+    "rsid": "rs11385942",
+    "gene": "LZTFL1",
+    "trait": "Heat Tolerance",
+    "category": "Athletic",
+    "genotype_results": {
+      "GA": "Carrier of the minor allele \u2014 may have altered inflammatory response to heat stress. Take extra precautions in hot environments during exercise.",
+      "GG": "Normal LZTFL1 function \u2014 standard heat tolerance and inflammatory response during hot-weather exercise.",
+      "AA": "Two copies of the minor allele \u2014 potentially heightened inflammatory response to heat stress. Heat acclimatization protocols are especially important."
+    },
+    "description": "LZTFL1 gained attention for its role in immune and inflammatory responses. Variants in this gene may influence how your body handles the combined stress of heat and physical exertion through inflammatory pathways.",
+    "population_frequency": 0.08,
+    "confidence": "Low",
+    "source": "Downes et al., Nat Genet 2021"
+  },
+  {
+    "rsid": "rs4680",
+    "gene": "COMT",
+    "trait": "Competitiveness",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Val/Val \u2014 Higher competitive drive. Faster dopamine clearance keeps you cool under pressure, which can fuel a love of head-to-head challenges.",
+      "GA": "Val/Met \u2014 Moderate competitive streak. You enjoy a good contest but don't need to win everything to feel satisfied.",
+      "AA": "Met/Met \u2014 Less driven by direct competition. You're more likely to compete with yourself than with others \u2014 personal bests over leaderboards."
+    },
+    "description": "COMT Val158Met affects dopamine levels in the prefrontal cortex, influencing how rewarding you find competitive situations. Note: environment, upbringing, and culture play a much larger role in competitiveness than any single gene.",
+    "population_frequency": 0.5,
+    "confidence": "Low",
+    "source": "Stein et al., Neuropsychopharmacology 2006"
+  },
+  {
+    "rsid": "rs1800497",
+    "gene": "ANKK1/DRD2",
+    "trait": "Competitiveness (Reward Drive)",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Normal D2 receptor density \u2014 standard reward processing from competitive wins.",
+      "GA": "Slightly reduced D2 receptors \u2014 may seek out more intense competitive thrills to get the same dopamine hit.",
+      "AA": "A1/A1 \u2014 Reduced D2 receptor density. Winning may feel extra rewarding, potentially driving stronger competitive behavior."
+    },
+    "description": "The Taq1A variant near DRD2 affects dopamine receptor availability, influencing how much reward you experience from winning. Environmental factors like sports culture and family values are far more important in shaping competitiveness.",
+    "population_frequency": 0.2,
+    "confidence": "Low",
+    "source": "Comings & Blum, Progress in Brain Research 2000"
+  },
+  {
+    "rsid": "rs6265",
+    "gene": "BDNF",
+    "trait": "Determination",
+    "category": "Behavioral",
+    "genotype_results": {
+      "CC": "Val/Val \u2014 Normal BDNF secretion supports resilient neural circuits. You may bounce back more easily from setbacks.",
+      "CT": "Val/Met \u2014 Slightly reduced activity-dependent BDNF. You might need a bit more mental effort to push through tough stretches, but you absolutely can.",
+      "TT": "Met/Met \u2014 Reduced BDNF release during stress. Setbacks may hit harder initially, but many people with this genotype develop exceptional determination through practice."
+    },
+    "description": "BDNF Val66Met influences neuroplasticity and stress resilience, which can affect how easily you bounce back from difficulty. Your actual determination is shaped far more by life experiences, habits, and mindset than by this variant.",
+    "population_frequency": 0.2,
+    "confidence": "Low",
+    "source": "Egan et al., Cell 2003"
+  },
+  {
+    "rsid": "rs4680",
+    "gene": "COMT",
+    "trait": "Determination (Cognitive Persistence)",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Val/Val \u2014 Faster dopamine clearance. You may power through challenges by staying level-headed under pressure.",
+      "GA": "Val/Met \u2014 Balanced dopamine metabolism. A nice blend of steady persistence and flexible thinking.",
+      "AA": "Met/Met \u2014 Higher baseline dopamine. You may think deeply before persisting on a task, sometimes overthinking \u2014 but when committed, you dig in."
+    },
+    "description": "COMT affects prefrontal dopamine tone, which can influence how you sustain effort under difficulty. Real determination comes from motivation, values, and habits \u2014 genetics plays only a small supporting role.",
+    "population_frequency": 0.5,
+    "confidence": "Low",
+    "source": "Stein et al., Neuropsychopharmacology 2006"
+  },
+  {
+    "rsid": "rs2164273",
+    "gene": "WSCD2",
+    "trait": "Introvert or Extrovert",
+    "category": "Behavioral",
+    "genotype_results": {
+      "AA": "More likely to lean toward extroversion \u2014 you probably recharge through social interaction.",
+      "AG": "Somewhere in the ambivert range \u2014 you enjoy both social time and solo time.",
+      "GG": "More likely to lean introverted \u2014 you may prefer smaller gatherings and need quiet time to recharge."
+    },
+    "description": "A GWAS-identified locus near WSCD2 associated with sociability and extraversion. Introversion and extroversion exist on a spectrum, and your environment, culture, and life experiences shape where you land far more than genetics.",
+    "population_frequency": 0.35,
+    "confidence": "Low",
+    "source": "Lo et al., Nature Genetics 2017"
+  },
+  {
+    "rsid": "rs1426371",
+    "gene": "Intergenic",
+    "trait": "Introvert or Extrovert (Social Energy)",
+    "category": "Behavioral",
+    "genotype_results": {
+      "CC": "Slightly higher tendency toward sociability \u2014 parties might be your thing.",
+      "CT": "Balanced social energy \u2014 you can work a room or enjoy a quiet evening with equal ease.",
+      "TT": "Slightly lower social drive \u2014 you might prefer a good book over a big gathering, and that's perfectly fine."
+    },
+    "description": "GWAS-identified variant associated with extraversion traits. Social energy patterns are influenced by dozens of genes working together, each contributing only a tiny effect. Your personality is overwhelmingly shaped by experience and choice.",
+    "population_frequency": 0.4,
+    "confidence": "Low",
+    "source": "Lo et al., Nature Genetics 2017"
+  },
+  {
+    "rsid": "rs53576",
+    "gene": "OXTR",
+    "trait": "Optimism",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Higher oxytocin receptor expression \u2014 associated with a sunnier outlook and greater social support-seeking, both of which can boost optimism.",
+      "GA": "Intermediate oxytocin receptor function. Your glass might be half full or half empty depending on the day.",
+      "AA": "Lower oxytocin receptor expression \u2014 you may have a more cautious or realistic outlook. Many would call this practical rather than pessimistic."
+    },
+    "description": "The oxytocin receptor gene influences social bonding and emotional processing, which can color your general outlook. But optimism is largely a skill that can be practiced \u2014 genetics just nudges the starting point.",
+    "population_frequency": 0.35,
+    "confidence": "Low",
+    "source": "Saphire-Bernstein et al., PNAS 2011"
+  },
+  {
+    "rsid": "rs2254298",
+    "gene": "OXTR",
+    "trait": "Optimism (Emotional Resilience)",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Standard oxytocin receptor function \u2014 typical range of emotional resilience.",
+      "GA": "Slightly altered OXTR expression \u2014 may process positive and negative emotions a bit differently.",
+      "AA": "Associated with higher sensitivity to social environment \u2014 in supportive settings this can actually enhance positive outlook."
+    },
+    "description": "A second OXTR variant that influences how you process emotional experiences. In positive environments, carriers of the A allele can actually be more optimistic than average \u2014 it's about sensitivity to context, not a fixed trait.",
+    "population_frequency": 0.15,
+    "confidence": "Low",
+    "source": "Lucht et al., Progress in Neuropsychopharmacology & Biological Psychiatry 2009"
+  },
+  {
+    "rsid": "rs1800497",
+    "gene": "ANKK1/DRD2",
+    "trait": "Persistence",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Normal D2 receptor density \u2014 standard reward reinforcement for sustained effort.",
+      "GA": "Slightly reduced D2 receptors \u2014 you might need bigger milestones to keep going, but once hooked on a goal, you stick with it.",
+      "AA": "A1/A1 \u2014 Lower D2 density. You may find it harder to stay motivated by small rewards but can develop exceptional persistence when the goal truly matters to you."
+    },
+    "description": "DRD2/ANKK1 Taq1A affects how your brain processes the small dopamine rewards that keep you going during long tasks. But true persistence is built through habits and purpose \u2014 genetics is just one small ingredient.",
+    "population_frequency": 0.2,
+    "confidence": "Low",
+    "source": "Noble, European Psychiatry 2000"
+  },
+  {
+    "rsid": "rs4680",
+    "gene": "COMT",
+    "trait": "Persistence (Sustained Focus)",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Val/Val \u2014 Quick dopamine turnover. You may shift focus more easily between tasks rather than grinding on one thing.",
+      "GA": "Val/Met \u2014 Balanced persistence. You can focus deeply when needed but also know when to pivot.",
+      "AA": "Met/Met \u2014 Higher sustained dopamine. You may find it easier to stay locked in on a task for extended periods."
+    },
+    "description": "COMT influences dopamine availability in the prefrontal cortex, which relates to sustained attention and focus. Actual persistence depends heavily on passion, training, and environment.",
+    "population_frequency": 0.5,
+    "confidence": "Low",
+    "source": "Stein et al., Neuropsychopharmacology 2006"
+  },
+  {
+    "rsid": "rs2354674",
+    "gene": "Intergenic",
+    "trait": "Pet Ownership",
+    "category": "Behavioral",
+    "genotype_results": {
+      "CC": "Slightly higher genetic propensity toward pet ownership \u2014 you might be a natural animal person.",
+      "CT": "Average tendency \u2014 whether you have a pet probably depends more on your living situation than your DNA.",
+      "TT": "Slightly lower genetic propensity \u2014 doesn't mean you don't love animals, just that the urge to bring one home might be less hardwired."
+    },
+    "description": "GWAS studies of over 35,000 twin pairs identified genetic loci associated with pet ownership. Yes, really \u2014 there's a small genetic component to whether you end up with a furry companion. But housing, lifestyle, and allergies matter way more.",
+    "population_frequency": 0.45,
+    "confidence": "Low",
+    "source": "Fall et al., Scientific Reports 2019"
+  },
+  {
+    "rsid": "rs1879245",
+    "gene": "Intergenic",
+    "trait": "Pet Ownership (Bonding Tendency)",
+    "category": "Behavioral",
+    "genotype_results": {
+      "TT": "Slightly higher affinity for animal companionship \u2014 your genome may nudge you toward having a pet.",
+      "TC": "Average range \u2014 pet ownership is likely driven by your life circumstances.",
+      "CC": "Slightly lower genetic inclination toward pet ownership \u2014 you might be more of a plant parent."
+    },
+    "description": "A second GWAS-identified locus associated with pet ownership in large population studies. The genetic effect is tiny \u2014 your childhood experiences with animals, available space, and lifestyle are the real deciding factors.",
+    "population_frequency": 0.38,
+    "confidence": "Low",
+    "source": "Fall et al., Scientific Reports 2019"
+  },
+  {
+    "rsid": "rs73598374",
+    "gene": "ADORA2A",
+    "trait": "Remembering Dreams",
+    "category": "Behavioral",
+    "genotype_results": {
+      "CC": "Normal adenosine receptor function \u2014 standard dream recall frequency.",
+      "CT": "Altered adenosine signaling \u2014 you may wake slightly more during REM sleep, giving your brain more chances to encode dreams into memory.",
+      "TT": "Higher adenosine sensitivity \u2014 more frequent sleep-wake transitions during the night may mean you remember your dreams more often."
+    },
+    "description": "ADORA2A variants affect adenosine receptor sensitivity, influencing sleep architecture and the transitions between sleep stages. More brief awakenings during REM sleep = more dream memories. Keeping a dream journal has a much bigger effect than genetics.",
+    "population_frequency": 0.12,
+    "confidence": "Low",
+    "source": "R\u00e9tey et al., Human Molecular Genetics 2007"
+  },
+  {
+    "rsid": "rs5751876",
+    "gene": "ADORA2A",
+    "trait": "Remembering Dreams (Sleep Transitions)",
+    "category": "Behavioral",
+    "genotype_results": {
+      "CC": "Standard adenosine 2A receptor activity \u2014 typical dream recall patterns.",
+      "CT": "Slightly altered sleep microarchitecture \u2014 may experience more vivid dream recall.",
+      "TT": "Modified adenosine signaling \u2014 associated with differences in sleep depth and REM transitions that may affect how often you remember dreams."
+    },
+    "description": "The ADORA2A gene plays a key role in sleep pressure and architecture. This variant affects how your brain transitions between sleep stages, which can influence whether dreams get consolidated into waking memory. Stress, sleep quality, and interest in dreams matter much more.",
+    "population_frequency": 0.45,
+    "confidence": "Low",
+    "source": "Bodenmann et al., Neuropsychopharmacology 2012"
+  },
+  {
+    "rsid": "rs53576",
+    "gene": "OXTR",
+    "trait": "Self-Confidence",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Higher oxytocin receptor expression \u2014 associated with greater self-esteem, social confidence, and feeling secure in relationships.",
+      "GA": "Intermediate oxytocin receptor function \u2014 moderate baseline self-assurance.",
+      "AA": "Lower OXTR expression \u2014 you may be more self-critical or cautious in social settings, but this also drives careful preparation and self-awareness."
+    },
+    "description": "Oxytocin influences feelings of trust and social security, which contribute to self-confidence. But confidence is largely built through experience, accomplishments, and supportive relationships \u2014 your genes just set a subtle starting point.",
+    "population_frequency": 0.35,
+    "confidence": "Low",
+    "source": "Saphire-Bernstein et al., PNAS 2011"
+  },
+  {
+    "rsid": "rs6265",
+    "gene": "BDNF",
+    "trait": "Self-Confidence (Neural Resilience)",
+    "category": "Behavioral",
+    "genotype_results": {
+      "CC": "Val/Val \u2014 Robust BDNF signaling supports confident learning from experience. Positive feedback loops build self-assurance more easily.",
+      "CT": "Val/Met \u2014 Slightly reduced activity-dependent BDNF. You might need a few more wins to build lasting confidence, but it absolutely happens.",
+      "TT": "Met/Met \u2014 Lower BDNF activity may mean confidence takes longer to build. On the flip side, you may be more thoughtful and measured in your self-assessment."
+    },
+    "description": "BDNF supports neuroplasticity \u2014 the brain's ability to rewire from positive experiences. This can influence how quickly self-confidence builds. But practice, mentoring, and personal growth are the real confidence builders.",
+    "population_frequency": 0.2,
+    "confidence": "Low",
+    "source": "Egan et al., Cell 2003"
+  },
+  {
+    "rsid": "rs4680",
+    "gene": "COMT",
+    "trait": "Self-Discipline",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Val/Val \u2014 Quick dopamine clearance in the prefrontal cortex. You might find it easier to act decisively and resist temptation.",
+      "GA": "Val/Met \u2014 Balanced dopamine metabolism. Decent willpower with a healthy ability to also be flexible.",
+      "AA": "Met/Met \u2014 Higher prefrontal dopamine. You may deliberate more before acting \u2014 which can look like indecision, or like very thoughtful self-regulation."
+    },
+    "description": "COMT influences dopamine levels in the prefrontal cortex, the brain region responsible for executive function and self-control. But self-discipline is overwhelmingly a skill built through habit formation, environment design, and practice.",
+    "population_frequency": 0.5,
+    "confidence": "Low",
+    "source": "Stein et al., Neuropsychopharmacology 2006"
+  },
+  {
+    "rsid": "rs1800497",
+    "gene": "ANKK1/DRD2",
+    "trait": "Self-Discipline (Reward Regulation)",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Normal D2 density \u2014 standard ability to delay gratification.",
+      "GA": "Slightly reduced D2 receptors \u2014 immediate rewards may be a bit more tempting, but awareness of this tendency is half the battle.",
+      "AA": "A1/A1 \u2014 Lower D2 receptor availability. You might find delayed gratification trickier, but structured routines and accountability systems can absolutely compensate."
+    },
+    "description": "Dopamine D2 receptor availability influences how your brain weighs immediate vs. future rewards, a core component of self-discipline. Environment and habit design are far more powerful tools for building discipline than raw genetics.",
+    "population_frequency": 0.2,
+    "confidence": "Low",
+    "source": "Noble, European Psychiatry 2000"
+  },
+  {
+    "rsid": "rs1801260",
+    "gene": "CLOCK",
+    "trait": "Taking Naps",
+    "category": "Behavioral",
+    "genotype_results": {
+      "AA": "Morning chronotype tendency \u2014 may feel an afternoon energy dip that makes napping appealing.",
+      "AG": "Intermediate circadian pattern \u2014 whether you nap probably depends more on your schedule than your genes.",
+      "GG": "Evening chronotype \u2014 you may be less inclined to nap because your energy naturally peaks later in the day."
+    },
+    "description": "The CLOCK gene influences your circadian rhythm, which affects when you feel alert and when you feel sleepy. Morning types who wake early often experience a stronger afternoon dip. But napping habits are mostly shaped by culture, schedule, and lifestyle.",
+    "population_frequency": 0.28,
+    "confidence": "Low",
+    "source": "Katzenberg et al., Sleep 1998"
+  },
+  {
+    "rsid": "rs73598374",
+    "gene": "ADORA2A",
+    "trait": "Taking Naps (Sleep Pressure)",
+    "category": "Behavioral",
+    "genotype_results": {
+      "CC": "Normal adenosine receptor sensitivity \u2014 standard daytime sleepiness patterns.",
+      "CT": "Altered adenosine signaling \u2014 you may build up sleep pressure faster during the day, making naps more tempting.",
+      "TT": "Higher adenosine sensitivity \u2014 you likely feel daytime sleepiness more intensely. A short power nap might be your secret weapon."
+    },
+    "description": "ADORA2A affects how sensitive you are to adenosine, the molecule that builds up during waking hours and makes you sleepy. Higher sensitivity means stronger 'nap signals' in the afternoon. But caffeine, activity level, and sleep quality matter much more.",
+    "population_frequency": 0.12,
+    "confidence": "Low",
+    "source": "R\u00e9tey et al., Human Molecular Genetics 2007"
+  },
+  {
+    "rsid": "rs4680",
+    "gene": "COMT",
+    "trait": "Trying New Things",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Val/Val \u2014 Quick dopamine clearance. You may be more comfortable with unfamiliar situations because stress doesn't build up as easily.",
+      "GA": "Val/Met \u2014 Balanced approach to novelty. You enjoy trying new things but also appreciate your comfort zone.",
+      "AA": "Met/Met \u2014 Higher dopamine levels may make novel situations feel more intense. You might prefer to research before jumping in \u2014 which means when you do try something new, you're really into it."
+    },
+    "description": "COMT influences how your prefrontal cortex handles the uncertainty that comes with new experiences. But openness to experience is powerfully shaped by culture, education, and personal history \u2014 genes explain at most 5-10% of the variation.",
+    "population_frequency": 0.5,
+    "confidence": "Low",
+    "source": "Stein et al., Neuropsychopharmacology 2006"
+  },
+  {
+    "rsid": "rs1800497",
+    "gene": "ANKK1/DRD2",
+    "trait": "Trying New Things (Novelty Reward)",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Normal D2 density \u2014 new experiences provide a standard reward signal.",
+      "GA": "Slightly reduced D2 receptors \u2014 you may crave more novelty because each new experience provides a bigger relative dopamine boost.",
+      "AA": "A1/A1 \u2014 Lower receptor density may drive stronger novelty-seeking as your brain looks for larger reward signals. The upside: you're probably a great travel companion."
+    },
+    "description": "Dopamine D2 receptor availability shapes how rewarding new experiences feel. Lower D2 density can drive more novelty-seeking as the brain pursues bigger reward signals. But your actual openness to new things is mostly about upbringing, values, and opportunity.",
+    "population_frequency": 0.2,
+    "confidence": "Low",
+    "source": "Comings & Blum, Progress in Brain Research 2000"
+  },
+  {
+    "rsid": "rs1800497",
+    "gene": "ANKK1/DRD2",
+    "trait": "Watching Sports",
+    "category": "Behavioral",
+    "genotype_results": {
+      "GG": "Normal D2 density \u2014 standard reward from spectator experiences.",
+      "GA": "Slightly reduced D2 receptors \u2014 the emotional highs and lows of watching sports may feel more intense, making you a more passionate fan.",
+      "AA": "A1/A1 \u2014 Lower D2 density. You might get a bigger dopamine rush from watching exciting plays, potentially making sports fandom extra rewarding."
+    },
+    "description": "Watching sports activates reward and mirror neuron systems in the brain. D2 receptor density can influence how much vicarious thrill you get from spectating. But whether you watch sports is mostly about culture, social bonds, and what teams your family followed.",
+    "population_frequency": 0.2,
+    "confidence": "Low",
+    "source": "Comings & Blum, Progress in Brain Research 2000"
+  },
+  {
+    "rsid": "rs6277",
+    "gene": "DRD2",
+    "trait": "Watching Sports (Vicarious Thrill)",
+    "category": "Behavioral",
+    "genotype_results": {
+      "CC": "Higher D2 receptor expression in the striatum \u2014 standard reward from spectator activities.",
+      "CT": "Slightly altered D2 expression \u2014 may experience moderately enhanced emotional engagement when watching exciting events.",
+      "TT": "Lower D2 mRNA stability \u2014 reduced receptor expression may heighten the appeal of exciting, emotionally charged spectacles like sports."
+    },
+    "description": "DRD2 C957T (rs6277) affects D2 receptor expression in the brain's reward circuitry. This can subtly influence how much vicarious excitement you experience watching competitive events. Your sports habits are really about social connections, childhood exposure, and culture.",
+    "population_frequency": 0.42,
+    "confidence": "Low",
+    "source": "Hirvonen et al., Human Brain Mapping 2009"
+  },
+  {
+    "rsid": "rs12927162",
+    "gene": "MTNR1B",
+    "trait": "Morning or Night Person (Enhanced)",
+    "category": "Behavioral",
+    "genotype_results": {
+      "TT": "Standard melatonin receptor function \u2014 your chronotype is probably shaped more by habits than this variant.",
+      "TC": "Slightly altered melatonin signaling \u2014 may have a mild shift in natural sleep-wake timing.",
+      "CC": "Modified MTNR1B function \u2014 associated with later melatonin onset and evening preference. Your body's clock may naturally run a bit late."
+    },
+    "description": "MTNR1B codes for the melatonin 1B receptor, which influences when your body starts producing melatonin in the evening. This variant adds to the picture beyond the classic CLOCK gene for a more complete chronotype profile. Light exposure, screen habits, and schedule matter far more.",
+    "population_frequency": 0.3,
+    "confidence": "Moderate",
+    "source": "Lane et al., Nature Communications 2016"
+  },
+  {
+    "rsid": "rs1801260",
+    "gene": "CLOCK",
+    "trait": "Morning or Night Person (Enhanced, CLOCK)",
+    "category": "Behavioral",
+    "genotype_results": {
+      "AA": "Morning chronotype tendency \u2014 you're probably at your best before noon. Early bird gets the worm, and you might actually enjoy the early alarm.",
+      "AG": "Intermediate chronotype \u2014 you can adapt to most schedules without too much pain.",
+      "GG": "Evening chronotype \u2014 'night owl' tendencies. Your brain perks up when others are winding down. Peak creativity might hit after dinner."
+    },
+    "description": "The classic CLOCK 3111T/C variant, revisited here as part of an enhanced chronotype panel. Combined with MTNR1B results, this gives a fuller picture of your natural sleep-wake preferences. But remember \u2014 consistent sleep schedules and light exposure can override genetics.",
+    "population_frequency": 0.28,
+    "confidence": "Moderate",
+    "source": "Katzenberg et al., Sleep 1998"
   }
 ]
