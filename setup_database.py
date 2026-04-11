@@ -670,7 +670,7 @@ def load_prs_definitions(conn):
     """
     progress("Loading PRS definitions ...")
 
-    # Check if there's a curated PRS file
+    # Check if there's a curated PRS file (preferred over GWAS-derived)
     prs_data = load_json("prs_definitions.json")
     if prs_data:
         rows = []
@@ -681,6 +681,7 @@ def load_prs_definitions(conn):
                     "rsid": rsid,
                     "trait": entry.get("trait", ""),
                     "effect_allele": entry.get("effect_allele", entry.get("risk_allele", "")),
+                    "effect_allele_freq": float(entry.get("effect_allele_freq", 0.5)),
                     "beta": str(entry.get("beta", entry.get("weight", ""))),
                     "source": entry.get("source", "curated"),
                 })

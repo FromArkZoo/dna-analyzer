@@ -11,8 +11,20 @@ from typing import Dict, Optional, Tuple
 
 from config import CURATED_DIR
 
-# Continental reference populations for ancestry-informative markers
-CONTINENTAL_POPS = ["African", "European", "East Asian", "South Asian", "Americas"]
+# Reference populations for ancestry-informative markers.
+# European sub-populations use 1000 Genomes codes: GBR, CEU (NW Europe), TSI (S. Europe), FIN.
+CONTINENTAL_POPS = [
+    "British & Irish",
+    "NW European",
+    "Southern European",
+    "Scandinavian & Finnish",
+    "Eastern European",
+    "West African",
+    "East African",
+    "East Asian",
+    "South Asian",
+    "Americas",
+]
 
 
 def analyze_ancestry(
@@ -31,7 +43,7 @@ def analyze_ancestry(
     result = {
         "maternal_haplogroup": _determine_maternal_haplogroup(genotypes, db_path),
         "paternal_haplogroup": _determine_paternal_haplogroup(genotypes, db_path),
-        "ancestry_composition": _estimate_ancestry_composition(genotypes, db_path),
+        "composition": _estimate_ancestry_composition(genotypes, db_path),
         "caveats": [
             "Ancestry estimates are approximate and based on a limited set of markers.",
             "Haplogroup assignments trace only one maternal or paternal lineage and do not represent your full ancestry.",
@@ -209,9 +221,11 @@ def _estimate_ancestry_composition(
     if not aim_markers:
         return _default_composition("No ancestry-informative markers defined.")
 
-    # Calculate log-likelihood scores for each population
+    COMPLEMENT = {"A": "T", "T": "A", "C": "G", "G": "C"}
+
     pop_scores = {pop: 0.0 for pop in CONTINENTAL_POPS}
     markers_used = 0
+    debug_markers = []
 
     for marker in aim_markers:
         rsid = marker.get("rsid", "").lower()
@@ -221,23 +235,54 @@ def _estimate_ancestry_composition(
         allele1, allele2 = genotypes[rsid]
         ref_freqs = marker.get("reference_frequencies", {})
         effect_allele = marker.get("effect_allele", "").upper()
+        other_allele = marker.get("other_allele", "").upper()
 
         if not effect_allele or not ref_freqs:
             continue
 
-        # Count effect alleles (0, 1, or 2)
-        effect_count = (1 if allele1 == effect_allele else 0) + (
-            1 if allele2 == effect_allele else 0
-        )
+        # Strand-aware matching using both alleles when available
+        user_alleles = {allele1, allele2}
+        effect_count = None
+
+        if other_allele:
+            fwd_alleles = {effect_allele, other_allele}
+            comp_alleles = {COMPLEMENT.get(effect_allele, effect_allele),
+                           COMPLEMENT.get(other_allele, other_allele)}
+
+            if user_alleles <= fwd_alleles:
+                # Forward strand match
+                effect_count = (1 if allele1 == effect_allele else 0) + (
+                    1 if allele2 == effect_allele else 0)
+            elif user_alleles <= comp_alleles:
+                # Complement strand — count complement of effect allele
+                comp_eff = COMPLEMENT.get(effect_allele, effect_allele)
+                effect_count = (1 if allele1 == comp_eff else 0) + (
+                    1 if allele2 == comp_eff else 0)
+            else:
+                # User alleles don't match either strand — skip
+                continue
+        else:
+            # Fallback: single-allele matching with complement check
+            effect_count = (1 if allele1 == effect_allele else 0) + (
+                1 if allele2 == effect_allele else 0)
+            comp_allele = COMPLEMENT.get(effect_allele, effect_allele)
+            if effect_count == 0 and comp_allele != effect_allele:
+                comp_count = (1 if allele1 == comp_allele else 0) + (
+                    1 if allele2 == comp_allele else 0)
+                if comp_count > 0:
+                    effect_count = comp_count
 
         markers_used += 1
+        debug_markers.append({
+            "rsid": rsid, "genotype": f"{allele1}/{allele2}",
+            "effect_allele": effect_allele, "other_allele": other_allele,
+            "effect_count": effect_count, "gene": marker.get("gene", ""),
+        })
 
         for pop in CONTINENTAL_POPS:
             freq = ref_freqs.get(pop, 0.5)
-            # Clamp to avoid log(0)
             freq = max(0.001, min(freq, 0.999))
 
-            # Binomial log-likelihood for the observed genotype
             if effect_count == 2:
                 score = 2.0 * _safe_log(freq)
             elif effect_count == 1:
@@ -246,6 +291,15 @@ def _estimate_ancestry_composition(
                 score = 2.0 * _safe_log(1 - freq)
 
             pop_scores[pop] += score
+
+    # Write debug log
+    _debug_path = os.path.join(os.path.dirname(CURATED_DIR), "ancestry_debug.json")
+    try:
+        with open(_debug_path, "w") as _f:
+            json.dump({"markers_used": markers_used, "markers_total": len(aim_markers),
+                        "pop_scores": pop_scores, "marker_details": debug_markers}, _f, indent=2)
+    except Exception:
+        pass
 
     if markers_used < 10:
         return _default_composition(

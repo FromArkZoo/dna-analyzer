@@ -1,0 +1,477 @@
+[
+  {
+    "rsid": "rs1426654",
+    "effect_allele": "A",
+    "other_allele": "G",
+    "gene": "SLC24A5",
+    "description": "Skin pigmentation, nearly fixed in all European populations",
+    "reference_frequencies": {
+      "British & Irish": 0.98,
+      "NW European": 0.98,
+      "Southern European": 0.97,
+      "Scandinavian & Finnish": 0.98,
+      "Eastern European": 0.98,
+      "West African": 0.01,
+      "East African": 0.05,
+      "East Asian": 0.01,
+      "South Asian": 0.85,
+      "Americas": 0.40
+    }
+  },
+  {
+    "rsid": "rs16891982",
+    "effect_allele": "G",
+    "other_allele": "C",
+    "gene": "SLC45A2",
+    "description": "Skin/hair pigmentation, higher in Northern than Southern Europeans",
+    "reference_frequencies": {
+      "British & Irish": 0.96,
+      "NW European": 0.96,
+      "Southern European": 0.87,
+      "Scandinavian & Finnish": 0.97,
+      "Eastern European": 0.93,
+      "West African": 0.02,
+      "East African": 0.02,
+      "East Asian": 0.01,
+      "South Asian": 0.10,
+      "Americas": 0.35
+    }
+  },
+  {
+    "rsid": "rs12913832",
+    "effect_allele": "G",
+    "other_allele": "A",
+    "gene": "HERC2",
+    "description": "Blue eye color — highest in NW Europe, lower in Southern Europe",
+    "reference_frequencies": {
+      "British & Irish": 0.75,
+      "NW European": 0.78,
+      "Southern European": 0.25,
+      "Scandinavian & Finnish": 0.80,
+      "Eastern European": 0.55,
+      "West African": 0.01,
+      "East African": 0.01,
+      "East Asian": 0.01,
+      "South Asian": 0.10,
+      "Americas": 0.25
+    }
+  },
+  {
+    "rsid": "rs1800407",
+    "effect_allele": "A",
+    "other_allele": "C",
+    "gene": "OCA2",
+    "description": "Eye color modifier (green/hazel), highest in NW Europeans",
+    "reference_frequencies": {
+      "British & Irish": 0.09,
+      "NW European": 0.08,
+      "Southern European": 0.04,
+      "Scandinavian & Finnish": 0.06,
+      "Eastern European": 0.06,
+      "West African": 0.01,
+      "East African": 0.01,
+      "East Asian": 0.01,
+      "South Asian": 0.02,
+      "Americas": 0.04
+    }
+  },
+  {
+    "rsid": "rs2814778",
+    "effect_allele": "C",
+    "other_allele": "T",
+    "gene": "DARC/ACKR1",
+    "description": "Duffy-null, nearly fixed in sub-Saharan Africa",
+    "reference_frequencies": {
+      "British & Irish": 0.01,
+      "NW European": 0.01,
+      "Southern European": 0.01,
+      "Scandinavian & Finnish": 0.01,
+      "Eastern European": 0.01,
+      "West African": 0.99,
+      "East African": 0.85,
+      "East Asian": 0.01,
+      "South Asian": 0.01,
+      "Americas": 0.15
+    }
+  },
+  {
+    "rsid": "rs3827760",
+    "effect_allele": "A",
+    "other_allele": "G",
+    "gene": "EDAR",
+    "description": "Hair thickness, high in East Asians and Indigenous Americans",
+    "reference_frequencies": {
+      "British & Irish": 0.01,
+      "NW European": 0.01,
+      "Southern European": 0.01,
+      "Scandinavian & Finnish": 0.01,
+      "Eastern European": 0.01,
+      "West African": 0.01,
+      "East African": 0.01,
+      "East Asian": 0.85,
+      "South Asian": 0.05,
+      "Americas": 0.60
+    }
+  },
+  {
+    "rsid": "rs671",
+    "effect_allele": "A",
+    "other_allele": "G",
+    "gene": "ALDH2",
+    "description": "Alcohol flush reaction, common in East Asians",
+    "reference_frequencies": {
+      "British & Irish": 0.01,
+      "NW European": 0.01,
+      "Southern European": 0.01,
+      "Scandinavian & Finnish": 0.01,
+      "Eastern European": 0.01,
+      "West African": 0.01,
+      "East African": 0.01,
+      "East Asian": 0.25,
+      "South Asian": 0.02,
+      "Americas": 0.03
+    }
+  },
+  {
+    "rsid": "rs4988235",
+    "effect_allele": "A",
+    "other_allele": "G",
+    "gene": "MCM6/LCT",
+    "description": "Lactase persistence — highest in NW Europe & Scandinavia, lower in S. Europe",
+    "reference_frequencies": {
+      "British & Irish": 0.80,
+      "NW European": 0.78,
+      "Southern European": 0.35,
+      "Scandinavian & Finnish": 0.85,
+      "Eastern European": 0.55,
+      "West African": 0.10,
+      "East African": 0.30,
+      "East Asian": 0.01,
+      "South Asian": 0.30,
+      "Americas": 0.20
+    }
+  },
+  {
+    "rsid": "rs1042602",
+    "effect_allele": "A",
+    "other_allele": "C",
+    "gene": "TYR",
+    "description": "Tyrosinase S192Y pigmentation variant",
+    "reference_frequencies": {
+      "British & Irish": 0.42,
+      "NW European": 0.40,
+      "Southern European": 0.38,
+      "Scandinavian & Finnish": 0.35,
+      "Eastern European": 0.38,
+      "West African": 0.04,
+      "East African": 0.05,
+      "East Asian": 0.01,
+      "South Asian": 0.25,
+      "Americas": 0.20
+    }
+  },
+  {
+    "rsid": "rs1834640",
+    "effect_allele": "A",
+    "other_allele": "G",
+    "gene": "SLC24A5 region",
+    "description": "Near SLC24A5, tracks European/South Asian lightening sweep",
+    "reference_frequencies": {
+      "British & Irish": 0.92,
+      "NW European": 0.90,
+      "Southern European": 0.88,
+      "Scandinavian & Finnish": 0.91,
+      "Eastern European": 0.90,
+      "West African": 0.05,
+      "East African": 0.08,
+      "East Asian": 0.03,
+      "South Asian": 0.78,
+      "Americas": 0.35
+    }
+  },
+  {
+    "rsid": "rs1800414",
+    "effect_allele": "C",
+    "other_allele": "T",
+    "gene": "OCA2",
+    "description": "OCA2 H615R, lighter skin in East Asians",
+    "reference_frequencies": {
+      "British & Irish": 0.01,
+      "NW European": 0.01,
+      "Southern European": 0.01,
+      "Scandinavian & Finnish": 0.01,
+      "Eastern European": 0.01,
+      "West African": 0.01,
+      "East African": 0.01,
+      "East Asian": 0.65,
+      "South Asian": 0.05,
+      "Americas": 0.30
+    }
+  },
+  {
+    "rsid": "rs1805007",
+    "effect_allele": "T",
+    "other_allele": "C",
+    "gene": "MC1R",
+    "description": "Red hair/fair skin — highest in British & Irish",
+    "reference_frequencies": {
+      "British & Irish": 0.13,
+      "NW European": 0.08,
+      "Southern European": 0.04,
+      "Scandinavian & Finnish": 0.06,
+      "Eastern European": 0.05,
+      "West African": 0.01,
+      "East African": 0.01,
+      "East Asian": 0.01,
+      "South Asian": 0.01,
+      "Americas": 0.04
+    }
+  },
+  {
+    "rsid": "rs1805008",
+    "effect_allele": "T",
+    "other_allele": "C",
+    "gene": "MC1R",
+    "description": "MC1R R160W — red hair variant, NW European enriched",
+    "reference_frequencies": {
+      "British & Irish": 0.10,
+      "NW European": 0.08,
+      "Southern European": 0.03,
+      "Scandinavian & Finnish": 0.05,
+      "Eastern European": 0.04,
+      "West African": 0.01,
+      "East African": 0.01,
+      "East Asian": 0.01,
+      "South Asian": 0.01,
+      "Americas": 0.03
+    }
+  },
+  {
+    "rsid": "rs2065160",
+    "effect_allele": "C",
+    "other_allele": "T",
+    "gene": "MFSD12",
+    "description": "Skin pigmentation, darker skin in African populations",
+    "reference_frequencies": {
+      "British & Irish": 0.10,
+      "NW European": 0.10,
+      "Southern European": 0.12,
+      "Scandinavian & Finnish": 0.08,
+      "Eastern European": 0.10,
+      "West African": 0.88,
+      "East African": 0.75,
+      "East Asian": 0.15,
+      "South Asian": 0.25,
+      "Americas": 0.30
+    }
+  },
+  {
+    "rsid": "rs174570",
+    "effect_allele": "C",
+    "other_allele": "T",
+    "gene": "FADS2",
+    "description": "Fatty acid desaturase — frequency varies between European sub-groups",
+    "reference_frequencies": {
+      "British & Irish": 0.35,
+      "NW European": 0.33,
+      "Southern European": 0.42,
+      "Scandinavian & Finnish": 0.28,
+      "Eastern European": 0.38,
+      "West African": 0.08,
+      "East African": 0.10,
+      "East Asian": 0.45,
+      "South Asian": 0.30,
+      "Americas": 0.42
+    }
+  },
+  {
+    "rsid": "rs4918664",
+    "effect_allele": "G",
+    "other_allele": "A",
+    "gene": "intergenic",
+    "description": "South Asian differentiator",
+    "reference_frequencies": {
+      "British & Irish": 0.28,
+      "NW European": 0.30,
+      "Southern European": 0.32,
+      "Scandinavian & Finnish": 0.25,
+      "Eastern European": 0.30,
+      "West African": 0.15,
+      "East African": 0.18,
+      "East Asian": 0.10,
+      "South Asian": 0.75,
+      "Americas": 0.22
+    }
+  },
+  {
+    "rsid": "rs3317",
+    "effect_allele": "G",
+    "other_allele": "A",
+    "gene": "GC",
+    "description": "Vitamin D binding protein — varies by latitude and ancestry",
+    "reference_frequencies": {
+      "British & Irish": 0.76,
+      "NW European": 0.75,
+      "Southern European": 0.72,
+      "Scandinavian & Finnish": 0.78,
+      "Eastern European": 0.74,
+      "West African": 0.15,
+      "East African": 0.20,
+      "East Asian": 0.90,
+      "South Asian": 0.65,
+      "Americas": 0.70
+    }
+  },
+  {
+    "rsid": "rs7349",
+    "effect_allele": "C",
+    "other_allele": "T",
+    "gene": "F13B",
+    "description": "Coagulation factor XIII B — non-African allele",
+    "reference_frequencies": {
+      "British & Irish": 0.91,
+      "NW European": 0.90,
+      "Southern European": 0.88,
+      "Scandinavian & Finnish": 0.92,
+      "Eastern European": 0.90,
+      "West African": 0.15,
+      "East African": 0.25,
+      "East Asian": 0.92,
+      "South Asian": 0.88,
+      "Americas": 0.85
+    }
+  },
+  {
+    "rsid": "rs6451722",
+    "effect_allele": "T",
+    "other_allele": "G",
+    "gene": "intergenic",
+    "description": "South Asian enriched marker",
+    "reference_frequencies": {
+      "British & Irish": 0.23,
+      "NW European": 0.25,
+      "Southern European": 0.28,
+      "Scandinavian & Finnish": 0.20,
+      "Eastern European": 0.25,
+      "West African": 0.20,
+      "East African": 0.22,
+      "East Asian": 0.10,
+      "South Asian": 0.72,
+      "Americas": 0.18
+    }
+  },
+  {
+    "rsid": "rs1229984",
+    "effect_allele": "T",
+    "other_allele": "C",
+    "gene": "ADH1B",
+    "description": "ADH1B*2 alcohol metabolism — high in East Asians",
+    "reference_frequencies": {
+      "British & Irish": 0.04,
+      "NW European": 0.05,
+      "Southern European": 0.06,
+      "Scandinavian & Finnish": 0.03,
+      "Eastern European": 0.05,
+      "West African": 0.02,
+      "East African": 0.02,
+      "East Asian": 0.75,
+      "South Asian": 0.18,
+      "Americas": 0.40
+    }
+  },
+  {
+    "rsid": "rs1540771",
+    "effect_allele": "G",
+    "other_allele": "A",
+    "gene": "intergenic",
+    "description": "European substructure marker from Seldin et al.",
+    "reference_frequencies": {
+      "British & Irish": 0.72,
+      "NW European": 0.70,
+      "Southern European": 0.55,
+      "Scandinavian & Finnish": 0.68,
+      "Eastern European": 0.62,
+      "West African": 0.20,
+      "East African": 0.22,
+      "East Asian": 0.35,
+      "South Asian": 0.50,
+      "Americas": 0.38
+    }
+  },
+  {
+    "rsid": "rs4411548",
+    "effect_allele": "A",
+    "other_allele": "G",
+    "gene": "intergenic",
+    "description": "South Asian ancestry differentiator",
+    "reference_frequencies": {
+      "British & Irish": 0.18,
+      "NW European": 0.20,
+      "Southern European": 0.22,
+      "Scandinavian & Finnish": 0.16,
+      "Eastern European": 0.20,
+      "West African": 0.10,
+      "East African": 0.12,
+      "East Asian": 0.08,
+      "South Asian": 0.68,
+      "Americas": 0.15
+    }
+  },
+  {
+    "rsid": "rs285",
+    "effect_allele": "T",
+    "other_allele": "C",
+    "gene": "LPL",
+    "description": "Lipoprotein lipase — European enriched",
+    "reference_frequencies": {
+      "British & Irish": 0.82,
+      "NW European": 0.80,
+      "Southern European": 0.75,
+      "Scandinavian & Finnish": 0.83,
+      "Eastern European": 0.78,
+      "West African": 0.50,
+      "East African": 0.48,
+      "East Asian": 0.30,
+      "South Asian": 0.60,
+      "Americas": 0.40
+    }
+  },
+  {
+    "rsid": "rs2789823",
+    "effect_allele": "C",
+    "other_allele": "T",
+    "gene": "intergenic",
+    "description": "African ancestry differentiator",
+    "reference_frequencies": {
+      "British & Irish": 0.10,
+      "NW European": 0.10,
+      "Southern European": 0.12,
+      "Scandinavian & Finnish": 0.08,
+      "Eastern European": 0.10,
+      "West African": 0.88,
+      "East African": 0.78,
+      "East Asian": 0.05,
+      "South Asian": 0.15,
+      "Americas": 0.20
+    }
+  },
+  {
+    "rsid": "rs3916235",
+    "effect_allele": "T",
+    "other_allele": "C",
+    "gene": "intergenic",
+    "description": "High Fst African vs non-African",
+    "reference_frequencies": {
+      "British & Irish": 0.14,
+      "NW European": 0.15,
+      "Southern European": 0.18,
+      "Scandinavian & Finnish": 0.12,
+      "Eastern European": 0.15,
+      "West African": 0.92,
+      "East African": 0.85,
+      "East Asian": 0.10,
+      "South Asian": 0.20,
+      "Americas": 0.22
+    }
+  }
+]

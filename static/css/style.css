@@ -766,7 +766,9 @@ main { flex: 1; }
 /* --- Print --- */
 @media print {
     .disclaimer-banner, .app-header, .tab-nav, .tab-toolbar,
-    .upload-section, .loading-section, .header-actions,
+    .upload-section, .loading-section, .header-actions { display: none !important; }
+}
+
 /* --- Section Intros & Summary Descriptions --- */
 .overview-intro {
     margin-bottom: 24px;
@@ -869,6 +871,7 @@ main { flex: 1; }
     border-left: 3px solid var(--color-protective);
 }
 
+@media print {
     .disclaimer-close, .btn-outline { display: none !important; }
     .tab-content { display: block !important; page-break-inside: avoid; }
     .result-card-body { display: block !important; }

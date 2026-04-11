@@ -121,7 +121,7 @@ const DNACharts = (() => {
             '#14B8A6', '#F59E0B', '#8B5CF6', '#10B981',
         ];
 
-        const labels = composition.map(c => c.region || c.name);
+        const labels = composition.map(c => c.region || c.population || c.name);
         const data = composition.map(c => c.percentage);
         const colors = composition.map((_, i) => regionColors[i % regionColors.length]);
 

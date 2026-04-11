@@ -151,7 +151,7 @@ function renderResults(data) {
     renderHealth(data.health_risks || []);
     renderPharma(data.pharmacogenomics || []);
     renderTraits(data.traits || []);
-    renderAncestry(data.ancestry || {});
+    renderAncestry(data);
     initSearchAndFilters();
 }
 
@@ -285,7 +285,7 @@ function renderPharma(pharma) {
     emptyEl.style.display = 'none';
 
     // Show critical drug interactions panel
-    const criticals = pharma.filter(p => p.critical);
+    const criticals = pharma.filter(p => p.is_critical);
     const critPanel = document.getElementById('pharma-critical-panel');
     const critList = document.getElementById('pharma-critical-list');
     if (criticals.length > 0) {
@@ -293,7 +293,7 @@ function renderPharma(pharma) {
         critList.innerHTML = criticals.map(p => `
             <div class="critical-alert-card">
                 <h4>${esc(p.gene || '')} — ${esc(p.metabolizer_status || '')}</h4>
-                <p>${esc(p.description || (p.medications || []).map(m => typeof m === 'string' ? m : m.name).join(', '))}</p>
+                <p>${esc(p.description || (p.drugs_affected || []).map(m => typeof m === 'string' ? m : (m.drug || m.name)).join(', '))}</p>
             </div>
         `).join('');
     } else {
@@ -308,24 +308,24 @@ function renderPharma(pharma) {
         else if (status.includes('ultra')) badgeClass = 'metabolizer-ultrarapid';
         else if (status.includes('rapid')) badgeClass = 'metabolizer-rapid';
 
-        const meds = p.medications || [];
+        const meds = p.drugs_affected || [];
         const medsTable = meds.length ? `
             <table class="medications-table">
                 <thead><tr><th>Medication</th><th>Impact</th><th>Recommendation</th></tr></thead>
                 <tbody>
                     ${meds.map(m => {
-                        const med = typeof m === 'string' ? { name: m } : m;
-                        const isCrit = med.critical || (p.critical && true);
+                        const med = typeof m === 'string' ? { drug: m } : m;
+                        const isCrit = med.is_critical || (p.is_critical && true);
                         return `<tr class="${isCrit ? 'med-critical' : ''}">
-                            <td>${esc(med.name || med.drug || m)}</td>
-                            <td>${esc(med.impact || med.effect || '—')}</td>
-                            <td>${esc(med.recommendation || '—')}</td>
+                            <td>${esc(med.drug || med.name || m)}</td>
+                            <td>${esc(med.guidance || med.impact || '—')}</td>
+                            <td>${esc(med.guidance || med.recommendation || '—')}</td>
                         </tr>`;
                     }).join('')}
                 </tbody>
             </table>` : '<p style="color:#9CA3AF;font-size:.85rem">No specific medications listed.</p>';
 
-        const searchText = [p.gene, p.metabolizer_status, ...meds.map(m => typeof m === 'string' ? m : (m.name || m.drug || ''))].join(' ').toLowerCase();
+        const searchText = [p.gene, p.metabolizer_status, ...meds.map(m => typeof m === 'string' ? m : (m.drug || m.name || ''))].join(' ').toLowerCase();
 
         return `
         <div class="pharma-card" data-search="${esc(searchText)}" onclick="toggleCard(this)">
@@ -396,7 +396,8 @@ function filterTraits(category) {
 }
 
 // ---- Ancestry Tab ----
-function renderAncestry(ancestry) {
+function renderAncestry(data) {
+    const ancestry = data.ancestry || {};
     // Maternal haplogroup
     const mhg = ancestry.maternal_haplogroup || {};
     const mhgName = mhg.name || mhg.haplogroup || '—';
@@ -424,7 +425,7 @@ function renderAncestry(ancestry) {
     }
 
     // PRS
-    const prs = ancestry.prs || [];
+    const prs = data.polygenic_risk || [];
     const prsSection = document.getElementById('prs-section');
     const prsGrid = document.getElementById('prs-grid');
     if (prs.length > 0) {

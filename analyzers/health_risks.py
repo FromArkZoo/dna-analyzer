@@ -5,9 +5,12 @@ Classifies findings by severity and zygosity.
 """
 
 import json
+import logging
 import os
 import sqlite3
 from typing import Dict, Tuple
+
+logger = logging.getLogger(__name__)
 
 from config import CURATED_DIR, PATHOGENIC_SIGNIFICANCES, SEVERITY_LEVELS
 from analyzers.risk_calculator import (
@@ -155,12 +158,11 @@ def _analyze_clinvar(
             batch = rsid_list[i : i + batch_size]
             placeholders = ",".join("?" * len(batch))
             query = f"""
-                SELECT rsid, gene, condition, clinical_significance,
-                       review_stars, risk_allele, odds_ratio, population_frequency
+                SELECT rsid, gene, phenotype, clinical_significance,
+                       review_status, alt_allele
                 FROM clinvar
                 WHERE rsid IN ({placeholders})
                   AND clinical_significance IN ({','.join('?' * len(PATHOGENIC_SIGNIFICANCES))})
-                  AND review_stars >= 1
             """
             params = batch + PATHOGENIC_SIGNIFICANCES
             cursor.execute(query, params)
@@ -168,7 +170,7 @@ def _analyze_clinvar(
             for row in cursor.fetchall():
                 rsid = row["rsid"]
                 allele1, allele2 = genotypes[rsid]
-                risk_allele = (row["risk_allele"] or "").upper()
+                risk_allele = (row["alt_allele"] or "").upper()
 
                 if not risk_allele:
                     continue
@@ -180,8 +182,8 @@ def _analyze_clinvar(
                     continue
 
                 zygosity = "homozygous" if risk_count == 2 else "heterozygous"
-                stars = row["review_stars"] or 1
-                odds_ratio = row["odds_ratio"] or 1.0
+                stars = _review_status_to_stars(row["review_status"])
+                odds_ratio = 1.0
 
                 severity = _classify_severity(
                     row["clinical_significance"], stars, odds_ratio, zygosity
@@ -190,7 +192,7 @@ def _analyze_clinvar(
                 findings.append({
                     "rsid": rsid,
                     "gene": row["gene"] or "Unknown",
-                    "condition": row["condition"] or "Unknown condition",
+                    "condition": row["phenotype"] or "Unknown condition",
                     "severity": severity,
                     "severity_color": SEVERITY_LEVELS.get(severity, {}).get("color", "#6B7280"),
                     "zygosity": zygosity,
@@ -201,15 +203,31 @@ def _analyze_clinvar(
                     "confidence_stars": stars,
                     "confidence_label": confidence_descriptor(stars),
                     "odds_ratio": odds_ratio,
-                    "population_frequency": row["population_frequency"] or 0.0,
+                    "population_frequency": 0.0,
                     "absolute_risk": "N/A",
                 })
 
         conn.close()
-    except sqlite3.Error:
-        pass  # DB issues shouldn't crash the analysis
+    except sqlite3.Error as e:
+        logger.exception("ClinVar analysis failed: %s", e)
 
     return findings
+
+
+def _review_status_to_stars(review_status: str) -> int:
+    """Map ClinVar review_status text to a star rating (0-4)."""
+    if not review_status:
+        return 0
+    status = review_status.lower()
+    if "practice guideline" in status:
+        return 4
+    if "reviewed by expert panel" in status:
+        return 3
+    if "multiple submitters" in status:
+        return 2
+    if "single submitter" in status or "criteria provided" in status:
+        return 1
+    return 0
 
 
 def _classify_severity(

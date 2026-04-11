@@ -5,9 +5,12 @@ Flags critical drug-gene interactions.
 """
 
 import json
+import logging
 import os
 import sqlite3
 from typing import Dict, Tuple
+
+logger = logging.getLogger(__name__)
 
 from config import CURATED_DIR
 
@@ -181,51 +184,55 @@ def _analyze_pharmgkb_db(
             batch = rsid_list[i : i + batch_size]
             placeholders = ",".join("?" * len(batch))
             query = f"""
-                SELECT rsid, gene, variant_allele, star_allele,
-                       metabolizer_status, drug_name, drug_guidance
-                FROM pharmgkb
-                WHERE rsid IN ({placeholders})
+                SELECT p.rsid, p.gene, p.drug, p.phenotype_category,
+                       p.evidence_level, p.annotation_id,
+                       pa.genotype, pa.annotation_text, pa.allele_function
+                FROM pharmgkb p
+                LEFT JOIN pharmgkb_alleles pa ON p.annotation_id = pa.annotation_id
+                WHERE p.rsid IN ({placeholders})
             """
             cursor.execute(query, batch)
 
             for row in cursor.fetchall():
                 rsid = row["rsid"]
                 gene = row["gene"] or "Unknown"
-                allele1, allele2 = genotypes[rsid]
-                variant_allele = (row["variant_allele"] or "").upper()
-
-                variant_count = (1 if allele1 == variant_allele else 0) + (
-                    1 if allele2 == variant_allele else 0
-                )
-                if variant_count == 0:
-                    continue
 
                 if gene not in gene_data:
                     gene_data[gene] = {
                         "gene": gene,
                         "tested_variants": [],
-                        "star_alleles": row["star_allele"] or "*1/*1",
-                        "metabolizer_status": row["metabolizer_status"] or "Normal Metabolizer",
+                        "star_alleles": "*1/*1",
+                        "metabolizer_status": "Normal Metabolizer",
                         "metabolizer_code": "NM",
                         "drugs_affected": [],
                         "is_critical": False,
                         "critical_warning": None,
                     }
 
-                if row["drug_name"]:
+                allele1, allele2 = genotypes[rsid]
+                gene_data[gene]["tested_variants"].append({
+                    "rsid": rsid,
+                    "genotype": f"{allele1}/{allele2}",
+                    "variant_allele": "",
+                    "variant_count": 0,
+                })
+
+                drug_name = row["drug"] or ""
+                if drug_name:
                     existing_drugs = {d["drug"] for d in gene_data[gene]["drugs_affected"]}
-                    if row["drug_name"] not in existing_drugs:
+                    if drug_name not in existing_drugs:
+                        guidance = row["annotation_text"] or "See PharmGKB for guidance."
                         gene_data[gene]["drugs_affected"].append({
-                            "drug": row["drug_name"],
-                            "guidance": row["drug_guidance"] or "See PharmGKB for guidance.",
-                            "category": "",
+                            "drug": drug_name,
+                            "guidance": guidance,
+                            "category": row["phenotype_category"] or "",
                             "source": "PharmGKB DB",
                         })
 
         results = list(gene_data.values())
         conn.close()
-    except sqlite3.Error:
-        pass
+    except sqlite3.Error as e:
+        logger.exception("PharmGKB analysis failed: %s", e)
 
     return results
 

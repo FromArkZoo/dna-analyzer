@@ -5,9 +5,12 @@ Groups results by category (Nutrition, Physical, Athletic, Sleep, Behavioral).
 """
 
 import json
+import logging
 import os
 import sqlite3
 from typing import Dict, Tuple
+
+logger = logging.getLogger(__name__)
 
 from config import CURATED_DIR
 
@@ -129,8 +132,8 @@ def _analyze_trait_db(
             batch = rsid_list[i : i + batch_size]
             placeholders = ",".join("?" * len(batch))
             query = f"""
-                SELECT rsid, trait, gene, category, effect_allele,
-                       phenotype_description, population_frequency
+                SELECT rsid, name, gene, category, risk_allele,
+                       effect, population_frequency
                 FROM traits
                 WHERE rsid IN ({placeholders})
             """
@@ -139,32 +142,32 @@ def _analyze_trait_db(
             for row in cursor.fetchall():
                 rsid = row["rsid"]
                 allele1, allele2 = genotypes[rsid]
-                effect = (row["effect_allele"] or "").upper()
+                effect_allele = (row["risk_allele"] or "").upper()
 
                 effect_count = 0
-                if effect:
-                    effect_count = (1 if allele1 == effect else 0) + (
-                        1 if allele2 == effect else 0
+                if effect_allele:
+                    effect_count = (1 if allele1 == effect_allele else 0) + (
+                        1 if allele2 == effect_allele else 0
                     )
 
-                if effect and effect_count == 0:
+                if effect_allele and effect_count == 0:
                     continue
 
                 findings.append({
                     "rsid": rsid,
-                    "trait": row["trait"] or "Unknown trait",
+                    "trait": row["name"] or "Unknown trait",
                     "gene": row["gene"] or "",
                     "category": row["category"] or "Physical",
                     "your_genotype": f"{allele1}/{allele2}",
-                    "result": row["phenotype_description"] or "Variant detected",
+                    "result": row["effect"] or "Variant detected",
                     "explanation": "",
                     "population_frequency": row["population_frequency"] or 0.0,
                     "confidence": "moderate",
                 })
 
         conn.close()
-    except sqlite3.Error:
-        pass
+    except sqlite3.Error as e:
+        logger.exception("Trait DB analysis failed: %s", e)
 
     return findings
 
