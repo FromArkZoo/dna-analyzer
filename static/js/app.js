@@ -16,6 +16,9 @@ function showSection(id) {
         document.getElementById(s).style.display = s === id ? '' : 'none';
     });
     $actions().style.display = id === 'results-section' ? '' : 'none';
+    // Show/hide fixed bottom tab nav independently
+    const tabNav = document.getElementById('tab-nav');
+    if (tabNav) tabNav.style.display = id === 'results-section' ? 'flex' : 'none';
 }
 
 function resetApp() {
@@ -43,6 +46,12 @@ function resetApp() {
         if (fileInput.files.length) handleFile(fileInput.files[0]);
     });
 })();
+
+// Header glass effect on scroll
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.app-header');
+    if (header) header.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
 
 function handleFile(file) {
     const errEl = document.getElementById('upload-error');
@@ -323,7 +332,7 @@ function renderPharma(pharma) {
                         </tr>`;
                     }).join('')}
                 </tbody>
-            </table>` : '<p style="color:#9CA3AF;font-size:.85rem">No specific medications listed.</p>';
+            </table>` : '<p style="color:rgba(11,16,18,0.35);font-size:.85rem">No specific medications listed.</p>';
 
         const searchText = [p.gene, p.metabolizer_status, ...meds.map(m => typeof m === 'string' ? m : (m.drug || m.name || ''))].join(' ').toLowerCase();
 
@@ -404,7 +413,7 @@ function renderAncestry(data) {
     document.getElementById('maternal-hg-name').textContent = mhgName;
     document.getElementById('maternal-hg-desc').textContent = mhg.description || mhg.geographic_description || '';
     if (mhgName === 'Not available' || mhgName === 'Unknown') {
-        document.getElementById('maternal-hg-name').style.color = '#9CA3AF';
+        document.getElementById('maternal-hg-name').style.color = 'rgba(11,16,18,0.35)';
     }
 
     // Paternal haplogroup

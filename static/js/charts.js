@@ -1,14 +1,14 @@
 /* ============================================================
-   DNA Analyzer — Chart.js Visualizations
+   DNA Analyzer — Chart.js Visualizations (light theme)
    ============================================================ */
 
 const DNACharts = (() => {
     const SEVERITY_COLORS = {
-        CRITICAL:   '#DC2626',
-        HIGH:       '#EA580C',
-        MODERATE:   '#D97706',
-        LOW:        '#2563EB',
-        PROTECTIVE: '#059669',
+        CRITICAL:   '#c0392b',
+        HIGH:       '#b8652e',
+        MODERATE:   '#9e8230',
+        LOW:        '#4a6fa5',
+        PROTECTIVE: '#3d8b63',
     };
 
     const SEVERITY_LABELS = {
@@ -25,24 +25,28 @@ const DNACharts = (() => {
         plugins: {
             legend: {
                 labels: {
-                    font: { family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif', size: 12 },
+                    font: { family: "'Inter', sans-serif", size: 12 },
+                    color: 'rgba(11, 16, 18, 0.55)',
                     padding: 14,
                     usePointStyle: true,
                     pointStyleWidth: 10,
                 },
             },
             tooltip: {
-                backgroundColor: '#1F2937',
-                titleFont: { size: 13, weight: '600' },
-                bodyFont: { size: 12 },
-                padding: 10,
-                cornerRadius: 6,
+                backgroundColor: 'rgba(11, 16, 18, 0.92)',
+                titleFont: { size: 13, weight: '600', family: "'Inter', sans-serif" },
+                bodyFont: { size: 12, family: "'Inter', sans-serif" },
+                titleColor: '#f9f9fb',
+                bodyColor: 'rgba(249,249,251,0.8)',
+                borderColor: 'rgba(0,0,0,0.1)',
+                borderWidth: 1,
+                padding: 12,
+                cornerRadius: 4,
                 displayColors: true,
             },
         },
     };
 
-    // Track chart instances for cleanup
     const instances = {};
 
     function destroy(id) {
@@ -52,9 +56,6 @@ const DNACharts = (() => {
         }
     }
 
-    /**
-     * Severity donut chart for the Overview tab.
-     */
     function createSeverityDonut(canvasId, counts) {
         destroy(canvasId);
         const ctx = document.getElementById(canvasId);
@@ -76,7 +77,7 @@ const DNACharts = (() => {
         if (data.length === 0) {
             labels.push('No findings');
             data.push(1);
-            colors.push('#E5E7EB');
+            colors.push('rgba(0,0,0,0.06)');
         }
 
         const chart = new Chart(ctx, {
@@ -87,7 +88,7 @@ const DNACharts = (() => {
                     data,
                     backgroundColor: colors,
                     borderWidth: 2,
-                    borderColor: '#FFFFFF',
+                    borderColor: '#f3f3f6',
                     hoverBorderWidth: 3,
                 }],
             },
@@ -107,18 +108,15 @@ const DNACharts = (() => {
         return chart;
     }
 
-    /**
-     * Horizontal stacked bar chart for ancestry composition.
-     */
     function createAncestryBar(canvasId, composition) {
         destroy(canvasId);
         const ctx = document.getElementById(canvasId);
         if (!ctx) return null;
 
         const regionColors = [
-            '#2563EB', '#7C3AED', '#059669', '#D97706', '#DC2626',
-            '#EC4899', '#0891B2', '#65A30D', '#EA580C', '#6366F1',
-            '#14B8A6', '#F59E0B', '#8B5CF6', '#10B981',
+            '#4a6fa5', '#7a5ca8', '#3d8b63', '#9e8230', '#c0392b',
+            '#a05a8a', '#3a8e9e', '#6a8e4a', '#b8652e', '#5a5aa8',
+            '#3a9e8e', '#9e8230', '#7a5ca8', '#3d8b63',
         ];
 
         const labels = composition.map(c => c.region || c.population || c.name);
@@ -132,8 +130,8 @@ const DNACharts = (() => {
                 datasets: [{
                     data,
                     backgroundColor: colors,
-                    borderRadius: 4,
-                    barThickness: 28,
+                    borderRadius: 2,
+                    barThickness: 24,
                 }],
             },
             options: {
@@ -143,11 +141,18 @@ const DNACharts = (() => {
                     x: {
                         beginAtZero: true,
                         max: 100,
-                        ticks: { callback: v => v + '%', font: { size: 11 } },
-                        grid: { color: '#F3F4F6' },
+                        ticks: {
+                            callback: v => v + '%',
+                            font: { size: 11, family: "'Inter', sans-serif" },
+                            color: 'rgba(11, 16, 18, 0.45)',
+                        },
+                        grid: { color: 'rgba(0,0,0,0.04)' },
                     },
                     y: {
-                        ticks: { font: { size: 12, weight: '600' } },
+                        ticks: {
+                            font: { size: 12, weight: '600', family: "'Inter', sans-serif" },
+                            color: '#1a1c1e',
+                        },
                         grid: { display: false },
                     },
                 },
@@ -167,10 +172,6 @@ const DNACharts = (() => {
         return chart;
     }
 
-    /**
-     * Semi-circular gauge for PRS percentiles.
-     * Returns a canvas-based gauge drawn manually (no Chart.js dependency for this one).
-     */
     function createPRSGauge(container, percentile, condition) {
         const canvas = document.createElement('canvas');
         canvas.width = 280;
@@ -187,7 +188,7 @@ const DNACharts = (() => {
         ctx.beginPath();
         ctx.arc(cx, cy, radius, startAngle, endAngle);
         ctx.lineWidth = 22;
-        ctx.strokeStyle = '#E5E7EB';
+        ctx.strokeStyle = 'rgba(0,0,0,0.06)';
         ctx.lineCap = 'round';
         ctx.stroke();
 
@@ -208,20 +209,18 @@ const DNACharts = (() => {
 
         // Percentile text
         ctx.textAlign = 'center';
-        ctx.fillStyle = '#1F2937';
-        ctx.font = 'bold 28px -apple-system, BlinkMacSystemFont, sans-serif';
+        ctx.fillStyle = '#1a1c1e';
+        ctx.font = "bold 28px 'Inter', sans-serif";
         ctx.fillText(`${Math.round(percentile)}%`, cx, cy - 10);
 
-        ctx.font = '12px -apple-system, BlinkMacSystemFont, sans-serif';
-        ctx.fillStyle = '#9CA3AF';
-        ctx.fillText('percentile', cx, cy + 10);
+        ctx.font = "600 10px 'Inter', sans-serif";
+        ctx.fillStyle = 'rgba(11, 16, 18, 0.45)';
+        ctx.letterSpacing = '0.08em';
+        ctx.fillText('PERCENTILE', cx, cy + 10);
 
         return canvas;
     }
 
-    /**
-     * Population frequency comparison bar (simple horizontal).
-     */
     function createPopFreqBar(container, frequency) {
         const pct = Math.min(100, Math.max(0, (frequency || 0) * 100));
         const bar = document.createElement('div');
