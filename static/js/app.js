@@ -479,30 +479,29 @@ function renderPharma(pharma) {
         { key: 'rapid', label: 'Rapid / Ultra', dotClass: 'bg-secondary-container', borderClass: 'border-secondary-container/50', textClass: 'text-stone-700' },
     ];
 
+    const MAX_PER_GROUP = 5;
     const sidebarHTML = groupConfig.map(g => {
         const items = grouped[g.key];
         if (!items.length) return '';
+        const shown = items.slice(0, MAX_PER_GROUP);
+        const remaining = items.length - shown.length;
         return `
-        <div class="relative pl-6 border-l-2 ${g.borderClass} mb-8">
+        <div class="relative pl-6 border-l-2 ${g.borderClass} mb-6">
             <div class="absolute -left-[5px] top-0 w-2 h-2 rounded-full ${g.dotClass}"></div>
-            <h3 class="text-[10px] font-black uppercase tracking-[0.2em] ${g.textClass} mb-4">${g.label}</h3>
+            <h3 class="text-[10px] font-black uppercase tracking-[0.2em] ${g.textClass} mb-3">${g.label} <span class="text-stone-400 font-medium">(${items.length})</span></h3>
             <div class="space-y-2">
-                ${items.map(p => {
-                    const meds = (p.drugs_affected || []).map(m => typeof m === 'string' ? m : (m.drug || m.name || '')).join(', ');
-                    const searchText = [p.gene, p.metabolizer_status, meds].join(' ').toLowerCase();
+                ${shown.map(p => {
+                    const meds = (p.drugs_affected || []).slice(0, 2).map(m => typeof m === 'string' ? m : (m.drug || m.name || '')).join(', ');
                     return `
-                    <div class="pharma-card flex items-center justify-between p-4 bg-white/40 rounded-xl border border-white/60 shadow-sm group hover:bg-white/60 transition-colors cursor-pointer" data-search="${esc(searchText)}" onclick="toggleCard(this)">
-                        <div>
-                            <span class="text-sm font-extrabold tracking-tight text-stone-950">${esc(p.gene || 'Unknown')}</span>
-                            ${meds ? `<span class="text-xs text-stone-500 ml-2">${esc(meds)}</span>` : ''}
+                    <div class="flex items-center justify-between p-3 bg-white/40 rounded-lg border border-white/60 text-sm">
+                        <div class="min-w-0">
+                            <span class="font-bold text-stone-950">${esc(p.gene || 'Unknown')}</span>
+                            ${meds ? `<span class="text-xs text-stone-500 ml-1 truncate">${esc(meds)}</span>` : ''}
                         </div>
-                        <span class="material-symbols-outlined text-stone-400 text-sm expand-icon">chevron_right</span>
-                        <div class="pharma-card-body hidden w-full mt-3 pt-3 border-t border-white/40">
-                            ${p.description ? `<p class="text-sm text-stone-700 mb-3">${esc(p.description)}</p>` : ''}
-                            ${meds ? `<p class="text-xs text-stone-500">Affected medications: ${esc(meds)}</p>` : ''}
-                        </div>
+                        <span class="material-symbols-outlined text-stone-300 text-sm shrink-0">info</span>
                     </div>`;
                 }).join('')}
+                ${remaining > 0 ? `<p class="text-[10px] text-stone-400 font-bold uppercase tracking-widest pt-1">+ ${remaining} more</p>` : ''}
             </div>
         </div>`;
     }).join('');
@@ -510,7 +509,7 @@ function renderPharma(pharma) {
     // Populate the sidebar in the HTML template
     const sidebarContainer = document.getElementById('medication-sensitivity');
     if (sidebarContainer) {
-        const innerDiv = sidebarContainer.querySelector('.space-y-8');
+        const innerDiv = sidebarContainer.querySelector('.space-y-4, .space-y-8') || sidebarContainer.lastElementChild;
         if (innerDiv) innerDiv.innerHTML = sidebarHTML || '<p class="text-stone-500 text-sm">No medication data.</p>';
     }
 
