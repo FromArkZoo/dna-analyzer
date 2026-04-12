@@ -495,10 +495,16 @@ body { font-family: 'Inter', sans-serif; }
             </div>
         </section>
         <!-- Sidebar: Medication Sensitivity -->
-        <aside class="md:col-span-4 flex flex-col gap-6">
-            <div id="medication-sensitivity" class="glass-panel p-6 rounded-2xl shadow-lg flex flex-col">
-                <h2 class="text-lg font-extrabold text-stone-950 mb-6 uppercase tracking-wider">Medication Sensitivity</h2>
-                <div class="space-y-4 overflow-y-auto max-h-[600px] no-scrollbar">
+        <aside class="md:col-span-4">
+            <div id="medication-sensitivity" class="glass-panel p-6 rounded-2xl shadow-lg flex flex-col md:sticky md:top-24">
+                <h2 class="text-lg font-extrabold text-stone-950 mb-4 uppercase tracking-wider">Browse by Category</h2>
+                <button onclick="filterPharmaByCategory('all')" class="w-full flex items-center justify-between p-3 bg-primary/10 rounded-lg border border-primary/20 mb-3 hover:bg-primary/15 transition-colors cursor-pointer">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-lg">apps</span>
+                        <span class="text-sm font-bold text-stone-950">All Categories</span>
+                    </div>
+                </button>
+                <div class="space-y-2 overflow-y-auto max-h-[500px] no-scrollbar">
                     <!-- JS populated -->
                 </div>
             </div>

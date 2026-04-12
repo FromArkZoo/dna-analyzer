@@ -625,6 +625,7 @@ function renderMetabolismInsight(pharma) {
 
 // ---- Pharma category helpers ----
 function filterPharmaByCategory(catName) {
+    // Filter main content groups
     const groups = document.querySelectorAll('.pharma-category-group');
     groups.forEach(g => {
         if (catName === 'all') {
@@ -633,6 +634,25 @@ function filterPharmaByCategory(catName) {
             g.style.display = g.dataset.pharmaCategory === catName ? '' : 'none';
         }
     });
+
+    // Highlight active category in sidebar
+    const sidebarItems = document.querySelectorAll('#medication-sensitivity [onclick*="filterPharmaByCategory"]');
+    sidebarItems.forEach(item => {
+        const isActive = item.getAttribute('onclick').includes("'" + catName + "'");
+        if (isActive) {
+            item.classList.add('bg-primary/10', 'border-primary/30', '!border-l-4', '!border-l-secondary');
+            item.classList.remove('bg-white/40');
+        } else {
+            item.classList.remove('bg-primary/10', 'border-primary/30', '!border-l-4', '!border-l-secondary');
+            item.classList.add('bg-white/40');
+        }
+    });
+
+    // Scroll to the filtered group
+    if (catName !== 'all') {
+        const target = document.querySelector(`.pharma-category-group[data-pharma-category="${catName}"]`);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 }
 
 function expandPharmaCategory(btn, catName) {
