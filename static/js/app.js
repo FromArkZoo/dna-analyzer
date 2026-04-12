@@ -152,11 +152,21 @@ async function uploadFile(file) {
 function applyHash() {
     const hash = window.location.hash.replace('#', '') || 'overview';
     document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.tab === hash);
+        const isActive = btn.dataset.tab === hash;
+        btn.classList.toggle('active', isActive);
+        // Update nav styling
+        if (isActive) {
+            btn.classList.add('text-stone-950', 'border-b-2', 'border-secondary', 'pb-1');
+            btn.classList.remove('text-stone-600');
+        } else {
+            btn.classList.remove('text-stone-950', 'border-b-2', 'border-secondary', 'pb-1');
+            btn.classList.add('text-stone-600');
+        }
     });
     document.querySelectorAll('.tab-content').forEach(tc => {
         tc.classList.toggle('active', tc.id === 'tab-' + hash);
     });
+    window.scrollTo(0, 0);
 }
 
 // ---- Render All Results ----
@@ -172,13 +182,36 @@ function renderResults(data) {
 // ---- Overview Tab ----
 function renderOverview(data) {
     const summary = data.summary || {};
-    document.getElementById('stat-critical').textContent = summary.critical_alerts || summary.critical_count || 0;
-    document.getElementById('stat-high').textContent = summary.high_risk || summary.high_count || 0;
-    document.getElementById('stat-drugs').textContent = summary.drug_interactions || summary.drug_interactions_count || 0;
-    document.getElementById('stat-traits').textContent = summary.traits_found || summary.traits_count || 0;
+    const critCount = summary.critical_alerts || summary.critical_count || 0;
+    const highCount = summary.high_risk || summary.high_count || 0;
+    const drugCount = summary.drug_interactions || summary.drug_interactions_count || 0;
+    const traitCount = summary.traits_found || summary.traits_count || 0;
+
+    document.getElementById('stat-critical').textContent = critCount;
+    document.getElementById('stat-high').textContent = highCount;
+    document.getElementById('stat-drugs').textContent = drugCount;
+    document.getElementById('stat-traits').textContent = traitCount;
     document.getElementById('stat-total-variants').textContent = (summary.total_variants || summary.total_snps || 0).toLocaleString();
     document.getElementById('stat-matched-variants').textContent = (summary.matched_variants || summary.health_findings_count || 0).toLocaleString();
     document.getElementById('stat-health-findings').textContent = (summary.health_findings || summary.health_findings_count || summary.health_risks || 0).toLocaleString();
+
+    // Bento grid display stats
+    const critDisplay = document.getElementById('stat-critical-display');
+    if (critDisplay) critDisplay.textContent = String(critCount).padStart(2, '0');
+    const highDisplay = document.getElementById('stat-high-display');
+    if (highDisplay) highDisplay.textContent = String(highCount).padStart(2, '0');
+    const modEl = document.getElementById('stat-moderate');
+    if (modEl) modEl.textContent = 0; // will be updated after severity count
+
+    // Health findings summary text
+    const hfSummary = document.getElementById('health-findings-summary');
+    if (hfSummary) {
+        const total = (data.health_risks || []).length;
+        const pharmaCount = (data.pharmacogenomics || []).length;
+        hfSummary.textContent = total > 0
+            ? `Your DNA analysis identified ${total} health-related variants and ${pharmaCount} pharmacogenomic markers across ${(summary.total_variants || summary.total_snps || 0).toLocaleString()} analyzed SNPs.`
+            : 'No significant health variants were identified in your genomic data.';
+    }
 
     // Severity counts
     const sevCounts = {};
@@ -187,6 +220,10 @@ function renderOverview(data) {
         sevCounts[s] = (sevCounts[s] || 0) + 1;
     });
     DNACharts.createSeverityDonut('chart-severity-donut', sevCounts);
+
+    // Update moderate count in donut legend
+    const modEl2 = document.getElementById('stat-moderate');
+    if (modEl2) modEl2.textContent = sevCounts['MODERATE'] || 0;
 
     // Critical alerts
     const criticals = (data.health_risks || []).filter(r => (r.severity || '').toUpperCase() === 'CRITICAL');
