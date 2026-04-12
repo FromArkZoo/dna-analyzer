@@ -433,7 +433,7 @@ body { font-family: 'Inter', sans-serif; }
 </div>
 
 <!-- ========== TAB: PHARMA ========== -->
-<div id="tab-pharma" class="tab-content bg-pharma min-h-screen flex flex-col relative overflow-x-hidden">
+<div id="tab-pharma" class="tab-content bg-pharma min-h-screen flex flex-col relative">
 <main class="relative z-10 pt-24 pb-12 px-6 md:px-12 w-full max-w-screen-2xl mx-auto flex-grow">
     <!-- Disclaimer -->
     <div class="mb-8 glass-panel rounded-lg p-4 flex items-center gap-4 border-l-4 border-error shadow-sm">
@@ -522,11 +522,15 @@ body { font-family: 'Inter', sans-serif; }
     </header>
     <!-- Category Tabs -->
     <div id="traits-category-tabs" class="flex gap-3 mb-8 flex-wrap">
-        <button class="category-btn px-5 py-2 bg-primary text-on-primary rounded-full text-sm font-bold" data-category="all">All</button>
-        <!-- JS adds category buttons -->
+        <button class="category-btn active px-5 py-2 bg-primary text-on-primary rounded-full text-sm font-bold" data-category="all">All</button>
+        <button class="category-btn px-5 py-2 glass-card text-stone-800 hover:bg-white/50 rounded-full text-sm font-bold" data-category="nutrition">Nutrition</button>
+        <button class="category-btn px-5 py-2 glass-card text-stone-800 hover:bg-white/50 rounded-full text-sm font-bold" data-category="physical">Physical</button>
+        <button class="category-btn px-5 py-2 glass-card text-stone-800 hover:bg-white/50 rounded-full text-sm font-bold" data-category="athletic">Athletic</button>
+        <button class="category-btn px-5 py-2 glass-card text-stone-800 hover:bg-white/50 rounded-full text-sm font-bold" data-category="sleep">Sleep</button>
+        <button class="category-btn px-5 py-2 glass-card text-stone-800 hover:bg-white/50 rounded-full text-sm font-bold" data-category="behavioral">Behavioral</button>
     </div>
     <!-- Traits Grid -->
-    <div id="traits-results" class="traits-grid grid grid-cols-1 md:grid-cols-12 gap-4">
+    <div id="traits-results" class="traits-grid">
         <!-- JS populated -->
     </div>
     <div id="traits-empty" class="hidden text-center py-20">

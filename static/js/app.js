@@ -507,16 +507,15 @@ function renderPharma(pharma) {
         </div>`;
     }).join('');
 
-    container.innerHTML = `
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-            <div class="md:col-span-8">
-                ${criticals.length > 0 ? '' : '<p class="text-stone-500 text-sm mb-6">No critical drug-gene interactions found.</p>'}
-            </div>
-            <div class="md:col-span-4 glass-panel p-8 rounded-2xl shadow-lg">
-                <h2 class="text-xl font-extrabold tracking-tight text-stone-950 mb-8 uppercase tracking-wider">Medication Sensitivity</h2>
-                ${sidebarHTML}
-            </div>
-        </div>`;
+    // Populate the sidebar in the HTML template
+    const sidebarContainer = document.getElementById('medication-sensitivity');
+    if (sidebarContainer) {
+        const innerDiv = sidebarContainer.querySelector('.space-y-8');
+        if (innerDiv) innerDiv.innerHTML = sidebarHTML || '<p class="text-stone-500 text-sm">No medication data.</p>';
+    }
+
+    // Clear results container (critical items are in their own panel)
+    container.innerHTML = '';
 
     // Render metabolism insight
     renderMetabolismInsight(pharma);
