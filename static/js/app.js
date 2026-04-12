@@ -459,62 +459,120 @@ function renderPharma(pharma) {
         critPanel.style.display = 'none';
     }
 
-    // Group non-critical by metabolizer type for sidebar-style rendering
-    const grouped = { poor: [], intermediate: [], normal: [], rapid: [] };
-    const critGenes = new Set(criticals.map(p => p.gene));
+    // Build drug-category index from all pharma data
+    const categoryMap = {};
+    const categoryIcons = {
+        'cardiovascular': 'cardiology', 'hypertension': 'cardiology', 'coronary': 'cardiology',
+        'mental health': 'psychology', 'depressive': 'psychology', 'schizophrenia': 'psychology',
+        'oncology': 'biotech', 'neoplasm': 'biotech', 'carcinoma': 'biotech', 'cancer': 'biotech', 'osteosarcoma': 'biotech',
+        'pain': 'medication', 'opioid': 'medication', 'heroin': 'medication',
+        'immune': 'immunology', 'arthritis': 'immunology', 'psoriasis': 'immunology', 'asthma': 'immunology',
+        'infectious': 'coronavirus', 'hiv': 'coronavirus',
+    };
 
     pharma.forEach(p => {
-        if (critGenes.has(p.gene) && p.is_critical) return; // already shown above
-        const status = (p.metabolizer_status || 'Normal').toLowerCase();
-        if (status.includes('poor')) grouped.poor.push(p);
-        else if (status.includes('intermediate')) grouped.intermediate.push(p);
-        else if (status.includes('rapid') || status.includes('ultra')) grouped.rapid.push(p);
-        else grouped.normal.push(p);
+        (p.drugs_affected || []).forEach(d => {
+            const drug = typeof d === 'string' ? { drug: d } : d;
+            const rawCats = (drug.category || '').split(';').map(c => c.trim()).filter(Boolean);
+            if (!rawCats.length) rawCats.push('Other');
+            // Normalize into broader categories
+            rawCats.forEach(rc => {
+                let bucket = rc;
+                const rcl = rc.toLowerCase();
+                if (rcl.includes('depress') || rcl.includes('schizophreni') || rcl.includes('bipolar') || rcl.includes('anxiety')) bucket = 'Mental Health';
+                else if (rcl.includes('hypertens') || rcl.includes('coronary') || rcl.includes('cardiac') || rcl.includes('heart') || rcl.includes('atrial')) bucket = 'Cardiovascular';
+                else if (rcl.includes('neoplas') || rcl.includes('carcinom') || rcl.includes('cancer') || rcl.includes('sarcoma') || rcl.includes('leukemia') || rcl.includes('lymphoma') || rcl.includes('tumor')) bucket = 'Oncology';
+                else if (rcl.includes('opioid') || rcl.includes('heroin') || rcl.includes('pain') || rcl.includes('analges')) bucket = 'Pain & Addiction';
+                else if (rcl.includes('arthritis') || rcl.includes('psoriasis') || rcl.includes('asthma') || rcl.includes('autoimmun') || rcl.includes('lupus') || rcl.includes('inflammat')) bucket = 'Immune & Inflammatory';
+                else if (rcl.includes('hiv') || rcl.includes('hepat') || rcl.includes('tuberc') || rcl.includes('infect')) bucket = 'Infectious Disease';
+                else if (rcl.includes('diabet') || rcl.includes('cholesterol') || rcl.includes('obesity') || rcl.includes('lipid')) bucket = 'Metabolic';
+                else if (rcl.includes('stroke') || rcl.includes('epilep') || rcl.includes('seizure') || rcl.includes('neuro') || rcl.includes('alzheimer')) bucket = 'Neurological';
+
+                if (!categoryMap[bucket]) categoryMap[bucket] = [];
+                categoryMap[bucket].push({
+                    gene: p.gene,
+                    drug: drug.drug || drug.name || '',
+                    guidance: (drug.guidance || '').substring(0, 150),
+                    category: rc,
+                    status: p.metabolizer_status
+                });
+            });
+        });
     });
 
-    const groupConfig = [
-        { key: 'poor', label: 'Poor Metabolizer', dotClass: 'bg-error', borderClass: 'border-error/30', textClass: 'text-error' },
-        { key: 'intermediate', label: 'Intermediate', dotClass: 'bg-secondary', borderClass: 'border-secondary/30', textClass: 'text-secondary' },
-        { key: 'normal', label: 'Normal', dotClass: 'bg-stone-950', borderClass: 'border-stone-950/30', textClass: 'text-stone-950' },
-        { key: 'rapid', label: 'Rapid / Ultra', dotClass: 'bg-secondary-container', borderClass: 'border-secondary-container/50', textClass: 'text-stone-700' },
-    ];
+    // Sort categories by count, deduplicate entries within each
+    const sortedCats = Object.entries(categoryMap)
+        .map(([name, items]) => {
+            // Deduplicate by gene+drug
+            const seen = new Set();
+            const unique = items.filter(i => {
+                const key = i.gene + '|' + i.drug;
+                if (seen.has(key)) return false;
+                seen.add(key);
+                return true;
+            });
+            return [name, unique];
+        })
+        .sort((a, b) => b[1].length - a[1].length);
 
-    const MAX_PER_GROUP = 5;
-    const sidebarHTML = groupConfig.map(g => {
-        const items = grouped[g.key];
-        if (!items.length) return '';
-        const shown = items.slice(0, MAX_PER_GROUP);
-        const remaining = items.length - shown.length;
-        return `
-        <div class="relative pl-6 border-l-2 ${g.borderClass} mb-6">
-            <div class="absolute -left-[5px] top-0 w-2 h-2 rounded-full ${g.dotClass}"></div>
-            <h3 class="text-[10px] font-black uppercase tracking-[0.2em] ${g.textClass} mb-3">${g.label} <span class="text-stone-400 font-medium">(${items.length})</span></h3>
-            <div class="space-y-2">
-                ${shown.map(p => {
-                    const meds = (p.drugs_affected || []).slice(0, 2).map(m => typeof m === 'string' ? m : (m.drug || m.name || '')).join(', ');
-                    return `
-                    <div class="flex items-center justify-between p-3 bg-white/40 rounded-lg border border-white/60 text-sm">
-                        <div class="min-w-0">
-                            <span class="font-bold text-stone-950">${esc(p.gene || 'Unknown')}</span>
-                            ${meds ? `<span class="text-xs text-stone-500 ml-1 truncate">${esc(meds)}</span>` : ''}
-                        </div>
-                        <span class="material-symbols-outlined text-stone-300 text-sm shrink-0">info</span>
-                    </div>`;
-                }).join('')}
-                ${remaining > 0 ? `<p class="text-[10px] text-stone-400 font-bold uppercase tracking-widest pt-1">+ ${remaining} more</p>` : ''}
-            </div>
-        </div>`;
-    }).join('');
+    // Build category pill filters + drug cards
+    const ITEMS_PER_CAT = 6;
 
-    // Populate the sidebar in the HTML template
+    // Populate sidebar with category summary
     const sidebarContainer = document.getElementById('medication-sensitivity');
     if (sidebarContainer) {
         const innerDiv = sidebarContainer.querySelector('.space-y-4, .space-y-8') || sidebarContainer.lastElementChild;
-        if (innerDiv) innerDiv.innerHTML = sidebarHTML || '<p class="text-stone-500 text-sm">No medication data.</p>';
+        if (innerDiv) {
+            innerDiv.innerHTML = sortedCats.map(([catName, items]) => {
+                const icon = Object.entries(categoryIcons).find(([k]) => catName.toLowerCase().includes(k));
+                return `
+                <div class="flex items-center justify-between p-3 bg-white/40 rounded-lg border border-white/60 hover:bg-white/60 transition-colors cursor-pointer"
+                     onclick="filterPharmaByCategory('${esc(catName)}')">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-secondary/70 text-lg">${icon ? icon[1] : 'science'}</span>
+                        <span class="text-sm font-bold text-stone-950">${esc(catName)}</span>
+                    </div>
+                    <span class="text-xs font-bold text-stone-500 bg-white/50 px-2 py-0.5 rounded-full">${items.length}</span>
+                </div>`;
+            }).join('');
+        }
     }
 
-    // Clear results container (critical items are in their own panel)
-    container.innerHTML = '';
+    // Render main results as category groups
+    container.innerHTML = sortedCats.map(([catName, items]) => {
+        const shown = items.slice(0, ITEMS_PER_CAT);
+        const remaining = items.length - shown.length;
+        const icon = Object.entries(categoryIcons).find(([k]) => catName.toLowerCase().includes(k));
+        return `
+        <div class="pharma-category-group mb-8" data-pharma-category="${esc(catName)}">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-secondary/70">${icon ? icon[1] : 'science'}</span>
+                <h3 class="text-lg font-extrabold tracking-tight text-stone-950">${esc(catName)}</h3>
+                <span class="text-xs font-bold text-stone-400">${items.length} interactions</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                ${shown.map(item => `
+                <div class="pharma-card glass-item p-4 rounded-xl hover:bg-white/40 transition-all cursor-pointer" data-search="${esc((item.gene + ' ' + item.drug + ' ' + catName).toLowerCase())}" onclick="toggleCard(this)">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm font-extrabold text-stone-950">${esc(item.gene)}</span>
+                        <span class="text-[10px] font-bold text-stone-500 bg-white/50 px-2 py-0.5 rounded uppercase tracking-wider">${esc(item.status || '')}</span>
+                    </div>
+                    <div class="text-sm font-semibold text-secondary mb-1">${esc(item.drug)}</div>
+                    <div class="pharma-card-body">
+                        <p class="text-xs text-stone-600 leading-relaxed mt-2 pt-2 border-t border-white/40">${esc(item.guidance)}${item.guidance.length >= 150 ? '...' : ''}</p>
+                    </div>
+                </div>`).join('')}
+            </div>
+            ${remaining > 0 ? `
+            <button class="mt-3 text-xs font-bold text-secondary hover:underline uppercase tracking-widest flex items-center gap-1"
+                    onclick="expandPharmaCategory(this, '${esc(catName)}')">
+                Show ${remaining} more <span class="material-symbols-outlined text-sm">expand_more</span>
+            </button>` : ''}
+        </div>`;
+    }).join('');
+
+    // Store full data for expand functionality
+    window._pharmaCategoryData = Object.fromEntries(sortedCats);
 
     // Render metabolism insight
     renderMetabolismInsight(pharma);
@@ -563,6 +621,45 @@ function renderMetabolismInsight(pharma) {
                 </div>
             `).join('')}
         </div>`;
+}
+
+// ---- Pharma category helpers ----
+function filterPharmaByCategory(catName) {
+    const groups = document.querySelectorAll('.pharma-category-group');
+    groups.forEach(g => {
+        if (catName === 'all') {
+            g.style.display = '';
+        } else {
+            g.style.display = g.dataset.pharmaCategory === catName ? '' : 'none';
+        }
+    });
+}
+
+function expandPharmaCategory(btn, catName) {
+    const data = window._pharmaCategoryData?.[catName] || [];
+    const group = btn.closest('.pharma-category-group');
+    const grid = group?.querySelector('.grid');
+    if (!grid) return;
+    // Render all remaining items
+    const existing = grid.children.length;
+    const remaining = data.slice(existing);
+    remaining.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'pharma-card glass-item p-4 rounded-xl hover:bg-white/40 transition-all cursor-pointer';
+        div.dataset.search = (item.gene + ' ' + item.drug + ' ' + catName).toLowerCase();
+        div.onclick = function() { toggleCard(this); };
+        div.innerHTML = `
+            <div class="flex items-center justify-between mb-2">
+                <span class="text-sm font-extrabold text-stone-950">${esc(item.gene)}</span>
+                <span class="text-[10px] font-bold text-stone-500 bg-white/50 px-2 py-0.5 rounded uppercase tracking-wider">${esc(item.status || '')}</span>
+            </div>
+            <div class="text-sm font-semibold text-secondary mb-1">${esc(item.drug)}</div>
+            <div class="pharma-card-body">
+                <p class="text-xs text-stone-600 leading-relaxed mt-2 pt-2 border-t border-white/40">${esc(item.guidance)}${item.guidance.length >= 150 ? '...' : ''}</p>
+            </div>`;
+        grid.appendChild(div);
+    });
+    btn.remove();
 }
 
 // ---- Traits Tab ----
