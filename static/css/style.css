@@ -101,43 +101,38 @@
 .med-critical { background: rgba(192, 57, 43, 0.04); }
 .med-critical td { color: #c0392b; font-weight: 600; }
 
-/* --- Section Background Images --- */
+/* --- Section Background Images (high-res Unsplash) --- */
 .bg-upload {
-    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCsJEe1jwYh1qeDjBI5-5yhVcesGWl3Nw8cLGhB4EzL3T3p_Oa2D7kSp9MGVTq3zW0w9Z31wV5r6Dtak50a_Cw9EFFGeP5_c5wECN_S0Cht6XPSaBcnPsnGN-Zn1pZN8-qcFSBfukO7ewvLLdJwjqlS-QjRGLYeLmZipBDyaekpG1o4YMA-5uaohvglmpoXdwS-01vSxWtS3HrZLrX4iBPvYZ6Y4rCeQK6RUFhkyecYYiE9ukodHNrkrqlLKiG9YW7RBj5Mvo1JuEMh);
+    background-image: url(https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80&auto=format);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 .bg-overview {
-    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBgzzyNJyDp6MGVd1d8RfdpwbP-YXW_FPGKpgZaOcxOjrV38kTi41nzQezxy8qNEl3GAsBpbsOIc4ON8kgPfhC5KojITYaiqX3fVaP3EMVcqD61eR3WzOXZjeId8GYRKAXcaV7SVDFWl9uqLqbJ4NSwCIe4fY6wSWMZijBCifLVm4IGSX9JTJJG1K1GXxxNL4gB6Vyrc3qdnOuyX5yeXAm8IEzRQCJuKJanJ2_OP_M_mdJ0CZvTJLo0_wnlslsTZDoCIw1Xwhi7EY_q);
+    background-image: url(https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1920&q=80&auto=format);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 .bg-health {
-    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBzUweDG75GwpK7LMVLBkhuRgHNygL-4Tufc8I9R5avoJtaHRD0qAcCoKv1eOYEOwtL0LnETtBpvFHC8E39Te9fGwZAeFflt_G4oUbzo9Exv2e-68hSiekthnB6Q09ykZB9WWg-lZHLpYLU-esKYGX749TBm7WZGb5bGhCxRgKTJlO4ySHmbKMMdTU8k2RQYTsCmMzK26cb2LTO4Y5KWj-Pd0v9dqT9GVIoqjSRKvE3ag3Gi_mvidak-JGWzOMlAX4Bfp0Wl6gqjiJ3);
+    background-image: url(https://images.unsplash.com/photo-1439853949127-fa647821eba0?w=1920&q=80&auto=format);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 .bg-pharma {
-    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAraBB-6bygg34OJ_ciiLckn9PUv3mGSk7QBbkbzero1N8kv28G6ZioQuS11uEN64HldYW7mSw2CBGSvPZ0biI4n-LE8cRAAndBoxLF4LlosXLA3ePad28OIdmFtTnI8EBT9Tq2S8-zTyhwmhJwCh8TNxBqXzLA9R4kuH3QU8eMVkGRNoRxQq0XRZGmRZ0IAGEbyGhbFcpFS4_LLaQ1b3dpkOMQLoqqjlNShQh4LMrIGaHRMB-q9zZ1bOWFc75Q7H9Kq_XWSeYOUH3H);
+    background-image: url(https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1920&q=80&auto=format);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 .bg-traits {
-    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuB0aOmLnsFPUvQ7zCCFa7SD2OeUw0MxJFMJQlBD4CrF11fUp1fc8xIy-Ar184w_FOMt35QNRMEELdtCm3tepcNNdxI3EFXltIQX_c6VVadtYQsvvSrWv8lRnte_rMRutR-AgAvhQ8Ub0INLzjUpEw3HAuqcTVDEkjwPsuDopJI71U5D6VauUeF1TpUiPAIJnHllft354tCqJR5OwHX7bbISgF3OX1Ohsga9YqnfW4rVyUpQ_x_9dsZSsyhckwaoyatoW28oyY6WemGh);
+    background-image: url(https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=80&auto=format);
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-position: center top;
 }
 .bg-ancestry {
-    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBgzzyNJyDp6MGVd1d8RfdpwbP-YXW_FPGKpgZaOcxOjrV38kTi41nzQezxy8qNEl3GAsBpbsOIc4ON8kgPfhC5KojITYaiqX3fVaP3EMVcqD61eR3WzOXZjeId8GYRKAXcaV7SVDFWl9uqLqbJ4NSwCIe4fY6wSWMZijBCifLVm4IGSX9JTJJG1K1GXxxNL4gB6Vyrc3qdnOuyX5yeXAm8IEzRQCJuKJanJ2_OP_M_mdJ0CZvTJLo0_wnlslsTZDoCIw1Xwhi7EY_q);
+    background-image: url(https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1920&q=80&auto=format);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
+
 
 /* --- DNA Helix Loader Animation --- */
 @keyframes helixSpin {
