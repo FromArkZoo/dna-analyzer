@@ -247,11 +247,11 @@ const DNACharts = (() => {
 
         // Region config: keys for matching, color, label position
         const regionConfig = [
-            { id:'british', keys:['british','irish'], color:'#4a6fa5', lx:460, ly:115 },
-            { id:'nw-europe', keys:['nw european','northwest','french','german','dutch'], color:'#5a7fb5', lx:490, ly:135 },
-            { id:'scandinavia', keys:['scandinavian','finnish','nordic','norwegian','swedish'], color:'#3a6e95', lx:508, ly:95 },
-            { id:'south-europe', keys:['southern european','italian','iberian','greek','spanish','mediterranean'], color:'#7a5ca8', lx:490, ly:155 },
-            { id:'east-europe', keys:['eastern european','slavic','baltic','polish','russian','ashkenazi'], color:'#3a8e9e', lx:540, ly:120 },
+            { id:'british', keys:['british','irish'], color:'#4a6fa5', lx:395, ly:115 },
+            { id:'nw-europe', keys:['nw european','northwest','french','german','dutch'], color:'#5a7fb5', lx:395, ly:140 },
+            { id:'scandinavia', keys:['scandinavian','finnish','nordic','norwegian','swedish'], color:'#3a6e95', lx:510, ly:80 },
+            { id:'south-europe', keys:['southern european','italian','iberian','greek','spanish','mediterranean'], color:'#7a5ca8', lx:395, ly:165 },
+            { id:'east-europe', keys:['eastern european','slavic','baltic','polish','russian','ashkenazi'], color:'#3a8e9e', lx:570, ly:110 },
             { id:'middle-east', keys:['near east','middle east','arab','levantine','turkish'], color:'#b8652e', lx:575, ly:170 },
             { id:'north-africa', keys:['north africa','berber','egyptian','maghreb'], color:'#c4873e', lx:490, ly:185 },
             { id:'sub-saharan', keys:['sub-saharan','west africa','east africa','african','nigerian','central africa'], color:'#3d8b63', lx:500, ly:260 },
@@ -303,13 +303,32 @@ const DNACharts = (() => {
             if (opacity > 0) {
                 svgContent += `<path d="${regionPath}" fill="${r.color}" fill-opacity="${opacity}" stroke="${r.color}" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>`;
                 const displayName = m.name.replace(/\b\w/g, c => c.toUpperCase());
-                labels.push({ x: r.lx, y: r.ly, text: displayName, pct: Math.round(pct * 10) / 10, color: r.color });
+                labels.push({ x: r.lx, y: r.ly, ox: r.lx, oy: r.ly, text: displayName, pct: Math.round(pct * 10) / 10, color: r.color });
             }
         });
 
-        // Render labels (white pill badges)
+        // De-crowd labels: push overlapping labels apart vertically
+        labels.sort((a, b) => a.y - b.y);
+        const labelH = 22;
+        for (let i = 1; i < labels.length; i++) {
+            for (let j = 0; j < i; j++) {
+                const dx = Math.abs(labels[i].x - labels[j].x);
+                const dy = labels[i].y - labels[j].y;
+                if (dx < 120 && Math.abs(dy) < labelH) {
+                    labels[i].y = labels[j].y + labelH;
+                }
+            }
+        }
+
+        // Render labels with connector lines to their regions
         labels.forEach(l => {
             const tw = Math.max(l.text.length * 5.2 + 32, 58);
+            // Connector dot at original region position
+            svgContent += `<circle cx="${l.ox || l.x}" cy="${l.oy || l.y}" r="3" fill="${l.color}" fill-opacity="0.6"/>`;
+            // If label was displaced, draw a subtle connector line
+            if (l.oy && Math.abs(l.y - l.oy) > 5) {
+                svgContent += `<line x1="${l.ox || l.x}" y1="${l.oy}" x2="${l.x}" y2="${l.y}" stroke="${l.color}" stroke-opacity="0.3" stroke-width="0.8"/>`;
+            }
             svgContent += `<rect x="${l.x - tw/2}" y="${l.y - 10}" width="${tw}" height="20" rx="10" fill="white" fill-opacity="0.95" stroke="${l.color}" stroke-width="1"/>`;
             svgContent += `<text x="${l.x}" y="${l.y + 4}" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" font-weight="700" fill="${l.color}">${l.text} ${l.pct}%</text>`;
         });
