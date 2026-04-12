@@ -102,6 +102,21 @@
 .med-critical td { color: #c0392b; font-weight: 600; }
 
 /* --- Section backgrounds handled by <img> elements in HTML --- */
+/* Gradient fade at bottom of hero images */
+.tab-content .absolute.h-\[120vh\]::after,
+#upload-section .absolute::after,
+#loading-section .absolute::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    top: auto;
+    height: 50vh;
+    background: linear-gradient(to bottom, transparent, #e8e4df);
+    pointer-events: none;
+    z-index: 1;
+}
+body { background-color: #e8e4df; }
+
 .bg-upload {
     background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCsJEe1jwYh1qeDjBI5-5yhVcesGWl3Nw8cLGhB4EzL3T3p_Oa2D7kSp9MGVTq3zW0w9Z31wV5r6Dtak50a_Cw9EFFGeP5_c5wECN_S0Cht6XPSaBcnPsnGN-Zn1pZN8-qcFSBfukO7ewvLLdJwjqlS-QjRGLYeLmZipBDyaekpG1o4YMA-5uaohvglmpoXdwS-01vSxWtS3HrZLrX4iBPvYZ6Y4rCeQK6RUFhkyecYYiE9ukodHNrkrqlLKiG9YW7RBj5Mvo1JuEMh=w1920);
     background-size: cover; background-position: center;
