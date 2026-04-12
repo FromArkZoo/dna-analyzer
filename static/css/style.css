@@ -1,9 +1,175 @@
 /* ============================================================
-   DNA Analyzer — Minimal styles for JS-generated content
-   Tailwind handles all static layout via index.html
+   DNA Analyzer — Stitch Design System
+   Glass morphism + section backgrounds + component styles
    ============================================================ */
 
-/* --- Severity Badges (used in JS-generated health cards) --- */
+/* --- Glass Effects (from Stitch design) --- */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.glass-panel-dark {
+    background: rgba(11, 12, 12, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+.glass-nav {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.glass-item {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.data-chip {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+/* --- Material Symbols --- */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* --- Tab Content (show/hide + animation) --- */
+.tab-content { display: none; }
+.tab-content.active { display: block; animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Card Expand/Collapse --- */
+.result-card-body, .pharma-card-body { display: none; }
+.expanded .result-card-body, .expanded .pharma-card-body { display: block; }
+.expand-icon { transition: transform 0.3s; }
+.expanded .expand-icon { transform: rotate(90deg); }
+
+/* --- Results List --- */
+.results-list { display: flex; flex-direction: column; gap: 1rem; }
+
+/* --- Traits Grid --- */
+.traits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+}
+
+/* --- PRS Grid --- */
+.prs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+/* --- Coverage Indicators --- */
+.coverage-indicators { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+/* --- Medication Table --- */
+.medications-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+.medications-table th {
+    text-align: left;
+    padding: 0.6rem;
+    background: rgba(255, 255, 255, 0.3);
+    font-weight: 700;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.medications-table td {
+    padding: 0.6rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.medications-table tr:last-child td { border-bottom: none; }
+.med-critical { background: rgba(192, 57, 43, 0.04); }
+.med-critical td { color: #c0392b; font-weight: 600; }
+
+/* --- Section Background Images --- */
+.bg-upload {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCsJEe1jwYh1qeDjBI5-5yhVcesGWl3Nw8cLGhB4EzL3T3p_Oa2D7kSp9MGVTq3zW0w9Z31wV5r6Dtak50a_Cw9EFFGeP5_c5wECN_S0Cht6XPSaBcnPsnGN-Zn1pZN8-qcFSBfukO7ewvLLdJwjqlS-QjRGLYeLmZipBDyaekpG1o4YMA-5uaohvglmpoXdwS-01vSxWtS3HrZLrX4iBPvYZ6Y4rCeQK6RUFhkyecYYiE9ukodHNrkrqlLKiG9YW7RBj5Mvo1JuEMh);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.bg-overview {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBgzzyNJyDp6MGVd1d8RfdpwbP-YXW_FPGKpgZaOcxOjrV38kTi41nzQezxy8qNEl3GAsBpbsOIc4ON8kgPfhC5KojITYaiqX3fVaP3EMVcqD61eR3WzOXZjeId8GYRKAXcaV7SVDFWl9uqLqbJ4NSwCIe4fY6wSWMZijBCifLVm4IGSX9JTJJG1K1GXxxNL4gB6Vyrc3qdnOuyX5yeXAm8IEzRQCJuKJanJ2_OP_M_mdJ0CZvTJLo0_wnlslsTZDoCIw1Xwhi7EY_q);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.bg-health {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBzUweDG75GwpK7LMVLBkhuRgHNygL-4Tufc8I9R5avoJtaHRD0qAcCoKv1eOYEOwtL0LnETtBpvFHC8E39Te9fGwZAeFflt_G4oUbzo9Exv2e-68hSiekthnB6Q09ykZB9WWg-lZHLpYLU-esKYGX749TBm7WZGb5bGhCxRgKTJlO4ySHmbKMMdTU8k2RQYTsCmMzK26cb2LTO4Y5KWj-Pd0v9dqT9GVIoqjSRKvE3ag3Gi_mvidak-JGWzOMlAX4Bfp0Wl6gqjiJ3);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.bg-pharma {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAraBB-6bygg34OJ_ciiLckn9PUv3mGSk7QBbkbzero1N8kv28G6ZioQuS11uEN64HldYW7mSw2CBGSvPZ0biI4n-LE8cRAAndBoxLF4LlosXLA3ePad28OIdmFtTnI8EBT9Tq2S8-zTyhwmhJwCh8TNxBqXzLA9R4kuH3QU8eMVkGRNoRxQq0XRZGmRZ0IAGEbyGhbFcpFS4_LLaQ1b3dpkOMQLoqqjlNShQh4LMrIGaHRMB-q9zZ1bOWFc75Q7H9Kq_XWSeYOUH3H);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.bg-traits {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuB0aOmLnsFPUvQ7zCCFa7SD2OeUw0MxJFMJQlBD4CrF11fUp1fc8xIy-Ar184w_FOMt35QNRMEELdtCm3tepcNNdxI3EFXltIQX_c6VVadtYQsvvSrWv8lRnte_rMRutR-AgAvhQ8Ub0INLzjUpEw3HAuqcTVDEkjwPsuDopJI71U5D6VauUeF1TpUiPAIJnHllft354tCqJR5OwHX7bbISgF3OX1Ohsga9YqnfW4rVyUpQ_x_9dsZSsyhckwaoyatoW28oyY6WemGh);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.bg-ancestry {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBgzzyNJyDp6MGVd1d8RfdpwbP-YXW_FPGKpgZaOcxOjrV38kTi41nzQezxy8qNEl3GAsBpbsOIc4ON8kgPfhC5KojITYaiqX3fVaP3EMVcqD61eR3WzOXZjeId8GYRKAXcaV7SVDFWl9uqLqbJ4NSwCIe4fY6wSWMZijBCifLVm4IGSX9JTJJG1K1GXxxNL4gB6Vyrc3qdnOuyX5yeXAm8IEzRQCJuKJanJ2_OP_M_mdJ0CZvTJLo0_wnlslsTZDoCIw1Xwhi7EY_q);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* --- DNA Helix Loader Animation --- */
+@keyframes helixSpin {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+@keyframes helixPulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1); }
+}
+.dna-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    perspective: 600px;
+}
+.dna-helix {
+    width: 40px;
+    height: 80px;
+    animation: helixSpin 2s linear infinite;
+    transform-style: preserve-3d;
+}
+.dna-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #0b0c0c;
+    animation: helixPulse 1.2s ease-in-out infinite;
+}
+
+/* --- Severity Badges --- */
 .severity-badge {
     display: inline-flex;
     align-items: center;
@@ -16,22 +182,20 @@
     letter-spacing: 0.08em;
     flex-shrink: 0;
 }
-.severity-CRITICAL { background: rgba(192,57,43,0.06); color: #c0392b; border: 1px solid rgba(192,57,43,0.2); }
-.severity-HIGH { background: rgba(184,101,46,0.06); color: #b8652e; border: 1px solid rgba(184,101,46,0.2); }
-.severity-MODERATE { background: rgba(158,130,48,0.06); color: #9e8230; border: 1px solid rgba(158,130,48,0.2); }
-.severity-LOW { background: rgba(74,111,165,0.06); color: #4a6fa5; border: 1px solid rgba(74,111,165,0.2); }
-.severity-PROTECTIVE { background: rgba(61,139,99,0.06); color: #3d8b63; border: 1px solid rgba(61,139,99,0.2); }
+.severity-CRITICAL { background: rgba(192, 57, 43, 0.06); color: #c0392b; border: 1px solid rgba(192, 57, 43, 0.2); }
+.severity-HIGH { background: rgba(184, 101, 46, 0.06); color: #b8652e; border: 1px solid rgba(184, 101, 46, 0.2); }
+.severity-MODERATE { background: rgba(158, 130, 48, 0.06); color: #9e8230; border: 1px solid rgba(158, 130, 48, 0.2); }
+.severity-LOW { background: rgba(74, 111, 165, 0.06); color: #4a6fa5; border: 1px solid rgba(74, 111, 165, 0.2); }
+.severity-PROTECTIVE { background: rgba(61, 139, 99, 0.06); color: #3d8b63; border: 1px solid rgba(61, 139, 99, 0.2); }
 
-/* --- Result Cards (JS-generated health risk cards) --- */
-.results-list { display: flex; flex-direction: column; gap: 0.75rem; }
-
+/* --- Result Cards --- */
 .result-card {
-    border: 1px solid rgba(0,0,0,0.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     overflow: hidden;
     transition: opacity 0.4s cubic-bezier(0.76, 0, 0.24, 1);
     cursor: pointer;
 }
-.result-card:hover { border-color: rgba(0,0,0,0.15); }
+.result-card:hover { border-color: rgba(0, 0, 0, 0.15); }
 .result-card-header {
     display: flex;
     align-items: center;
@@ -41,21 +205,21 @@
 .result-card-header .expand-icon {
     margin-left: auto;
     font-size: 0.7rem;
-    color: rgba(11,16,18,0.3);
+    color: rgba(11, 16, 18, 0.3);
     transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
 }
 .result-card.expanded .expand-icon { transform: rotate(180deg); }
 .result-card-info { flex: 1; min-width: 0; }
 .result-card-gene { font-weight: 700; font-size: 0.95rem; }
-.result-card-condition { font-size: 0.82rem; color: rgba(11,16,18,0.55); margin-top: 2px; }
-.result-card-rsid { font-size: 0.72rem; color: rgba(11,16,18,0.3); letter-spacing: 0.04em; }
+.result-card-condition { font-size: 0.82rem; color: rgba(11, 16, 18, 0.55); margin-top: 2px; }
+.result-card-rsid { font-size: 0.72rem; color: rgba(11, 16, 18, 0.3); letter-spacing: 0.04em; }
 
 .zygosity-badge {
     font-size: 0.6rem;
     padding: 0.15rem 0.5rem;
     border-radius: 9999px;
-    background: rgba(0,0,0,0.06);
-    color: rgba(11,16,18,0.55);
+    background: rgba(0, 0, 0, 0.06);
+    color: rgba(11, 16, 18, 0.55);
     font-weight: 600;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -63,11 +227,10 @@
 }
 
 .result-card-body {
-    display: none;
     padding: 0 1.5rem 1.5rem;
-    border-top: 1px solid rgba(0,0,0,0.06);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
-.result-card.expanded .result-card-body { display: block; padding-top: 1rem; }
+.result-card.expanded .result-card-body { padding-top: 1rem; }
 
 .result-detail-grid {
     display: grid;
@@ -77,109 +240,90 @@
 }
 .detail-label {
     font-size: 0.6rem;
-    color: rgba(11,16,18,0.3);
+    color: rgba(11, 16, 18, 0.3);
     text-transform: uppercase;
     letter-spacing: 0.08em;
     font-weight: 700;
 }
 .detail-value { font-size: 0.85rem; margin-top: 2px; }
 
-.risk-description { font-size: 0.85rem; color: rgba(11,16,18,0.55); line-height: 1.5; }
+.risk-description { font-size: 0.85rem; color: rgba(11, 16, 18, 0.55); line-height: 1.5; }
 .clinvar-stars { color: #9e8230; letter-spacing: 1px; }
 
 .population-freq-bar {
-    height: 2px; background: rgba(0,0,0,0.08); border-radius: 1px;
+    height: 2px; background: rgba(0, 0, 0, 0.08); border-radius: 1px;
     margin-top: 4px; overflow: hidden;
 }
 .population-freq-fill { height: 100%; background: #1a1c1e; border-radius: 1px; transition: width 0.5s; }
 
-/* Health card sections */
+/* --- Health Card Sections --- */
 .health-section {
     margin-bottom: 0.75rem; padding: 0.75rem 1rem;
-    background: rgba(0,0,0,0.02); font-size: 0.85rem; line-height: 1.6;
+    background: rgba(0, 0, 0, 0.02); font-size: 0.85rem; line-height: 1.6;
 }
-.health-section:first-child { background: rgba(158,130,48,0.04); border-left: 2px solid #9e8230; }
+.health-section:first-child { background: rgba(158, 130, 48, 0.04); border-left: 2px solid #9e8230; }
 .health-section-label {
     font-weight: 700; font-size: 0.6rem; text-transform: uppercase;
-    letter-spacing: 0.08em; color: rgba(11,16,18,0.55); margin-bottom: 4px;
+    letter-spacing: 0.08em; color: rgba(11, 16, 18, 0.55); margin-bottom: 4px;
 }
-.health-next-steps { background: rgba(61,139,99,0.04); border-left: 2px solid #3d8b63; }
+.health-next-steps { background: rgba(61, 139, 99, 0.04); border-left: 2px solid #3d8b63; }
 
 /* --- Critical Alert Cards --- */
 .critical-alerts-list { display: flex; flex-direction: column; gap: 0.5rem; }
 .critical-alert-card {
-    background: rgba(192,57,43,0.04); border-left: 2px solid #c0392b;
+    background: rgba(192, 57, 43, 0.04); border-left: 2px solid #c0392b;
     padding: 0.75rem 1rem;
 }
 .critical-alert-card h4 { color: #c0392b; font-size: 0.88rem; margin-bottom: 4px; }
-.critical-alert-card p { font-size: 0.82rem; color: rgba(11,16,18,0.55); }
+.critical-alert-card p { font-size: 0.82rem; color: rgba(11, 16, 18, 0.55); }
 
-/* --- Pharma Cards (JS-generated) --- */
+/* --- Pharma Cards --- */
 .pharma-card {
-    border: 1px solid rgba(0,0,0,0.08); overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.08); overflow: hidden;
     margin-bottom: 0.5rem; transition: opacity 0.4s; cursor: pointer;
 }
-.pharma-card:hover { border-color: rgba(0,0,0,0.15); }
+.pharma-card:hover { border-color: rgba(0, 0, 0, 0.15); }
 .pharma-card-header {
     display: flex; align-items: center; gap: 0.75rem;
     padding: 1rem 1.5rem;
 }
 .pharma-gene-name { font-weight: 700; font-size: 1rem; flex: 1; }
 .pharma-card-body {
-    display: none; padding: 0 1.5rem 1.5rem;
-    border-top: 1px solid rgba(0,0,0,0.06);
+    padding: 0 1.5rem 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
-.pharma-card.expanded .pharma-card-body { display: block; padding-top: 1rem; }
+.pharma-card.expanded .pharma-card-body { padding-top: 1rem; }
 .pharma-card .expand-icon {
-    font-size: 0.7rem; color: rgba(11,16,18,0.3);
+    font-size: 0.7rem; color: rgba(11, 16, 18, 0.3);
     transition: transform 0.4s;
 }
 .pharma-card.expanded .expand-icon { transform: rotate(180deg); }
 
-/* Metabolizer badges */
+/* --- Metabolizer Badges --- */
 .metabolizer-badge {
     display: inline-flex; padding: 0.15rem 0.6rem;
     border-radius: 9999px; font-size: 0.6rem; font-weight: 700;
     text-transform: uppercase; letter-spacing: 0.08em;
 }
-.metabolizer-poor { background: rgba(192,57,43,0.06); color: #c0392b; border: 1px solid rgba(192,57,43,0.2); }
-.metabolizer-intermediate { background: rgba(158,130,48,0.06); color: #9e8230; border: 1px solid rgba(158,130,48,0.2); }
-.metabolizer-normal { background: rgba(61,139,99,0.06); color: #3d8b63; border: 1px solid rgba(61,139,99,0.2); }
-.metabolizer-rapid, .metabolizer-ultrarapid { background: rgba(74,111,165,0.06); color: #4a6fa5; border: 1px solid rgba(74,111,165,0.2); }
+.metabolizer-poor { background: rgba(192, 57, 43, 0.06); color: #c0392b; border: 1px solid rgba(192, 57, 43, 0.2); }
+.metabolizer-intermediate { background: rgba(158, 130, 48, 0.06); color: #9e8230; border: 1px solid rgba(158, 130, 48, 0.2); }
+.metabolizer-normal { background: rgba(61, 139, 99, 0.06); color: #3d8b63; border: 1px solid rgba(61, 139, 99, 0.2); }
+.metabolizer-rapid, .metabolizer-ultrarapid { background: rgba(74, 111, 165, 0.06); color: #4a6fa5; border: 1px solid rgba(74, 111, 165, 0.2); }
 
-/* Medications table */
-.medications-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
-.medications-table th {
-    text-align: left; padding: 0.6rem 0.8rem;
-    background: rgba(0,0,0,0.02); font-weight: 700;
-    color: rgba(11,16,18,0.55); font-size: 0.6rem;
-    text-transform: uppercase; letter-spacing: 0.08em;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-.medications-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid rgba(0,0,0,0.06); }
-.medications-table tr:last-child td { border-bottom: none; }
-.med-critical { background: rgba(192,57,43,0.04); }
-.med-critical td { color: #c0392b; font-weight: 600; }
-
-/* --- Trait Cards (JS-generated) --- */
-.traits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 0.75rem;
-}
+/* --- Trait Cards --- */
 .trait-card {
-    border: 1px solid rgba(0,0,0,0.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     padding: 1.5rem;
     transition: opacity 0.4s cubic-bezier(0.76, 0, 0.24, 1);
 }
-.trait-card:hover { border-color: rgba(0,0,0,0.15); }
+.trait-card:hover { border-color: rgba(0, 0, 0, 0.15); }
 .trait-card-name { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.25rem; }
 .trait-card-result { font-size: 1.1rem; font-weight: 800; margin-bottom: 0.25rem; }
-.trait-card-explanation { font-size: 0.82rem; color: rgba(11,16,18,0.55); line-height: 1.5; margin-bottom: 0.75rem; }
+.trait-card-explanation { font-size: 0.82rem; color: rgba(11, 16, 18, 0.55); line-height: 1.5; margin-bottom: 0.75rem; }
 .trait-card-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; }
 .trait-pop-freq { flex: 1; }
-.trait-pop-freq-label { color: rgba(11,16,18,0.3); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 2px; }
-.trait-pop-freq-bar { height: 2px; background: rgba(0,0,0,0.08); border-radius: 1px; overflow: hidden; max-width: 120px; }
+.trait-pop-freq-label { color: rgba(11, 16, 18, 0.3); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 2px; }
+.trait-pop-freq-bar { height: 2px; background: rgba(0, 0, 0, 0.08); border-radius: 1px; overflow: hidden; max-width: 120px; }
 .trait-pop-freq-fill { height: 100%; background: #1a1c1e; border-radius: 1px; }
 
 .confidence-badge {
@@ -187,29 +331,23 @@
     font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.08em; font-size: 0.55rem;
 }
-.confidence-high { background: rgba(61,139,99,0.06); color: #3d8b63; }
-.confidence-medium { background: rgba(158,130,48,0.06); color: #9e8230; }
-.confidence-low { background: rgba(0,0,0,0.04); color: rgba(11,16,18,0.3); }
+.confidence-high { background: rgba(61, 139, 99, 0.06); color: #3d8b63; }
+.confidence-medium { background: rgba(158, 130, 48, 0.06); color: #9e8230; }
+.confidence-low { background: rgba(0, 0, 0, 0.04); color: rgba(11, 16, 18, 0.3); }
 
-/* --- PRS Cards (JS-generated) --- */
-.prs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 0.75rem;
-}
+/* --- PRS Cards --- */
 .prs-card {
-    background: rgba(0,0,0,0.02);
-    border: 1px solid rgba(0,0,0,0.06);
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     padding: 1.5rem; text-align: center;
 }
 .prs-card-condition { font-weight: 700; font-size: 0.88rem; margin-bottom: 0.75rem; }
 .prs-gauge-wrapper { width: 160px; height: 100px; margin: 0 auto 0.25rem; position: relative; overflow: hidden; }
 .prs-gauge-wrapper canvas { width: 100%; height: auto; display: block; }
 
-/* --- Coverage (JS-generated) --- */
-.coverage-indicators { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+/* --- Coverage --- */
 .coverage-item {
-    background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.06);
+    background: rgba(0, 0, 0, 0.02); border: 1px solid rgba(0, 0, 0, 0.06);
     padding: 0.5rem 1rem; display: flex; align-items: center;
     gap: 0.5rem; font-size: 0.82rem;
 }
@@ -218,27 +356,31 @@
 .coverage-partial { background: #9e8230; }
 .coverage-limited { background: #c0392b; }
 
-/* --- Header scroll glass (toggled by JS) --- */
+/* --- Header Scroll Glass --- */
 .app-header.scrolled {
-    background: rgba(249,249,251,0.85);
+    background: rgba(249, 249, 251, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-/* --- Tab active state (toggled by JS) --- */
+/* --- Tab Active State --- */
 .tab-btn.active {
     color: #1a1c1e;
-    background: rgba(0,0,0,0.06);
+    background: rgba(0, 0, 0, 0.06);
 }
 
-/* --- Dragover state (toggled by JS) --- */
+/* --- Dragover State --- */
 .upload-dropzone.dragover {
-    border-color: rgba(0,0,0,0.25) !important;
-    background: rgba(0,0,0,0.04) !important;
+    border-color: rgba(0, 0, 0, 0.25) !important;
+    background: rgba(0, 0, 0, 0.04) !important;
 }
 
-/* --- Responsive overrides for JS-generated grids --- */
+/* --- Scrollbar Hiding --- */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* --- Responsive --- */
 @media (max-width: 768px) {
     .result-detail-grid { grid-template-columns: 1fr; }
     .traits-grid { grid-template-columns: 1fr; }
@@ -248,7 +390,17 @@
 /* --- Print --- */
 @media print {
     body { background: #fff !important; color: #1a1a1a !important; }
+    .app-header, .glass-nav, nav { display: none !important; }
     .tab-content { display: block !important; page-break-inside: avoid; }
     .result-card-body { display: block !important; }
     .pharma-card-body { display: block !important; }
+    .glass-panel, .glass-card, .glass-item {
+        background: white !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+    .bg-upload, .bg-overview, .bg-health, .bg-pharma, .bg-traits, .bg-ancestry {
+        background-image: none !important;
+        background: white !important;
+    }
 }

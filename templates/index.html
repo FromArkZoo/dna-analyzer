@@ -1,467 +1,633 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DNA Analyzer — Personal Genomics Report</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              surface: { DEFAULT: '#f9f9fb', dim: '#d9dadc', bright: '#f9f9fb',
-                container: { DEFAULT: '#eeeef0', low: '#f3f3f6', high: '#e8e8ea', highest: '#e2e2e5', lowest: '#ffffff' }
-              },
-              'on-surface': { DEFAULT: '#1a1c1e', variant: '#434749' },
-              primary: { DEFAULT: '#000000', container: '#171c1e', fixed: { DEFAULT: '#dfe3e6', dim: '#c3c7ca' } },
-              'on-primary': { DEFAULT: '#ffffff', container: '#808587', 'fixed-variant': '#42484a' },
-              secondary: { DEFAULT: '#5d5e61', container: '#e2e2e5', fixed: { DEFAULT: '#e2e2e5', dim: '#c6c6c9' } },
-              'on-secondary': { DEFAULT: '#ffffff', container: '#636467', 'fixed-variant': '#454749' },
-              outline: { DEFAULT: '#747879', variant: '#c4c7c9' },
-              error: { DEFAULT: '#ba1a1a', container: '#ffdad6' },
-              'on-error': { DEFAULT: '#ffffff', container: '#93000a' },
-              // Severity
-              critical: { DEFAULT: '#c0392b', bg: 'rgba(192,57,43,0.06)' },
-              high: { DEFAULT: '#b8652e', bg: 'rgba(184,101,46,0.06)' },
-              moderate: { DEFAULT: '#9e8230', bg: 'rgba(158,130,48,0.06)' },
-              low: { DEFAULT: '#4a6fa5', bg: 'rgba(74,111,165,0.06)' },
-              protective: { DEFAULT: '#3d8b63', bg: 'rgba(61,139,99,0.06)' },
-            },
-            fontFamily: {
-              headline: ['Inter', 'sans-serif'],
-              body: ['Inter', 'sans-serif'],
-            },
-            borderRadius: {
-              DEFAULT: '0.25rem',
-            },
-          },
-        },
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>JB DNA — Personal Genomics Report</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary-fixed-dim": "#c8c6c5",
+        "surface-container-lowest": "#ffffff",
+        "on-surface-variant": "#444748",
+        "tertiary": "#1d011c",
+        "surface-tint": "#5f5e5e",
+        "on-secondary": "#ffffff",
+        "on-primary-fixed-variant": "#474746",
+        "surface-container-high": "#e8e8e8",
+        "primary": "#0b0c0c",
+        "on-surface": "#1a1c1c",
+        "on-tertiary-container": "#a97ba0",
+        "on-primary-container": "#8a8989",
+        "surface-dim": "#dadada",
+        "surface-container-low": "#f3f3f3",
+        "on-tertiary-fixed": "#300e2d",
+        "surface-variant": "#e2e2e2",
+        "on-primary-fixed": "#1b1c1c",
+        "primary-fixed": "#e5e2e1",
+        "on-secondary-container": "#005e79",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed": "#001f2a",
+        "surface-container-highest": "#e2e2e2",
+        "inverse-primary": "#c8c6c5",
+        "on-error-container": "#93000a",
+        "secondary-container": "#7cd7ff",
+        "surface-container": "#eeeeee",
+        "secondary-fixed-dim": "#76d2f9",
+        "background": "#f9f9f9",
+        "on-primary": "#ffffff",
+        "outline": "#747878",
+        "error": "#ba1a1a",
+        "tertiary-fixed-dim": "#eab7df",
+        "primary-container": "#222222",
+        "on-secondary-fixed-variant": "#004d64",
+        "on-tertiary-fixed-variant": "#603a5b",
+        "secondary": "#006684",
+        "tertiary-container": "#371534",
+        "tertiary-fixed": "#ffd7f4",
+        "secondary-fixed": "#bde9ff",
+        "inverse-on-surface": "#f1f1f1",
+        "inverse-surface": "#2f3131",
+        "surface": "#f9f9f9",
+        "on-tertiary": "#ffffff",
+        "on-error": "#ffffff",
+        "on-background": "#1a1c1c",
+        "outline-variant": "#c4c7c7",
+        "surface-bright": "#f9f9f9"
+      },
+      borderRadius: {
+        DEFAULT: "0.125rem",
+        lg: "0.25rem",
+        xl: "0.5rem",
+        full: "0.75rem"
+      },
+      fontFamily: {
+        headline: ["Inter"],
+        body: ["Inter"],
+        label: ["Inter"]
       }
-    </script>
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
-    <style>
-        .font-tight { letter-spacing: -0.02em; }
-        .tracking-tightest { letter-spacing: -0.03em; }
-        .glass-effect { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-        body { font-family: 'Inter', sans-serif; }
+    }
+  }
+}
+</script>
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+<style>
+body { font-family: 'Inter', sans-serif; }
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+}
+/* Glass effects */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+.glass-panel-dark {
+    background: rgba(11, 12, 12, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.glass-nav {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.glass-item {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+}
+.data-chip {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.technical-header {
+    font-weight: 850;
+    letter-spacing: -0.04em;
+}
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.text-subtle-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
 
-        /* Tab content animation */
-        .tab-content { display: none; animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
-        .tab-content.active { display: block; }
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(12px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* DNA helix loader */
-        .dna-helix-loader { width: 60px; height: 60px; position: relative; animation: helix-spin 1.5s linear infinite; }
-        .helix-strand { position: absolute; width: 14px; height: 14px; border-radius: 50%; top: 50%; transform: translateY(-50%); }
-        .strand-left { left: 6px; background: #1a1c1e; animation: helix-left 0.75s ease-in-out infinite alternate; }
-        .strand-right { right: 6px; background: #747879; animation: helix-right 0.75s ease-in-out infinite alternate; }
-        @keyframes helix-spin { to { transform: rotate(360deg); } }
-        @keyframes helix-left { from { transform: translateY(-12px) scale(1); } to { transform: translateY(12px) scale(.7); } }
-        @keyframes helix-right { from { transform: translateY(12px) scale(.7); } to { transform: translateY(-12px) scale(1); } }
-
-        /* Gallery-fade hover */
-        .results-list:hover .result-card,
-        .results-list:hover .pharma-card,
-        .traits-grid:hover .trait-card { opacity: 0.4; transition: opacity 0.4s cubic-bezier(0.76, 0, 0.24, 1); }
-        .results-list:hover .result-card:hover,
-        .results-list:hover .pharma-card:hover,
-        .traits-grid:hover .trait-card:hover { opacity: 1; }
-
-        /* Print styles */
-        @media print {
-            nav, .tab-nav, .glass-effect, .disclaimer-banner { display: none !important; }
-            body { background: #fff !important; }
-            .tab-content { display: block !important; page-break-inside: avoid; }
-        }
-    </style>
+/* Section backgrounds */
+.bg-upload {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCsJEe1jwYh1qeDjBI5-5yhVcesGWl3Nw8cLGhB4EzL3T3p_Oa2D7kSp9MGVTq3zW0w9Z31wV5r6Dtak50a_Cw9EFFGeP5_c5wECN_S0Cht6XPSaBcnPsnGN-Zn1pZN8-qcFSBfukO7ewvLLdJwjqlS-QjRGLYeLmZipBDyaekpG1o4YMA-5uaohvglmpoXdwS-01vSxWtS3HrZLrX4iBPvYZ6Y4rCeQK6RUFhkyecYYiE9ukodHNrkrqlLKiG9YW7RBj5Mvo1JuEMh);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.bg-overview {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBgzzyNJyDp6MGVd1d8RfdpwbP-YXW_FPGKpgZaOcxOjrV38kTi41nzQezxy8qNEl3GAsBpbsOIc4ON8kgPfhC5KojITYaiqX3fVaP3EMVcqD61eR3WzOXZjeId8GYRKAXcaV7SVDFWl9uqLqbJ4NSwCIe4fY6wSWMZijBCifLVm4IGSX9JTJJG1K1GXxxNL4gB6Vyrc3qdnOuyX5yeXAm8IEzRQCJuKJanJ2_OP_M_mdJ0CZvTJLo0_wnlslsTZDoCIw1Xwhi7EY_q);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.bg-health {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBzUweDG75GwpK7LMVLBkhuRgHNygL-4Tufc8I9R5avoJtaHRD0qAcCoKv1eOYEOwtL0LnETtBpvFHC8E39Te9fGwZAeFflt_G4oUbzo9Exv2e-68hSiekthnB6Q09ykZB9WWg-lZHLpYLU-esKYGX749TBm7WZGb5bGhCxRgKTJlO4ySHmbKMMdTU8k2RQYTsCmMzK26cb2LTO4Y5KWj-Pd0v9dqT9GVIoqjSRKvE3ag3Gi_mvidak-JGWzOMlAX4Bfp0Wl6gqjiJ3);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.bg-pharma {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAraBB-6bygg34OJ_ciiLckn9PUv3mGSk7QBbkbzero1N8kv28G6ZioQuS11uEN64HldYW7mSw2CBGSvPZ0biI4n-LE8cRAAndBoxLF4LlosXLA3ePad28OIdmFtTnI8EBT9Tq2S8-zTyhwmhJwCh8TNxBqXzLA9R4kuH3QU8eMVkGRNoRxQq0XRZGmRZ0IAGEbyGhbFcpFS4_LLaQ1b3dpkOMQLoqqjlNShQh4LMrIGaHRMB-q9zZ1bOWFc75Q7H9Kq_XWSeYOUH3H);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.bg-traits {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuB0aOmLnsFPUvQ7zCCFa7SD2OeUw0MxJFMJQlBD4CrF11fUp1fc8xIy-Ar184w_FOMt35QNRMEELdtCm3tepcNNdxI3EFXltIQX_c6VVadtYQsvvSrWv8lRnte_rMRutR-AgAvhQ8Ub0INLzjUpEw3HAuqcTVDEkjwPsuDopJI71U5D6VauUeF1TpUiPAIJnHllft354tCqJR5OwHX7bbISgF3OX1Ohsga9YqnfW4rVyUpQ_x_9dsZSsyhckwaoyatoW28oyY6WemGh);
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+}
+.bg-ancestry {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBLRGUykQDJzEJ82B8leaLxSb2NClI26DL7JSzQ11PMAgPxOQFhuzXXEPb6Erjt2cuj1P_jt2hGiEOZeFokQLPyfC3cbHuPeG0pBY5hlPalrrGt0NSwUBaami28g40W8HFw9XzaWFBUyuPkIqPNTHdCunQIOK1Psdrtjc8s_P15mtevJnu6pReq_OzcgCU_cfXQbvXedo33fL2D6FGmEwh_Mv-l9svqlyT-HPq33qssNaYy4g7RTzYYznbvFqRW2YBOGVq7XsAV43MF);
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+}
+/* Tab content visibility */
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+</style>
 </head>
-<body class="antialiased bg-surface text-on-surface min-h-screen">
+<body class="bg-background text-on-background min-h-screen flex flex-col">
 
-<!-- Medical Disclaimer Banner -->
-<div id="disclaimer-banner" class="bg-moderate/[0.06] border-b border-moderate/20 sticky top-0 z-[100] glass-effect transition-all duration-300 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 py-3 flex items-start gap-3 text-xs tracking-wide text-moderate">
-        <span class="material-symbols-outlined text-base flex-shrink-0 mt-0.5">warning</span>
-        <div class="leading-relaxed">
-            <strong>Medical Disclaimer:</strong> This report is for <em>educational and informational purposes only</em>.
-            It is <strong>not</strong> a medical diagnosis and should not replace professional medical advice.
-            Always consult a qualified healthcare provider before making health decisions based on genetic data.
-        </div>
-        <button onclick="document.getElementById('disclaimer-banner').style.maxHeight='0';document.getElementById('disclaimer-banner').style.padding='0';document.getElementById('disclaimer-banner').style.opacity='0'" class="text-moderate/50 hover:text-moderate text-lg flex-shrink-0 leading-none">&times;</button>
+<!-- ===== TOP NAV BAR (always visible) ===== -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-sm">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+    <div class="text-xl font-bold tracking-tighter text-stone-950">JB DNA</div>
+    <div class="hidden md:flex items-center gap-8 font-sans tracking-tight text-sm font-medium" id="nav-tabs">
+        <a class="tab-btn text-stone-600 hover:text-stone-950 transition-colors cursor-pointer" data-tab="overview">Overview</a>
+        <a class="tab-btn text-stone-600 hover:text-stone-950 transition-colors cursor-pointer" data-tab="health">Health</a>
+        <a class="tab-btn text-stone-600 hover:text-stone-950 transition-colors cursor-pointer" data-tab="pharma">Pharmacy</a>
+        <a class="tab-btn text-stone-600 hover:text-stone-950 transition-colors cursor-pointer" data-tab="traits">Traits</a>
+        <a class="tab-btn text-stone-600 hover:text-stone-950 transition-colors cursor-pointer" data-tab="ancestry">Ancestry</a>
+    </div>
+    <div class="flex items-center gap-4" id="header-actions" style="display:none">
+        <button class="px-6 py-2 bg-primary text-on-primary text-sm font-semibold rounded-md shadow-lg hover:opacity-90 transition-opacity" id="export-btn">Export Report</button>
+        <button class="px-4 py-2 bg-white/30 border border-white/40 text-sm font-medium rounded-md hover:bg-white/50 transition-colors" id="new-analysis-btn">New Analysis</button>
     </div>
 </div>
-
-<!-- Header -->
-<header class="app-header fixed top-0 left-0 right-0 z-50 px-6 md:px-12 transition-all duration-300">
-    <div class="max-w-7xl mx-auto flex items-center justify-between h-16">
-        <div class="flex items-center gap-3">
-            <h1 class="text-sm font-black tracking-tighter uppercase font-headline">DNA Analyzer</h1>
-            <span class="text-[10px] tracking-widest uppercase text-on-surface-variant hidden md:inline">Personal Genomics</span>
-        </div>
-        <div id="header-actions" class="flex gap-2" style="display:none;">
-            <button id="btn-export" onclick="window.print()" class="flex items-center gap-1.5 px-4 py-2 text-[10px] font-bold tracking-widest uppercase border border-outline-variant hover:bg-surface-container transition-all">
-                <span class="material-symbols-outlined text-sm">download</span> Export
-            </button>
-            <button id="btn-new" onclick="resetApp()" class="flex items-center gap-1.5 px-4 py-2 text-[10px] font-bold tracking-widest uppercase border border-outline-variant hover:bg-surface-container transition-all">
-                <span class="material-symbols-outlined text-sm">add</span> New
-            </button>
-        </div>
-    </div>
-</header>
-
-<!-- Upload Section -->
-<main>
-    <section id="upload-section" class="upload-section min-h-screen flex items-center justify-center px-6 md:px-12 pt-24 pb-16">
-        <div class="max-w-6xl w-full">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
-                <!-- Hero Text -->
-                <div class="md:col-span-7">
-                    <span class="text-[10px] tracking-[0.2em] uppercase font-bold text-on-surface-variant mb-6 block">Personal Genomics Report</span>
-                    <h2 class="text-[clamp(3rem,8vw,7rem)] leading-[0.95] font-black tracking-tightest uppercase font-headline mb-6">
-                        Upload<br>Your DNA<br>Data
-                    </h2>
-                    <p class="text-on-surface-variant text-base md:text-lg leading-relaxed max-w-md">
-                        Upload your raw DNA file from AncestryDNA, 23andMe, or similar services.
-                        Your data is processed <strong class="text-on-surface">locally</strong> and never leaves this machine.
-                    </p>
-                </div>
-                <!-- Dropzone -->
-                <div class="md:col-span-5">
-                    <div id="dropzone" class="upload-dropzone border border-outline-variant bg-surface-container-low p-12 text-center cursor-pointer hover:bg-surface-container transition-all duration-300 group">
-                        <div class="dropzone-content flex flex-col items-center gap-4">
-                            <span class="material-symbols-outlined text-4xl text-outline/40 group-hover:text-outline transition-colors">folder_open</span>
-                            <p class="text-xs font-bold tracking-widest uppercase">Drag & drop your DNA file here</p>
-                            <p class="text-[10px] tracking-widest uppercase text-on-surface-variant">or</p>
-                            <label class="btn btn-primary bg-primary text-on-primary px-8 py-3 text-[10px] font-bold tracking-widest uppercase cursor-pointer hover:bg-primary/90 transition-all inline-block" for="file-input">Choose File</label>
-                            <input type="file" id="file-input" accept=".txt,.csv,.tsv,.zip" hidden>
-                            <p class="text-[10px] tracking-wider text-outline uppercase">Supported: .txt, .csv, .tsv, .zip</p>
-                        </div>
-                    </div>
-                    <div id="upload-error" class="upload-error mt-4 p-3 bg-error-container border border-error/20 text-error text-sm" style="display:none;"></div>
-                </div>
-            </div>
-            <!-- Scroll indicator -->
-            <div class="hidden md:flex flex-col items-center gap-4 mt-24">
-                <span class="text-[10px] tracking-widest uppercase text-outline">Scroll to explore</span>
-                <div class="w-px h-12 bg-gradient-to-b from-outline/40 to-transparent"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Loading Section -->
-    <section id="loading-section" class="loading-section min-h-screen flex items-center justify-center px-6" style="display:none;">
-        <div class="text-center max-w-sm">
-            <div class="dna-helix-loader mx-auto">
-                <div class="helix-strand strand-left"></div>
-                <div class="helix-strand strand-right"></div>
-            </div>
-            <h2 class="loading-title text-xl font-bold tracking-tighter mt-8 mb-2">Analyzing Your DNA</h2>
-            <p id="loading-status" class="loading-subtitle text-xs tracking-widest uppercase text-on-surface-variant mb-6">Parsing genotype data...</p>
-            <div class="progress-bar h-0.5 bg-outline-variant/30 overflow-hidden">
-                <div id="progress-fill" class="h-full bg-gradient-to-r from-primary to-outline transition-all duration-400" style="width:0%"></div>
-            </div>
-            <p class="text-[10px] tracking-wider text-outline mt-4 uppercase">This may take a moment depending on file size.</p>
-        </div>
-    </section>
-
-    <!-- Results Section -->
-    <section id="results-section" class="results-section" style="display:none;">
-
-        <!-- Overview Tab -->
-        <div class="tab-content active" id="tab-overview">
-            <div class="max-w-7xl mx-auto px-6 md:px-12 pt-24 pb-32">
-                <!-- Intro -->
-                <div class="mb-16">
-                    <span class="text-[10px] tracking-[0.2em] uppercase font-bold text-outline mb-4 block">Overview</span>
-                    <h2 class="text-[clamp(2rem,4vw,3.6rem)] font-black tracking-tightest uppercase leading-none mb-4">Your DNA Report</h2>
-                    <p class="text-on-surface-variant text-sm leading-relaxed max-w-2xl">
-                        We scanned your genetic data against medical research databases. Below is a summary of what we found.
-                        Genetics is only one piece of the puzzle — lifestyle, environment, and family history all matter too.
-                    </p>
-                </div>
-
-                <!-- Summary Bento Grid -->
-                <div class="summary-grid grid grid-cols-12 gap-4 mb-16">
-                    <div class="summary-card summary-critical col-span-12 md:col-span-3 bg-surface-container-low p-8 border-t-2 border-critical/30">
-                        <div class="summary-number text-[clamp(3rem,5vw,4.5rem)] font-black tracking-tighter leading-none" id="stat-critical">0</div>
-                        <div class="summary-label text-[10px] tracking-widest uppercase font-bold text-critical mt-2">Critical Alerts</div>
-                        <div class="summary-desc text-xs text-on-surface-variant mt-3 leading-relaxed">Genetic variants linked to serious health conditions that may warrant a conversation with your doctor.</div>
-                    </div>
-                    <div class="summary-card summary-high col-span-12 md:col-span-3 bg-surface-container-low p-8 md:mt-8 border-t-2 border-high/30">
-                        <div class="summary-number text-[clamp(3rem,5vw,4.5rem)] font-black tracking-tighter leading-none" id="stat-high">0</div>
-                        <div class="summary-label text-[10px] tracking-widest uppercase font-bold text-high mt-2">High Risk</div>
-                        <div class="summary-desc text-xs text-on-surface-variant mt-3 leading-relaxed">Variants associated with elevated risk for certain conditions.</div>
-                    </div>
-                    <div class="summary-card summary-drugs col-span-12 md:col-span-3 bg-surface-container-low p-8 border-t-2 border-moderate/30">
-                        <div class="summary-number text-[clamp(3rem,5vw,4.5rem)] font-black tracking-tighter leading-none" id="stat-drugs">0</div>
-                        <div class="summary-label text-[10px] tracking-widest uppercase font-bold text-moderate mt-2">Drug Sensitivities</div>
-                        <div class="summary-desc text-xs text-on-surface-variant mt-3 leading-relaxed">Your genes may affect how you metabolize certain medications.</div>
-                    </div>
-                    <div class="summary-card summary-traits col-span-12 md:col-span-3 bg-surface-container-low p-8 md:mt-8 border-t-2 border-outline-variant/40">
-                        <div class="summary-number text-[clamp(3rem,5vw,4.5rem)] font-black tracking-tighter leading-none" id="stat-traits">0</div>
-                        <div class="summary-label text-[10px] tracking-widest uppercase font-bold text-on-surface-variant mt-2">Traits Analyzed</div>
-                        <div class="summary-desc text-xs text-on-surface-variant mt-3 leading-relaxed">Fun and interesting genetic traits like caffeine sensitivity and more.</div>
-                    </div>
-                </div>
-
-                <!-- Critical Alerts Panel -->
-                <div id="critical-alerts-panel" class="critical-alerts-panel bg-critical-bg border border-critical/15 p-6 mb-8" style="display:none;">
-                    <h3 class="section-title text-[10px] tracking-widest uppercase font-bold text-critical mb-4 flex items-center gap-2">
-                        <span class="material-symbols-outlined text-base">emergency</span> Critical Alerts
-                    </h3>
-                    <div id="critical-alerts-list" class="critical-alerts-list flex flex-col gap-3"></div>
-                </div>
-
-                <!-- Charts Grid -->
-                <div class="overview-charts grid grid-cols-12 gap-4">
-                    <div class="chart-card col-span-12 md:col-span-7 bg-surface-container-low p-8 border-t border-outline-variant/30">
-                        <h3 class="section-title text-[10px] tracking-widest uppercase font-bold mb-6">Risk Severity Distribution</h3>
-                        <div class="chart-wrapper max-w-[280px] mx-auto mt-4">
-                            <canvas id="chart-severity-donut"></canvas>
-                        </div>
-                    </div>
-                    <div class="chart-card col-span-12 md:col-span-5 bg-surface-container-low p-8 md:mt-12 border-t border-outline-variant/30">
-                        <h3 class="section-title text-[10px] tracking-widest uppercase font-bold mb-6">Variants Analyzed</h3>
-                        <div class="variants-summary flex flex-col gap-6 mt-4" id="variants-summary">
-                            <div class="variant-stat">
-                                <span class="variant-stat-number text-3xl font-black tracking-tighter" id="stat-total-variants">0</span>
-                                <span class="variant-stat-label text-[10px] tracking-widest uppercase text-on-surface-variant font-bold">Total Variants Read</span>
-                            </div>
-                            <div class="variant-stat">
-                                <span class="variant-stat-number text-3xl font-black tracking-tighter" id="stat-matched-variants">0</span>
-                                <span class="variant-stat-label text-[10px] tracking-widest uppercase text-on-surface-variant font-bold">Matched to Database</span>
-                            </div>
-                            <div class="variant-stat">
-                                <span class="variant-stat-number text-3xl font-black tracking-tighter" id="stat-health-findings">0</span>
-                                <span class="variant-stat-label text-[10px] tracking-widest uppercase text-on-surface-variant font-bold">Health Findings</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Health Risks Tab -->
-        <div class="tab-content" id="tab-health">
-            <div class="max-w-7xl mx-auto px-6 md:px-12 pt-24 pb-32">
-                <div class="mb-12">
-                    <span class="text-[10px] tracking-[0.2em] uppercase font-bold text-outline mb-4 block">Health</span>
-                    <h2 class="text-[clamp(2rem,4vw,3.6rem)] font-black tracking-tightest uppercase leading-none mb-4">Health Risk Variants</h2>
-                    <p class="text-on-surface-variant text-sm leading-relaxed max-w-2xl mb-6">
-                        Genetic variants in your DNA linked to health conditions in published medical research.
-                    </p>
-                    <details class="text-xs text-on-surface-variant border border-outline-variant/30 p-4 mb-6">
-                        <summary class="text-[10px] tracking-widest uppercase font-bold cursor-pointer text-on-surface">Understanding Severity Levels</summary>
-                        <div class="section-intro-legend mt-4 space-y-2">
-                            <div class="flex items-center gap-2"><span class="severity-badge severity-CRITICAL">Critical</span> <span>Variants strongly linked to serious conditions</span></div>
-                            <div class="flex items-center gap-2"><span class="severity-badge severity-HIGH">High</span> <span>Notable risk elevation or carrier status</span></div>
-                            <div class="flex items-center gap-2"><span class="severity-badge severity-MODERATE">Moderate</span> <span>Modest risk increase</span></div>
-                            <div class="flex items-center gap-2"><span class="severity-badge severity-LOW">Low</span> <span>Minor risk factor</span></div>
-                            <div class="flex items-center gap-2"><span class="severity-badge severity-PROTECTIVE">Protective</span> <span>Reduced risk — good news</span></div>
-                            <p class="mt-3"><strong>Zygosity:</strong> "Heterozygous" = one copy (lower impact). "Homozygous" = two copies (higher impact).</p>
-                        </div>
-                    </details>
-                </div>
-
-                <!-- Search & Filter -->
-                <div class="tab-toolbar flex flex-wrap gap-3 mb-6 items-center">
-                    <div class="search-box flex-1 min-w-[240px] relative">
-                        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
-                        <input type="text" id="health-search" placeholder="Search by gene, condition, or rsid..." class="search-input w-full pl-10 pr-4 py-2.5 bg-surface-container-low border border-outline-variant/30 text-sm focus:outline-none focus:border-outline transition-colors">
-                    </div>
-                    <div class="filter-group flex items-center gap-2">
-                        <label class="text-[10px] tracking-widest uppercase font-bold text-on-surface-variant">Severity:</label>
-                        <select id="health-severity-filter" class="filter-select bg-surface-container-low border border-outline-variant/30 px-3 py-2.5 text-sm focus:outline-none focus:border-outline">
-                            <option value="all">All</option>
-                            <option value="CRITICAL">Critical</option>
-                            <option value="HIGH">High</option>
-                            <option value="MODERATE">Moderate</option>
-                            <option value="LOW">Low</option>
-                            <option value="PROTECTIVE">Protective</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="disclaimer-inline bg-moderate/[0.04] border border-moderate/10 p-4 text-xs text-moderate mb-6 flex items-start gap-2">
-                    <span class="material-symbols-outlined text-sm mt-0.5">info</span>
-                    <span>These results are based on published research associations and do <strong>not</strong> constitute a diagnosis.</span>
-                </div>
-
-                <div id="health-results" class="results-list"></div>
-                <div id="health-empty" class="empty-state text-center py-16 text-on-surface-variant text-sm" style="display:none;">
-                    No health risks match your filters.
-                </div>
-            </div>
-        </div>
-
-        <!-- Pharmacogenomics Tab -->
-        <div class="tab-content" id="tab-pharma">
-            <div class="max-w-7xl mx-auto px-6 md:px-12 pt-24 pb-32">
-                <div class="mb-12">
-                    <span class="text-[10px] tracking-[0.2em] uppercase font-bold text-outline mb-4 block">Pharma</span>
-                    <h2 class="text-[clamp(2rem,4vw,3.6rem)] font-black tracking-tightest uppercase leading-none mb-4">Pharmacogenomics</h2>
-                    <p class="text-on-surface-variant text-sm leading-relaxed max-w-2xl mb-6">
-                        Your genes affect how your body processes medications. Some people break down drugs faster or slower than average.
-                    </p>
-                    <details class="text-xs text-on-surface-variant border border-outline-variant/30 p-4 mb-6">
-                        <summary class="text-[10px] tracking-widest uppercase font-bold cursor-pointer text-on-surface">Understanding Metabolizer Types</summary>
-                        <div class="mt-4 space-y-2">
-                            <p><strong>Poor Metabolizer</strong> — Drug builds up; stronger side effects possible.</p>
-                            <p><strong>Intermediate</strong> — Somewhat slower processing; may need lower dose.</p>
-                            <p><strong>Normal</strong> — Standard dosing is likely appropriate.</p>
-                            <p><strong>Rapid / Ultra-rapid</strong> — Drug processed quickly; may be less effective.</p>
-                        </div>
-                    </details>
-                </div>
-
-                <div class="tab-toolbar flex flex-wrap gap-3 mb-6 items-center">
-                    <div class="search-box flex-1 min-w-[240px] relative">
-                        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
-                        <input type="text" id="pharma-search" placeholder="Search by gene or medication..." class="search-input w-full pl-10 pr-4 py-2.5 bg-surface-container-low border border-outline-variant/30 text-sm focus:outline-none focus:border-outline transition-colors">
-                    </div>
-                </div>
-
-                <div class="disclaimer-inline bg-moderate/[0.04] border border-moderate/10 p-4 text-xs text-moderate mb-6 flex items-start gap-2">
-                    <span class="material-symbols-outlined text-sm mt-0.5">info</span>
-                    <span><strong>Never</strong> change or stop medications based on this report. Always discuss with your physician first.</span>
-                </div>
-
-                <div id="pharma-critical-panel" class="critical-alerts-panel bg-critical-bg border border-critical/15 p-6 mb-6" style="display:none;">
-                    <h3 class="section-title text-[10px] tracking-widest uppercase font-bold text-critical mb-4 flex items-center gap-2">
-                        <span class="material-symbols-outlined text-base">emergency</span> Critical Drug-Gene Interactions
-                    </h3>
-                    <div id="pharma-critical-list"></div>
-                </div>
-
-                <div id="pharma-results" class="results-list"></div>
-                <div id="pharma-empty" class="empty-state text-center py-16 text-on-surface-variant text-sm" style="display:none;">
-                    No pharmacogenomics results match your search.
-                </div>
-            </div>
-        </div>
-
-        <!-- Traits Tab -->
-        <div class="tab-content" id="tab-traits">
-            <div class="max-w-7xl mx-auto px-6 md:px-12 pt-24 pb-32">
-                <div class="mb-12">
-                    <span class="text-[10px] tracking-[0.2em] uppercase font-bold text-outline mb-4 block">Traits</span>
-                    <h2 class="text-[clamp(2rem,4vw,3.6rem)] font-black tracking-tightest uppercase leading-none mb-4">Genetic Traits</h2>
-                    <p class="text-on-surface-variant text-sm leading-relaxed max-w-2xl">
-                        Well-studied genetic traits — mostly harmless characteristics determined partly by your DNA.
-                    </p>
-                </div>
-
-                <div class="tab-toolbar mb-8">
-                    <div class="traits-category-tabs flex flex-wrap gap-1" id="traits-category-tabs">
-                        <button class="category-btn active px-4 py-2 text-[10px] font-bold tracking-widest uppercase border-b-2 border-primary transition-all" data-category="all">All</button>
-                        <button class="category-btn px-4 py-2 text-[10px] font-bold tracking-widest uppercase text-on-surface-variant border-b-2 border-transparent hover:text-on-surface transition-all" data-category="nutrition">Nutrition</button>
-                        <button class="category-btn px-4 py-2 text-[10px] font-bold tracking-widest uppercase text-on-surface-variant border-b-2 border-transparent hover:text-on-surface transition-all" data-category="physical">Physical</button>
-                        <button class="category-btn px-4 py-2 text-[10px] font-bold tracking-widest uppercase text-on-surface-variant border-b-2 border-transparent hover:text-on-surface transition-all" data-category="athletic">Athletic</button>
-                        <button class="category-btn px-4 py-2 text-[10px] font-bold tracking-widest uppercase text-on-surface-variant border-b-2 border-transparent hover:text-on-surface transition-all" data-category="sleep">Sleep</button>
-                        <button class="category-btn px-4 py-2 text-[10px] font-bold tracking-widest uppercase text-on-surface-variant border-b-2 border-transparent hover:text-on-surface transition-all" data-category="behavioral">Behavioral</button>
-                    </div>
-                </div>
-
-                <div id="traits-results" class="traits-grid"></div>
-                <div id="traits-empty" class="empty-state text-center py-16 text-on-surface-variant text-sm" style="display:none;">
-                    No traits match this category.
-                </div>
-            </div>
-        </div>
-
-        <!-- Ancestry Tab -->
-        <div class="tab-content" id="tab-ancestry">
-            <div class="max-w-7xl mx-auto px-6 md:px-12 pt-24 pb-32">
-                <div class="mb-12">
-                    <span class="text-[10px] tracking-[0.2em] uppercase font-bold text-outline mb-4 block">Ancestry</span>
-                    <h2 class="text-[clamp(2rem,4vw,3.6rem)] font-black tracking-tightest uppercase leading-none mb-4">Ancestry & Origins</h2>
-                    <p class="text-on-surface-variant text-sm leading-relaxed max-w-2xl">
-                        Your DNA carries traces of ancient migrations. Haplogroups are deep ancestral lineages
-                        passed down through your mother (mtDNA) and father (Y-DNA).
-                    </p>
-                </div>
-
-                <div class="disclaimer-inline bg-moderate/[0.04] border border-moderate/10 p-4 text-xs text-moderate mb-8 flex items-start gap-2">
-                    <span class="material-symbols-outlined text-sm mt-0.5">info</span>
-                    <span>Ancestry estimates are rough approximations from a limited set of markers.</span>
-                </div>
-
-                <!-- Haplogroups -->
-                <div class="haplogroup-panels grid grid-cols-12 gap-4 mb-12" id="haplogroup-panels">
-                    <div class="haplogroup-card col-span-12 md:col-span-6 bg-surface-container-low p-8" id="maternal-haplogroup">
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="material-symbols-outlined text-2xl text-outline">female</span>
-                            <h3 class="text-[10px] tracking-widest uppercase font-bold">Maternal Haplogroup (mtDNA)</h3>
-                        </div>
-                        <div class="haplogroup-name text-[clamp(2rem,4vw,3.6rem)] font-black tracking-tighter leading-none mb-3" id="maternal-hg-name">—</div>
-                        <div class="haplogroup-desc text-sm text-on-surface-variant leading-relaxed" id="maternal-hg-desc"></div>
-                    </div>
-                    <div class="haplogroup-card col-span-12 md:col-span-6 bg-surface-container-low p-8" id="paternal-haplogroup">
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="material-symbols-outlined text-2xl text-outline">male</span>
-                            <h3 class="text-[10px] tracking-widest uppercase font-bold">Paternal Haplogroup (Y-DNA)</h3>
-                        </div>
-                        <div class="haplogroup-name text-[clamp(2rem,4vw,3.6rem)] font-black tracking-tighter leading-none mb-3" id="paternal-hg-name">—</div>
-                        <div class="haplogroup-desc text-sm text-on-surface-variant leading-relaxed" id="paternal-hg-desc"></div>
-                    </div>
-                </div>
-
-                <!-- Ancestry Composition -->
-                <div class="ancestry-composition mb-12" id="ancestry-composition-section" style="display:none;">
-                    <h3 class="section-title text-[10px] tracking-widest uppercase font-bold mb-6">Ancestry Composition</h3>
-                    <div class="chart-wrapper chart-wrapper-wide bg-surface-container-low p-8">
-                        <canvas id="chart-ancestry-bar"></canvas>
-                    </div>
-                </div>
-
-                <!-- PRS Section -->
-                <div class="prs-section mb-12" id="prs-section" style="display:none;">
-                    <h3 class="section-title text-[10px] tracking-widest uppercase font-bold mb-2">Polygenic Risk Scores</h3>
-                    <p class="prs-explanation text-xs text-on-surface-variant mb-6">Higher percentile = higher genetic predisposition relative to reference population.</p>
-                    <div class="prs-grid" id="prs-grid"></div>
-                </div>
-
-                <!-- Coverage -->
-                <div class="coverage-section" id="coverage-section" style="display:none;">
-                    <h3 class="section-title text-[10px] tracking-widest uppercase font-bold mb-4">Analysis Coverage</h3>
-                    <div id="coverage-indicators" class="coverage-indicators"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
-
-<!-- Tab Navigation (fixed bottom bar) -->
-<nav class="tab-nav fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex gap-0.5 p-1.5 bg-surface/85 glass-effect border border-outline-variant/30 rounded-full shadow-lg" id="tab-nav" style="display:none;">
-    <button class="tab-btn active px-5 py-2 text-[10px] font-bold tracking-widest uppercase rounded-full transition-all duration-300" data-tab="overview">Overview</button>
-    <button class="tab-btn px-5 py-2 text-[10px] font-bold tracking-widest uppercase text-on-surface-variant rounded-full transition-all duration-300 hover:text-on-surface" data-tab="health">Health</button>
-    <button class="tab-btn px-5 py-2 text-[10px] font-bold tracking-widest uppercase text-on-surface-variant rounded-full transition-all duration-300 hover:text-on-surface" data-tab="pharma">Pharma</button>
-    <button class="tab-btn px-5 py-2 text-[10px] font-bold tracking-widest uppercase text-on-surface-variant rounded-full transition-all duration-300 hover:text-on-surface" data-tab="traits">Traits</button>
-    <button class="tab-btn px-5 py-2 text-[10px] font-bold tracking-widest uppercase text-on-surface-variant rounded-full transition-all duration-300 hover:text-on-surface" data-tab="ancestry">Ancestry</button>
 </nav>
 
-<!-- Footer -->
-<footer class="bg-surface-container-low px-6 md:px-12 py-12">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-        <div class="text-[10px] tracking-widest uppercase text-outline flex items-center gap-2">
-            <span class="material-symbols-outlined text-sm">lock</span>
-            All analysis is performed locally. Your DNA data never leaves this machine.
-        </div>
-        <div class="text-[10px] tracking-widest uppercase text-outline">
-            Educational purposes only. Not a medical device.
+<!-- ===== UPLOAD SECTION ===== -->
+<section id="upload-section" class="relative flex-grow flex items-center justify-center pt-16 pb-12 overflow-hidden min-h-screen">
+    <div class="absolute inset-0 z-0 bg-upload">
+        <div class="absolute inset-0 bg-white/10"></div>
+    </div>
+    <div class="relative z-10 w-full max-w-2xl px-6">
+        <div class="glass-card rounded-xl p-8 md:p-12 shadow-2xl text-center">
+            <div class="mb-8">
+                <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-primary mb-4 font-headline">Upload Your Genomic Data</h1>
+                <p class="text-on-surface-variant text-base md:text-lg max-w-lg mx-auto font-body leading-relaxed">
+                    Upload your raw DNA from 23andMe, AncestryDNA, or MyHeritage. Your data is processed locally and never leaves your browser.
+                </p>
+            </div>
+            <!-- Dropzone -->
+            <div id="dropzone" class="group relative mb-8 border-2 border-dashed border-outline-variant rounded-xl bg-white/20 hover:bg-white/40 hover:border-primary transition-all duration-300 cursor-pointer flex flex-col items-center justify-center py-12">
+                <span class="material-symbols-outlined text-5xl text-primary mb-4" style="font-variation-settings: 'FILL' 1;">cloud_upload</span>
+                <p class="text-on-surface font-medium mb-1 font-label">Drag and drop your DNA file here</p>
+                <p class="text-on-surface-variant text-sm font-label">(.txt, .zip, .csv)</p>
+            </div>
+            <input type="file" id="file-input" class="hidden" accept=".txt,.csv,.zip,.gz">
+            <div id="upload-error" class="text-error text-sm mb-4 hidden"></div>
+            <!-- CTA -->
+            <div class="flex flex-col items-center gap-6">
+                <label for="file-input" class="bg-primary text-on-primary px-10 py-4 rounded-full font-semibold tracking-wide hover:opacity-90 transition-all shadow-lg w-full md:w-auto uppercase text-sm cursor-pointer text-center">
+                    Select File
+                </label>
+                <div class="flex items-center gap-2 px-4 py-2 bg-white/30 rounded-full border border-white/50">
+                    <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">lock</span>
+                    <span class="text-xs font-medium text-on-surface tracking-tight font-label">Privacy First: Local execution ensures your raw data remains on your device.</span>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-white/30 flex justify-center items-center gap-8 opacity-60">
+                <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Compatible Formats: 23andMe &bull; AncestryDNA &bull; MyHeritage</div>
+            </div>
         </div>
     </div>
+</section>
+
+<!-- ===== LOADING SECTION ===== -->
+<section id="loading-section" style="display:none" class="relative flex-grow flex items-center justify-center pt-16 pb-12 min-h-screen">
+    <div class="absolute inset-0 z-0 bg-upload">
+        <div class="absolute inset-0 bg-white/20"></div>
+    </div>
+    <div class="relative z-10 w-full max-w-lg px-6 text-center">
+        <div class="glass-card rounded-xl p-12 shadow-2xl">
+            <div class="dna-loader mx-auto mb-8">
+                <span class="material-symbols-outlined text-6xl text-primary animate-spin">genetics</span>
+            </div>
+            <h2 class="text-2xl font-bold tracking-tight text-primary mb-2">Analyzing Your Genome</h2>
+            <p id="loading-status" class="text-on-surface-variant text-sm mb-8">Parsing genomic data...</p>
+            <div class="w-full h-2 bg-white/30 rounded-full overflow-hidden">
+                <div id="progress-fill" class="h-full bg-primary rounded-full transition-all duration-500" style="width:0%"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== RESULTS SECTION ===== -->
+<section id="results-section" style="display:none" class="flex-grow">
+
+<!-- ========== TAB: OVERVIEW ========== -->
+<div id="tab-overview" class="tab-content active bg-overview min-h-screen text-on-surface selection:bg-secondary-container">
+<main class="pt-28 pb-20 px-8 max-w-screen-2xl mx-auto">
+    <!-- Header -->
+    <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div class="max-w-2xl">
+            <h1 class="text-5xl font-extrabold tracking-tighter text-primary mb-4 drop-shadow-sm font-headline">DNA Analyzer &mdash; Overview</h1>
+            <p class="text-body-lg leading-relaxed text-on-surface-variant font-medium" id="overview-summary">Your genomic signature has been cross-referenced against 1,200+ clinical markers. Below is your prioritized health intelligence report.</p>
+        </div>
+    </header>
+    <!-- Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[minmax(180px,auto)]">
+        <!-- Donut Chart Panel -->
+        <div class="md:col-span-4 md:row-span-2 glass-panel p-8 rounded-xl flex flex-col justify-between group transition-all duration-300 hover:shadow-xl">
+            <div>
+                <h3 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant mb-8">Risk Severity Distribution</h3>
+                <div class="relative w-48 h-48 mx-auto flex items-center justify-center">
+                    <canvas id="chart-severity-donut" width="192" height="192"></canvas>
+                </div>
+            </div>
+            <div class="space-y-3 pt-8">
+                <div class="flex items-center justify-between text-xs">
+                    <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-error"></div> Critical</div>
+                    <span class="font-bold" id="stat-critical">0</span>
+                </div>
+                <div class="flex items-center justify-between text-xs">
+                    <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-secondary"></div> High</div>
+                    <span class="font-bold" id="stat-high">0</span>
+                </div>
+                <div class="flex items-center justify-between text-xs">
+                    <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-secondary-container"></div> Moderate</div>
+                    <span class="font-bold" id="stat-moderate">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Health Findings Summary -->
+        <div class="md:col-span-8 md:row-span-1 glass-panel p-8 rounded-xl flex items-center justify-between overflow-hidden relative group hover:shadow-xl transition-all">
+            <div class="relative z-10 max-w-lg">
+                <h3 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant mb-2">Health Findings</h3>
+                <p class="text-2xl font-semibold tracking-tight text-primary" id="health-findings-summary">Loading summary...</p>
+            </div>
+            <div class="hidden lg:block absolute -right-12 -bottom-12 opacity-5 scale-150 transform group-hover:rotate-12 transition-transform duration-700">
+                <span class="material-symbols-outlined text-[200px]" style='font-variation-settings: "wght" 200;'>genetics</span>
+            </div>
+        </div>
+
+        <!-- Stats: Critical -->
+        <div class="md:col-span-4 glass-panel p-8 rounded-xl border-l-4 border-l-error flex flex-col justify-between hover:shadow-xl transition-all">
+            <div class="flex justify-between items-start">
+                <span class="material-symbols-outlined text-error" style='font-variation-settings: "FILL" 1;'>warning</span>
+                <span class="text-[10px] font-bold uppercase tracking-[0.1em] text-error">Urgent Attention</span>
+            </div>
+            <div>
+                <div class="text-4xl font-extrabold text-primary" id="stat-critical-display">00</div>
+                <div class="text-sm font-medium text-on-surface-variant opacity-80">Critical Health Risks</div>
+            </div>
+        </div>
+
+        <!-- Stats: High -->
+        <div class="md:col-span-4 glass-panel p-8 rounded-xl flex flex-col justify-between hover:shadow-xl transition-all">
+            <div class="flex justify-between items-start">
+                <span class="material-symbols-outlined text-secondary">trending_up</span>
+                <span class="text-[10px] font-bold uppercase tracking-[0.1em] text-on-surface-variant">Elevated Monitoring</span>
+            </div>
+            <div>
+                <div class="text-4xl font-extrabold text-primary" id="stat-high-display">00</div>
+                <div class="text-sm font-medium text-on-surface-variant">High Priority Markers</div>
+            </div>
+        </div>
+
+        <!-- Drug Sensitivities Preview (Dark) -->
+        <div class="md:col-span-4 md:row-span-2 glass-panel-dark text-white p-8 rounded-xl flex flex-col justify-between relative overflow-hidden hover:shadow-2xl transition-all">
+            <div class="relative z-10">
+                <h3 class="text-sm font-bold uppercase tracking-widest text-primary-fixed-dim mb-4">Drug Sensitivities</h3>
+                <div id="overview-pharma-preview" class="space-y-4">
+                    <!-- JS populated -->
+                </div>
+            </div>
+            <button class="relative z-10 mt-6 text-xs font-bold uppercase tracking-widest text-secondary-container flex items-center gap-2 hover:translate-x-1 transition-transform tab-btn" data-tab="pharma">
+                View full pharmacogenomics <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </button>
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-secondary/40 to-transparent blur-3xl"></div>
+        </div>
+
+        <!-- Traits Preview -->
+        <div class="md:col-span-8 glass-panel p-8 rounded-xl hover:shadow-xl transition-all">
+            <div class="flex items-center justify-between mb-8">
+                <h3 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Top Genetic Traits</h3>
+                <a class="text-xs font-bold text-secondary hover:underline cursor-pointer tab-btn" data-tab="traits">See all traits</a>
+            </div>
+            <div id="overview-traits-preview" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- JS populated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats footer row -->
+    <div class="mt-8 grid grid-cols-3 gap-6">
+        <div class="glass-panel p-6 rounded-xl text-center">
+            <div class="text-3xl font-extrabold text-primary" id="stat-total-variants">0</div>
+            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mt-1">Total Variants</div>
+        </div>
+        <div class="glass-panel p-6 rounded-xl text-center">
+            <div class="text-3xl font-extrabold text-primary" id="stat-matched-variants">0</div>
+            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mt-1">Matched Variants</div>
+        </div>
+        <div class="glass-panel p-6 rounded-xl text-center">
+            <div class="text-3xl font-extrabold text-primary" id="stat-health-findings">0</div>
+            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mt-1">Health Findings</div>
+        </div>
+    </div>
+
+    <!-- Critical Alerts Panel -->
+    <div id="critical-alerts-panel" class="mt-8 glass-panel border-l-4 border-l-error p-8 rounded-xl hidden">
+        <h3 class="text-sm font-bold uppercase tracking-widest text-error mb-4">Critical Alerts</h3>
+        <div id="critical-alerts-list" class="space-y-4">
+            <!-- JS populated -->
+        </div>
+    </div>
+
+    <!-- Drug count stat -->
+    <div class="hidden"><span id="stat-drugs">0</span><span id="stat-traits">0</span></div>
+</main>
+</div>
+
+<!-- ========== TAB: HEALTH ========== -->
+<div id="tab-health" class="tab-content bg-health min-h-screen text-on-surface">
+<main class="pt-24 pb-20 px-8 max-w-screen-2xl mx-auto">
+    <!-- Header -->
+    <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 p-8 rounded-2xl glass-panel">
+        <div class="max-w-2xl">
+            <span class="text-secondary font-bold tracking-[0.1em] uppercase mb-2 block text-xs">Clinical Analysis</span>
+            <h1 class="text-5xl font-extrabold tracking-tighter text-primary mb-4">DNA Analyzer &mdash; Health Risks</h1>
+            <p class="text-stone-900 leading-relaxed font-medium">
+                Comprehensive screening of your genomic sequence against validated medical databases. This report prioritizes variants that may influence clinical outcomes or wellness strategies.
+            </p>
+        </div>
+    </header>
+
+    <!-- Toolbar -->
+    <section class="mb-8 flex flex-col md:flex-row gap-4 items-center sticky top-24 z-40 py-4 px-6 rounded-xl glass-panel">
+        <div class="relative w-full md:w-96 group">
+            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-stone-800 group-focus-within:text-primary transition-colors">search</span>
+            <input id="health-search" class="w-full pl-12 pr-4 py-3 bg-white/30 border-none outline-none focus:ring-2 focus:ring-primary/50 rounded-lg transition-all placeholder:text-stone-700 text-stone-950 font-medium" placeholder="Search conditions, genes, or RSIDs..." type="text">
+        </div>
+        <div class="flex gap-2 w-full md:w-auto overflow-x-auto no-scrollbar pb-2 md:pb-0" id="health-severity-pills">
+            <button class="severity-pill px-4 py-2 bg-primary text-on-primary rounded-full text-sm font-medium whitespace-nowrap shadow-md" data-severity="all">All Risks</button>
+            <button class="severity-pill px-4 py-2 bg-white/30 text-stone-900 hover:bg-white/50 transition-colors rounded-full text-sm font-bold whitespace-nowrap flex items-center gap-2 border border-white/30" data-severity="critical">
+                <span class="w-2.5 h-2.5 rounded-full bg-error shadow-sm"></span> Critical
+            </button>
+            <button class="severity-pill px-4 py-2 bg-white/30 text-stone-900 hover:bg-white/50 transition-colors rounded-full text-sm font-bold whitespace-nowrap flex items-center gap-2 border border-white/30" data-severity="high">
+                <span class="w-2.5 h-2.5 rounded-full bg-tertiary-container shadow-sm"></span> High
+            </button>
+            <button class="severity-pill px-4 py-2 bg-white/30 text-stone-900 hover:bg-white/50 transition-colors rounded-full text-sm font-bold whitespace-nowrap flex items-center gap-2 border border-white/30" data-severity="moderate">
+                <span class="w-2.5 h-2.5 rounded-full bg-secondary shadow-sm"></span> Moderate
+            </button>
+            <button class="severity-pill px-4 py-2 bg-white/30 text-stone-900 hover:bg-white/50 transition-colors rounded-full text-sm font-bold whitespace-nowrap flex items-center gap-2 border border-white/30" data-severity="low">
+                <span class="w-2.5 h-2.5 rounded-full bg-outline-variant shadow-sm"></span> Normal
+            </button>
+        </div>
+        <select id="health-severity-filter" class="hidden">
+            <option value="all">All</option>
+            <option value="critical">Critical</option>
+            <option value="high">High</option>
+            <option value="moderate">Moderate</option>
+            <option value="low">Low</option>
+        </select>
+    </section>
+
+    <!-- Results -->
+    <div id="health-results" class="results-list grid grid-cols-1 gap-6">
+        <!-- JS populated health risk cards -->
+    </div>
+    <div id="health-empty" class="hidden text-center py-20">
+        <span class="material-symbols-outlined text-6xl text-on-surface-variant/30 mb-4">search_off</span>
+        <p class="text-on-surface-variant text-lg font-medium">No health risks match your search criteria.</p>
+    </div>
+</main>
+</div>
+
+<!-- ========== TAB: PHARMA ========== -->
+<div id="tab-pharma" class="tab-content min-h-screen flex flex-col relative overflow-x-hidden">
+<div class="fixed inset-0 z-0 bg-pharma">
+    <div class="absolute inset-0 bg-white/20"></div>
+</div>
+<main class="relative z-10 pt-24 pb-12 px-6 md:px-12 w-full max-w-screen-2xl mx-auto flex-grow">
+    <!-- Disclaimer -->
+    <div class="mb-8 glass-panel rounded-lg p-4 flex items-center gap-4 border-l-4 border-error shadow-sm">
+        <span class="material-symbols-outlined text-error">clinical_notes</span>
+        <p class="text-[10px] md:text-xs uppercase tracking-widest font-black text-on-surface/90">
+            CLINICAL DISCLAIMER: This report is a clinical decision support tool intended for professional use only. Do not alter or stop medications without consulting a healthcare provider.
+        </p>
+    </div>
+    <!-- Header -->
+    <header class="mb-12">
+        <h1 class="text-6xl md:text-8xl technical-header text-stone-950 mb-2">Pharmacogenomics</h1>
+        <p class="text-stone-700 font-semibold tracking-tight text-lg max-w-2xl">Understanding your unique genetic response to medications for safer, personalized treatment plans.</p>
+    </header>
+    <!-- Search -->
+    <div class="mb-8 relative w-full md:w-96">
+        <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-stone-500">search</span>
+        <input id="pharma-search" class="w-full pl-12 pr-4 py-3 bg-white/30 border-none outline-none focus:ring-2 focus:ring-primary/50 rounded-lg placeholder:text-stone-500 text-stone-950 font-medium" placeholder="Search drug interactions..." type="text">
+    </div>
+    <!-- Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <!-- Main: Critical Interactions -->
+        <section class="md:col-span-8 flex flex-col gap-6">
+            <div id="pharma-critical-panel" class="glass-panel p-8 rounded-2xl shadow-lg">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-2xl technical-header text-stone-950">Critical Drug-Gene Interactions</h2>
+                    <span class="px-4 py-1 bg-error/10 text-error text-[10px] font-black rounded-full uppercase tracking-widest border border-error/20">Priority Review</span>
+                </div>
+                <div id="pharma-critical-list" class="space-y-6">
+                    <!-- JS populated -->
+                </div>
+            </div>
+            <!-- Results -->
+            <div id="pharma-results" class="results-list space-y-6">
+                <!-- JS populated -->
+            </div>
+            <div id="pharma-empty" class="hidden text-center py-20">
+                <span class="material-symbols-outlined text-6xl text-on-surface-variant/30 mb-4">search_off</span>
+                <p class="text-on-surface-variant text-lg font-medium">No pharmacogenomic results match your search.</p>
+            </div>
+            <!-- Metabolism Insight -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div id="metabolism-insight" class="glass-panel p-8 rounded-2xl shadow-md border border-white/50">
+                    <h3 class="technical-header text-stone-950 mb-6 flex items-center gap-2 uppercase text-xs tracking-[0.2em]">
+                        <span class="material-symbols-outlined !text-[14px]">monitoring</span> Metabolism Insight
+                    </h3>
+                    <div class="space-y-5">
+                        <!-- JS populated -->
+                    </div>
+                </div>
+                <div class="glass-panel p-8 rounded-2xl shadow-md flex items-center justify-center text-center">
+                    <div>
+                        <div class="w-16 h-16 bg-stone-950 text-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl">
+                            <span class="material-symbols-outlined text-3xl">dna</span>
+                        </div>
+                        <h4 class="technical-header text-stone-950 text-lg">Genomic Blueprint</h4>
+                        <p class="text-xs text-stone-700 font-medium mt-3 px-4 leading-relaxed">Your metabolic profile is mapped across unique pharmacogenomic markers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sidebar: Medication Sensitivity -->
+        <aside class="md:col-span-4 flex flex-col gap-6">
+            <div id="medication-sensitivity" class="glass-panel p-8 rounded-2xl shadow-lg h-full flex flex-col">
+                <h2 class="text-xl technical-header text-stone-950 mb-8 uppercase tracking-wider">Medication Sensitivity</h2>
+                <div class="space-y-8 flex-grow">
+                    <!-- JS populated -->
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>
+</div>
+
+<!-- ========== TAB: TRAITS ========== -->
+<div id="tab-traits" class="tab-content min-h-screen flex flex-col relative">
+<div class="fixed inset-0 z-0 bg-traits">
+    <div class="absolute inset-0 bg-white/10"></div>
+</div>
+<main class="relative z-10 pb-20 px-8 max-w-7xl mx-auto w-full flex-grow pt-24">
+    <!-- Header -->
+    <header class="relative mb-16">
+        <div class="inline-block relative z-20 max-w-xl py-2">
+            <span class="text-xs font-bold tracking-[0.3em] uppercase opacity-70 text-black text-subtle-shadow">Genetic Traits</span>
+            <h1 class="text-6xl md:text-7xl font-extrabold tracking-tighter mt-4 mb-6 leading-none text-black text-subtle-shadow">The Mosaic of You</h1>
+            <p class="font-medium text-black/80 leading-relaxed text-subtle-shadow text-xl max-w-2xl">
+                Exploring the unique genetic markers that shape your physical and behavioral identity through precision sequencing.
+            </p>
+        </div>
+    </header>
+    <!-- Category Tabs -->
+    <div id="traits-category-tabs" class="flex gap-3 mb-8 flex-wrap">
+        <button class="category-btn px-5 py-2 bg-primary text-on-primary rounded-full text-sm font-bold" data-category="all">All</button>
+        <!-- JS adds category buttons -->
+    </div>
+    <!-- Traits Grid -->
+    <div id="traits-results" class="traits-grid grid grid-cols-1 md:grid-cols-12 gap-4">
+        <!-- JS populated -->
+    </div>
+    <div id="traits-empty" class="hidden text-center py-20">
+        <span class="material-symbols-outlined text-6xl text-on-surface-variant/30 mb-4">search_off</span>
+        <p class="text-on-surface-variant text-lg font-medium">No traits match the selected category.</p>
+    </div>
+</main>
+</div>
+
+<!-- ========== TAB: ANCESTRY ========== -->
+<div id="tab-ancestry" class="tab-content bg-ancestry min-h-screen flex flex-col text-on-surface selection:bg-secondary-container">
+<main class="pt-24 pb-12 px-6 md:px-12 max-w-7xl mx-auto w-full flex-grow">
+    <!-- Header -->
+    <header class="mb-12">
+        <h1 class="text-5xl font-extrabold tracking-tighter text-primary mb-4 drop-shadow-sm">Ancestry Heritage</h1>
+    </header>
+    <!-- Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <!-- World Map -->
+        <div class="md:col-span-8 glass-panel p-8 rounded-xl flex flex-col gap-6">
+            <div class="flex justify-between items-end">
+                <div>
+                    <h2 class="text-2xl font-light text-stone-950">Ancestry Composition</h2>
+                    <p class="text-sm text-stone-800 font-medium">Mapping the threads of your deep genetic history</p>
+                </div>
+            </div>
+            <div id="ancestry-world-map" class="relative w-full aspect-[16/9] rounded-lg overflow-hidden border border-white/20 bg-stone-100">
+                <!-- JS renders SVG map -->
+            </div>
+            <div id="ancestry-composition-section">
+                <canvas id="chart-ancestry-bar" height="80"></canvas>
+            </div>
+        </div>
+
+        <!-- Haplogroup Side Panel -->
+        <div class="md:col-span-4 flex flex-col gap-6">
+            <!-- Maternal -->
+            <div id="maternal-haplogroup" class="glass-panel p-6 rounded-xl flex-1 border-l-4 border-secondary">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="material-symbols-outlined text-secondary scale-125">female</span>
+                    <h3 class="text-lg font-medium text-stone-950">Maternal Haplogroup</h3>
+                </div>
+                <div class="mb-4">
+                    <div class="text-4xl font-light text-secondary mb-1" id="maternal-hg-name">--</div>
+                    <p class="text-sm text-stone-900 leading-relaxed font-medium" id="maternal-hg-desc">Awaiting analysis...</p>
+                </div>
+            </div>
+            <!-- Paternal -->
+            <div id="paternal-haplogroup" class="glass-panel p-6 rounded-xl flex-1 border-l-4 border-stone-950">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="material-symbols-outlined text-stone-950 scale-125">male</span>
+                    <h3 class="text-lg font-medium text-stone-950">Paternal Haplogroup</h3>
+                </div>
+                <div class="mb-4">
+                    <div class="text-4xl font-light text-stone-950 mb-1" id="paternal-hg-name">--</div>
+                    <p class="text-sm text-stone-900 leading-relaxed font-medium" id="paternal-hg-desc">Awaiting analysis...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRS Section -->
+        <div id="prs-section" class="md:col-span-12 glass-panel p-8 rounded-xl">
+            <h2 class="text-2xl font-light text-stone-950 mb-6">Polygenic Risk Scores</h2>
+            <div id="prs-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- JS populated -->
+            </div>
+        </div>
+
+        <!-- Coverage Section -->
+        <div id="coverage-section" class="md:col-span-12 glass-panel p-8 rounded-xl">
+            <h2 class="text-2xl font-light text-stone-950 mb-6">Genomic Coverage</h2>
+            <div id="coverage-indicators" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- JS populated -->
+            </div>
+        </div>
+    </div>
+</main>
+</div>
+
+</section>
+<!-- end results-section -->
+
+<!-- ===== FOOTER ===== -->
+<footer class="w-full border-t border-zinc-200/50 bg-zinc-50/80 backdrop-blur-md py-8 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto gap-4">
+    <div class="font-sans text-[10px] uppercase tracking-[0.2em] text-zinc-400">JB DNA &mdash; Personal Genomics</div>
+    <div class="flex gap-8">
+        <a class="font-sans text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-zinc-900 transition-colors" href="#">Privacy Policy</a>
+        <a class="font-sans text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-zinc-900 transition-colors" href="#">Terms</a>
+        <a class="font-sans text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-zinc-900 transition-colors" href="#">Compliance</a>
+    </div>
+</div>
 </footer>
 
+<!-- Scripts -->
 <script src="/static/lib/chart.min.js"></script>
 <script src="/static/js/charts.js"></script>
 <script src="/static/js/app.js"></script>

@@ -49,8 +49,13 @@ function resetApp() {
 
 // Header glass effect on scroll
 window.addEventListener('scroll', () => {
-    const header = document.querySelector('.app-header');
-    if (header) header.classList.toggle('scrolled', window.scrollY > 40);
+    const header = document.querySelector('.glass-nav');
+    if (!header) {
+        const fallback = document.querySelector('.app-header');
+        if (fallback) fallback.classList.toggle('scrolled', window.scrollY > 40);
+    } else {
+        header.classList.toggle('scrolled', window.scrollY > 40);
+    }
 }, { passive: true });
 
 function handleFile(file) {
@@ -198,6 +203,53 @@ function renderOverview(data) {
     } else {
         critPanel.style.display = 'none';
     }
+
+    // Pharma preview (top 3 findings)
+    const pharmaPreview = document.getElementById('overview-pharma-preview');
+    if (pharmaPreview) {
+        const pharma = data.pharmacogenomics || [];
+        const top3 = pharma.slice(0, 3);
+        if (top3.length > 0) {
+            pharmaPreview.innerHTML = top3.map(p => {
+                const status = (p.metabolizer_status || 'Normal').toLowerCase();
+                let dotColor = 'bg-stone-500';
+                if (status.includes('poor')) dotColor = 'bg-error';
+                else if (status.includes('intermediate')) dotColor = 'bg-secondary';
+                else if (status.includes('rapid') || status.includes('ultra')) dotColor = 'bg-secondary-container';
+                const meds = (p.drugs_affected || []).slice(0, 2).map(m => typeof m === 'string' ? m : (m.drug || m.name || '')).join(', ');
+                return `
+                    <div class="flex items-center justify-between p-3 bg-white/20 rounded-lg border border-white/30">
+                        <div class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full ${dotColor} shrink-0"></span>
+                            <span class="text-sm font-bold text-stone-950">${esc(p.gene || '')}</span>
+                        </div>
+                        <span class="text-xs text-stone-600 font-medium">${esc(p.metabolizer_status || '')}</span>
+                    </div>`;
+            }).join('');
+        }
+    }
+
+    // Traits preview (top 4 results)
+    const traitsPreview = document.getElementById('overview-traits-preview');
+    if (traitsPreview) {
+        const traits = data.traits || [];
+        const top4 = traits.slice(0, 4);
+        if (top4.length > 0) {
+            traitsPreview.innerHTML = top4.map(t => {
+                const catIcons = { nutrition: 'restaurant', physical: 'fitness_center', athletic: 'sports_score', sleep: 'bedtime', behavioral: 'psychology', other: 'science' };
+                const cat = (t.category || 'other').toLowerCase();
+                const icon = catIcons[cat] || 'science';
+                return `
+                    <div class="glass-panel p-4 rounded-lg">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="material-symbols-outlined text-sm text-secondary/70">${icon}</span>
+                            <span class="text-xs font-bold text-primary truncate">${esc(t.name || t.trait || '')}</span>
+                        </div>
+                        <div class="text-lg font-extrabold text-primary leading-tight">${esc(t.result || t.value || '—')}</div>
+                    </div>`;
+            }).join('');
+        }
+    }
 }
 
 // ---- Health Risks Tab ----
@@ -229,19 +281,66 @@ function renderHealth(risks) {
         const category = r.category || '';
         const absRisk = r.absolute_risk || '';
 
+        // Severity styling maps
+        let iconName, iconBgClass, badgeClass, borderClass;
+        switch (sev) {
+            case 'CRITICAL':
+                iconName = 'warning';
+                iconBgClass = 'bg-error-container/95 text-on-error-container';
+                badgeClass = 'bg-error text-white text-[10px] px-2 py-0.5 rounded-full font-black uppercase tracking-widest shadow-sm';
+                borderClass = 'border-l-4 border-l-error';
+                break;
+            case 'HIGH':
+                iconName = 'health_metrics';
+                iconBgClass = 'bg-amber-100 text-amber-800';
+                badgeClass = 'bg-amber-600 text-white text-[10px] px-2 py-0.5 rounded-full font-black uppercase tracking-widest shadow-sm';
+                borderClass = '';
+                break;
+            case 'MODERATE':
+                iconName = 'ecg_heart';
+                iconBgClass = 'bg-sky-100 text-sky-800';
+                badgeClass = 'bg-secondary text-white text-[10px] px-2 py-0.5 rounded-full font-black uppercase tracking-widest shadow-sm';
+                borderClass = '';
+                break;
+            case 'PROTECTIVE':
+                iconName = 'shield_with_heart';
+                iconBgClass = 'bg-emerald-100 text-emerald-800';
+                badgeClass = 'bg-emerald-600 text-white text-[10px] px-2 py-0.5 rounded-full font-black uppercase tracking-widest shadow-sm';
+                borderClass = 'border-l-4 border-l-emerald-500';
+                break;
+            default: // LOW
+                iconName = 'monitoring';
+                iconBgClass = 'bg-stone-100 text-stone-600';
+                badgeClass = 'bg-stone-500 text-white text-[10px] px-2 py-0.5 rounded-full font-black uppercase tracking-widest shadow-sm';
+                borderClass = '';
+                break;
+        }
+
+        const searchText = esc((r.gene||'') + ' ' + (r.condition||'') + ' ' + (r.rsid||'')).toLowerCase();
+
         return `
-        <div class="result-card" data-severity="${sev}" data-search="${esc((r.gene||'') + ' ' + (r.condition||'') + ' ' + (r.rsid||'')).toLowerCase()}" onclick="toggleCard(this)">
-            <div class="result-card-header">
-                <span class="severity-badge severity-${sev}">${sev}</span>
-                <div class="result-card-info">
-                    <div class="result-card-gene">${esc(r.gene || 'Unknown')}</div>
-                    <div class="result-card-condition">${esc(r.condition || '')}</div>
+        <article class="group glass-item p-6 rounded-xl hover:bg-white/30 transition-all flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 ${borderClass} result-card" data-severity="${sev}" data-search="${searchText}" onclick="toggleCard(this)">
+            <div class="flex flex-col md:flex-row gap-6 md:items-center flex-1">
+                <div class="w-14 h-14 ${iconBgClass} rounded-lg flex items-center justify-center shrink-0 shadow-md">
+                    <span class="material-symbols-outlined text-3xl" style='font-variation-settings: "FILL" 1'>${iconName}</span>
                 </div>
-                ${r.rsid ? `<span class="result-card-rsid">${esc(r.rsid)}</span>` : ''}
-                ${r.zygosity ? `<span class="zygosity-badge">${esc(r.zygosity)}</span>` : ''}
-                <span class="expand-icon">&#9660;</span>
+                <div>
+                    <div class="flex items-center gap-3 mb-1">
+                        <h3 class="text-xl font-bold tracking-tight text-stone-950">${esc(r.gene || 'Unknown')} — ${esc(r.condition || '')}</h3>
+                        <span class="${badgeClass}">${sev}</span>
+                    </div>
+                    <p class="text-stone-700 font-medium max-w-lg leading-snug text-sm">${esc(r.risk_description || r.description || '')}</p>
+                </div>
             </div>
-            <div class="result-card-body">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-10 shrink-0">
+                <div class="flex flex-col"><span class="text-[10px] text-stone-600 font-bold uppercase tracking-wider mb-1">Gene</span><span class="font-mono text-sm font-bold data-chip">${esc(r.gene || '—')}</span></div>
+                <div class="flex flex-col"><span class="text-[10px] text-stone-600 font-bold uppercase tracking-wider mb-1">rsid</span><span class="font-mono text-sm text-secondary font-bold data-chip">${esc(r.rsid || '—')}</span></div>
+                <div class="flex flex-col"><span class="text-[10px] text-stone-600 font-bold uppercase tracking-wider mb-1">Genotype</span><span class="font-bold text-sm data-chip">${esc(r.your_genotype || r.genotype || '—')}</span></div>
+                <div class="flex flex-col"><span class="text-[10px] text-stone-600 font-bold uppercase tracking-wider mb-1">Zygosity</span><span class="text-sm font-bold data-chip">${esc(r.zygosity || '—')}</span></div>
+            </div>
+            <span class="material-symbols-outlined text-stone-400 group-hover:translate-x-1 group-hover:text-stone-950 transition-all cursor-pointer expand-icon">chevron_right</span>
+            <!-- Expanded body (hidden by default) -->
+            <div class="result-card-body w-full">
                 ${whatThisMeans ? `
                     <div class="health-section">
                         <div class="health-section-label">What this means for you</div>
@@ -278,7 +377,7 @@ function renderHealth(risks) {
                         : 'This is worth being aware of. Mention it at your next doctor visit if relevant to your health history.'}</p>
                 </div>
             </div>
-        </div>`;
+        </article>`;
     }).join('');
 }
 
@@ -299,56 +398,136 @@ function renderPharma(pharma) {
     const critList = document.getElementById('pharma-critical-list');
     if (criticals.length > 0) {
         critPanel.style.display = '';
-        critList.innerHTML = criticals.map(p => `
-            <div class="critical-alert-card">
-                <h4>${esc(p.gene || '')} — ${esc(p.metabolizer_status || '')}</h4>
-                <p>${esc(p.description || (p.drugs_affected || []).map(m => typeof m === 'string' ? m : (m.drug || m.name)).join(', '))}</p>
-            </div>
-        `).join('');
+        critList.innerHTML = criticals.map(p => {
+            const meds = (p.drugs_affected || []).slice(0, 3).map(m => typeof m === 'string' ? m : (m.drug || m.name || '')).join(', ');
+            return `
+            <div class="group flex items-start gap-6 p-6 bg-white/20 hover:bg-white/40 transition-all rounded-xl border border-white/40 shadow-sm mb-4">
+                <div class="p-4 bg-error text-white rounded-xl shadow-lg shrink-0">
+                    <span class="material-symbols-outlined">medication</span>
+                </div>
+                <div class="flex-grow">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="text-xl font-extrabold tracking-tight text-stone-950">${esc(p.gene || '')} <span class="text-stone-500 font-medium text-sm ml-1">${esc(p.metabolizer_status || '')}</span></h3>
+                        <span class="text-xs font-black tracking-widest text-stone-600 bg-white/50 px-2 py-0.5 rounded">${esc(p.gene || '')}</span>
+                    </div>
+                    <p class="text-sm text-stone-800 font-medium leading-relaxed mb-4">${esc(p.description || '')}</p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="px-3 py-1 bg-stone-950 text-white text-[9px] font-black uppercase tracking-widest rounded-lg">Action Required</span>
+                        ${meds ? `<span class="px-3 py-1 bg-white/60 border border-stone-300 text-[9px] font-black uppercase tracking-widest rounded-lg text-stone-700">${esc(meds)}</span>` : ''}
+                    </div>
+                </div>
+            </div>`;
+        }).join('');
     } else {
         critPanel.style.display = 'none';
     }
 
-    container.innerHTML = pharma.map(p => {
-        const status = (p.metabolizer_status || 'Normal').toLowerCase().replace(/\s+/g, '');
-        let badgeClass = 'metabolizer-normal';
-        if (status.includes('poor')) badgeClass = 'metabolizer-poor';
-        else if (status.includes('intermediate')) badgeClass = 'metabolizer-intermediate';
-        else if (status.includes('ultra')) badgeClass = 'metabolizer-ultrarapid';
-        else if (status.includes('rapid')) badgeClass = 'metabolizer-rapid';
+    // Group non-critical by metabolizer type for sidebar-style rendering
+    const grouped = { poor: [], intermediate: [], normal: [], rapid: [] };
+    const critGenes = new Set(criticals.map(p => p.gene));
 
-        const meds = p.drugs_affected || [];
-        const medsTable = meds.length ? `
-            <table class="medications-table">
-                <thead><tr><th>Medication</th><th>Impact</th><th>Recommendation</th></tr></thead>
-                <tbody>
-                    ${meds.map(m => {
-                        const med = typeof m === 'string' ? { drug: m } : m;
-                        const isCrit = med.is_critical || (p.is_critical && true);
-                        return `<tr class="${isCrit ? 'med-critical' : ''}">
-                            <td>${esc(med.drug || med.name || m)}</td>
-                            <td>${esc(med.guidance || med.impact || '—')}</td>
-                            <td>${esc(med.guidance || med.recommendation || '—')}</td>
-                        </tr>`;
-                    }).join('')}
-                </tbody>
-            </table>` : '<p style="color:rgba(11,16,18,0.35);font-size:.85rem">No specific medications listed.</p>';
+    pharma.forEach(p => {
+        if (critGenes.has(p.gene) && p.is_critical) return; // already shown above
+        const status = (p.metabolizer_status || 'Normal').toLowerCase();
+        if (status.includes('poor')) grouped.poor.push(p);
+        else if (status.includes('intermediate')) grouped.intermediate.push(p);
+        else if (status.includes('rapid') || status.includes('ultra')) grouped.rapid.push(p);
+        else grouped.normal.push(p);
+    });
 
-        const searchText = [p.gene, p.metabolizer_status, ...meds.map(m => typeof m === 'string' ? m : (m.drug || m.name || ''))].join(' ').toLowerCase();
+    const groupConfig = [
+        { key: 'poor', label: 'Poor Metabolizer', dotClass: 'bg-error', borderClass: 'border-error/30', textClass: 'text-error' },
+        { key: 'intermediate', label: 'Intermediate', dotClass: 'bg-secondary', borderClass: 'border-secondary/30', textClass: 'text-secondary' },
+        { key: 'normal', label: 'Normal', dotClass: 'bg-stone-950', borderClass: 'border-stone-950/30', textClass: 'text-stone-950' },
+        { key: 'rapid', label: 'Rapid / Ultra', dotClass: 'bg-secondary-container', borderClass: 'border-secondary-container/50', textClass: 'text-stone-700' },
+    ];
 
+    const sidebarHTML = groupConfig.map(g => {
+        const items = grouped[g.key];
+        if (!items.length) return '';
         return `
-        <div class="pharma-card" data-search="${esc(searchText)}" onclick="toggleCard(this)">
-            <div class="pharma-card-header">
-                <span class="pharma-gene-name">${esc(p.gene || 'Unknown')}</span>
-                <span class="metabolizer-badge ${badgeClass}">${esc(p.metabolizer_status || 'Unknown')}</span>
-                <span class="expand-icon">&#9660;</span>
-            </div>
-            <div class="pharma-card-body">
-                ${p.description ? `<p class="risk-description" style="margin-bottom:12px">${esc(p.description)}</p>` : ''}
-                ${medsTable}
+        <div class="relative pl-6 border-l-2 ${g.borderClass} mb-8">
+            <div class="absolute -left-[5px] top-0 w-2 h-2 rounded-full ${g.dotClass}"></div>
+            <h3 class="text-[10px] font-black uppercase tracking-[0.2em] ${g.textClass} mb-4">${g.label}</h3>
+            <div class="space-y-2">
+                ${items.map(p => {
+                    const meds = (p.drugs_affected || []).map(m => typeof m === 'string' ? m : (m.drug || m.name || '')).join(', ');
+                    const searchText = [p.gene, p.metabolizer_status, meds].join(' ').toLowerCase();
+                    return `
+                    <div class="pharma-card flex items-center justify-between p-4 bg-white/40 rounded-xl border border-white/60 shadow-sm group hover:bg-white/60 transition-colors cursor-pointer" data-search="${esc(searchText)}" onclick="toggleCard(this)">
+                        <div>
+                            <span class="text-sm font-extrabold tracking-tight text-stone-950">${esc(p.gene || 'Unknown')}</span>
+                            ${meds ? `<span class="text-xs text-stone-500 ml-2">${esc(meds)}</span>` : ''}
+                        </div>
+                        <span class="material-symbols-outlined text-stone-400 text-sm expand-icon">chevron_right</span>
+                        <div class="pharma-card-body hidden w-full mt-3 pt-3 border-t border-white/40">
+                            ${p.description ? `<p class="text-sm text-stone-700 mb-3">${esc(p.description)}</p>` : ''}
+                            ${meds ? `<p class="text-xs text-stone-500">Affected medications: ${esc(meds)}</p>` : ''}
+                        </div>
+                    </div>`;
+                }).join('')}
             </div>
         </div>`;
     }).join('');
+
+    container.innerHTML = `
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div class="md:col-span-8">
+                ${criticals.length > 0 ? '' : '<p class="text-stone-500 text-sm mb-6">No critical drug-gene interactions found.</p>'}
+            </div>
+            <div class="md:col-span-4 glass-panel p-8 rounded-2xl shadow-lg">
+                <h2 class="text-xl font-extrabold tracking-tight text-stone-950 mb-8 uppercase tracking-wider">Medication Sensitivity</h2>
+                ${sidebarHTML}
+            </div>
+        </div>`;
+
+    // Render metabolism insight
+    renderMetabolismInsight(pharma);
+}
+
+function renderMetabolismInsight(pharma) {
+    const container = document.getElementById('metabolism-insight');
+    if (!container) return;
+
+    const counts = { poor: 0, intermediate: 0, normal: 0, rapid: 0 };
+    pharma.forEach(p => {
+        const status = (p.metabolizer_status || 'Normal').toLowerCase();
+        if (status.includes('poor')) counts.poor++;
+        else if (status.includes('intermediate')) counts.intermediate++;
+        else if (status.includes('rapid') || status.includes('ultra')) counts.rapid++;
+        else counts.normal++;
+    });
+
+    const total = pharma.length || 1;
+    const pctPoor = Math.round(counts.poor / total * 100);
+    const pctIntermediate = Math.round(counts.intermediate / total * 100);
+    const pctNormal = Math.round(counts.normal / total * 100);
+    const pctRapid = Math.round(counts.rapid / total * 100);
+
+    const bars = [
+        { label: 'Poor Metabolizer', pct: pctPoor, color: 'bg-error' },
+        { label: 'Intermediate', pct: pctIntermediate, color: 'bg-secondary' },
+        { label: 'Normal', pct: pctNormal, color: 'bg-stone-950' },
+        { label: 'Rapid', pct: pctRapid, color: 'bg-secondary-container' },
+    ];
+
+    container.innerHTML = `
+        <h3 class="font-extrabold text-stone-950 mb-6 flex items-center gap-2 uppercase text-xs tracking-[0.2em]">
+            <span class="material-symbols-outlined text-sm">monitoring</span> Metabolism Insight
+        </h3>
+        <div class="space-y-5">
+            ${bars.map(b => `
+                <div>
+                    <div class="flex justify-between text-[10px] font-black uppercase text-stone-600 mb-2 tracking-widest">
+                        <span>${b.label}</span>
+                        <span class="text-stone-950">${b.pct}%</span>
+                    </div>
+                    <div class="h-1.5 w-full bg-stone-200/50 rounded-full overflow-hidden">
+                        <div class="h-full ${b.color} rounded-full" style="width:${b.pct}%"></div>
+                    </div>
+                </div>
+            `).join('')}
+        </div>`;
 }
 
 // ---- Traits Tab ----
@@ -362,24 +541,44 @@ function renderTraits(traits) {
     }
     emptyEl.style.display = 'none';
 
+    const catIcons = { nutrition: 'restaurant', physical: 'fitness_center', athletic: 'sports_score', sleep: 'bedtime', behavioral: 'psychology', other: 'science' };
+
     container.innerHTML = traits.map(t => {
         const cat = (t.category || 'other').toLowerCase();
         const conf = (t.confidence || 'medium').toLowerCase();
         const popFreq = t.population_frequency;
+        const icon = catIcons[cat] || 'science';
+
+        let confBadgeClass;
+        switch (conf) {
+            case 'high':
+                confBadgeClass = 'bg-emerald-100 text-emerald-800 text-[10px] px-2 py-0.5 rounded-full font-black uppercase tracking-widest';
+                break;
+            case 'low':
+                confBadgeClass = 'bg-stone-100 text-stone-500 text-[10px] px-2 py-0.5 rounded-full font-black uppercase tracking-widest';
+                break;
+            default:
+                confBadgeClass = 'bg-secondary/10 text-secondary text-[10px] px-2 py-0.5 rounded-full font-black uppercase tracking-widest';
+                break;
+        }
+
+        const freqPct = popFreq != null ? Math.min(100, Math.max(0, popFreq * 100)).toFixed(0) : null;
 
         return `
-        <div class="trait-card" data-category="${esc(cat)}">
-            <div class="trait-card-name">${esc(t.name || t.trait || '')}</div>
-            <div class="trait-card-result">${esc(t.result || t.value || '—')}</div>
-            <div class="trait-card-explanation">${esc(t.explanation || t.description || '')}</div>
-            <div class="trait-card-meta">
-                ${popFreq != null ? `
-                    <div class="trait-pop-freq">
-                        <div class="trait-pop-freq-label">Pop. frequency: ${(popFreq * 100).toFixed(0)}%</div>
-                        <div class="trait-pop-freq-bar"><div class="trait-pop-freq-fill" style="width:${Math.min(100, popFreq * 100)}%"></div></div>
-                    </div>` : '<div></div>'}
-                <span class="confidence-badge confidence-${conf}">${conf} confidence</span>
+        <div class="glass-panel p-6 rounded-xl hover:shadow-xl transition-all group trait-card" data-category="${esc(cat)}">
+            <div class="flex justify-between items-start mb-4">
+                <span class="material-symbols-outlined text-2xl text-secondary/70">${icon}</span>
+                <span class="${confBadgeClass}">${conf}</span>
             </div>
+            <h3 class="font-bold text-lg tracking-tight text-primary mb-1">${esc(t.name || t.trait || '')}</h3>
+            <div class="text-2xl font-extrabold text-primary mb-3">${esc(t.result || t.value || '—')}</div>
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-4">${esc(t.explanation || t.description || '')}</p>
+            ${freqPct !== null ? `
+            <div class="flex items-center gap-2 text-[10px] uppercase tracking-wider text-stone-500">
+                <span>Pop. frequency:</span>
+                <div class="flex-1 h-1.5 bg-stone-200/50 rounded-full overflow-hidden max-w-[100px]"><div class="h-full bg-primary/60 rounded-full" style="width:${freqPct}%"></div></div>
+                <span class="font-bold">${freqPct}%</span>
+            </div>` : ''}
         </div>`;
     }).join('');
 
@@ -423,17 +622,52 @@ function renderAncestry(data) {
     // Hide paternal if not available (e.g. female sample)
     document.getElementById('paternal-haplogroup').style.display = (phg.name || phg.haplogroup) ? '' : 'none';
 
-    // Ancestry composition
+    // Ancestry composition — render as horizontal progress bars in a dark panel
     const comp = ancestry.composition || [];
     const compSection = document.getElementById('ancestry-composition-section');
     if (comp.length > 0) {
         compSection.style.display = '';
-        DNACharts.createAncestryBar('chart-ancestry-bar', comp);
+
+        // Replace the canvas-based bar chart with glass-panel-dark progress bars
+        const chartWrapper = compSection.querySelector('.chart-wrapper');
+        if (chartWrapper) {
+            const regionColors = [
+                '#4a6fa5', '#7a5ca8', '#3d8b63', '#9e8230', '#c0392b',
+                '#a05a8a', '#3a8e9e', '#6a8e4a', '#b8652e', '#5a5aa8',
+            ];
+            chartWrapper.className = 'glass-panel p-8 rounded-2xl';
+            chartWrapper.style.background = 'rgba(30,30,30,0.85)';
+            chartWrapper.style.backdropFilter = 'blur(40px)';
+            chartWrapper.innerHTML = `
+                <div class="space-y-4">
+                    ${comp.map((c, i) => {
+                        const region = c.region || c.population || c.name || '';
+                        const pct = c.percentage || 0;
+                        const color = regionColors[i % regionColors.length];
+                        return `
+                        <div>
+                            <div class="flex justify-between text-[10px] font-black uppercase text-stone-300 mb-2 tracking-widest">
+                                <span>${esc(region)}</span>
+                                <span class="text-white">${pct.toFixed(1)}%</span>
+                            </div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                <div class="h-full rounded-full transition-all" style="width:${pct}%;background:${color}"></div>
+                            </div>
+                        </div>`;
+                    }).join('')}
+                </div>`;
+        }
+
+        // Render world map if container exists
+        const mapContainer = document.getElementById('ancestry-world-map');
+        if (mapContainer) {
+            DNACharts.createWorldMap('ancestry-world-map', comp);
+        }
     } else {
         compSection.style.display = 'none';
     }
 
-    // PRS
+    // PRS — render as SVG gauges
     const prs = data.polygenic_risk || [];
     const prsSection = document.getElementById('prs-section');
     const prsGrid = document.getElementById('prs-grid');
@@ -449,7 +683,7 @@ function renderAncestry(data) {
             `;
             prsGrid.appendChild(card);
             const gaugeContainer = card.querySelector('.prs-gauge-wrapper');
-            DNACharts.createPRSGauge(gaugeContainer, p.percentile || 0, p.condition || '');
+            DNACharts.createPRSGaugeSVG(gaugeContainer, p.percentile || 0, p.condition || '');
         });
     } else {
         prsSection.style.display = 'none';
