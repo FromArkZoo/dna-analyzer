@@ -221,10 +221,11 @@ const DNACharts = (() => {
         return svg;
     }
 
-    // SVG World Map for ancestry composition — recognizable geography
+    // SVG World Map using real GeoJSON-derived country boundaries
     function createWorldMap(containerId, composition) {
         const container = document.getElementById(containerId);
         if (!container) return null;
+        if (typeof WORLD_MAP_DATA === 'undefined') return null;
 
         const regionData = {};
         (composition || []).forEach(c => {
@@ -244,51 +245,25 @@ const DNACharts = (() => {
             return { pct: maxPct, name: matchedName };
         }
 
-        // Continent outlines (subtle base layer)
-        const continentOutlines = [
-            'M85,70 L110,55 L145,48 L170,45 L195,50 L220,58 L235,52 L250,48 L255,55 L248,65 L238,72 L230,80 L225,95 L228,108 L235,120 L240,135 L248,148 L255,160 L258,172 L252,178 L242,175 L232,168 L220,165 L210,170 L200,180 L192,175 L185,168 L175,162 L168,155 L160,150 L148,148 L138,142 L128,135 L118,125 L108,115 L98,105 L90,92 L85,80 Z',
-            'M218,195 L228,188 L240,185 L252,190 L262,200 L270,215 L275,232 L278,252 L276,272 L272,292 L265,310 L258,325 L250,338 L240,345 L232,342 L225,332 L220,318 L216,300 L214,280 L212,260 L213,240 L215,220 L216,205 Z',
-            'M440,55 L450,50 L462,48 L472,52 L478,48 L485,42 L492,40 L498,45 L502,52 L508,55 L515,52 L522,48 L530,50 L535,56 L540,62 L542,70 L538,78 L530,82 L524,88 L520,95 L518,102 L515,108 L510,112 L505,118 L498,122 L492,128 L488,134 L482,138 L475,140 L468,138 L460,135 L454,130 L448,126 L443,120 L440,114 L436,108 L435,100 L434,92 L432,84 L434,75 L436,65 Z',
-            'M432,68 L436,62 L440,58 L444,60 L446,66 L444,72 L440,76 L436,74 Z M428,76 L432,74 L435,78 L436,84 L434,90 L430,92 L426,88 L426,82 Z',
-            'M448,148 L460,142 L475,140 L490,142 L505,144 L518,148 L528,152 L538,158 L545,165 L548,175 L550,185 L548,198 L542,210 L538,222 L535,235 L530,248 L525,260 L518,272 L510,282 L502,290 L492,296 L482,298 L472,296 L462,290 L455,280 L450,268 L446,255 L444,240 L442,225 L440,210 L438,195 L435,180 L434,168 L436,158 L440,150 Z',
-            'M540,110 L555,108 L570,112 L582,118 L590,126 L595,138 L592,148 L585,155 L575,158 L565,160 L555,155 L548,148 L542,140 L538,130 L536,120 Z',
-            'M600,100 L620,95 L640,98 L655,105 L665,115 L668,128 L665,140 L658,152 L648,162 L638,170 L628,175 L618,172 L610,165 L605,155 L602,142 L600,128 L598,115 Z',
-            'M660,65 L680,58 L700,60 L718,68 L732,78 L740,92 L742,108 L738,122 L730,135 L718,145 L705,150 L692,152 L680,148 L670,140 L662,130 L656,118 L652,105 L650,90 L652,78 Z',
-            'M680,158 L695,155 L710,160 L720,170 L725,182 L722,195 L712,205 L698,210 L685,208 L675,200 L670,188 L672,175 Z',
-            'M540,62 L560,55 L585,50 L612,48 L640,50 L665,55 L690,52 L710,48 L730,50 L745,55 L755,62 L758,72 L750,78 L740,82 L728,80 L718,75 L700,68 L680,65 L660,65 L652,78 L650,68 L640,62 L620,58 L600,55 L580,58 L560,62 L545,68 L540,75 L535,70 Z',
-            'M740,265 L755,258 L772,255 L790,258 L805,265 L812,278 L810,292 L802,302 L790,308 L775,310 L760,306 L750,298 L744,285 L742,275 Z',
-        ];
-
-        // Ancestry regions overlaid on continents
-        const ancestryRegions = [
-            { keys:['british','irish'], color:'#4a6fa5', label:[438,75],
-              path:'M432,68 L436,62 L440,58 L444,60 L446,66 L444,72 L440,76 L436,74 Z M428,76 L432,74 L435,78 L436,84 L434,90 L430,92 L426,88 L426,82 Z' },
-            { keys:['nw european','northwest','french','german','dutch'], color:'#5a7fb5', label:[475,105],
-              path:'M455,88 L465,82 L478,80 L488,84 L495,92 L498,102 L495,112 L488,118 L478,120 L468,118 L458,112 L452,102 L452,95 Z' },
-            { keys:['scandinavian','finnish','nordic','norwegian','swedish'], color:'#3a6e95', label:[488,55],
-              path:'M472,52 L478,48 L485,42 L492,40 L498,45 L502,52 L508,55 L515,52 L522,48 L530,50 L535,56 L530,62 L522,58 L515,55 L508,58 L502,62 L498,65 L492,68 L485,72 L478,68 L474,62 Z' },
-            { keys:['southern european','italian','iberian','greek','spanish','mediterranean'], color:'#7a5ca8', label:[470,135],
-              path:'M443,120 L452,116 L462,118 L472,120 L482,124 L490,128 L498,126 L505,130 L508,138 L502,144 L492,146 L480,145 L468,142 L456,138 L448,132 L443,126 Z' },
-            { keys:['eastern european','slavic','baltic','polish','russian','ashkenazi'], color:'#3a8e9e', label:[535,85],
-              path:'M515,55 L525,52 L535,56 L542,65 L545,75 L542,85 L538,95 L532,102 L525,108 L518,112 L510,108 L505,100 L502,92 L505,82 L508,72 L510,62 Z' },
-            { keys:['near east','middle east','arab','levantine','turkish'], color:'#b8652e', label:[568,135],
-              path:'M540,110 L555,108 L570,112 L582,118 L590,126 L595,138 L592,148 L585,155 L575,158 L565,160 L555,155 L548,148 L542,140 L538,130 L536,120 Z' },
-            { keys:['north africa','berber','egyptian','maghreb'], color:'#c4873e', label:[478,155],
-              path:'M448,148 L460,142 L475,140 L490,142 L505,144 L518,148 L528,152 L535,158 L530,165 L518,168 L505,170 L490,172 L475,170 L460,168 L450,162 L446,155 Z' },
-            { keys:['sub-saharan','west africa','east africa','african','nigerian','central africa'], color:'#3d8b63', label:[490,235],
-              path:'M450,172 L465,170 L480,172 L495,175 L510,178 L525,182 L535,190 L540,202 L538,218 L532,232 L525,245 L518,258 L508,270 L498,278 L488,282 L478,280 L468,274 L460,264 L455,250 L450,235 L448,218 L446,200 L445,185 Z' },
-            { keys:['south asia','indian','south asian','pakistani'], color:'#a05a8a', label:[630,145],
-              path:'M608,115 L620,108 L635,112 L648,120 L655,132 L652,145 L645,158 L635,168 L625,172 L615,168 L608,158 L604,145 L602,132 L604,122 Z' },
-            { keys:['east asia','chinese','japanese','korean','han'], color:'#9e8230', label:[700,105],
-              path:'M670,72 L688,68 L705,72 L720,80 L730,92 L735,108 L730,122 L720,132 L708,138 L695,140 L682,136 L672,128 L665,118 L660,105 L658,92 L662,80 Z' },
-            { keys:['southeast asia','filipino','vietnamese','thai','malay'], color:'#8e7a30', label:[698,182],
-              path:'M680,158 L695,155 L710,160 L720,170 L725,182 L722,195 L712,205 L698,210 L685,208 L675,200 L670,188 L672,175 Z' },
-            { keys:['native american','indigenous','mesoamerican','americas'], color:'#c0392b', label:[190,120],
-              path:'M108,70 L135,60 L165,55 L195,58 L218,68 L232,80 L240,95 L245,112 L248,130 L245,148 L238,162 L225,170 L210,168 L198,160 L185,150 L172,140 L158,128 L145,118 L132,108 L120,95 L110,82 Z' },
-            { keys:['south america','andean','brazilian'], color:'#c0392b', label:[248,270],
-              path:'M218,195 L228,188 L240,185 L252,190 L262,200 L270,215 L275,232 L278,252 L276,272 L272,292 L265,310 L258,325 L250,338 L240,345 L232,342 L225,332 L220,318 L216,300 L214,280 L212,260 L213,240 L215,220 L216,205 Z' },
-            { keys:['oceania','melanesian','polynesian','australian','aboriginal'], color:'#5a5aa8', label:[775,285],
-              path:'M740,265 L755,258 L772,255 L790,258 L805,265 L812,278 L810,292 L802,302 L790,308 L775,310 L760,306 L750,298 L744,285 L742,275 Z' },
+        // Region config: keys for matching, color, label position
+        const regionConfig = [
+            { id:'british', keys:['british','irish'], color:'#4a6fa5', lx:460, ly:115 },
+            { id:'nw-europe', keys:['nw european','northwest','french','german','dutch'], color:'#5a7fb5', lx:490, ly:135 },
+            { id:'scandinavia', keys:['scandinavian','finnish','nordic','norwegian','swedish'], color:'#3a6e95', lx:508, ly:95 },
+            { id:'south-europe', keys:['southern european','italian','iberian','greek','spanish','mediterranean'], color:'#7a5ca8', lx:490, ly:155 },
+            { id:'east-europe', keys:['eastern european','slavic','baltic','polish','russian','ashkenazi'], color:'#3a8e9e', lx:540, ly:120 },
+            { id:'middle-east', keys:['near east','middle east','arab','levantine','turkish'], color:'#b8652e', lx:575, ly:170 },
+            { id:'north-africa', keys:['north africa','berber','egyptian','maghreb'], color:'#c4873e', lx:490, ly:185 },
+            { id:'sub-saharan', keys:['sub-saharan','west africa','east africa','african','nigerian','central africa'], color:'#3d8b63', lx:500, ly:260 },
+            { id:'south-asia', keys:['south asia','indian','south asian','pakistani'], color:'#a05a8a', lx:640, ly:190 },
+            { id:'east-asia', keys:['east asia','chinese','japanese','korean','han'], color:'#9e8230', lx:710, ly:145 },
+            { id:'southeast-asia', keys:['southeast asia','filipino','vietnamese','thai','malay'], color:'#8e7a30', lx:700, ly:210 },
+            { id:'central-asia', keys:['central asia','steppe','turkic','mongol'], color:'#7a8e5a', lx:620, ly:130 },
+            { id:'north-america', keys:['native american','indigenous','mesoamerican','americas'], color:'#c0392b', lx:180, ly:140 },
+            { id:'central-america', keys:['central america','mexican','caribbean'], color:'#d04a3a', lx:220, ly:200 },
+            { id:'south-america', keys:['south america','andean','brazilian'], color:'#c0392b', lx:260, ly:290 },
+            { id:'oceania', keys:['oceania','melanesian','polynesian','australian','aboriginal'], color:'#5a5aa8', lx:790, ly:320 },
+            { id:'russia', keys:['siberian','north asian'], color:'#6a8a6a', lx:650, ly:80 },
         ];
 
         const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -299,36 +274,44 @@ const DNACharts = (() => {
         svg.style.maxWidth = '100%';
         svg.style.borderRadius = '0.75rem';
 
-        let svgContent = `<rect width="1000" height="500" fill="rgba(235,245,255,0.5)" rx="12"/>`;
+        // Background
+        let svgContent = `<rect width="1000" height="500" fill="rgba(235,245,255,0.4)" rx="12"/>`;
 
-        // Latitude lines
+        // Latitude/longitude grid
         [125, 250, 375].forEach(y => {
-            svgContent += `<line x1="30" y1="${y}" x2="970" y2="${y}" stroke="rgba(0,0,0,0.04)" stroke-width="0.5" stroke-dasharray="4,4"/>`;
+            svgContent += `<line x1="20" y1="${y}" x2="980" y2="${y}" stroke="rgba(0,0,0,0.03)" stroke-width="0.5" stroke-dasharray="4,4"/>`;
+        });
+        [200, 400, 600, 800].forEach(x => {
+            svgContent += `<line x1="${x}" y1="20" x2="${x}" y2="480" stroke="rgba(0,0,0,0.02)" stroke-width="0.5" stroke-dasharray="4,4"/>`;
         });
 
-        // Draw continent outlines (subtle gray)
-        continentOutlines.forEach(p => {
-            svgContent += `<path d="${p}" fill="rgba(0,0,0,0.04)" stroke="rgba(0,0,0,0.08)" stroke-width="0.5" stroke-linejoin="round"/>`;
+        // Draw all country outlines (subtle gray base)
+        WORLD_MAP_DATA.allPaths.forEach(p => {
+            svgContent += `<path d="${p}" fill="rgba(200,210,220,0.35)" stroke="rgba(255,255,255,0.8)" stroke-width="0.5" stroke-linejoin="round"/>`;
         });
 
-        // Draw highlighted ancestry regions
+        // Overlay highlighted ancestry regions
         const labels = [];
-        ancestryRegions.forEach(r => {
+        regionConfig.forEach(r => {
+            const regionPath = WORLD_MAP_DATA.regions[r.id];
+            if (!regionPath) return;
+
             const m = matchPct(r.keys);
             const pct = m.pct;
-            const opacity = pct > 0 ? Math.max(0.3, Math.min(0.8, pct / 30)) : 0;
+            const opacity = pct > 0 ? Math.max(0.35, Math.min(0.85, pct / 28)) : 0;
+
             if (opacity > 0) {
-                svgContent += `<path d="${r.path}" fill="${r.color}" fill-opacity="${opacity}" stroke="${r.color}" stroke-width="1.5" stroke-linejoin="round"/>`;
+                svgContent += `<path d="${regionPath}" fill="${r.color}" fill-opacity="${opacity}" stroke="${r.color}" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>`;
                 const displayName = m.name.replace(/\b\w/g, c => c.toUpperCase());
-                labels.push({ x: r.label[0], y: r.label[1], text: displayName, pct: Math.round(pct * 10) / 10, color: r.color });
+                labels.push({ x: r.lx, y: r.ly, text: displayName, pct: Math.round(pct * 10) / 10, color: r.color });
             }
         });
 
-        // Labels with white pill badges
+        // Render labels (white pill badges)
         labels.forEach(l => {
-            const tw = Math.max(l.text.length * 5 + 30, 55);
-            svgContent += `<rect x="${l.x - tw/2}" y="${l.y - 9}" width="${tw}" height="18" rx="9" fill="white" fill-opacity="0.92" stroke="${l.color}" stroke-width="0.8"/>`;
-            svgContent += `<text x="${l.x}" y="${l.y + 3.5}" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="${l.color}">${l.text} ${l.pct}%</text>`;
+            const tw = Math.max(l.text.length * 5.2 + 32, 58);
+            svgContent += `<rect x="${l.x - tw/2}" y="${l.y - 10}" width="${tw}" height="20" rx="10" fill="white" fill-opacity="0.95" stroke="${l.color}" stroke-width="1"/>`;
+            svgContent += `<text x="${l.x}" y="${l.y + 4}" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" font-weight="700" fill="${l.color}">${l.text} ${l.pct}%</text>`;
         });
 
         svg.innerHTML = svgContent;
