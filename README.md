@@ -1,4 +1,4 @@
-# DNA Analyzer
+# JB DNA (dna-analyzer)
 
 **A Flask web app that takes a raw AncestryDNA file, cross-references it against four authoritative public genomic databases, and produces a structured health / pharmacogenomics / ancestry report — with privacy-by-design (raw files are parsed in memory and never written to disk).**
 
