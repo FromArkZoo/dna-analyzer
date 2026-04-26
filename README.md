@@ -2,6 +2,8 @@
 
 **A Flask web app that takes a raw AncestryDNA file, cross-references it against four authoritative public genomic databases, and produces a structured health / pharmacogenomics / ancestry report — with privacy-by-design (raw files are parsed in memory and never written to disk).**
 
+![JB DNA — Overview dashboard with risk-severity donut, drug sensitivity panel, top traits, and aggregate variant stats](screenshot.png)
+
 The project exists to answer a simple question: what can you actually learn from your AncestryDNA raw data file beyond what the consumer report tells you? The answer turns out to be a lot — but only if you're willing to integrate a handful of authoritative, regularly-updated reference databases and normalise them into a single coherent schema.
 
 ## What it does
