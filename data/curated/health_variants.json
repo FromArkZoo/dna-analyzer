@@ -289,7 +289,9 @@
     "hom_description": "Homozygous: highest genetic risk for celiac disease (~10% lifetime risk). Especially elevated risk if first-degree relative affected.",
     "odds_ratio": 7.0,
     "population_frequency": 0.14,
-    "source": "ClinVar, HLA Database"
+    "source": "ClinVar, HLA Database",
+    "freq_note": "HLA-DQA1 lies in the MHC where gnomAD AF (0.003) is unreliable due to mapping. Literature DQ2.5-tag (T) allele ~0.10-0.13; curated 0.14 retained, no gnomad_af attached.",
+    "freq_review_resolved": "2026-06-07"
   },
   {
     "rsid": "rs10490924",
@@ -694,7 +696,11 @@
       "review_status": "criteria provided, multiple submitters, no conflicts",
       "last_evaluated": "2026/02/04 00:00",
       "retrieved": "2026-06-07"
-    }
+    },
+    "gnomad_af": 0.887,
+    "gnomad_af_source": "gnomAD v4 joint, manual orientation-check via GDM science-skills, 2026-06-07",
+    "freq_note": "Risk allele C (Pro12) is the COMMON allele; minor Ala12 (G) gnomAD AF=0.113 (sas popmax 0.121). Curated 0.85 confirmed accurate.",
+    "freq_review_resolved": "2026-06-07"
   },
   {
     "rsid": "rs7903146",
@@ -850,7 +856,11 @@
     "hom_description": "Two risk alleles: ~1.4x increased T2D risk.",
     "odds_ratio": 1.2,
     "population_frequency": 0.82,
-    "source": "GWAS Catalog"
+    "source": "GWAS Catalog",
+    "gnomad_af": 0.854,
+    "gnomad_af_source": "gnomAD v4 joint, manual orientation-check via GDM science-skills, 2026-06-07",
+    "freq_note": "Risk allele T is the COMMON allele; minor C gnomAD AF=0.146 (eas popmax 0.399). Curated 0.82 confirmed accurate.",
+    "freq_review_resolved": "2026-06-07"
   },
   {
     "rsid": "rs1333049",
@@ -1030,7 +1040,12 @@
       "review_status": "criteria provided, single submitter",
       "last_evaluated": "1/01/01 00:00",
       "retrieved": "2026-06-07"
-    }
+    },
+    "gnomad_af": 0.835,
+    "gnomad_af_source": "gnomAD v4 joint, manual orientation-check via GDM science-skills, 2026-06-07",
+    "freq_note": "Risk allele C(ref, wet earwax) global AF ~0.83; minor T(dry earwax) AF=0.166 (eas popmax 0.864). Curated 0.7 ~accurate.",
+    "caveat": "Keys on the common reference allele, so fires for most users; the wet-earwax->breast-cancer association is weak/controversial. Consider removing or reducing visibility (product decision).",
+    "freq_review_resolved": "2026-06-07"
   },
   {
     "rsid": "rs4988235",
@@ -1198,7 +1213,11 @@
       "review_status": "criteria provided, multiple submitters, no conflicts",
       "last_evaluated": "2018/08/30 00:00",
       "retrieved": "2026-06-07"
-    }
+    },
+    "gnomad_af": 0.101,
+    "gnomad_af_source": "gnomAD v4 joint, manual orientation-check via GDM science-skills, 2026-06-07",
+    "freq_note": "APOA5 minus-strand; risk C(gene)=genomic G(ref). Global AF ~0.10, nfe ~0.072. Curated 0.08 confirmed accurate.",
+    "freq_review_resolved": "2026-06-07"
   },
   {
     "rsid": "rs1800896",
