@@ -77,3 +77,9 @@ data/reference.db
 data/reference.db-shm
 data/reference.db-wal
 data/downloads/
+
+# ---- Reference-validation transients (scripts/validate_health_variants.py) ----
+# The committed report (.md/.json) is kept; these are regenerable scratch.
+data/validation/_tmp/
+data/validation/run.log
+*.bak

@@ -1,0 +1,132 @@
+[
+  {
+    "rsid": "rs80357906",
+    "gene": "BRCA1",
+    "old_population_frequency": 0.001,
+    "new_global_af": 6.753775918389602e-05,
+    "popmax_faf95": 4.346e-05,
+    "popmax_pop": "nfe",
+    "fold_diff": 14.8,
+    "confidence": "medium (by-rsID, rsID-confirmed)"
+  },
+  {
+    "rsid": "rs80357914",
+    "gene": "BRCA1",
+    "old_population_frequency": 0.001,
+    "new_global_af": 0.00011848017845223947,
+    "popmax_faf95": 2.478e-05,
+    "popmax_pop": "nfe",
+    "fold_diff": 8.4,
+    "confidence": "medium (by-rsID, rsID-confirmed)"
+  },
+  {
+    "rsid": "rs28897696",
+    "gene": "BRCA2",
+    "old_population_frequency": 0.001,
+    "new_global_af": 1.9829220835553792e-05,
+    "popmax_faf95": 0.00019869999999999998,
+    "popmax_pop": "afr",
+    "fold_diff": 50.4,
+    "confidence": "medium (by-rsID, rsID-confirmed)"
+  },
+  {
+    "rsid": "rs28897727",
+    "gene": "BRCA2",
+    "old_population_frequency": 0.0005,
+    "new_global_af": 0.006428953396193098,
+    "popmax_faf95": 0.007673860000000001,
+    "popmax_pop": "sas",
+    "fold_diff": 12.9,
+    "confidence": "medium (by-rsID, rsID-confirmed)"
+  },
+  {
+    "rsid": "rs2187668",
+    "gene": "HLA-DQA1",
+    "old_population_frequency": 0.14,
+    "new_global_af": 0.00334744433991847,
+    "popmax_faf95": 0.006098990000000294,
+    "popmax_pop": "mid",
+    "fold_diff": 41.8,
+    "confidence": "high (allele-pinned, rsID-confirmed)"
+  },
+  {
+    "rsid": "rs334",
+    "gene": "HBB",
+    "old_population_frequency": 0.08,
+    "new_global_af": 0.00265234532642101,
+    "popmax_faf95": 0.04815774000000001,
+    "popmax_pop": "afr",
+    "fold_diff": 30.2,
+    "confidence": "high (allele-pinned, rsID-confirmed)"
+  },
+  {
+    "rsid": "rs75961395",
+    "gene": "CFTR",
+    "old_population_frequency": 0.002,
+    "new_global_af": 6.337549163067022e-05,
+    "popmax_faf95": 7.081e-05,
+    "popmax_pop": "nfe",
+    "fold_diff": 31.6,
+    "confidence": "high (allele-pinned, rsID-confirmed)"
+  },
+  {
+    "rsid": "rs113993960",
+    "gene": "CFTR",
+    "old_population_frequency": 0.001,
+    "new_global_af": 0.011931254341569912,
+    "popmax_faf95": 0.01475724,
+    "popmax_pop": "nfe",
+    "fold_diff": 11.9,
+    "confidence": "medium (by-rsID, rsID-confirmed)"
+  },
+  {
+    "rsid": "rs1050828",
+    "gene": "G6PD",
+    "old_population_frequency": 0.1,
+    "new_global_af": 0.006443034878493799,
+    "popmax_faf95": 0.12037137000000002,
+    "popmax_pop": "afr",
+    "fold_diff": 15.5,
+    "confidence": "medium (by-rsID, rsID-confirmed)"
+  },
+  {
+    "rsid": "rs5030868",
+    "gene": "G6PD",
+    "old_population_frequency": 0.04,
+    "new_global_af": 0.0014093797737056851,
+    "popmax_faf95": 0.037061430000000076,
+    "popmax_pop": "mid",
+    "fold_diff": 28.4,
+    "confidence": "high (allele-pinned, rsID-confirmed)"
+  },
+  {
+    "rsid": "rs1801282",
+    "gene": "PPARG",
+    "old_population_frequency": 0.85,
+    "new_global_af": 0.11300008946811207,
+    "popmax_faf95": 0.12093785000000001,
+    "popmax_pop": "sas",
+    "fold_diff": 7.5,
+    "confidence": "high (allele-pinned, rsID-confirmed)"
+  },
+  {
+    "rsid": "rs10811661",
+    "gene": "CDKN2A/B",
+    "old_population_frequency": 0.82,
+    "new_global_af": 0.14590805775623086,
+    "popmax_faf95": 0.39860543999999964,
+    "popmax_pop": "eas",
+    "fold_diff": 5.6,
+    "confidence": "medium (by-rsID, rsID-confirmed)"
+  },
+  {
+    "rsid": "rs662799",
+    "gene": "APOA5",
+    "old_population_frequency": 0.08,
+    "new_global_af": 0.8985770969098171,
+    "popmax_faf95": 0.9285099200000003,
+    "popmax_pop": "nfe",
+    "fold_diff": 11.2,
+    "confidence": "medium (by-rsID, rsID-confirmed)"
+  }
+]

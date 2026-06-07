@@ -1,0 +1,38 @@
+[
+  {
+    "rsid": "rs2187668",
+    "gene": "HLA-DQA1",
+    "curated_freq": 0.14,
+    "gnomad_af_pinned": 0.00334744433991847,
+    "popmax": 0.006098990000000294,
+    "popmax_pop": "mid",
+    "reason": "MHC/HLA mapping unreliable"
+  },
+  {
+    "rsid": "rs1801282",
+    "gene": "PPARG",
+    "curated_freq": 0.85,
+    "gnomad_af_pinned": 0.11300008946811207,
+    "popmax": 0.12093785000000001,
+    "popmax_pop": "sas",
+    "reason": "possible major/minor or strand flip (AF\u22481\u2212curated)"
+  },
+  {
+    "rsid": "rs10811661",
+    "gene": "CDKN2A/B",
+    "curated_freq": 0.82,
+    "gnomad_af_pinned": 0.14590805775623086,
+    "popmax": 0.39860543999999964,
+    "popmax_pop": "eas",
+    "reason": "possible major/minor or strand flip (AF\u22481\u2212curated)"
+  },
+  {
+    "rsid": "rs662799",
+    "gene": "APOA5",
+    "curated_freq": 0.08,
+    "gnomad_af_pinned": 0.8985770969098171,
+    "popmax": 0.9285099200000003,
+    "popmax_pop": "nfe",
+    "reason": "possible major/minor or strand flip (AF\u22481\u2212curated)"
+  }
+]

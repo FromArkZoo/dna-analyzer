@@ -15,7 +15,17 @@
     "hom_description": "Homozygous pathogenic — extremely rare. Very high cancer risk requiring immediate clinical management.",
     "odds_ratio": 11.0,
     "population_frequency": 0.001,
-    "source": "ClinVar, ACMG"
+    "source": "ClinVar, ACMG",
+    "clinvar_xref": {
+      "classification": "Pathogenic",
+      "review_status": "reviewed by expert panel",
+      "last_evaluated": "2016/04/22 00:00",
+      "retrieved": "2026-06-07"
+    },
+    "gnomad_af": 6.753775918389602e-05,
+    "gnomad_af_popmax": 4.346e-05,
+    "gnomad_af_popmax_pop": "nfe",
+    "gnomad_af_source": "gnomAD v4 joint (allele-pinned, rsID-confirmed via GDM science-skills), retrieved 2026-06-07"
   },
   {
     "rsid": "rs80357914",
@@ -33,7 +43,17 @@
     "hom_description": "Homozygous — extremely rare and associated with very high cancer risk.",
     "odds_ratio": 10.0,
     "population_frequency": 0.001,
-    "source": "ClinVar, ACMG"
+    "source": "ClinVar, ACMG",
+    "clinvar_xref": {
+      "classification": "Pathogenic",
+      "review_status": "reviewed by expert panel",
+      "last_evaluated": "2016/09/08 00:00",
+      "retrieved": "2026-06-07"
+    },
+    "gnomad_af": 0.00011848017845223947,
+    "gnomad_af_popmax": 2.478e-05,
+    "gnomad_af_popmax_pop": "nfe",
+    "gnomad_af_source": "gnomAD v4 joint (allele-pinned, rsID-confirmed via GDM science-skills), retrieved 2026-06-07"
   },
   {
     "rsid": "rs28897696",
@@ -51,25 +71,17 @@
     "hom_description": "Homozygous pathogenic — extremely rare. Associated with Fanconi anemia in biallelic state.",
     "odds_ratio": 8.0,
     "population_frequency": 0.001,
-    "source": "ClinVar, ACMG"
-  },
-  {
-    "rsid": "rs28897727",
-    "gene": "BRCA2",
-    "variant_name": "BRCA2 c.5946delT",
-    "condition": "Hereditary Breast and Ovarian Cancer Syndrome",
-    "significance": "Pathogenic",
-    "risk_allele": "delT",
-    "normal_allele": "-",
-    "inheritance": "AD",
-    "category": "Cancer",
-    "severity": "CRITICAL",
-    "description": "Pathogenic frameshift variant in BRCA2 that results in premature protein truncation and loss of DNA repair function.",
-    "het_description": "Carrier with significantly increased breast and ovarian cancer risk.",
-    "hom_description": "Extremely rare; associated with Fanconi anemia subtype.",
-    "odds_ratio": 7.5,
-    "population_frequency": 0.0005,
-    "source": "ClinVar"
+    "source": "ClinVar, ACMG",
+    "clinvar_xref": {
+      "classification": "Conflicting classifications of pathogenicity",
+      "review_status": "criteria provided, conflicting classifications",
+      "last_evaluated": "2025/08/18 00:00",
+      "retrieved": "2026-06-07"
+    },
+    "gnomad_af": 1.9829220835553792e-05,
+    "gnomad_af_popmax": 0.00019869999999999998,
+    "gnomad_af_popmax_pop": "afr",
+    "gnomad_af_source": "gnomAD v4 joint (allele-pinned, rsID-confirmed via GDM science-skills), retrieved 2026-06-07"
   },
   {
     "rsid": "rs80357713",
@@ -105,7 +117,13 @@
     "hom_description": "Two ε4 alleles (ε4/ε4): 8-15x increased Alzheimer's risk. Average onset ~68 years vs ~84 for ε3/ε3.",
     "odds_ratio": 3.7,
     "population_frequency": 0.16,
-    "source": "AlzGene, ClinVar"
+    "source": "AlzGene, ClinVar",
+    "clinvar_xref": {
+      "classification": "no classification for the single variant",
+      "review_status": "no classification for the single variant",
+      "last_evaluated": "1/01/01 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs7412",
@@ -123,7 +141,13 @@
     "hom_description": "ε2/ε2: strong Alzheimer's protection but ~5-10% risk of type III hyperlipoproteinemia.",
     "odds_ratio": 0.6,
     "population_frequency": 0.08,
-    "source": "AlzGene, ClinVar"
+    "source": "AlzGene, ClinVar",
+    "clinvar_xref": {
+      "classification": "Likely pathogenic",
+      "review_status": "criteria provided, single submitter",
+      "last_evaluated": "2022/02/15 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs6025",
@@ -141,7 +165,17 @@
     "hom_description": "Homozygous: 50-80x increased VTE risk. Significant clinical implications. May require lifelong anticoagulation. Avoid all hormonal contraception.",
     "odds_ratio": 7.0,
     "population_frequency": 0.05,
-    "source": "ClinVar, OMIM"
+    "source": "ClinVar, OMIM",
+    "clinvar_xref": {
+      "classification": "Conflicting classifications of pathogenicity",
+      "review_status": "criteria provided, conflicting classifications",
+      "last_evaluated": "2026/02/04 00:00",
+      "retrieved": "2026-06-07"
+    },
+    "gnomad_af": 0.021432388235308703,
+    "gnomad_af_popmax": 0.035182130000000075,
+    "gnomad_af_popmax_pop": "mid",
+    "gnomad_af_source": "gnomAD v4 joint (allele-pinned, rsID-confirmed via GDM science-skills), retrieved 2026-06-07"
   },
   {
     "rsid": "rs1801133",
@@ -159,7 +193,13 @@
     "hom_description": "Two copies (TT): ~30% enzyme activity. Significantly elevated homocysteine. Increased risk of neural tube defects, cardiovascular events. Supplemental methylfolate recommended.",
     "odds_ratio": 1.5,
     "population_frequency": 0.33,
-    "source": "ClinVar, OMIM"
+    "source": "ClinVar, OMIM",
+    "clinvar_xref": {
+      "classification": "Benign",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "last_evaluated": "2026/02/04 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs1801131",
@@ -176,8 +216,14 @@
     "het_description": "One copy: minimal clinical effect alone. Check for compound heterozygosity with C677T.",
     "hom_description": "Two copies: moderate reduction in MTHFR activity. Combined with C677T heterozygosity may significantly elevate homocysteine.",
     "odds_ratio": 1.2,
-    "population_frequency": 0.30,
-    "source": "ClinVar"
+    "population_frequency": 0.3,
+    "source": "ClinVar",
+    "clinvar_xref": {
+      "classification": "Benign/Likely benign; other",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "last_evaluated": "2026/02/04 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs1800562",
@@ -195,7 +241,13 @@
     "hom_description": "Homozygous C282Y: ~80% risk of iron overload. Men more severely affected. Regular phlebotomy recommended. Monitor ferritin and transferrin saturation.",
     "odds_ratio": null,
     "population_frequency": 0.06,
-    "source": "ClinVar, OMIM"
+    "source": "ClinVar, OMIM",
+    "clinvar_xref": {
+      "classification": "Conflicting classifications of pathogenicity; other; risk factor",
+      "review_status": "criteria provided, conflicting classifications",
+      "last_evaluated": "2026/02/13 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs1799945",
@@ -213,7 +265,13 @@
     "hom_description": "Homozygous H63D: mildly elevated risk of iron overload. Monitor ferritin levels periodically.",
     "odds_ratio": 1.5,
     "population_frequency": 0.14,
-    "source": "ClinVar"
+    "source": "ClinVar",
+    "clinvar_xref": {
+      "classification": "Conflicting classifications of pathogenicity; other",
+      "review_status": "criteria provided, conflicting classifications",
+      "last_evaluated": "2026/04/27 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs2187668",
@@ -249,7 +307,13 @@
     "hom_description": "Two risk alleles: ~8x increased AMD risk. High-dose AREDS supplementation may be beneficial. Annual dilated eye exams strongly recommended.",
     "odds_ratio": 2.7,
     "population_frequency": 0.22,
-    "source": "GWAS Catalog"
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "risk factor",
+      "review_status": "no assertion criteria provided",
+      "last_evaluated": "2015/02/18 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs1061170",
@@ -267,7 +331,13 @@
     "hom_description": "Two risk alleles: ~6x increased AMD risk. Combined with ARMS2 risk alleles can exceed 30x risk.",
     "odds_ratio": 2.5,
     "population_frequency": 0.34,
-    "source": "GWAS Catalog"
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "Conflicting classifications of pathogenicity",
+      "review_status": "criteria provided, conflicting classifications",
+      "last_evaluated": "2026/02/04 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs28929474",
@@ -285,7 +355,17 @@
     "hom_description": "ZZ genotype: AAT levels ~10-15% of normal. High risk of early-onset emphysema and liver cirrhosis. Eligible for AAT augmentation therapy.",
     "odds_ratio": null,
     "population_frequency": 0.02,
-    "source": "ClinVar, OMIM"
+    "source": "ClinVar, OMIM",
+    "clinvar_xref": {
+      "classification": "Likely pathogenic",
+      "review_status": "criteria provided, single submitter",
+      "last_evaluated": "2023/09/09 00:00",
+      "retrieved": "2026-06-07"
+    },
+    "gnomad_af": 0.01586291664549959,
+    "gnomad_af_popmax": 0.01918274,
+    "gnomad_af_popmax_pop": "nfe",
+    "gnomad_af_source": "gnomAD v4 joint (allele-pinned, rsID-confirmed via GDM science-skills), retrieved 2026-06-07"
   },
   {
     "rsid": "rs334",
@@ -303,7 +383,17 @@
     "hom_description": "Sickle cell disease (HbSS): chronic hemolytic anemia, vaso-occlusive crises, organ damage. Requires comprehensive medical management. Life expectancy reduced but improving with modern care.",
     "odds_ratio": null,
     "population_frequency": 0.08,
-    "source": "ClinVar, OMIM"
+    "source": "ClinVar, OMIM",
+    "clinvar_xref": {
+      "classification": "other",
+      "review_status": "no assertion criteria provided",
+      "last_evaluated": "2017/12/12 00:00",
+      "retrieved": "2026-06-07"
+    },
+    "gnomad_af": 0.00265234532642101,
+    "gnomad_af_popmax": 0.04815774000000001,
+    "gnomad_af_popmax_pop": "afr",
+    "gnomad_af_source": "gnomAD v4 joint (allele-pinned, rsID-confirmed via GDM science-skills), retrieved 2026-06-07"
   },
   {
     "rsid": "rs1799963",
@@ -321,7 +411,17 @@
     "hom_description": "Homozygous: significantly elevated VTE risk. May warrant prophylactic anticoagulation in high-risk situations.",
     "odds_ratio": 3.0,
     "population_frequency": 0.02,
-    "source": "ClinVar, OMIM"
+    "source": "ClinVar, OMIM",
+    "clinvar_xref": {
+      "classification": "Pathogenic/Likely pathogenic/Pathogenic, low penetrance/Established risk allele; risk factor",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "last_evaluated": "2026/04/27 00:00",
+      "retrieved": "2026-06-07"
+    },
+    "gnomad_af": 0.011384996668959431,
+    "gnomad_af_popmax": 0.01468876999999994,
+    "gnomad_af_popmax_pop": "mid",
+    "gnomad_af_source": "gnomAD v4 joint (allele-pinned, rsID-confirmed via GDM science-skills), retrieved 2026-06-07"
   },
   {
     "rsid": "rs121909001",
@@ -357,7 +457,17 @@
     "hom_description": "Cystic fibrosis. Responds well to ivacaftor therapy.",
     "odds_ratio": null,
     "population_frequency": 0.002,
-    "source": "ClinVar, CFTR2"
+    "source": "ClinVar, CFTR2",
+    "clinvar_xref": {
+      "classification": "Pathogenic",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "last_evaluated": "2026/04/09 00:00",
+      "retrieved": "2026-06-07"
+    },
+    "gnomad_af": 6.337549163067022e-05,
+    "gnomad_af_popmax": 7.081e-05,
+    "gnomad_af_popmax_pop": "nfe",
+    "gnomad_af_source": "gnomAD v4 joint (allele-pinned, rsID-confirmed via GDM science-skills), retrieved 2026-06-07"
   },
   {
     "rsid": "rs113993960",
@@ -375,7 +485,17 @@
     "hom_description": "Cystic fibrosis with severe phenotype due to complete absence of CFTR protein.",
     "odds_ratio": null,
     "population_frequency": 0.001,
-    "source": "ClinVar, CFTR2"
+    "source": "ClinVar, CFTR2",
+    "clinvar_xref": {
+      "classification": "Pathogenic",
+      "review_status": "reviewed by expert panel",
+      "last_evaluated": "2019/03/11 00:00",
+      "retrieved": "2026-06-07"
+    },
+    "gnomad_af": 0.011931254341569912,
+    "gnomad_af_popmax": 0.01475724,
+    "gnomad_af_popmax_pop": "nfe",
+    "gnomad_af_source": "gnomAD v4 joint (allele-pinned, rsID-confirmed via GDM science-skills), retrieved 2026-06-07"
   },
   {
     "rsid": "rs1050828",
@@ -392,8 +512,18 @@
     "het_description": "Female heterozygote: variable expression due to X-inactivation. May have mild to moderate G6PD deficiency.",
     "hom_description": "Hemizygous male or homozygous female: G6PD deficiency. Avoid fava beans, certain drugs (primaquine, sulfonamides, dapsone, nitrofurantoin). Risk of hemolytic crises.",
     "odds_ratio": null,
-    "population_frequency": 0.10,
-    "source": "ClinVar, OMIM"
+    "population_frequency": 0.1,
+    "source": "ClinVar, OMIM",
+    "clinvar_xref": {
+      "classification": "Likely pathogenic",
+      "review_status": "criteria provided, single submitter",
+      "last_evaluated": "2022/08/12 00:00",
+      "retrieved": "2026-06-07"
+    },
+    "gnomad_af": 0.006443034878493799,
+    "gnomad_af_popmax": 0.12037137000000002,
+    "gnomad_af_popmax_pop": "afr",
+    "gnomad_af_source": "gnomAD v4 joint (allele-pinned, rsID-confirmed via GDM science-skills), retrieved 2026-06-07"
   },
   {
     "rsid": "rs5030868",
@@ -411,14 +541,24 @@
     "hom_description": "Hemizygous male or homozygous female: severe G6PD deficiency. Strict avoidance of oxidative triggers required.",
     "odds_ratio": null,
     "population_frequency": 0.04,
-    "source": "ClinVar, OMIM"
+    "source": "ClinVar, OMIM",
+    "clinvar_xref": {
+      "classification": "Likely pathogenic",
+      "review_status": "criteria provided, single submitter",
+      "last_evaluated": "2022/08/12 00:00",
+      "retrieved": "2026-06-07"
+    },
+    "gnomad_af": 0.0014093797737056851,
+    "gnomad_af_popmax": 0.037061430000000076,
+    "gnomad_af_popmax_pop": "mid",
+    "gnomad_af_source": "gnomAD v4 joint (allele-pinned, rsID-confirmed via GDM science-skills), retrieved 2026-06-07"
   },
   {
     "rsid": "rs11591147",
     "gene": "PCSK9",
     "variant_name": "PCSK9 R46L",
     "condition": "Familial Hypercholesterolemia (protective)",
-    "significance": "Likely pathogenic",
+    "significance": "Protective",
     "risk_allele": "T",
     "normal_allele": "G",
     "inheritance": "AD",
@@ -427,9 +567,20 @@
     "description": "Loss-of-function variant in PCSK9 that lowers LDL cholesterol by ~15-28%. Associated with significant reduction in coronary artery disease risk.",
     "het_description": "One copy: LDL cholesterol reduced by ~15-28%. Up to 88% reduction in coronary heart disease risk in African Americans, 47% in Caucasians.",
     "hom_description": "Two copies: very low LDL cholesterol. No adverse health effects observed.",
-    "odds_ratio": 0.5,
+    "odds_ratio": 0.6,
     "population_frequency": 0.02,
-    "source": "ClinVar, GWAS Catalog"
+    "source": "ClinVar, GWAS Catalog",
+    "note": "Reclassified 2026-06-07: PCSK9 R46L is a protective loss-of-function allele (lowers LDL-C, reduces coronary disease risk). ClinVar: Benign/Likely benign.",
+    "clinvar_xref": {
+      "classification": "Benign/Likely benign",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "last_evaluated": "2026/02/03 00:00",
+      "retrieved": "2026-06-07"
+    },
+    "gnomad_af": 0.01486786579694924,
+    "gnomad_af_popmax": 0.01649444,
+    "gnomad_af_popmax_pop": "nfe",
+    "gnomad_af_source": "gnomAD v4 joint (allele-pinned, rsID-confirmed via GDM science-skills), retrieved 2026-06-07"
   },
   {
     "rsid": "rs515726",
@@ -446,7 +597,7 @@
     "het_description": "One copy: moderately elevated LDL cholesterol. Increased cardiovascular risk. Statin therapy may be beneficial.",
     "hom_description": "Two copies: significantly elevated LDL cholesterol. Cardiovascular screening and lipid management recommended.",
     "odds_ratio": 1.5,
-    "population_frequency": 0.10,
+    "population_frequency": 0.1,
     "source": "GWAS Catalog"
   },
   {
@@ -464,8 +615,14 @@
     "het_description": "Intermediate bronchodilator response. May need dose adjustment for beta-agonists.",
     "hom_description": "Reduced response to short-acting beta-agonists. Consider alternative asthma management strategies.",
     "odds_ratio": 1.3,
-    "population_frequency": 0.40,
-    "source": "PharmGKB"
+    "population_frequency": 0.4,
+    "source": "PharmGKB",
+    "clinvar_xref": {
+      "classification": "drug response",
+      "review_status": "reviewed by expert panel",
+      "last_evaluated": "2021/03/24 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs4149056",
@@ -483,7 +640,13 @@
     "hom_description": "Poor statin transporter function. 16.9x increased simvastatin myopathy risk. Avoid simvastatin. Use pravastatin or rosuvastatin at reduced doses.",
     "odds_ratio": 4.5,
     "population_frequency": 0.14,
-    "source": "CPIC, PharmGKB"
+    "source": "CPIC, PharmGKB",
+    "clinvar_xref": {
+      "classification": "drug response",
+      "review_status": "reviewed by expert panel",
+      "last_evaluated": "2022/02/15 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs12979860",
@@ -500,8 +663,14 @@
     "het_description": "CT genotype: intermediate response to interferon-based HCV therapy. ~50% SVR rate with pegIFN/RBV.",
     "hom_description": "TT genotype: poor response to interferon therapy (~25% SVR). CC genotype (favorable): ~80% SVR. Direct-acting antivirals now preferred regardless of genotype.",
     "odds_ratio": 2.0,
-    "population_frequency": 0.30,
-    "source": "GWAS Catalog, CPIC"
+    "population_frequency": 0.3,
+    "source": "GWAS Catalog, CPIC",
+    "clinvar_xref": {
+      "classification": "drug response",
+      "review_status": "reviewed by expert panel",
+      "last_evaluated": "2021/03/24 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs1801282",
@@ -519,7 +688,13 @@
     "hom_description": "Pro12/Pro12: ~1.25x increased T2D risk. Weight management and physical activity strongly recommended.",
     "odds_ratio": 1.25,
     "population_frequency": 0.85,
-    "source": "GWAS Catalog"
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "Benign/Likely benign",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "last_evaluated": "2026/02/04 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs7903146",
@@ -536,8 +711,14 @@
     "het_description": "One risk allele: ~1.4x increased T2D risk. Lifestyle intervention can significantly reduce risk.",
     "hom_description": "Two risk alleles: ~2x increased T2D risk. Active lifestyle management, glucose monitoring, and dietary modifications strongly recommended.",
     "odds_ratio": 1.4,
-    "population_frequency": 0.30,
-    "source": "GWAS Catalog"
+    "population_frequency": 0.3,
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "Likely risk allele",
+      "review_status": "no assertion criteria provided",
+      "last_evaluated": "2011/01/09 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs1800497",
@@ -554,8 +735,14 @@
     "het_description": "One copy: modestly reduced D2 receptor density. Slight increase in susceptibility to addictive behaviors.",
     "hom_description": "Two copies: ~30-40% reduced D2 receptor density. Increased risk for substance dependence and reward-seeking behavior.",
     "odds_ratio": 1.3,
-    "population_frequency": 0.20,
-    "source": "GWAS Catalog"
+    "population_frequency": 0.2,
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "Benign",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "last_evaluated": "2013/04/16 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs1800795",
@@ -572,8 +759,14 @@
     "het_description": "Intermediate IL-6 expression. Mildly altered inflammatory response.",
     "hom_description": "CC genotype: lower IL-6 levels at baseline but altered inflammatory regulation. May affect cardiovascular and metabolic risk.",
     "odds_ratio": 1.2,
-    "population_frequency": 0.40,
-    "source": "GWAS Catalog"
+    "population_frequency": 0.4,
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "other; risk factor",
+      "review_status": "no assertion criteria provided",
+      "last_evaluated": "2022/12/10 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs1800629",
@@ -591,7 +784,13 @@
     "hom_description": "Significantly increased TNF-alpha production. Higher risk of rheumatoid arthritis, IBD, and other autoimmune conditions.",
     "odds_ratio": 1.5,
     "population_frequency": 0.15,
-    "source": "GWAS Catalog"
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "drug response",
+      "review_status": "reviewed by expert panel",
+      "last_evaluated": "2021/03/24 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs9939609",
@@ -626,8 +825,14 @@
     "het_description": "One risk allele: ~1.14x increased T2D risk.",
     "hom_description": "Two risk alleles: ~1.3x increased T2D risk. Modest contribution to overall diabetes susceptibility.",
     "odds_ratio": 1.14,
-    "population_frequency": 0.30,
-    "source": "GWAS Catalog"
+    "population_frequency": 0.3,
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "risk factor",
+      "review_status": "no assertion criteria provided",
+      "last_evaluated": "2007/06/01 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs10811661",
@@ -662,8 +867,14 @@
     "het_description": "One risk allele: ~1.3x increased CAD risk. Standard cardiovascular risk management recommended.",
     "hom_description": "Two risk alleles: ~1.6x increased CAD risk. Enhanced cardiovascular screening and risk factor management recommended.",
     "odds_ratio": 1.3,
-    "population_frequency": 0.50,
-    "source": "GWAS Catalog"
+    "population_frequency": 0.5,
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "risk factor",
+      "review_status": "no assertion criteria provided",
+      "last_evaluated": "1/01/01 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs10757274",
@@ -681,7 +892,13 @@
     "hom_description": "Two risk alleles: ~1.6x increased MI risk. Comprehensive cardiovascular risk assessment recommended.",
     "odds_ratio": 1.25,
     "population_frequency": 0.48,
-    "source": "GWAS Catalog"
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "risk factor",
+      "review_status": "no assertion criteria provided",
+      "last_evaluated": "1/01/01 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs2200733",
@@ -716,7 +933,7 @@
     "het_description": "One risk allele: ~1.2x increased colorectal cancer risk. Adhere to recommended screening schedules.",
     "hom_description": "Two risk alleles: ~1.5x increased colorectal and prostate cancer risk. Consider earlier initiation of screening.",
     "odds_ratio": 1.2,
-    "population_frequency": 0.50,
+    "population_frequency": 0.5,
     "source": "GWAS Catalog"
   },
   {
@@ -734,8 +951,14 @@
     "het_description": "One risk allele: ~1.26x increased breast cancer risk.",
     "hom_description": "Two risk alleles: ~1.6x increased breast cancer risk. Regular mammographic screening recommended.",
     "odds_ratio": 1.26,
-    "population_frequency": 0.40,
-    "source": "GWAS Catalog"
+    "population_frequency": 0.4,
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "Benign",
+      "review_status": "criteria provided, single submitter",
+      "last_evaluated": "2026/01/19 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs4880",
@@ -753,7 +976,13 @@
     "hom_description": "Val/Val: reduced SOD2 activity. May benefit from dietary antioxidants. Associated with modestly increased cancer and cardiovascular risk.",
     "odds_ratio": 1.1,
     "population_frequency": 0.47,
-    "source": "GWAS Catalog"
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "Conflicting classifications of pathogenicity; risk factor",
+      "review_status": "no assertion criteria provided",
+      "last_evaluated": "2007/01/01 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs1229984",
@@ -771,7 +1000,13 @@
     "hom_description": "Very rapid alcohol metabolism. Strong flushing response. Strongly protective against alcoholism. Common in East Asian populations.",
     "odds_ratio": 0.3,
     "population_frequency": 0.25,
-    "source": "GWAS Catalog"
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "drug response",
+      "review_status": "reviewed by expert panel",
+      "last_evaluated": "2021/03/24 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs17822931",
@@ -788,8 +1023,14 @@
     "het_description": "Wet earwax type. Normal apocrine secretion. Marginal breast cancer risk.",
     "hom_description": "CC (wet earwax): slightly increased breast cancer risk. TT (dry earwax): reduced risk and minimal body odor.",
     "odds_ratio": 1.2,
-    "population_frequency": 0.70,
-    "source": "GWAS Catalog"
+    "population_frequency": 0.7,
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "Benign",
+      "review_status": "criteria provided, single submitter",
+      "last_evaluated": "1/01/01 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs4988235",
@@ -806,8 +1047,14 @@
     "het_description": "Lactase persistent. Can digest lactose normally into adulthood.",
     "hom_description": "GG: lactose intolerant (ancestral state). Lactase production declines after weaning. Avoid dairy or use lactase supplements. AA: lactase persistent.",
     "odds_ratio": null,
-    "population_frequency": 0.50,
-    "source": "OMIM"
+    "population_frequency": 0.5,
+    "source": "OMIM",
+    "clinvar_xref": {
+      "classification": "association",
+      "review_status": "no assertion criteria provided",
+      "last_evaluated": "2021/01/26 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs12913832",
@@ -824,8 +1071,14 @@
     "het_description": "AG: green, hazel, or intermediate eye color. Variable expression.",
     "hom_description": "GG: ~72% chance of blue eyes. AA: ~95% chance of brown eyes.",
     "odds_ratio": null,
-    "population_frequency": 0.40,
-    "source": "GWAS Catalog"
+    "population_frequency": 0.4,
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "association",
+      "review_status": "no assertion criteria provided",
+      "last_evaluated": "2018/02/13 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs1805007",
@@ -843,7 +1096,13 @@
     "hom_description": "Two copies: likely red hair, very fair skin, heavy freckling. ~3-4x increased melanoma risk. Strict sun protection essential.",
     "odds_ratio": 2.0,
     "population_frequency": 0.08,
-    "source": "GWAS Catalog"
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "Conflicting classifications of pathogenicity",
+      "review_status": "criteria provided, conflicting classifications",
+      "last_evaluated": "2026/02/03 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs1815739",
@@ -861,7 +1120,13 @@
     "hom_description": "CC: full alpha-actinin-3 expression. Sprint/power advantage. TT: no alpha-actinin-3. Endurance advantage. ~18% of population.",
     "odds_ratio": null,
     "population_frequency": 0.42,
-    "source": "GWAS Catalog"
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "Benign",
+      "review_status": "criteria provided, single submitter",
+      "last_evaluated": "2025/02/16 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs4680",
@@ -878,8 +1143,14 @@
     "het_description": "Val/Met: intermediate dopamine metabolism. Balanced stress response and cognitive function.",
     "hom_description": "Val/Val: rapid dopamine clearance. Better stress resilience but lower baseline cognitive performance. Met/Met: slow dopamine clearance. Superior working memory but more stress-sensitive.",
     "odds_ratio": null,
-    "population_frequency": 0.50,
-    "source": "GWAS Catalog"
+    "population_frequency": 0.5,
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "Benign",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "last_evaluated": "1/01/01 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs4961",
@@ -896,8 +1167,14 @@
     "het_description": "Intermediate salt sensitivity. Moderate sodium restriction may benefit blood pressure control.",
     "hom_description": "Trp/Trp: salt-sensitive hypertension. Sodium restriction particularly effective. Enhanced response to thiazide diuretics.",
     "odds_ratio": 1.4,
-    "population_frequency": 0.20,
-    "source": "GWAS Catalog"
+    "population_frequency": 0.2,
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "drug response",
+      "review_status": "reviewed by expert panel",
+      "last_evaluated": "2021/03/24 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs662799",
@@ -915,7 +1192,13 @@
     "hom_description": "Two risk alleles: ~30-40% higher triglycerides. Increased cardiovascular risk. Omega-3 supplementation and dietary management recommended.",
     "odds_ratio": 1.4,
     "population_frequency": 0.08,
-    "source": "GWAS Catalog"
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "Benign",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "last_evaluated": "2018/08/30 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs1800896",
@@ -933,7 +1216,13 @@
     "hom_description": "AA: low IL-10 production. May have stronger inflammatory responses and slightly increased autoimmune susceptibility.",
     "odds_ratio": 1.2,
     "population_frequency": 0.45,
-    "source": "GWAS Catalog"
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "Pathogenic",
+      "review_status": "criteria provided, single submitter",
+      "last_evaluated": "2025/09/17 00:00",
+      "retrieved": "2026-06-07"
+    }
   },
   {
     "rsid": "rs1695",
@@ -951,6 +1240,12 @@
     "hom_description": "Val/Val: reduced detoxification capacity for certain carcinogens. Increased susceptibility to some environmentally-triggered cancers.",
     "odds_ratio": 1.2,
     "population_frequency": 0.35,
-    "source": "GWAS Catalog"
+    "source": "GWAS Catalog",
+    "clinvar_xref": {
+      "classification": "Benign",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "last_evaluated": "2026/02/04 00:00",
+      "retrieved": "2026-06-07"
+    }
   }
 ]
