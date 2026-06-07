@@ -290,6 +290,24 @@ function renderOverview(data) {
 }
 
 // ---- Health Risks Tab ----
+// Predicted regulatory impact (AlphaGenome, pre-computed offline). Returns an
+// expandable health-section block, or '' when there's no notable prediction.
+function regulatoryHtml(reg) {
+    if (!reg || !reg.gene) return '';
+    const arrow = reg.direction === 'decreased' ? '↓' : '↑';
+    const dir = reg.direction === 'decreased' ? 'Decreased' : 'Increased';
+    const geneLabel = reg.nearby_gene
+        ? `${esc(reg.gene)} <span class="text-[10px] uppercase tracking-wider text-stone-400 font-bold">(nearby gene)</span>`
+        : `<strong>${esc(reg.gene)}</strong>`;
+    const splice = reg.affects_splicing ? ' It may also alter splicing.' : '';
+    return `
+        <div class="health-section">
+            <div class="health-section-label">Predicted regulatory impact — AlphaGenome</div>
+            <p><strong>${arrow} ${dir}</strong> expression of ${geneLabel} predicted${reg.tissue ? `, most strongly in <strong>${escPlain(reg.tissue)}</strong>` : ''}.${splice}</p>
+            <p class="text-xs text-stone-500 mt-1">Sequence-based prediction from Google DeepMind's AlphaGenome, pre-computed offline — not a clinical measurement.</p>
+        </div>`;
+}
+
 function renderHealth(risks) {
     const container = document.getElementById('health-results');
     const emptyEl = document.getElementById('health-empty');
@@ -388,6 +406,7 @@ function renderHealth(risks) {
                         <div class="health-section-label">About this variant</div>
                         <p>${escPlain(r.risk_description)}</p>
                     </div>` : ''}
+                ${regulatoryHtml(r.regulatory)}
                 <div class="health-section">
                     <div class="health-section-label">Your result</div>
                     <p>Your genotype is <strong>${esc(r.your_genotype || '')}</strong>
@@ -725,6 +744,11 @@ function renderTraits(traits) {
             <h3 class="font-bold text-lg tracking-tight text-primary mb-1">${esc(t.name || t.trait || '')}</h3>
             <div class="text-2xl font-extrabold text-primary mb-3">${esc(t.result || t.value || '—')}</div>
             <p class="text-sm text-on-surface-variant leading-relaxed mb-4">${esc(t.explanation || t.description || '')}</p>
+            ${t.regulatory && t.regulatory.gene ? `
+            <p class="text-xs text-secondary/90 mb-3 flex items-center gap-1">
+                <span class="material-symbols-outlined" style="font-size:14px">biotech</span>
+                <span><strong>AlphaGenome:</strong> ${t.regulatory.direction === 'decreased' ? '↓' : '↑'} ${esc(t.regulatory.gene)} expression${t.regulatory.tissue ? ` (${esc(t.regulatory.tissue)})` : ''}</span>
+            </p>` : ''}
             ${freqPct !== null ? `
             <div class="flex items-center gap-2 text-[10px] uppercase tracking-wider text-stone-500">
                 <span>Pop. frequency:</span>

@@ -13,6 +13,7 @@ from typing import Dict, Tuple
 logger = logging.getLogger(__name__)
 
 from config import CURATED_DIR
+from analyzers.alphagenome_scores import get_regulatory
 
 TRAIT_CATEGORIES = ["Nutrition", "Physical", "Athletic", "Sleep", "Behavioral"]
 
@@ -102,6 +103,7 @@ def _analyze_curated_traits(
             "explanation": explanation,
             "population_frequency": variant.get("population_frequency", {}),
             "confidence": variant.get("confidence", "moderate"),
+            "regulatory": get_regulatory(rsid),
         })
 
     return findings

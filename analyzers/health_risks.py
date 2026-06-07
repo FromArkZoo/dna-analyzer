@@ -18,6 +18,7 @@ from analyzers.risk_calculator import (
     confidence_descriptor,
     format_risk_percentage,
 )
+from analyzers.alphagenome_scores import get_regulatory
 
 # APOE allele definitions: rs429358 + rs7412
 APOE_SNPS = {
@@ -126,6 +127,7 @@ def _analyze_curated_variants(
             "odds_ratio": odds_ratio,
             "population_frequency": baseline_rate,
             "absolute_risk": risk_info["absolute_risk_pct"],
+            "regulatory": get_regulatory(rsid),
         })
 
     return findings
@@ -205,6 +207,7 @@ def _analyze_clinvar(
                     "odds_ratio": odds_ratio,
                     "population_frequency": 0.0,
                     "absolute_risk": "N/A",
+                    "regulatory": get_regulatory(rsid),
                 })
 
         conn.close()
