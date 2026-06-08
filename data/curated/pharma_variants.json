@@ -887,7 +887,7 @@
     "description": "Single base deletion (818delA) in exon 5 causing frameshift and premature termination."
   },
   {
-    "rsid": "rs3093105",
+    "rsid": "rs2108622",
     "gene": "CYP4F2",
     "star_allele": "*3",
     "effect": "Decreased function — reduced vitamin K1 metabolism",
@@ -900,21 +900,6 @@
     "clinical_significance": "Found in ~20-30% of Caucasians. Accounts for ~1-2% of warfarin dose variability. Included in refined pharmacogenomic dosing algorithms.",
     "guideline_source": "CPIC",
     "description": "Val433Met substitution reducing CYP4F2 metabolism of vitamin K1 oxidase activity."
-  },
-  {
-    "rsid": "rs4803419",
-    "gene": "CYP2C19",
-    "star_allele": "*4B",
-    "effect": "Non-functional allele — reduced enzyme activity",
-    "drugs": [
-      "clopidogrel",
-      "voriconazole",
-      "omeprazole"
-    ],
-    "metabolizer_impact": "Contributes to poor metabolizer status for CYP2C19 substrates.",
-    "clinical_significance": "Rare variant included in expanded CYP2C19 genotyping panels.",
-    "guideline_source": "CPIC",
-    "description": "Variant defining the *4B haplotype with reduced CYP2C19 activity."
   },
   {
     "rsid": "rs28399504",
@@ -1212,22 +1197,6 @@
     "description": "Near-gene variant affecting melanocortin-4 receptor regulation and antipsychotic-induced metabolic effects."
   },
   {
-    "rsid": "rs4633",
-    "gene": "COMT",
-    "star_allele": null,
-    "effect": "Altered catecholamine metabolism affecting opioid dose requirements",
-    "drugs": [
-      "morphine",
-      "oxycodone",
-      "fentanyl",
-      "codeine"
-    ],
-    "metabolizer_impact": "Low COMT activity (Met/Met at Val158Met): may require lower opioid doses due to higher pain sensitivity but increased opioid effect. High COMT: may need higher doses.",
-    "clinical_significance": "Emerging evidence for COMT genotype-guided opioid dosing. Currently used primarily in research settings.",
-    "guideline_source": "CPIC",
-    "description": "Variant in linkage disequilibrium with Val158Met (rs4680) affecting catecholamine and endorphin metabolism."
-  },
-  {
     "rsid": "rs2032583",
     "gene": "ABCB1",
     "star_allele": null,
@@ -1313,20 +1282,6 @@
     "description": "Synonymous variant (1236C>T, Gly412Gly) affecting mRNA folding and P-glycoprotein expression."
   },
   {
-    "rsid": "rs7668258",
-    "gene": "VKORC1",
-    "star_allele": null,
-    "effect": "Part of VKORC1 haplotype affecting warfarin sensitivity",
-    "drugs": [
-      "warfarin",
-      "acenocoumarol"
-    ],
-    "metabolizer_impact": "Contributes to VKORC1 haplotype determination. In LD with rs9923231.",
-    "clinical_significance": "Used in some pharmacogenomic platforms as part of VKORC1 haplotype analysis.",
-    "guideline_source": "CPIC",
-    "description": "Intronic variant used for VKORC1 haplotype assignment."
-  },
-  {
     "rsid": "rs4149117",
     "gene": "SLCO1B3",
     "star_allele": null,
@@ -1360,7 +1315,7 @@
     "description": "Promoter variant (-24C>T) reducing ABCC2/MRP2 transcription and biliary drug excretion."
   },
   {
-    "rsid": "rs4986913",
+    "rsid": "rs4987161",
     "gene": "CYP3A4",
     "star_allele": "*17",
     "effect": "Decreased function allele",
@@ -1373,21 +1328,6 @@
     "clinical_significance": "Rare variant. Primarily found in specific populations.",
     "guideline_source": "CPIC",
     "description": "Phe189Ser substitution reducing CYP3A4 catalytic activity."
-  },
-  {
-    "rsid": "rs2725264",
-    "gene": "CYP2C19",
-    "star_allele": null,
-    "effect": "Tag SNP for CYP2C19 haplotypes",
-    "drugs": [
-      "clopidogrel",
-      "voriconazole",
-      "PPIs"
-    ],
-    "metabolizer_impact": "Used in combination with other SNPs for accurate CYP2C19 metabolizer status prediction.",
-    "clinical_significance": "Part of expanded CYP2C19 genotyping panels.",
-    "guideline_source": "CPIC",
-    "description": "Intronic variant contributing to CYP2C19 haplotype determination."
   },
   {
     "rsid": "rs3758581",
@@ -1454,20 +1394,6 @@
     "description": "Asp85Tyr substitution reducing UGT2B15 glucuronidation activity."
   },
   {
-    "rsid": "rs12720461",
-    "gene": "DPYD",
-    "star_allele": null,
-    "effect": "Decreased function — reduced DPD expression",
-    "drugs": [
-      "5-fluorouracil",
-      "capecitabine"
-    ],
-    "metabolizer_impact": "Reduced DPD activity. Dose modification may be needed for fluoropyrimidines.",
-    "clinical_significance": "Rare variant with evidence of reduced DPD function.",
-    "guideline_source": "CPIC",
-    "description": "Promoter variant affecting DPYD transcription."
-  },
-  {
     "rsid": "rs2297595",
     "gene": "DPYD",
     "star_allele": null,
@@ -1516,7 +1442,7 @@
   {
     "rsid": "rs7900194",
     "gene": "CYP2C9",
-    "star_allele": "*11B",
+    "star_allele": "*8",
     "effect": "Decreased function allele",
     "drugs": [
       "warfarin",
@@ -1525,7 +1451,7 @@
     "metabolizer_impact": "Reduced CYP2C9 activity. May require warfarin dose reduction.",
     "clinical_significance": "Found in ~2% of African Americans. Contributes to warfarin dose variability in diverse populations.",
     "guideline_source": "CPIC",
-    "description": "Arg150Leu substitution reducing CYP2C9 activity."
+    "description": "Arg150His substitution reducing CYP2C9 activity."
   },
   {
     "rsid": "rs1057910",
