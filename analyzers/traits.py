@@ -14,6 +14,7 @@ logger = logging.getLogger(__name__)
 
 from config import CURATED_DIR
 from analyzers.alphagenome_scores import get_regulatory
+from analyzers.vep_annotations import get_consequence
 
 TRAIT_CATEGORIES = ["Nutrition", "Physical", "Athletic", "Sleep", "Behavioral"]
 
@@ -104,6 +105,7 @@ def _analyze_curated_traits(
             "population_frequency": variant.get("population_frequency", {}),
             "confidence": variant.get("confidence", "moderate"),
             "regulatory": get_regulatory(rsid),
+            "consequence": get_consequence(rsid),
         })
 
     return findings

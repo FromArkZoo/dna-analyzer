@@ -308,6 +308,22 @@ function regulatoryHtml(reg) {
         </div>`;
 }
 
+// Molecular consequence (Ensembl VEP, pre-computed offline): the coding/protein
+// view that complements the AlphaGenome regulatory view. Returns '' if absent.
+function consequenceHtml(c) {
+    if (!c || !c.consequence) return '';
+    const aa = c.amino_acids ? ` <span class="font-mono text-xs">(${esc(c.amino_acids)})</span>` : '';
+    const am = c.alphamissense_class
+        ? ` · <strong>AlphaMissense:</strong> ${esc(c.alphamissense_class)}${c.alphamissense_score != null ? ` (${esc(String(c.alphamissense_score))})` : ''}`
+        : '';
+    const pp = (!c.alphamissense_class && c.polyphen) ? ` · PolyPhen: ${esc(c.polyphen)}` : '';
+    return `
+        <div class="health-section">
+            <div class="health-section-label">Molecular consequence — Ensembl VEP</div>
+            <p><strong>${esc(c.consequence)}</strong>${aa}${am}${pp}.</p>
+        </div>`;
+}
+
 function renderHealth(risks) {
     const container = document.getElementById('health-results');
     const emptyEl = document.getElementById('health-empty');
@@ -406,6 +422,7 @@ function renderHealth(risks) {
                         <div class="health-section-label">About this variant</div>
                         <p>${escPlain(r.risk_description)}</p>
                     </div>` : ''}
+                ${consequenceHtml(r.consequence)}
                 ${regulatoryHtml(r.regulatory)}
                 <div class="health-section">
                     <div class="health-section-label">Your result</div>
@@ -749,6 +766,8 @@ function renderTraits(traits) {
                 <span class="material-symbols-outlined" style="font-size:14px">biotech</span>
                 <span><strong>AlphaGenome:</strong> ${t.regulatory.direction === 'decreased' ? '↓' : '↑'} ${esc(t.regulatory.gene)} expression${t.regulatory.tissue ? ` (${esc(t.regulatory.tissue)})` : ''}</span>
             </p>` : ''}
+            ${t.consequence && t.consequence.consequence ? `
+            <p class="text-xs text-stone-500 mb-3"><strong>VEP:</strong> ${esc(t.consequence.consequence)}${t.consequence.alphamissense_class ? ` · AlphaMissense ${esc(t.consequence.alphamissense_class)}` : ''}</p>` : ''}
             ${freqPct !== null ? `
             <div class="flex items-center gap-2 text-[10px] uppercase tracking-wider text-stone-500">
                 <span>Pop. frequency:</span>

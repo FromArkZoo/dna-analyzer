@@ -20,6 +20,7 @@ from analyzers.risk_calculator import (
 )
 from analyzers.alphagenome_scores import get_regulatory
 from analyzers.disease_prevalence import disease_baseline
+from analyzers.vep_annotations import get_consequence
 
 # APOE allele definitions: rs429358 + rs7412
 APOE_SNPS = {
@@ -142,6 +143,7 @@ def _analyze_curated_variants(
             "baseline_condition": base_name,
             "absolute_risk": absolute_risk,
             "regulatory": get_regulatory(rsid),
+            "consequence": get_consequence(rsid),
         })
 
     return findings
@@ -222,6 +224,7 @@ def _analyze_clinvar(
                     "population_frequency": 0.0,
                     "absolute_risk": "N/A",
                     "regulatory": get_regulatory(rsid),
+                    "consequence": get_consequence(rsid),
                 })
 
         conn.close()

@@ -1,0 +1,5757 @@
+[
+  {
+    "rsid": "rs80357906",
+    "genes": [
+      "BRCA1"
+    ],
+    "consequence": "frameshift_variant",
+    "gene": "BRCA1",
+    "impact": "HIGH",
+    "amino_acids": "S/SX",
+    "loeuf": 0.833,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs80357914",
+    "genes": [
+      "BRCA1"
+    ],
+    "consequence": "frameshift_variant",
+    "gene": "BRCA1",
+    "impact": "HIGH",
+    "amino_acids": "L/LX",
+    "loeuf": 0.833,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs28897696",
+    "genes": [
+      "BRCA2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "BRCA1",
+    "impact": "MODERATE",
+    "amino_acids": "A/V",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.6381
+    },
+    "sift": "deleterious",
+    "polyphen": "benign",
+    "loeuf": 0.833,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs80357713",
+    "genes": [
+      "BRCA1"
+    ],
+    "consequence": "frameshift_variant",
+    "gene": "BRCA1",
+    "impact": "HIGH",
+    "amino_acids": "L/LX",
+    "loeuf": 0.833,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs429358",
+    "genes": [
+      "APOE"
+    ],
+    "consequence": "missense_variant",
+    "gene": "APOE",
+    "impact": "MODERATE",
+    "amino_acids": "C/R",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0365
+    },
+    "sift": "tolerated",
+    "loeuf": 1.216,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7412",
+    "genes": [
+      "APOE"
+    ],
+    "consequence": "missense_variant",
+    "gene": "APOE",
+    "impact": "MODERATE",
+    "amino_acids": "R/C",
+    "alphamissense": {
+      "class": "ambiguous",
+      "score": 0.4222
+    },
+    "sift": "deleterious",
+    "loeuf": 1.216,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6025",
+    "genes": [
+      "F5"
+    ],
+    "consequence": "missense_variant",
+    "gene": "F5",
+    "impact": "MODERATE",
+    "amino_acids": "R/L",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.6379
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 0.704,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1801133",
+    "genes": [
+      "MTHFR"
+    ],
+    "consequence": "missense_variant",
+    "gene": "MTHFR",
+    "impact": "MODERATE",
+    "amino_acids": "A/V",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.6324
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 0.831,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1801131",
+    "genes": [
+      "MTHFR"
+    ],
+    "consequence": "missense_variant",
+    "gene": "MTHFR",
+    "impact": "MODERATE",
+    "amino_acids": "E/A",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0816
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.831,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1800562",
+    "genes": [
+      "HFE"
+    ],
+    "consequence": "missense_variant",
+    "gene": "HFE",
+    "impact": "MODERATE",
+    "amino_acids": "C/Y",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.9585
+    },
+    "sift": "deleterious",
+    "polyphen": "benign",
+    "loeuf": 1.027,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1799945",
+    "genes": [
+      "HFE"
+    ],
+    "consequence": "missense_variant",
+    "gene": "HFE",
+    "impact": "MODERATE",
+    "amino_acids": "H/D",
+    "alphamissense": {
+      "class": "ambiguous",
+      "score": 0.455
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.027,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2187668",
+    "genes": [
+      "HLA-DQA1"
+    ],
+    "consequence": "intron_variant",
+    "gene": "HLA-DQA1",
+    "impact": "MODIFIER",
+    "loeuf": 1.911,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10490924",
+    "genes": [
+      "ARMS2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "ARMS2",
+    "impact": "MODERATE",
+    "amino_acids": "A/P",
+    "alphamissense": {
+      "class": "ambiguous",
+      "score": 0.3458
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "possibly_damaging",
+    "loeuf": 1.815,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1061170",
+    "genes": [
+      "CFH"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CFH",
+    "impact": "MODERATE",
+    "amino_acids": "H/N",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0694
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.43,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs28929474",
+    "genes": [
+      "SERPINA1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "SERPINA1",
+    "impact": "MODERATE",
+    "amino_acids": "E/Q",
+    "alphamissense": {
+      "class": "ambiguous",
+      "score": 0.4965
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.113,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs334",
+    "genes": [
+      "HBB"
+    ],
+    "consequence": "missense_variant",
+    "gene": "HBB",
+    "impact": "MODERATE",
+    "amino_acids": "E/V",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.2229
+    },
+    "sift": "deleterious_low_confidence",
+    "loeuf": 1.952,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1799963",
+    "genes": [
+      "F2"
+    ],
+    "consequence": "3_prime_UTR_variant",
+    "gene": "F2",
+    "impact": "MODIFIER",
+    "loeuf": 0.552,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs121909001",
+    "genes": [
+      "CFTR"
+    ],
+    "consequence": "inframe_deletion",
+    "gene": "CFTR",
+    "impact": "MODERATE",
+    "amino_acids": "F/-",
+    "loeuf": 1.145,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs75961395",
+    "genes": [
+      "CFTR"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CFTR",
+    "impact": "MODERATE",
+    "amino_acids": "G/E",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.9881
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.145,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs113993960",
+    "genes": [
+      "CFTR"
+    ],
+    "consequence": "inframe_insertion",
+    "gene": "CFTR",
+    "impact": "MODERATE",
+    "amino_acids": "F/FF",
+    "loeuf": 1.145,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1050828",
+    "genes": [
+      "G6PD"
+    ],
+    "consequence": "missense_variant",
+    "gene": "G6PD",
+    "impact": "MODERATE",
+    "amino_acids": "V/M",
+    "alphamissense": {
+      "class": "ambiguous",
+      "score": 0.4927
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "benign",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs5030868",
+    "genes": [
+      "G6PD"
+    ],
+    "consequence": "missense_variant",
+    "gene": "G6PD",
+    "impact": "MODERATE",
+    "amino_acids": "S/F",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.3196
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "benign",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11591147",
+    "genes": [
+      "PCSK9"
+    ],
+    "consequence": "missense_variant",
+    "gene": "PCSK9",
+    "impact": "MODERATE",
+    "amino_acids": "R/H",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0867
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.25,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs515726",
+    "genes": [
+      "LDLR"
+    ],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1042713",
+    "genes": [
+      "ADRB2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "ADRB2",
+    "impact": "MODERATE",
+    "amino_acids": "G/R",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0906
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.901,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4149056",
+    "genes": [
+      "SLCO1B1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "SLCO1B1",
+    "impact": "MODERATE",
+    "amino_acids": "V/E",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.9241
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.425,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12979860",
+    "genes": [
+      "IFNL3"
+    ],
+    "consequence": "intron_variant",
+    "gene": "IFNL4",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1801282",
+    "genes": [
+      "PPARG"
+    ],
+    "consequence": "missense_variant",
+    "gene": "PPARG",
+    "impact": "MODERATE",
+    "amino_acids": "P/A",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.053
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 0.575,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7903146",
+    "genes": [
+      "TCF7L2"
+    ],
+    "consequence": "intron_variant",
+    "gene": "TCF7L2",
+    "impact": "MODIFIER",
+    "loeuf": 0.25,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1800497",
+    "genes": [
+      "ANKK1/DRD2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "ANKK1",
+    "impact": "MODERATE",
+    "amino_acids": "E/K",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0528
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.382,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1800795",
+    "genes": [
+      "IL6"
+    ],
+    "consequence": "intron_variant",
+    "gene": "IL6",
+    "impact": "MODIFIER",
+    "loeuf": 0.881,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1800629",
+    "genes": [
+      "TNF"
+    ],
+    "consequence": "upstream_gene_variant",
+    "gene": "TNF",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs9939609",
+    "genes": [
+      "FTO"
+    ],
+    "consequence": "intron_variant",
+    "gene": "FTO",
+    "impact": "MODIFIER",
+    "loeuf": 0.924,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4402960",
+    "genes": [
+      "IGF2BP2"
+    ],
+    "consequence": "intron_variant",
+    "gene": "IGF2BP2",
+    "impact": "MODIFIER",
+    "loeuf": 0.311,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10811661",
+    "genes": [
+      "CDKN2A/B"
+    ],
+    "consequence": "intron_variant",
+    "gene": "CDKN2B-AS1",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1333049",
+    "genes": [
+      "CDKN2B-AS1 (9p21)"
+    ],
+    "consequence": "intron_variant",
+    "gene": "CDKN2B-AS1",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10757274",
+    "genes": [
+      "CDKN2B-AS1 (9p21)"
+    ],
+    "consequence": "intron_variant",
+    "gene": "CDKN2B-AS1",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2200733",
+    "genes": [
+      "PITX2 (4q25)"
+    ],
+    "consequence": "intron_variant",
+    "gene": "LINC01438",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6983267",
+    "genes": [
+      "8q24 (MYC enhancer)"
+    ],
+    "consequence": "non_coding_transcript_exon_variant",
+    "gene": "CCAT2",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2981582",
+    "genes": [
+      "FGFR2"
+    ],
+    "consequence": "intron_variant",
+    "gene": "FGFR2",
+    "impact": "MODIFIER",
+    "loeuf": 0.185,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4880",
+    "genes": [
+      "SOD2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "SOD2",
+    "impact": "MODERATE",
+    "amino_acids": "V/A",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0655
+    },
+    "sift": "tolerated_low_confidence",
+    "polyphen": "benign",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1229984",
+    "genes": [
+      "ADH1B"
+    ],
+    "consequence": "missense_variant",
+    "gene": "ADH1B",
+    "impact": "MODERATE",
+    "amino_acids": "H/L",
+    "alphamissense": {
+      "class": "ambiguous",
+      "score": 0.4337
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 1.013,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs17822931",
+    "genes": [
+      "ABCC11"
+    ],
+    "consequence": "missense_variant",
+    "gene": "ABCC11",
+    "impact": "MODERATE",
+    "amino_acids": "G/R",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.8585
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.004,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4988235",
+    "genes": [
+      "MCM6/LCT"
+    ],
+    "consequence": "intron_variant",
+    "gene": "MCM6",
+    "impact": "MODIFIER",
+    "loeuf": 0.676,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12913832",
+    "genes": [
+      "HERC2",
+      "HERC2/OCA2"
+    ],
+    "consequence": "intron_variant",
+    "gene": "HERC2",
+    "impact": "MODIFIER",
+    "loeuf": 0.243,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1805007",
+    "genes": [
+      "MC1R"
+    ],
+    "consequence": "missense_variant",
+    "gene": "MC1R",
+    "impact": "MODERATE",
+    "amino_acids": "R/S",
+    "alphamissense": {
+      "class": "ambiguous",
+      "score": 0.4694
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.916,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1815739",
+    "genes": [
+      "ACTN3"
+    ],
+    "consequence": "stop_gained",
+    "gene": "ACTN3",
+    "impact": "HIGH",
+    "amino_acids": "R/*",
+    "loeuf": 0.9,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4680",
+    "genes": [
+      "COMT"
+    ],
+    "consequence": "missense_variant",
+    "gene": "COMT",
+    "impact": "MODERATE",
+    "amino_acids": "V/M",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1213
+    },
+    "sift": "deleterious",
+    "polyphen": "benign",
+    "loeuf": 1.055,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4961",
+    "genes": [
+      "ADD1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "ADD1",
+    "impact": "MODERATE",
+    "amino_acids": "G/R",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.2127
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "possibly_damaging",
+    "loeuf": 0.378,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs662799",
+    "genes": [
+      "APOA5"
+    ],
+    "consequence": "5_prime_UTR_variant",
+    "gene": "APOA5",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1800896",
+    "genes": [
+      "IL10"
+    ],
+    "consequence": "intron_variant",
+    "gene": "IL10",
+    "impact": "MODIFIER",
+    "loeuf": 0.701,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1695",
+    "genes": [
+      "GSTP1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "GSTP1",
+    "impact": "MODERATE",
+    "amino_acids": "I/V",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.14
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.413,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs762551",
+    "genes": [
+      "CYP1A2"
+    ],
+    "consequence": "5_prime_UTR_variant",
+    "gene": "CYP1A2",
+    "impact": "MODIFIER",
+    "loeuf": 1.355,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs671",
+    "genes": [
+      "ALDH2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "ALDH2",
+    "impact": "MODERATE",
+    "amino_acids": "E/K",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.8864
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "possibly_damaging",
+    "loeuf": 0.902,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs72921001",
+    "genes": [
+      "OR6A2"
+    ],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs713598",
+    "genes": [
+      "TAS2R38"
+    ],
+    "consequence": "missense_variant",
+    "gene": "TAS2R38",
+    "impact": "MODERATE",
+    "amino_acids": "A/S",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0901
+    },
+    "sift": "deleterious",
+    "polyphen": "benign",
+    "loeuf": 1.175,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs234706",
+    "genes": [
+      "CBS"
+    ],
+    "consequence": "synonymous_variant",
+    "gene": "CBS",
+    "impact": "LOW",
+    "amino_acids": "Y",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs602662",
+    "genes": [
+      "FUT2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "FUT2",
+    "impact": "MODERATE",
+    "amino_acids": "G/S",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1564
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.71,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12934922",
+    "genes": [
+      "BCMO1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "BCO1",
+    "impact": "MODERATE",
+    "amino_acids": "R/S",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.188
+    },
+    "sift": "deleterious",
+    "polyphen": "benign",
+    "loeuf": 1.17,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7501331",
+    "genes": [
+      "BCMO1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "BCO1",
+    "impact": "MODERATE",
+    "amino_acids": "A/V",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0983
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.17,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2282679",
+    "genes": [
+      "GC"
+    ],
+    "consequence": "intron_variant",
+    "gene": "GC",
+    "impact": "MODIFIER",
+    "loeuf": 1.492,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1544410",
+    "genes": [
+      "VDR"
+    ],
+    "consequence": "intron_variant",
+    "gene": "VDR",
+    "impact": "MODIFIER",
+    "loeuf": 0.711,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1801394",
+    "genes": [
+      "MTRR"
+    ],
+    "consequence": "missense_variant",
+    "gene": "MTRR",
+    "impact": "MODERATE",
+    "amino_acids": "I/M",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.2141
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 0.875,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4654748",
+    "genes": [
+      "NBPF3/ALPL"
+    ],
+    "consequence": "intron_variant",
+    "gene": "NBPF3",
+    "impact": "MODIFIER",
+    "loeuf": 1.072,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs174547",
+    "genes": [
+      "FADS1"
+    ],
+    "consequence": "intron_variant",
+    "gene": "FADS1",
+    "impact": "MODIFIER",
+    "loeuf": 0.299,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1800588",
+    "genes": [
+      "LIPC"
+    ],
+    "consequence": "5_prime_UTR_variant",
+    "gene": "LIPC",
+    "impact": "MODIFIER",
+    "loeuf": 1.102,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs5400",
+    "genes": [
+      "SLC2A2/GLUT2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "SLC2A2",
+    "impact": "MODERATE",
+    "amino_acids": "T/I",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0405
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.858,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1761667",
+    "genes": [
+      "CD36"
+    ],
+    "consequence": "intron_variant",
+    "gene": "CD36",
+    "impact": "MODIFIER",
+    "loeuf": 1.908,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12821256",
+    "genes": [
+      "KITLG"
+    ],
+    "consequence": "regulatory_region_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1426654",
+    "genes": [
+      "SLC24A5"
+    ],
+    "consequence": "missense_variant",
+    "gene": "SLC24A5",
+    "impact": "MODERATE",
+    "amino_acids": "T/A",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.027
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.112,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs16891982",
+    "genes": [
+      "SLC45A2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "SLC45A2",
+    "impact": "MODERATE",
+    "amino_acids": "L/F",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.568
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.022,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3827760",
+    "genes": [
+      "EDAR"
+    ],
+    "consequence": "missense_variant",
+    "gene": "EDAR",
+    "impact": "MODERATE",
+    "amino_acids": "V/G",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.8259
+    },
+    "sift": "deleterious",
+    "polyphen": "possibly_damaging",
+    "loeuf": 0.927,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs17646946",
+    "genes": [
+      "GJB2"
+    ],
+    "consequence": "upstream_gene_variant",
+    "gene": "TCHHL1",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2228479",
+    "genes": [
+      "MC1R"
+    ],
+    "consequence": "missense_variant",
+    "gene": "MC1R",
+    "impact": "MODERATE",
+    "amino_acids": "V/M",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1201
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.916,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1800407",
+    "genes": [
+      "OCA2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "OCA2",
+    "impact": "MODERATE",
+    "amino_acids": "R/Q",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0937
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 0.869,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4778138",
+    "genes": [
+      "OCA2"
+    ],
+    "consequence": "intron_variant",
+    "gene": "OCA2",
+    "impact": "MODIFIER",
+    "loeuf": 0.869,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1042602",
+    "genes": [
+      "TYR"
+    ],
+    "consequence": "missense_variant",
+    "gene": "TYR",
+    "impact": "MODERATE",
+    "amino_acids": "S/Y",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1346
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.346,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1805009",
+    "genes": [
+      "MC1R"
+    ],
+    "consequence": "missense_variant",
+    "gene": "MC1R",
+    "impact": "MODERATE",
+    "amino_acids": "D/N",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.2687
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.916,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2733832",
+    "genes": [
+      "TYRP1"
+    ],
+    "consequence": "intron_variant",
+    "gene": "TYRP1",
+    "impact": "MODIFIER",
+    "loeuf": 1.398,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7349332",
+    "genes": [
+      "TERT-CLPTM1L"
+    ],
+    "consequence": "intron_variant",
+    "gene": "WNT10A",
+    "impact": "MODIFIER",
+    "loeuf": 1.484,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6152",
+    "genes": [
+      "AR"
+    ],
+    "consequence": "missense_variant",
+    "gene": "AR",
+    "impact": "MODERATE",
+    "amino_acids": "E/D",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.129
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "probably_damaging",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1800414",
+    "genes": [
+      "OCA2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "OCA2",
+    "impact": "MODERATE",
+    "amino_acids": "H/L",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.2494
+    },
+    "sift": "deleterious",
+    "polyphen": "benign",
+    "loeuf": 0.869,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11803731",
+    "genes": [
+      "TCHH"
+    ],
+    "consequence": "missense_variant",
+    "gene": "TCHH",
+    "impact": "MODERATE",
+    "amino_acids": "L/V",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1354
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "unknown",
+    "loeuf": 1.811,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4994",
+    "genes": [
+      "ADRB3"
+    ],
+    "consequence": "missense_variant",
+    "gene": "ADRB3",
+    "impact": "MODERATE",
+    "amino_acids": "W/R",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0519
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.952,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1799752",
+    "genes": [
+      "ACE"
+    ],
+    "consequence": "intron_variant",
+    "gene": "ACE",
+    "impact": "MODIFIER",
+    "loeuf": 0.785,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs8192678",
+    "genes": [
+      "PPARGC1A"
+    ],
+    "consequence": "missense_variant",
+    "gene": "PPARGC1A",
+    "impact": "MODERATE",
+    "amino_acids": "G/S",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0558
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.264,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1800169",
+    "genes": [
+      "BDNF",
+      "CILP"
+    ],
+    "consequence": "splice_region_variant",
+    "gene": "CNTF",
+    "impact": "LOW",
+    "loeuf": 1.555,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1800012",
+    "genes": [
+      "COL1A1"
+    ],
+    "consequence": "intron_variant",
+    "gene": "COL1A1",
+    "impact": "MODIFIER",
+    "loeuf": 0.159,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7460",
+    "genes": [
+      "COL5A1"
+    ],
+    "consequence": "3_prime_UTR_variant",
+    "gene": "PTK2",
+    "impact": "MODIFIER",
+    "loeuf": 0.396,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs660339",
+    "genes": [
+      "UCP2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "UCP2",
+    "impact": "MODERATE",
+    "amino_acids": "A/V",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0978
+    },
+    "sift": "tolerated_low_confidence",
+    "loeuf": 1.127,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2104772",
+    "genes": [
+      "TNC"
+    ],
+    "consequence": "missense_variant",
+    "gene": "TNC",
+    "impact": "MODERATE",
+    "amino_acids": "I/L",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.2591
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.51,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs53576",
+    "genes": [
+      "OXTR"
+    ],
+    "consequence": "intron_variant",
+    "gene": "OXTR",
+    "impact": "MODIFIER",
+    "loeuf": 1.278,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4570625",
+    "genes": [
+      "TPH2"
+    ],
+    "consequence": "upstream_gene_variant",
+    "gene": "TPH2",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6265",
+    "genes": [
+      "BDNF"
+    ],
+    "consequence": "missense_variant",
+    "gene": "BDNF",
+    "impact": "MODERATE",
+    "amino_acids": "V/M",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.2125
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 0.202,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs25531",
+    "genes": [
+      "SLC6A4"
+    ],
+    "consequence": "intron_variant",
+    "gene": "SLC6A4",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1800955",
+    "genes": [
+      "DRD4"
+    ],
+    "consequence": "upstream_gene_variant",
+    "gene": "DRD4",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4307059",
+    "genes": [
+      "CDCA7/SP4"
+    ],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2760118",
+    "genes": [
+      "CLOCK"
+    ],
+    "consequence": "missense_variant",
+    "gene": "ALDH5A1",
+    "impact": "MODERATE",
+    "amino_acids": "H/Y",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0529
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.771,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1801260",
+    "genes": [
+      "CLOCK"
+    ],
+    "consequence": "3_prime_UTR_variant",
+    "gene": "CLOCK",
+    "impact": "MODIFIER",
+    "loeuf": 0.496,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs73598374",
+    "genes": [
+      "ADA",
+      "ADORA2A"
+    ],
+    "consequence": "missense_variant",
+    "gene": "ADA",
+    "impact": "MODERATE",
+    "amino_acids": "D/Y",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1658
+    },
+    "sift": "deleterious",
+    "polyphen": "possibly_damaging",
+    "loeuf": 1.184,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs57875989",
+    "genes": [
+      "DEC2/BHLHE41"
+    ],
+    "status": "skipped (no VEP result)"
+  },
+  {
+    "rsid": "rs228697",
+    "genes": [
+      "PER3"
+    ],
+    "consequence": "missense_variant",
+    "gene": "PER3",
+    "impact": "MODERATE",
+    "amino_acids": "P/A",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0607
+    },
+    "sift": "deleterious",
+    "polyphen": "benign",
+    "loeuf": 0.993,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12927162",
+    "genes": [
+      "AHR",
+      "MTNR1B"
+    ],
+    "consequence": "intron_variant",
+    "gene": "CASC16",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2287019",
+    "genes": [
+      "CRY1"
+    ],
+    "consequence": "intron_variant",
+    "gene": "QPCTL",
+    "impact": "MODIFIER",
+    "loeuf": 1.284,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4481887",
+    "genes": [
+      "OR2M7"
+    ],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10427255",
+    "genes": [
+      "Near 2q22"
+    ],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4778241",
+    "genes": [
+      "OCA2"
+    ],
+    "consequence": "intron_variant",
+    "gene": "OCA2",
+    "impact": "MODIFIER",
+    "loeuf": 0.869,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6313",
+    "genes": [
+      "HTR2A"
+    ],
+    "consequence": "synonymous_variant",
+    "gene": "HTR2A",
+    "impact": "LOW",
+    "amino_acids": "S",
+    "loeuf": 0.631,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1006737",
+    "genes": [
+      "CACNA1C"
+    ],
+    "consequence": "intron_variant",
+    "gene": "CACNA1C",
+    "impact": "MODIFIER",
+    "loeuf": 0.179,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1800544",
+    "genes": [
+      "ADRA2A"
+    ],
+    "consequence": "upstream_gene_variant",
+    "gene": "ADRA2A",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs28532698",
+    "genes": [
+      "ALDOB"
+    ],
+    "consequence": "intron_variant",
+    "gene": "BST1",
+    "impact": "MODIFIER",
+    "loeuf": 1.443,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs35744813",
+    "genes": [
+      "TAS2R19"
+    ],
+    "consequence": "upstream_gene_variant",
+    "gene": "TAS1R3",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2273535",
+    "genes": [
+      "AURKA"
+    ],
+    "consequence": "missense_variant",
+    "gene": "AURKA",
+    "impact": "MODERATE",
+    "amino_acids": "F/V",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0645
+    },
+    "sift": "tolerated_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 0.479,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2241766",
+    "genes": [
+      "ADIPOQ"
+    ],
+    "consequence": "synonymous_variant",
+    "gene": "ADIPOQ",
+    "impact": "LOW",
+    "amino_acids": "G",
+    "loeuf": 1.655,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7495174",
+    "genes": [
+      "OCA2"
+    ],
+    "consequence": "intron_variant",
+    "gene": "OCA2",
+    "impact": "MODIFIER",
+    "loeuf": 0.869,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2070744",
+    "genes": [
+      "NOS3"
+    ],
+    "consequence": "intron_variant",
+    "gene": "NOS3",
+    "impact": "MODIFIER",
+    "loeuf": 0.894,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1805086",
+    "genes": [
+      "MSTN"
+    ],
+    "consequence": "missense_variant",
+    "gene": "MSTN",
+    "impact": "MODERATE",
+    "amino_acids": "K/R",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0829
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.571,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4950",
+    "genes": [
+      "NRG1"
+    ],
+    "consequence": "5_prime_UTR_variant",
+    "gene": "CHRNB3",
+    "impact": "MODIFIER",
+    "loeuf": 1.066,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2395185",
+    "genes": [
+      "HLA-DRA"
+    ],
+    "consequence": "intron_variant",
+    "gene": "HLA-DRB9",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs17070145",
+    "genes": [
+      "KIBRA"
+    ],
+    "consequence": "intron_variant",
+    "gene": "WWC1",
+    "impact": "MODIFIER",
+    "loeuf": 0.5,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7566605",
+    "genes": [
+      "INSIG2"
+    ],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs662",
+    "genes": [
+      "PON1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "PON1",
+    "impact": "MODERATE",
+    "amino_acids": "Q/L",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1222
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.159,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs182549",
+    "genes": [
+      "MCM6/LCT"
+    ],
+    "consequence": "intron_variant",
+    "gene": "MCM6",
+    "impact": "MODIFIER",
+    "loeuf": 0.676,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6311",
+    "genes": [
+      "HTR2A"
+    ],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2230199",
+    "genes": [
+      "C3"
+    ],
+    "consequence": "missense_variant",
+    "gene": "C3",
+    "impact": "MODERATE",
+    "amino_acids": "R/C",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.2167
+    },
+    "sift": "deleterious",
+    "polyphen": "benign",
+    "loeuf": 0.413,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs333",
+    "genes": [
+      "CCR5"
+    ],
+    "consequence": "frameshift_variant",
+    "gene": "CCR5",
+    "impact": "HIGH",
+    "amino_acids": "SQYQFWKNFQT/X",
+    "loeuf": 1.592,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2802292",
+    "genes": [
+      "FOXO3"
+    ],
+    "consequence": "intron_variant",
+    "gene": "FOXO3",
+    "impact": "MODIFIER",
+    "loeuf": 0.26,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs5882",
+    "genes": [
+      "CETP"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CETP",
+    "impact": "MODERATE",
+    "amino_acids": "V/I",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0682
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.972,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2228570",
+    "genes": [
+      "VDR"
+    ],
+    "consequence": "start_lost",
+    "gene": "VDR",
+    "impact": "HIGH",
+    "amino_acids": "M/R",
+    "sift": "deleterious_low_confidence",
+    "polyphen": "possibly_damaging",
+    "loeuf": 0.711,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7041",
+    "genes": [
+      "GC"
+    ],
+    "consequence": "missense_variant",
+    "gene": "GC",
+    "impact": "MODERATE",
+    "amino_acids": "D/E",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0917
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.492,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10246939",
+    "genes": [
+      "TAS2R38"
+    ],
+    "consequence": "missense_variant",
+    "gene": "TAS2R38",
+    "impact": "MODERATE",
+    "amino_acids": "I/V",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1022
+    },
+    "sift": "tolerated",
+    "polyphen": "possibly_damaging",
+    "loeuf": 1.175,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1800206",
+    "genes": [
+      "PPARA"
+    ],
+    "consequence": "missense_variant",
+    "gene": "PPARA",
+    "impact": "MODERATE",
+    "amino_acids": "L/V",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1106
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 0.711,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4646994",
+    "genes": [
+      "ACE"
+    ],
+    "status": "skipped (no VEP result)"
+  },
+  {
+    "rsid": "rs4253778",
+    "genes": [
+      "PPARA"
+    ],
+    "consequence": "intron_variant",
+    "gene": "PPARA",
+    "impact": "MODIFIER",
+    "loeuf": 0.711,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1042714",
+    "genes": [
+      "ADRB2"
+    ],
+    "consequence": "stop_gained",
+    "gene": "ADRB2",
+    "impact": "HIGH",
+    "amino_acids": "E/*",
+    "loeuf": 0.901,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4626",
+    "genes": [
+      "DIO1"
+    ],
+    "consequence": "synonymous_variant",
+    "gene": "TOB1",
+    "impact": "LOW",
+    "amino_acids": "K",
+    "loeuf": 0.266,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs225014",
+    "genes": [
+      "DIO2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "DIO2",
+    "impact": "MODERATE",
+    "amino_acids": "T/A",
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.286,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs13266634",
+    "genes": [
+      "SLC30A8"
+    ],
+    "consequence": "missense_variant",
+    "gene": "SLC30A8",
+    "impact": "MODERATE",
+    "amino_acids": "R/W",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0747
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.88,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7602",
+    "genes": [
+      "HIF1A"
+    ],
+    "consequence": "3_prime_UTR_variant",
+    "gene": "LEPROT",
+    "impact": "MODIFIER",
+    "loeuf": 0.618,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6232",
+    "genes": [
+      "PCSK1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "PCSK1",
+    "impact": "MODERATE",
+    "amino_acids": "N/D",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0732
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.631,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7799039",
+    "genes": [
+      "LEP"
+    ],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1137101",
+    "genes": [
+      "LEPR"
+    ],
+    "consequence": "missense_variant",
+    "gene": "LEPR",
+    "impact": "MODERATE",
+    "amino_acids": "Q/R",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0989
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.589,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs17782313",
+    "genes": [
+      "MC4R"
+    ],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1801253",
+    "genes": [
+      "ADRB1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "ADRB1",
+    "impact": "MODERATE",
+    "amino_acids": "G/R",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0808
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.939,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11684042",
+    "genes": [
+      "Intergenic (1p36)"
+    ],
+    "consequence": "intron_variant",
+    "gene": "TEX41",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2166975",
+    "genes": [
+      "MYH9"
+    ],
+    "consequence": "synonymous_variant",
+    "gene": "TGFA",
+    "impact": "LOW",
+    "amino_acids": "V",
+    "loeuf": 0.926,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1960063",
+    "genes": [
+      "KALRN region"
+    ],
+    "consequence": "intron_variant",
+    "gene": "POLR1HASP",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10211198",
+    "genes": [
+      "EDAR region"
+    ],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12916399",
+    "genes": [
+      "Near FOXC2"
+    ],
+    "consequence": "intron_variant",
+    "gene": "WDR72",
+    "impact": "MODIFIER",
+    "loeuf": 1.078,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs756853",
+    "genes": [
+      "LNX1"
+    ],
+    "consequence": "intron_variant",
+    "gene": "HDAC9",
+    "impact": "MODIFIER",
+    "loeuf": 0.235,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs314277",
+    "genes": [
+      "LIN28B"
+    ],
+    "consequence": "intron_variant",
+    "gene": "LIN28B",
+    "impact": "MODIFIER",
+    "loeuf": 0.36,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7817985",
+    "genes": [
+      "PAX9 region"
+    ],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1799884",
+    "genes": [
+      "GCK"
+    ],
+    "consequence": "intron_variant",
+    "gene": "GCK",
+    "impact": "MODIFIER",
+    "loeuf": 0.815,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2274333",
+    "genes": [
+      "CA6"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CA6",
+    "impact": "MODERATE",
+    "amino_acids": "S/G",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1796
+    },
+    "sift": "tolerated",
+    "polyphen": "possibly_damaging",
+    "loeuf": 1.197,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs8065080",
+    "genes": [
+      "TRPV1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "TRPV1",
+    "impact": "MODERATE",
+    "amino_acids": "I/V",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0576
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.225,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs222747",
+    "genes": [
+      "TRPV1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "TRPV1",
+    "impact": "MODERATE",
+    "amino_acids": "M/I",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0657
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.225,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs35874116",
+    "genes": [
+      "TAS1R2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "TAS1R2",
+    "impact": "MODERATE",
+    "amino_acids": "I/V",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0842
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.127,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs307355",
+    "genes": [
+      "TAS1R3"
+    ],
+    "consequence": "upstream_gene_variant",
+    "gene": "TAS1R3",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs34160967",
+    "genes": [
+      "TAS1R1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "TAS1R1",
+    "impact": "MODERATE",
+    "amino_acids": "A/T",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0826
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.79,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs33972313",
+    "genes": [
+      "SLC23A1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "SLC23A1",
+    "impact": "MODERATE",
+    "amino_acids": "V/L",
+    "alphamissense": {
+      "class": "ambiguous",
+      "score": 0.3989
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 0.573,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6596473",
+    "genes": [
+      "SLC23A1"
+    ],
+    "consequence": "intron_variant",
+    "gene": "SLC23A1",
+    "impact": "MODIFIER",
+    "loeuf": 0.573,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12272004",
+    "genes": [
+      "APOA5"
+    ],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs964184",
+    "genes": [
+      "ZPR1/APOA5"
+    ],
+    "consequence": "3_prime_UTR_variant",
+    "gene": "ZPR1",
+    "impact": "MODIFIER",
+    "loeuf": 0.797,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1799983",
+    "genes": [
+      "NOS3"
+    ],
+    "consequence": "missense_variant",
+    "gene": "NOS3",
+    "impact": "MODERATE",
+    "amino_acids": "D/E",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0605
+    },
+    "sift": "tolerated_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 0.894,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2229456",
+    "genes": [
+      "COL5A1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "ACTN3",
+    "impact": "MODERATE",
+    "amino_acids": "E/A",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.2297
+    },
+    "sift": "deleterious_low_confidence",
+    "loeuf": 0.9,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12722",
+    "genes": [
+      "COL5A1"
+    ],
+    "consequence": "3_prime_UTR_variant",
+    "gene": "COL5A1",
+    "impact": "MODIFIER",
+    "loeuf": 0.089,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs324420",
+    "genes": [
+      "FAAH"
+    ],
+    "consequence": "missense_variant",
+    "gene": "FAAH",
+    "impact": "MODERATE",
+    "amino_acids": "P/T",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0757
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.147,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11385942",
+    "genes": [
+      "LZTFL1"
+    ],
+    "consequence": "non_coding_transcript_exon_variant",
+    "gene": "LZTFL1",
+    "impact": "MODIFIER",
+    "loeuf": 0.874,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2164273",
+    "genes": [
+      "WSCD2"
+    ],
+    "consequence": "intron_variant",
+    "gene": "MTMR9",
+    "impact": "MODIFIER",
+    "loeuf": 0.771,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1426371",
+    "genes": [
+      "Intergenic"
+    ],
+    "consequence": "intron_variant",
+    "gene": "WSCD2",
+    "impact": "MODIFIER",
+    "loeuf": 0.579,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2254298",
+    "genes": [
+      "OXTR"
+    ],
+    "consequence": "intron_variant",
+    "gene": "OXTR",
+    "impact": "MODIFIER",
+    "loeuf": 1.278,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2354674",
+    "genes": [
+      "Intergenic"
+    ],
+    "consequence": "intron_variant",
+    "gene": "PWRN1",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1879245",
+    "genes": [
+      "Intergenic"
+    ],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs5751876",
+    "genes": [
+      "ADORA2A"
+    ],
+    "consequence": "synonymous_variant",
+    "gene": "ADORA2A",
+    "impact": "LOW",
+    "amino_acids": "Y",
+    "loeuf": 0.59,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6277",
+    "genes": [
+      "DRD2"
+    ],
+    "consequence": "synonymous_variant",
+    "gene": "DRD2",
+    "impact": "LOW",
+    "amino_acids": "P",
+    "loeuf": 0.316,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs5219",
+    "genes": [],
+    "consequence": "stop_gained",
+    "gene": "KCNJ11",
+    "impact": "HIGH",
+    "amino_acids": "K/*",
+    "loeuf": 1.074,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1111875",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7756992",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CDKAL1",
+    "impact": "MODIFIER",
+    "loeuf": 0.643,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10946398",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CDKAL1",
+    "impact": "MODIFIER",
+    "loeuf": 0.643,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12779790",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7578597",
+    "genes": [],
+    "consequence": "missense_variant",
+    "gene": "THADA",
+    "impact": "MODERATE",
+    "amino_acids": "T/A",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1422
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 1.178,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2237892",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "KCNQ1",
+    "impact": "MODIFIER",
+    "loeuf": 0.841,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs243021",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "MIR4432HG",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7961581",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "TSPAN8",
+    "impact": "MODIFIER",
+    "loeuf": 0.912,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs896854",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "TP53INP1",
+    "impact": "MODIFIER",
+    "loeuf": 0.823,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs340874",
+    "genes": [],
+    "consequence": "non_coding_transcript_exon_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1552224",
+    "genes": [],
+    "consequence": "5_prime_UTR_variant",
+    "gene": "ARAP1",
+    "impact": "MODIFIER",
+    "loeuf": 0.523,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11708067",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "ADCY5",
+    "impact": "MODIFIER",
+    "loeuf": 0.32,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3802177",
+    "genes": [],
+    "consequence": "3_prime_UTR_variant",
+    "gene": "SLC30A8",
+    "impact": "MODIFIER",
+    "loeuf": 0.88,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs8042680",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "PRC1",
+    "impact": "MODIFIER",
+    "loeuf": 0.677,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7172432",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2943641",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10757278",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CDKN2B-AS1",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11206510",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs515135",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10455872",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "LPA",
+    "impact": "MODIFIER",
+    "loeuf": 1.183,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs599839",
+    "genes": [],
+    "consequence": "downstream_gene_variant",
+    "gene": "CELSR2",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12526453",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "PHACTR1",
+    "impact": "MODIFIER",
+    "loeuf": 0.335,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs579459",
+    "genes": [],
+    "consequence": "upstream_gene_variant",
+    "gene": "ABO",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4977574",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CDKN2B-AS1",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs646776",
+    "genes": [],
+    "consequence": "downstream_gene_variant",
+    "gene": "CELSR2",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs17114036",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "PLPP3",
+    "impact": "MODIFIER",
+    "loeuf": 0.403,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2505083",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "JCAD",
+    "impact": "MODIFIER",
+    "loeuf": 0.496,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3798220",
+    "genes": [],
+    "consequence": "missense_variant",
+    "gene": "LPA",
+    "impact": "MODERATE",
+    "amino_acids": "I/M",
+    "sift": "tolerated",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.183,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs17465637",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "MIA3",
+    "impact": "MODIFIER",
+    "loeuf": 0.524,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs9349379",
+    "genes": [],
+    "consequence": "non_coding_transcript_exon_variant",
+    "gene": "PHACTR1",
+    "impact": "MODIFIER",
+    "loeuf": 0.335,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1746048",
+    "genes": [],
+    "consequence": "downstream_gene_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6725887",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "WDR12",
+    "impact": "MODIFIER",
+    "loeuf": 0.902,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2681472",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "ATP2B1",
+    "impact": "MODIFIER",
+    "loeuf": 0.162,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12413409",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CNNM2",
+    "impact": "MODIFIER",
+    "loeuf": 0.287,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs56289821",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "SMARCA4",
+    "impact": "MODIFIER",
+    "loeuf": 0.204,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs9369640",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "PHACTR1",
+    "impact": "MODIFIER",
+    "loeuf": 0.335,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2106261",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "ZFHX3",
+    "impact": "MODIFIER",
+    "loeuf": 0.189,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6666258",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "KCNN3",
+    "impact": "MODIFIER",
+    "loeuf": 0.379,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3807989",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CAV1",
+    "impact": "MODIFIER",
+    "loeuf": 0.635,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3903239",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6817105",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "LINC01438",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7508",
+    "genes": [],
+    "consequence": "3_prime_UTR_variant",
+    "gene": "ASAH1",
+    "impact": "MODIFIER",
+    "loeuf": 1.336,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10821415",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "AOPEP",
+    "impact": "MODIFIER",
+    "loeuf": 0.932,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11264280",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2040862",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "WNT8A",
+    "impact": "MODIFIER",
+    "loeuf": 0.785,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10033464",
+    "genes": [],
+    "consequence": "downstream_gene_variant",
+    "gene": "LINC01438",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7164883",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "HCN4",
+    "impact": "MODIFIER",
+    "loeuf": 0.571,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1152591",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "SYNE2",
+    "impact": "MODIFIER",
+    "loeuf": 0.329,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2834618",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "LINC01426",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12415501",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "NEURL1",
+    "impact": "MODIFIER",
+    "loeuf": 0.931,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11047543",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs593479",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "PRRX1",
+    "impact": "MODIFIER",
+    "loeuf": 0.489,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6490029",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CUX2",
+    "impact": "MODIFIER",
+    "loeuf": 0.383,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4642101",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CAND2",
+    "impact": "MODIFIER",
+    "loeuf": 0.777,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3803662",
+    "genes": [],
+    "consequence": "non_coding_transcript_exon_variant",
+    "gene": "CASC16",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs889312",
+    "genes": [],
+    "consequence": "regulatory_region_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2046210",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs13281615",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CASC8",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1045485",
+    "genes": [],
+    "consequence": "missense_variant",
+    "gene": "CASP8",
+    "impact": "MODERATE",
+    "amino_acids": "D/N",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0685
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.632,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3817198",
+    "genes": [],
+    "consequence": "3_prime_UTR_variant",
+    "gene": "LSP1",
+    "impact": "MODIFIER",
+    "loeuf": 0.894,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10941679",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "MRPS30-DT",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2981579",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "FGFR2",
+    "impact": "MODIFIER",
+    "loeuf": 0.185,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4973768",
+    "genes": [],
+    "consequence": "3_prime_UTR_variant",
+    "gene": "SLC4A7",
+    "impact": "MODIFIER",
+    "loeuf": 0.374,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11249433",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "EMBP1",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs865686",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6504950",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "STXBP4",
+    "impact": "MODIFIER",
+    "loeuf": 0.935,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs999737",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "RAD51B",
+    "impact": "MODIFIER",
+    "loeuf": 1.227,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10771399",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs704010",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "ZMIZ1",
+    "impact": "MODIFIER",
+    "loeuf": 0.22,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2823093",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1292011",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs941764",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CCDC88C",
+    "impact": "MODIFIER",
+    "loeuf": 0.716,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6472903",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CASC9",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4784227",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CASC16",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs17632542",
+    "genes": [],
+    "consequence": "missense_variant",
+    "gene": "KLK3",
+    "impact": "MODERATE",
+    "amino_acids": "I/T",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.6712
+    },
+    "sift": "deleterious",
+    "polyphen": "possibly_damaging",
+    "loeuf": 1.01,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4430796",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "HNF1B",
+    "impact": "MODIFIER",
+    "loeuf": 0.179,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10993994",
+    "genes": [],
+    "consequence": "5_prime_UTR_variant",
+    "gene": "MSMB",
+    "impact": "MODIFIER",
+    "loeuf": 1.597,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10486567",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "JAZF1",
+    "impact": "MODIFIER",
+    "loeuf": 0.438,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2735839",
+    "genes": [],
+    "consequence": "upstream_gene_variant",
+    "gene": "KLK2",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs16901979",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CASC19",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1447295",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CASC8",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12621278",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "ITGA6",
+    "impact": "MODIFIER",
+    "loeuf": 0.52,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7679673",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2660753",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "LINC00506",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs721048",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "EHBP1",
+    "impact": "MODIFIER",
+    "loeuf": 0.497,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1859962",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CASC17",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12418451",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2242652",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "TERT",
+    "impact": "MODIFIER",
+    "loeuf": 0.593,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11672691",
+    "genes": [],
+    "consequence": "non_coding_transcript_exon_variant",
+    "gene": "PCAT19",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7931342",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10896449",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11568818",
+    "genes": [],
+    "consequence": "upstream_gene_variant",
+    "gene": "MMP7",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs8102476",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "SPINT2",
+    "impact": "MODIFIER",
+    "loeuf": 0.888,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1270884",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4939827",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "SMAD7",
+    "impact": "MODIFIER",
+    "loeuf": 0.351,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4444235",
+    "genes": [],
+    "consequence": "upstream_gene_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs16892766",
+    "genes": [],
+    "consequence": "downstream_gene_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3802842",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "POU2AF3",
+    "impact": "MODIFIER",
+    "loeuf": 0.699,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10795668",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs961253",
+    "genes": [],
+    "consequence": "upstream_gene_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4779584",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10411210",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "RHPN2",
+    "impact": "MODIFIER",
+    "loeuf": 0.685,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7136702",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11169552",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4813802",
+    "genes": [],
+    "consequence": "regulatory_region_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10936599",
+    "genes": [],
+    "consequence": "missense_variant",
+    "gene": "MYNN",
+    "impact": "MODERATE",
+    "amino_acids": "H/Q",
+    "alphamissense": {
+      "class": "ambiguous",
+      "score": 0.4469
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 0.553,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3824999",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "POLD3",
+    "impact": "MODIFIER",
+    "loeuf": 0.407,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1321311",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs992157",
+    "genes": [],
+    "consequence": "5_prime_UTR_variant",
+    "gene": "TMBIM1",
+    "impact": "MODIFIER",
+    "loeuf": 1.102,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2427308",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CABLES2",
+    "impact": "MODIFIER",
+    "loeuf": 1,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs9929218",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CDH1",
+    "impact": "MODIFIER",
+    "loeuf": 0.514,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10749971",
+    "genes": [],
+    "consequence": "upstream_gene_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12241008",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "VTI1A",
+    "impact": "MODIFIER",
+    "loeuf": 0.864,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7229639",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "SMAD7",
+    "impact": "MODIFIER",
+    "loeuf": 0.351,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs744373",
+    "genes": [],
+    "consequence": "downstream_gene_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11136000",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CLU",
+    "impact": "MODIFIER",
+    "loeuf": 0.559,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3851179",
+    "genes": [],
+    "consequence": "downstream_gene_variant",
+    "gene": "RNU6-560P",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6656401",
+    "genes": [],
+    "consequence": "non_coding_transcript_exon_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3865444",
+    "genes": [],
+    "consequence": "5_prime_UTR_variant",
+    "gene": "CD33",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs983392",
+    "genes": [],
+    "consequence": "downstream_gene_variant",
+    "gene": "LINC02705",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4147929",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "ABCA7",
+    "impact": "MODIFIER",
+    "loeuf": 1.089,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10948363",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CD2AP",
+    "impact": "MODIFIER",
+    "loeuf": 0.815,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs9271192",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs28834970",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "PTK2B",
+    "impact": "MODIFIER",
+    "loeuf": 0.529,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11218343",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "SORL1",
+    "impact": "MODIFIER",
+    "loeuf": 0.501,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10838725",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CELF1",
+    "impact": "MODIFIER",
+    "loeuf": 0.247,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1476679",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "ZCWPW1",
+    "impact": "MODIFIER",
+    "loeuf": 0.797,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs17125944",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "FERMT2",
+    "impact": "MODIFIER",
+    "loeuf": 0.259,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs190982",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "MEF2C-AS1",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2718058",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "GPR141",
+    "impact": "MODIFIER",
+    "loeuf": 1.497,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10792832",
+    "genes": [],
+    "consequence": "downstream_gene_variant",
+    "gene": "RNU6-560P",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs73223431",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "PTK2B",
+    "impact": "MODIFIER",
+    "loeuf": 0.529,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7933202",
+    "genes": [],
+    "consequence": "downstream_gene_variant",
+    "gene": "MS4A6A",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2476601",
+    "genes": [],
+    "consequence": "missense_variant",
+    "gene": "PTPN22",
+    "impact": "MODERATE",
+    "amino_acids": "W/R",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.02
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.944,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7574865",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "STAT4",
+    "impact": "MODIFIER",
+    "loeuf": 0.503,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3761847",
+    "genes": [],
+    "consequence": "5_prime_UTR_variant",
+    "gene": "TRAF1",
+    "impact": "MODIFIER",
+    "loeuf": 0.745,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3087243",
+    "genes": [],
+    "consequence": "downstream_gene_variant",
+    "gene": "CTLA4",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3093023",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CCR6",
+    "impact": "MODIFIER",
+    "loeuf": 1.538,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6920220",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "LINC03004",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs660895",
+    "genes": [],
+    "consequence": "downstream_gene_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6457617",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2104286",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "IL2RA",
+    "impact": "MODIFIER",
+    "loeuf": 0.798,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10818488",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "C5",
+    "impact": "MODIFIER",
+    "loeuf": 0.779,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2736340",
+    "genes": [],
+    "consequence": "upstream_gene_variant",
+    "gene": "BLK",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4810485",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CD40",
+    "impact": "MODIFIER",
+    "loeuf": 0.677,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs874040",
+    "genes": [],
+    "consequence": "downstream_gene_variant",
+    "gene": "LINC02357",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs548234",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "ATG5",
+    "impact": "MODIFIER",
+    "loeuf": 0.739,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs13031237",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "REL",
+    "impact": "MODIFIER",
+    "loeuf": 0.416,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs394581",
+    "genes": [],
+    "consequence": "non_coding_transcript_exon_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1980422",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3218253",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "IL2RB",
+    "impact": "MODIFIER",
+    "loeuf": 0.612,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2301888",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "PADI4",
+    "impact": "MODIFIER",
+    "loeuf": 1.012,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs706778",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "IL2RA",
+    "impact": "MODIFIER",
+    "loeuf": 0.798,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6441961",
+    "genes": [],
+    "consequence": "non_coding_transcript_exon_variant",
+    "gene": "UQCRC2P1",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3184504",
+    "genes": [],
+    "consequence": "missense_variant",
+    "gene": "SH2B3",
+    "impact": "MODERATE",
+    "amino_acids": "W/R",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0484
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.153,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2816316",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "RGS2-AS1",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs917997",
+    "genes": [],
+    "consequence": "downstream_gene_variant",
+    "gene": "IL18RAP",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1464510",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "LPP",
+    "impact": "MODIFIER",
+    "loeuf": 0.739,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2327832",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "LINC03004",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs653178",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "ATXN2",
+    "impact": "MODIFIER",
+    "loeuf": 0.199,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1738074",
+    "genes": [],
+    "consequence": "5_prime_UTR_variant",
+    "gene": "TAGAP",
+    "impact": "MODIFIER",
+    "loeuf": 0.66,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs842647",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "REL",
+    "impact": "MODIFIER",
+    "loeuf": 0.416,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs13010713",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "LINC01934",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4819388",
+    "genes": [],
+    "consequence": "3_prime_UTR_variant",
+    "gene": "ICOSLG",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4849135",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "ACOXL",
+    "impact": "MODIFIER",
+    "loeuf": 1.096,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1018326",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "LINC01934",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2298428",
+    "genes": [],
+    "consequence": "missense_variant",
+    "gene": "YDJC",
+    "impact": "MODERATE",
+    "amino_acids": "A/T",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0912
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.926,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12928822",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "RMI2",
+    "impact": "MODIFIER",
+    "loeuf": 1.913,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs13151961",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "BLTP1",
+    "impact": "MODIFIER",
+    "loeuf": 0.579,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10903122",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4675374",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "ICOS",
+    "impact": "MODIFIER",
+    "loeuf": 1.237,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2066844",
+    "genes": [],
+    "consequence": "missense_variant",
+    "gene": "NOD2",
+    "impact": "MODERATE",
+    "amino_acids": "R/W",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1061
+    },
+    "sift": "deleterious",
+    "polyphen": "possibly_damaging",
+    "loeuf": 1.033,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2066845",
+    "genes": [],
+    "consequence": "missense_variant",
+    "gene": "NOD2",
+    "impact": "MODERATE",
+    "amino_acids": "G/R",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.85
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.033,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2066847",
+    "genes": [],
+    "consequence": "frameshift_variant",
+    "gene": "NOD2",
+    "impact": "HIGH",
+    "amino_acids": "L/PX",
+    "loeuf": 1.033,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10210302",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "ATG16L1",
+    "impact": "MODIFIER",
+    "loeuf": 0.518,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11209026",
+    "genes": [],
+    "consequence": "missense_variant",
+    "gene": "IL23R",
+    "impact": "MODERATE",
+    "amino_acids": "R/Q",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1366
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 0.739,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs13361189",
+    "genes": [],
+    "consequence": "upstream_gene_variant",
+    "gene": "IRGM",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11175593",
+    "genes": [],
+    "consequence": "non_coding_transcript_exon_variant",
+    "gene": "LINC02471",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2241880",
+    "genes": [],
+    "consequence": "missense_variant",
+    "gene": "ATG16L1",
+    "impact": "MODERATE",
+    "amino_acids": "T/A",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0558
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.518,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3197999",
+    "genes": [],
+    "consequence": "missense_variant",
+    "gene": "MST1",
+    "impact": "MODERATE",
+    "amino_acids": "R/C",
+    "sift": "deleterious_low_confidence",
+    "polyphen": "probably_damaging",
+    "loeuf": 0.951,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4263839",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "TNFSF15",
+    "impact": "MODIFIER",
+    "loeuf": 0.985,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10045431",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "IL12B-AS1",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2542151",
+    "genes": [],
+    "consequence": "upstream_gene_variant",
+    "gene": "LINC01882",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11805303",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "IL23R",
+    "impact": "MODIFIER",
+    "loeuf": 0.739,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1000113",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "IRGM",
+    "impact": "MODIFIER",
+    "loeuf": 1.788,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2188962",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CARINH",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7517847",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "IL23R",
+    "impact": "MODIFIER",
+    "loeuf": 0.739,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12994997",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "ATG16L1",
+    "impact": "MODIFIER",
+    "loeuf": 0.518,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4613763",
+    "genes": [],
+    "consequence": "downstream_gene_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs9858542",
+    "genes": [],
+    "consequence": "synonymous_variant",
+    "gene": "BSN",
+    "impact": "LOW",
+    "amino_acids": "T",
+    "loeuf": 0.271,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6908425",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CDKAL1",
+    "impact": "MODIFIER",
+    "loeuf": 0.643,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7927894",
+    "genes": [],
+    "consequence": "upstream_gene_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1558902",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "FTO",
+    "impact": "MODIFIER",
+    "loeuf": 0.924,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6548238",
+    "genes": [],
+    "consequence": "regulatory_region_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10767664",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "BDNF",
+    "impact": "MODIFIER",
+    "loeuf": 0.202,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs13078807",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CADM2",
+    "impact": "MODIFIER",
+    "loeuf": 0.516,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10938397",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs543874",
+    "genes": [],
+    "consequence": "upstream_gene_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2867125",
+    "genes": [],
+    "consequence": "upstream_gene_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs571312",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2815752",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "LINC02796",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7359397",
+    "genes": [],
+    "consequence": "upstream_gene_variant",
+    "gene": "ATP2A1",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs987237",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "TFAP2B",
+    "impact": "MODIFIER",
+    "loeuf": 0.353,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10182181",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3101336",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "LINC02796",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs13107325",
+    "genes": [],
+    "consequence": "missense_variant",
+    "gene": "SLC39A8",
+    "impact": "MODERATE",
+    "amino_acids": "A/S",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0833
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.602,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11030104",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "BDNF",
+    "impact": "MODIFIER",
+    "loeuf": 0.202,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12446632",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7141420",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "NRXN3",
+    "impact": "MODIFIER",
+    "loeuf": 0.277,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2112347",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12566985",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "TNNI3K",
+    "impact": "MODIFIER",
+    "loeuf": 1.404,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3817334",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "MTCH2",
+    "impact": "MODIFIER",
+    "loeuf": 0.701,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs9816226",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "DGKG",
+    "impact": "MODIFIER",
+    "loeuf": 0.883,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1458038",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs17367504",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "MTHFR",
+    "impact": "MODIFIER",
+    "loeuf": 0.831,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11191548",
+    "genes": [],
+    "consequence": "3_prime_UTR_variant",
+    "gene": "CNNM2",
+    "impact": "MODIFIER",
+    "loeuf": 0.287,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs932764",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "PLCE1",
+    "impact": "MODIFIER",
+    "loeuf": 0.562,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs699",
+    "genes": [],
+    "consequence": "missense_variant",
+    "gene": "AGT",
+    "impact": "MODERATE",
+    "amino_acids": "M/T",
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.201,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4846049",
+    "genes": [],
+    "consequence": "3_prime_UTR_variant",
+    "gene": "MTHFR",
+    "impact": "MODIFIER",
+    "loeuf": 0.831,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs13139571",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "GUCY1A1",
+    "impact": "MODIFIER",
+    "loeuf": 0.946,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12940887",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "ZNF652",
+    "impact": "MODIFIER",
+    "loeuf": 0.473,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2521501",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "FES",
+    "impact": "MODIFIER",
+    "loeuf": 0.94,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2681492",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "ATP2B1",
+    "impact": "MODIFIER",
+    "loeuf": 0.162,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4373814",
+    "genes": [],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11953630",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "LINC02227",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7129220",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "AMPD3",
+    "impact": "MODIFIER",
+    "loeuf": 0.814,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3774372",
+    "genes": [],
+    "consequence": "missense_variant",
+    "gene": "ULK4",
+    "impact": "MODERATE",
+    "amino_acids": "K/R",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0866
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.943,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs17249754",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "ATP2B1",
+    "impact": "MODIFIER",
+    "loeuf": 0.162,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3918226",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "NOS3",
+    "impact": "MODIFIER",
+    "loeuf": 0.894,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2169137",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "MDM4",
+    "impact": "MODIFIER",
+    "loeuf": 0.128,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1378942",
+    "genes": [],
+    "consequence": "intron_variant",
+    "gene": "CSK",
+    "impact": "MODIFIER",
+    "loeuf": 0.222,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3892097",
+    "genes": [
+      "CYP2D6"
+    ],
+    "consequence": "splice_acceptor_variant",
+    "gene": "CYP2D6",
+    "impact": "HIGH",
+    "loeuf": 1.706,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1065852",
+    "genes": [
+      "CYP2D6"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP2D6",
+    "impact": "MODERATE",
+    "amino_acids": "P/S",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.7572
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.706,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs5030655",
+    "genes": [
+      "CYP2D6"
+    ],
+    "consequence": "frameshift_variant",
+    "gene": "CYP2D6",
+    "impact": "HIGH",
+    "amino_acids": "W/X",
+    "loeuf": 1.706,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs16947",
+    "genes": [
+      "CYP2D6"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP2D6",
+    "impact": "MODERATE",
+    "amino_acids": "R/C",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1383
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.706,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs28371725",
+    "genes": [
+      "CYP2D6"
+    ],
+    "consequence": "intron_variant",
+    "gene": "CYP2D6",
+    "impact": "MODIFIER",
+    "loeuf": 1.706,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4244285",
+    "genes": [
+      "CYP2C19"
+    ],
+    "consequence": "synonymous_variant",
+    "gene": "CYP2C19",
+    "impact": "LOW",
+    "amino_acids": "P",
+    "loeuf": 1.377,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4986893",
+    "genes": [
+      "CYP2C19"
+    ],
+    "consequence": "stop_gained",
+    "gene": "CYP2C19",
+    "impact": "HIGH",
+    "amino_acids": "W/*",
+    "loeuf": 1.377,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12248560",
+    "genes": [
+      "CYP2C19"
+    ],
+    "consequence": "upstream_gene_variant",
+    "gene": "CYP2C19",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1799853",
+    "genes": [
+      "CYP2C9"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP2C9",
+    "impact": "MODERATE",
+    "amino_acids": "R/S",
+    "alphamissense": {
+      "class": "ambiguous",
+      "score": 0.5251
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.428,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1057910",
+    "genes": [
+      "CYP2C9"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP2C9",
+    "impact": "MODERATE",
+    "amino_acids": "I/L",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1487
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 1.428,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs28371686",
+    "genes": [
+      "CYP2C9"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP2C9",
+    "impact": "MODERATE",
+    "amino_acids": "D/E",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.7481
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 1.428,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs776746",
+    "genes": [
+      "CYP3A5"
+    ],
+    "consequence": "splice_acceptor_variant",
+    "gene": "CYP3A5",
+    "impact": "HIGH",
+    "loeuf": 1.028,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs9923231",
+    "genes": [
+      "VKORC1"
+    ],
+    "consequence": "upstream_gene_variant",
+    "gene": "VKORC1",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3918290",
+    "genes": [
+      "DPYD"
+    ],
+    "consequence": "splice_donor_variant",
+    "gene": "DPYD",
+    "impact": "HIGH",
+    "loeuf": 1.09,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs55886062",
+    "genes": [
+      "DPYD"
+    ],
+    "consequence": "missense_variant",
+    "gene": "DPYD",
+    "impact": "MODERATE",
+    "amino_acids": "I/S",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.8504
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.09,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs67376798",
+    "genes": [
+      "DPYD"
+    ],
+    "consequence": "missense_variant",
+    "gene": "DPYD",
+    "impact": "MODERATE",
+    "amino_acids": "D/V",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.2925
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.09,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1800460",
+    "genes": [
+      "TPMT"
+    ],
+    "consequence": "missense_variant",
+    "gene": "TPMT",
+    "impact": "MODERATE",
+    "amino_acids": "A/S",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1033
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.823,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1142345",
+    "genes": [
+      "TPMT"
+    ],
+    "consequence": "missense_variant",
+    "gene": "TPMT",
+    "impact": "MODERATE",
+    "amino_acids": "Y/F",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1133
+    },
+    "sift": "deleterious",
+    "polyphen": "possibly_damaging",
+    "loeuf": 0.823,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs8175347",
+    "genes": [
+      "UGT1A1"
+    ],
+    "status": "skipped (no VEP result)"
+  },
+  {
+    "rsid": "rs2231142",
+    "genes": [
+      "ABCG2"
+    ],
+    "consequence": "stop_gained",
+    "gene": "ABCG2",
+    "impact": "HIGH",
+    "amino_acids": "Q/*",
+    "loeuf": 1.273,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2395029",
+    "genes": [
+      "HLA-B"
+    ],
+    "consequence": "non_coding_transcript_exon_variant",
+    "gene": "HCP5",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3909184",
+    "genes": [
+      "HLA-B"
+    ],
+    "consequence": "intron_variant",
+    "gene": "FLOT1",
+    "impact": "MODIFIER",
+    "loeuf": 0.867,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1801280",
+    "genes": [
+      "NAT2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "NAT2",
+    "impact": "MODERATE",
+    "amino_acids": "I/N",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.2723
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.938,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1799930",
+    "genes": [
+      "NAT2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "NAT2",
+    "impact": "MODERATE",
+    "amino_acids": "R/Q",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1004
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.938,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4148323",
+    "genes": [
+      "UGT1A1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "UGT1A1",
+    "impact": "MODERATE",
+    "amino_acids": "G/R",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.198
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "possibly_damaging",
+    "loeuf": 0.988,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1045642",
+    "genes": [
+      "ABCB1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "ABCB1",
+    "impact": "MODERATE",
+    "amino_acids": "I/M",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1865
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "probably_damaging",
+    "loeuf": 0.575,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs28371706",
+    "genes": [
+      "CYP2D6"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP2D6",
+    "impact": "MODERATE",
+    "amino_acids": "T/I",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.2533
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.706,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1058930",
+    "genes": [
+      "CYP2C9"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP2C8",
+    "impact": "MODERATE",
+    "amino_acids": "I/M",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.214
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.502,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs28371685",
+    "genes": [
+      "CYP2C9"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP2C9",
+    "impact": "MODERATE",
+    "amino_acids": "R/W",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.2408
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.428,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2279343",
+    "genes": [
+      "CYP2B6"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP2B6",
+    "impact": "MODERATE",
+    "amino_acids": "K/R",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0565
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.044,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3745274",
+    "genes": [
+      "CYP2B6"
+    ],
+    "consequence": "splice_acceptor_variant",
+    "gene": "CYP2B6",
+    "impact": "HIGH",
+    "loeuf": 1.044,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1799971",
+    "genes": [
+      "OPRM1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "OPRM1",
+    "impact": "MODERATE",
+    "amino_acids": "N/D",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1545
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 1.006,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs9934438",
+    "genes": [
+      "VKORC1"
+    ],
+    "consequence": "5_prime_UTR_variant",
+    "gene": "VKORC1",
+    "impact": "MODIFIER",
+    "loeuf": 0.997,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2032582",
+    "genes": [
+      "ABCB1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "ABCB1",
+    "impact": "MODERATE",
+    "amino_acids": "S/A",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0497
+    },
+    "sift": "tolerated_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 0.575,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1801159",
+    "genes": [
+      "DPYD"
+    ],
+    "consequence": "missense_variant",
+    "gene": "DPYD",
+    "impact": "MODERATE",
+    "amino_acids": "I/L",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0619
+    },
+    "sift": "tolerated_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 1.09,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs56038477",
+    "genes": [
+      "DPYD"
+    ],
+    "consequence": "missense_variant",
+    "gene": "DPYD",
+    "impact": "MODERATE",
+    "amino_acids": "E/D",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.2839
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 1.09,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs887829",
+    "genes": [
+      "UGT1A1"
+    ],
+    "consequence": "intron_variant",
+    "gene": "UGT1A6",
+    "impact": "MODIFIER",
+    "loeuf": 0.895,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4149015",
+    "genes": [
+      "SLCO1B1"
+    ],
+    "consequence": "upstream_gene_variant",
+    "gene": "SLCO1B1",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2306283",
+    "genes": [
+      "SLCO1B1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "SLCO1B1",
+    "impact": "MODERATE",
+    "amino_acids": "N/H",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.077
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.425,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs17244841",
+    "genes": [
+      "HMGCR"
+    ],
+    "consequence": "intron_variant",
+    "gene": "HMGCR",
+    "impact": "MODIFIER",
+    "loeuf": 0.429,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12777823",
+    "genes": [
+      "CYP2C cluster"
+    ],
+    "consequence": "downstream_gene_variant",
+    "gene": "CTBP2P2",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4986910",
+    "genes": [
+      "CYP3A4"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP3A4",
+    "impact": "MODERATE",
+    "amino_acids": "M/T",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.6601
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "probably_damaging",
+    "loeuf": 0.8,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs35599367",
+    "genes": [
+      "CYP3A4"
+    ],
+    "consequence": "intron_variant",
+    "gene": "CYP3A4",
+    "impact": "MODIFIER",
+    "loeuf": 0.8,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2740574",
+    "genes": [
+      "CYP3A4"
+    ],
+    "consequence": "upstream_gene_variant",
+    "gene": "CYP3A4",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs9332131",
+    "genes": [
+      "CYP2C9"
+    ],
+    "consequence": "frameshift_variant",
+    "gene": "CYP2C9",
+    "impact": "HIGH",
+    "amino_acids": "K/KX",
+    "loeuf": 1.428,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3093105",
+    "genes": [
+      "CYP4F2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP4F2",
+    "impact": "MODERATE",
+    "amino_acids": "W/G",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0364
+    },
+    "sift": "tolerated_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 1.146,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4803419",
+    "genes": [
+      "CYP2C19"
+    ],
+    "consequence": "intron_variant",
+    "gene": "CYP2B6",
+    "impact": "MODIFIER",
+    "loeuf": 1.044,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs28399504",
+    "genes": [
+      "CYP2C19"
+    ],
+    "consequence": "start_lost",
+    "gene": "CYP2C19",
+    "impact": "HIGH",
+    "amino_acids": "M/V",
+    "sift": "deleterious_low_confidence",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.377,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs56337013",
+    "genes": [
+      "CYP2C19"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP2C19",
+    "impact": "MODERATE",
+    "amino_acids": "R/W",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.6101
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "possibly_damaging",
+    "loeuf": 1.377,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs72558186",
+    "genes": [
+      "CYP2C19"
+    ],
+    "consequence": "splice_donor_variant",
+    "gene": "CYP2C19",
+    "impact": "HIGH",
+    "loeuf": 1.377,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs72558188",
+    "genes": [
+      "CYP2C19"
+    ],
+    "status": "skipped (no VEP result)"
+  },
+  {
+    "rsid": "rs17884712",
+    "genes": [
+      "CYP2C9"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP2C19",
+    "impact": "MODERATE",
+    "amino_acids": "R/H",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1736
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 1.377,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7294",
+    "genes": [
+      "VKORC1"
+    ],
+    "consequence": "3_prime_UTR_variant",
+    "gene": "VKORC1",
+    "impact": "MODIFIER",
+    "loeuf": 0.997,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1057868",
+    "genes": [
+      "POR"
+    ],
+    "consequence": "missense_variant",
+    "gene": "POR",
+    "impact": "MODERATE",
+    "amino_acids": "A/V",
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 0.736,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs116855232",
+    "genes": [
+      "NUDT15"
+    ],
+    "consequence": "missense_variant",
+    "gene": "NUDT15",
+    "impact": "MODERATE",
+    "amino_acids": "R/C",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1589
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.364,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3211371",
+    "genes": [
+      "CYP2B6"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP2B6",
+    "impact": "MODERATE",
+    "amino_acids": "R/S",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.2367
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.044,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs28399499",
+    "genes": [
+      "CYP2B6"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP2B6",
+    "impact": "MODERATE",
+    "amino_acids": "I/T",
+    "alphamissense": {
+      "class": "ambiguous",
+      "score": 0.3822
+    },
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.044,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1051266",
+    "genes": [
+      "SLC19A1"
+    ],
+    "consequence": "missense_variant",
+    "gene": "SLC19A1",
+    "impact": "MODERATE",
+    "amino_acids": "H/R",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0589
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.508,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3814055",
+    "genes": [
+      "NR1I2 (PXR)"
+    ],
+    "consequence": "5_prime_UTR_variant",
+    "gene": "NR1I2",
+    "impact": "MODIFIER",
+    "loeuf": 1.141,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2472297",
+    "genes": [
+      "CYP1A1/CYP1A2"
+    ],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs489693",
+    "genes": [
+      "MC4R"
+    ],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4633",
+    "genes": [
+      "COMT"
+    ],
+    "consequence": "synonymous_variant",
+    "gene": "COMT",
+    "impact": "LOW",
+    "amino_acids": "H",
+    "loeuf": 1.055,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2032583",
+    "genes": [
+      "ABCB1"
+    ],
+    "consequence": "intron_variant",
+    "gene": "ABCB1",
+    "impact": "MODIFIER",
+    "loeuf": 0.575,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10264272",
+    "genes": [
+      "CYP2C9"
+    ],
+    "consequence": "synonymous_variant",
+    "gene": "CYP3A5",
+    "impact": "LOW",
+    "amino_acids": "K",
+    "loeuf": 1.028,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1041983",
+    "genes": [
+      "NAT2"
+    ],
+    "consequence": "synonymous_variant",
+    "gene": "NAT2",
+    "impact": "LOW",
+    "amino_acids": "Y",
+    "loeuf": 1.938,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1799931",
+    "genes": [
+      "NAT2"
+    ],
+    "consequence": "missense_variant",
+    "gene": "NAT2",
+    "impact": "MODERATE",
+    "amino_acids": "G/E",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0809
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.938,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1128503",
+    "genes": [
+      "ABCB1"
+    ],
+    "consequence": "synonymous_variant",
+    "gene": "ABCB1",
+    "impact": "LOW",
+    "amino_acids": "G",
+    "loeuf": 0.575,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7668258",
+    "genes": [
+      "VKORC1"
+    ],
+    "consequence": "intron_variant",
+    "gene": "UGT2B7",
+    "impact": "MODIFIER",
+    "loeuf": 1.17,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4149117",
+    "genes": [
+      "SLCO1B3"
+    ],
+    "consequence": "missense_variant",
+    "gene": "SLCO1B3",
+    "impact": "MODERATE",
+    "amino_acids": "S/P",
+    "alphamissense": {
+      "class": "likely_pathogenic",
+      "score": 0.7901
+    },
+    "sift": "deleterious",
+    "polyphen": "benign",
+    "loeuf": 1.124,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs717620",
+    "genes": [
+      "ABCC2"
+    ],
+    "consequence": "5_prime_UTR_variant",
+    "gene": "ABCC2",
+    "impact": "MODIFIER",
+    "loeuf": 0.985,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4986913",
+    "genes": [
+      "CYP3A4"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP3A4",
+    "impact": "MODERATE",
+    "amino_acids": "P/S",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.2334
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 0.8,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs10873531",
+    "genes": [
+      "CYP2C19"
+    ],
+    "consequence": "synonymous_variant",
+    "gene": "HSP90AA1",
+    "impact": "LOW",
+    "amino_acids": "T",
+    "loeuf": 0.362,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2725264",
+    "genes": [
+      "CYP2C19"
+    ],
+    "consequence": "intron_variant",
+    "gene": "ABCG2",
+    "impact": "MODIFIER",
+    "loeuf": 1.273,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3758581",
+    "genes": [
+      "CYP2C9/CYP2C19"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP2C19",
+    "impact": "MODERATE",
+    "amino_acids": "I/L",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1757
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 1.377,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1985842",
+    "genes": [
+      "CYP2D6"
+    ],
+    "consequence": "intron_variant",
+    "gene": "CYP2D6",
+    "impact": "MODIFIER",
+    "loeuf": 1.706,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1135840",
+    "genes": [
+      "CYP2D6"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP2D6",
+    "impact": "MODERATE",
+    "amino_acids": "S/I",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1804
+    },
+    "sift": "tolerated",
+    "polyphen": "benign",
+    "loeuf": 1.706,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1902023",
+    "genes": [
+      "UGT2B15"
+    ],
+    "consequence": "missense_variant",
+    "gene": "UGT2B15",
+    "impact": "MODERATE",
+    "amino_acids": "Y/D",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.0496
+    },
+    "sift": "tolerated_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 1.102,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs12720461",
+    "genes": [
+      "DPYD"
+    ],
+    "consequence": "intron_variant",
+    "gene": "CYP1A2",
+    "impact": "MODIFIER",
+    "loeuf": 1.355,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2297595",
+    "genes": [
+      "DPYD"
+    ],
+    "consequence": "missense_variant",
+    "gene": "DPYD",
+    "impact": "MODERATE",
+    "amino_acids": "M/L",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.2716
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "probably_damaging",
+    "loeuf": 1.09,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1050829",
+    "genes": [
+      "G6PD"
+    ],
+    "consequence": "missense_variant",
+    "gene": "G6PD",
+    "impact": "MODERATE",
+    "amino_acids": "N/Y",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1949
+    },
+    "sift": "deleterious_low_confidence",
+    "polyphen": "possibly_damaging",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7900194",
+    "genes": [
+      "CYP2C9"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP2C9",
+    "impact": "MODERATE",
+    "amino_acids": "R/H",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.08
+    },
+    "sift": "tolerated_low_confidence",
+    "polyphen": "benign",
+    "loeuf": 1.428,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2814778",
+    "genes": [
+      "DARC/ACKR1"
+    ],
+    "consequence": "splice_polypyrimidine_tract_variant",
+    "gene": "ACKR1",
+    "impact": "LOW",
+    "loeuf": 1.841,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1834640",
+    "genes": [
+      "SLC24A5 region"
+    ],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1805008",
+    "genes": [
+      "MC1R"
+    ],
+    "consequence": "missense_variant",
+    "gene": "MC1R",
+    "impact": "MODERATE",
+    "amino_acids": "R/W",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1611
+    },
+    "sift": "deleterious",
+    "polyphen": "benign",
+    "loeuf": 1.916,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2065160",
+    "genes": [
+      "MFSD12"
+    ],
+    "consequence": "downstream_gene_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs174570",
+    "genes": [
+      "FADS2"
+    ],
+    "consequence": "intron_variant",
+    "gene": "FADS2",
+    "impact": "MODIFIER",
+    "loeuf": 0.396,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4918664",
+    "genes": [
+      "intergenic"
+    ],
+    "consequence": "intergenic_variant",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3317",
+    "genes": [
+      "GC"
+    ],
+    "consequence": "3_prime_UTR_variant",
+    "gene": "REEP5",
+    "impact": "MODIFIER",
+    "loeuf": 1.459,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs7349",
+    "genes": [
+      "F13B"
+    ],
+    "consequence": "3_prime_UTR_variant",
+    "gene": "ZEB1",
+    "impact": "MODIFIER",
+    "loeuf": 0.313,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs6451722",
+    "genes": [
+      "intergenic"
+    ],
+    "consequence": "downstream_gene_variant",
+    "gene": "NNT",
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1540771",
+    "genes": [
+      "intergenic"
+    ],
+    "consequence": "intron_variant",
+    "gene": null,
+    "impact": "MODIFIER",
+    "status": "ok"
+  },
+  {
+    "rsid": "rs4411548",
+    "genes": [
+      "intergenic"
+    ],
+    "consequence": "intron_variant",
+    "gene": "ATP6V0A1",
+    "impact": "MODIFIER",
+    "loeuf": 0.441,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs285",
+    "genes": [
+      "LPL"
+    ],
+    "consequence": "intron_variant",
+    "gene": "LPL",
+    "impact": "MODIFIER",
+    "loeuf": 1.075,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2789823",
+    "genes": [
+      "intergenic"
+    ],
+    "consequence": "intron_variant",
+    "gene": "VAV2",
+    "impact": "MODIFIER",
+    "loeuf": 0.606,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs3916235",
+    "genes": [
+      "intergenic"
+    ],
+    "consequence": "intron_variant",
+    "gene": "CD226",
+    "impact": "MODIFIER",
+    "loeuf": 1.012,
+    "status": "ok"
+  }
+]
