@@ -28,6 +28,7 @@ REPO = Path(os.path.expanduser("~/dna-analyzer"))
 CUR = REPO / "data" / "curated"
 OUT = CUR / "alphagenome_scores.json"
 DBSNP_DIR = Path(os.path.expanduser("~/science-skills/skills/dbsnp_database"))
+GNOMAD_DIR = Path(os.path.expanduser("~/science-skills/skills/gnomad_database"))
 COMP = {"A": "T", "T": "A", "C": "G", "G": "C"}
 SCORER_NAMES = ["RNA_SEQ", "DNASE", "CHIP_HISTONE", "SPLICE_SITES"]  # CONTACT_MAPS excluded (gRPC INTERNAL)
 
@@ -44,6 +45,32 @@ def dbsnp_get(rsid):
     subprocess.run(["uv", "run", "scripts/dbsnp_cli.py", "get-variant", rsid, "--output", "/tmp/agb_db.json"],
                    cwd=DBSNP_DIR, capture_output=True, text=True, timeout=60)
     return json.loads(Path("/tmp/agb_db.json").read_text())
+
+
+def gnomad_indel_vcf(rsid):
+    """Return VCF-normalized (chrom, pos, ref, alt) for an indel via gnomAD, or None.
+
+    gnomAD's variant_id is already left-aligned VCF (anchor-base) form, which is
+    what AlphaGenome's genome.Variant expects. rsID-CONFIRMED: the by-rsID lookup
+    can return a neighbouring/absent variant (e.g. rs1799752 -> F508del), so we
+    only trust it when the returned record actually carries our rsID.
+    """
+    subprocess.run(["uv", "run", "scripts/get_variant_frequency.py", "--rsid", rsid, "--output", "/tmp/agb_gn.json"],
+                   cwd=GNOMAD_DIR, capture_output=True, text=True, timeout=60)
+    try:
+        v = (json.loads(Path("/tmp/agb_gn.json").read_text()).get("data", {}) or {}).get("variant") or {}
+    except (json.JSONDecodeError, FileNotFoundError):
+        return None
+    rsids = [str(x).lower() for x in (v.get("rsids") or [])]
+    if rsid.lower() not in rsids:
+        return None
+    parts = (v.get("variant_id") or "").split("-")
+    if len(parts) != 4:
+        return None
+    chrom, pos, ref, alt = parts
+    if not (ref and alt and set(ref + alt) <= set("ACGT")):
+        return None
+    return chrom, int(pos), ref, alt
 
 
 def seq_chrom(seq):
@@ -146,43 +173,50 @@ def main():
     done = {}
     if OUT.exists():
         done = {r["rsid"]: r for r in json.loads(OUT.read_text())}
-    todo = [rs for rs in want if rs not in done]
+    ok_done = {rs for rs, r in done.items() if r.get("status") == "ok"}
+    todo = [rs for rs in want if rs not in ok_done]  # re-attempt anything not yet 'ok'
     limit = int(os.environ.get("AGB_LIMIT", "0") or 0)
     if limit:
         todo = todo[:limit]
-    print(f"{len(want)} unique curated rsIDs | {len(done)} already done | {len(todo)} to score", flush=True)
-    results = list(done.values())
+    print(f"{len(want)} unique curated rsIDs | {len(ok_done)} already ok | {len(todo)} to (re)score", flush=True)
+    results = [r for r in done.values() if r.get("status") == "ok"]  # keep ok; re-do the rest
 
     for i, rs in enumerate(todo, 1):
         info = want[rs]
         rec = {"rsid": rs, "genes": sorted(info["genes"]), "sources": sorted(info["sources"])}
         try:
             place = snv_placement(dbsnp_get(rs))
-            if not place:
-                rec["status"] = "skipped (non-SNV or no GRCh38 placement)"
-            else:
+            chrom = pos = ref = alt = how = None
+            if place:
                 chrom, pos, ref, alts = place
                 alt, how = pick_alt(ref, alts, info["alleles"])
-                if not alt:
-                    rec["status"] = "skipped (no alt allele)"
-                else:
-                    v = genome.Variant(chromosome=f"chr{chrom}", position=pos,
-                                       reference_bases=ref, alternate_bases=alt)
-                    interval = v.reference_interval.resize(dna_client.SEQUENCE_LENGTH_1MB)
-                    df = None
-                    for attempt in range(3):
-                        try:
-                            s = MODEL.score_variant(interval=interval, variant=v, variant_scorers=SCORERS)
-                            df = variant_scorers.tidy_scores(s)
-                            break
-                        except Exception as e:  # noqa: BLE001
-                            if attempt == 2:
-                                raise
-                            time.sleep(5 * (attempt + 1))
-                    rec["scored_variant"] = f"chr{chrom}:{pos}:{ref}>{alt}"
-                    rec["alt_choice"] = how
-                    rec.update(summarize(df, rec["genes"]))
-                    rec["status"] = "ok"
+            else:
+                indel = gnomad_indel_vcf(rs)  # VCF-normalized, rsID-confirmed
+                if indel:
+                    chrom, pos, ref, alt = indel
+                    how = "gnomAD-indel"
+
+            if not alt:
+                rec["status"] = ("skipped (no alt allele)" if place
+                                 else "skipped (indel: no rsID-confirmed gnomAD VCF)")
+            else:
+                v = genome.Variant(chromosome=f"chr{chrom}", position=pos,
+                                   reference_bases=ref, alternate_bases=alt)
+                interval = v.reference_interval.resize(dna_client.SEQUENCE_LENGTH_1MB)
+                df = None
+                for attempt in range(3):
+                    try:
+                        s = MODEL.score_variant(interval=interval, variant=v, variant_scorers=SCORERS)
+                        df = variant_scorers.tidy_scores(s)
+                        break
+                    except Exception as e:  # noqa: BLE001
+                        if attempt == 2:
+                            raise
+                        time.sleep(5 * (attempt + 1))
+                rec["scored_variant"] = f"chr{chrom}:{pos}:{ref}>{alt}"
+                rec["alt_choice"] = how
+                rec.update(summarize(df, rec["genes"]))
+                rec["status"] = "ok"
         except Exception as e:  # noqa: BLE001
             rec["status"] = f"error: {type(e).__name__}: {str(e)[:120]}"
         results.append(rec)

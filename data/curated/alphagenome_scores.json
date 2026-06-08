@@ -1,25 +1,5 @@
 [
   {
-    "rsid": "rs80357906",
-    "genes": [
-      "BRCA1"
-    ],
-    "sources": [
-      "health"
-    ],
-    "status": "skipped (non-SNV or no GRCh38 placement)"
-  },
-  {
-    "rsid": "rs80357914",
-    "genes": [
-      "BRCA1"
-    ],
-    "sources": [
-      "health"
-    ],
-    "status": "skipped (non-SNV or no GRCh38 placement)"
-  },
-  {
     "rsid": "rs28897696",
     "genes": [
       "BRCA2"
@@ -45,16 +25,6 @@
       "SPLICE_SITES": 0.0193
     },
     "status": "ok"
-  },
-  {
-    "rsid": "rs80357713",
-    "genes": [
-      "BRCA1"
-    ],
-    "sources": [
-      "health"
-    ],
-    "status": "skipped (non-SNV or no GRCh38 placement)"
   },
   {
     "rsid": "rs429358",
@@ -497,16 +467,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs121909001",
-    "genes": [
-      "CFTR"
-    ],
-    "sources": [
-      "health"
-    ],
-    "status": "skipped (non-SNV or no GRCh38 placement)"
-  },
-  {
     "rsid": "rs75961395",
     "genes": [
       "CFTR"
@@ -538,16 +498,6 @@
       "SPLICE_SITES": 0.0547
     },
     "status": "ok"
-  },
-  {
-    "rsid": "rs113993960",
-    "genes": [
-      "CFTR"
-    ],
-    "sources": [
-      "health"
-    ],
-    "status": "skipped (non-SNV or no GRCh38 placement)"
   },
   {
     "rsid": "rs1050828",
@@ -2608,16 +2558,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs1799752",
-    "genes": [
-      "ACE"
-    ],
-    "sources": [
-      "trait"
-    ],
-    "status": "skipped (non-SNV or no GRCh38 placement)"
-  },
-  {
     "rsid": "rs8192678",
     "genes": [
       "PPARGC1A"
@@ -3085,16 +3025,6 @@
       "SPLICE_SITES": 0.0078
     },
     "status": "ok"
-  },
-  {
-    "rsid": "rs57875989",
-    "genes": [
-      "DEC2/BHLHE41"
-    ],
-    "sources": [
-      "trait"
-    ],
-    "status": "skipped (non-SNV or no GRCh38 placement)"
   },
   {
     "rsid": "rs228697",
@@ -3832,16 +3762,6 @@
       "SPLICE_SITES": 0.0605
     },
     "status": "ok"
-  },
-  {
-    "rsid": "rs333",
-    "genes": [
-      "CCR5"
-    ],
-    "sources": [
-      "trait"
-    ],
-    "status": "skipped (non-SNV or no GRCh38 placement)"
   },
   {
     "rsid": "rs2802292",
@@ -5118,16 +5038,6 @@
       "SPLICE_SITES": 0.0078
     },
     "status": "ok"
-  },
-  {
-    "rsid": "rs11385942",
-    "genes": [
-      "LZTFL1"
-    ],
-    "sources": [
-      "trait"
-    ],
-    "status": "skipped (non-SNV or no GRCh38 placement)"
   },
   {
     "rsid": "rs2164273",
@@ -9612,14 +9522,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs2066847",
-    "genes": [],
-    "sources": [
-      "prs"
-    ],
-    "status": "skipped (non-SNV or no GRCh38 placement)"
-  },
-  {
     "rsid": "rs10210302",
     "genes": [],
     "sources": [
@@ -11092,16 +10994,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs5030655",
-    "genes": [
-      "CYP2D6"
-    ],
-    "sources": [
-      "pharma"
-    ],
-    "status": "skipped (non-SNV or no GRCh38 placement)"
-  },
-  {
     "rsid": "rs16947",
     "genes": [
       "CYP2D6"
@@ -11588,16 +11480,6 @@
       "SPLICE_SITES": 0.0078
     },
     "status": "ok"
-  },
-  {
-    "rsid": "rs8175347",
-    "genes": [
-      "UGT1A1"
-    ],
-    "sources": [
-      "pharma"
-    ],
-    "status": "skipped (non-SNV or no GRCh38 placement)"
   },
   {
     "rsid": "rs2231142",
@@ -12410,16 +12292,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs9332131",
-    "genes": [
-      "CYP2C9"
-    ],
-    "sources": [
-      "pharma"
-    ],
-    "status": "skipped (non-SNV or no GRCh38 placement)"
-  },
-  {
     "rsid": "rs3093105",
     "genes": [
       "CYP4F2"
@@ -12577,16 +12449,6 @@
       "SPLICE_SITES": 0.9296
     },
     "status": "ok"
-  },
-  {
-    "rsid": "rs72558188",
-    "genes": [
-      "CYP2C19"
-    ],
-    "sources": [
-      "pharma"
-    ],
-    "status": "skipped (non-SNV or no GRCh38 placement)"
   },
   {
     "rsid": "rs17884712",
@@ -13918,5 +13780,321 @@
       "SPLICE_SITES": 0.0059
     },
     "status": "ok"
+  },
+  {
+    "rsid": "rs80357906",
+    "genes": [
+      "BRCA1"
+    ],
+    "sources": [
+      "health"
+    ],
+    "scored_variant": "chr17:43057062:T>TG",
+    "alt_choice": "gnomAD-indel",
+    "n_scores": 36667,
+    "top_expr": {
+      "gene": "ETV4",
+      "tissue": "placenta",
+      "quantile": 1.0,
+      "raw": 0.2045
+    },
+    "max_expr_raw": 0.3314,
+    "n_expr_q99": 10377,
+    "own_gene": {
+      "gene": "BRCA1",
+      "tissue": "mammary microvascular endothelial cell",
+      "quantile": 1.0,
+      "raw": 0.0733
+    },
+    "max_raw_by_modality": {
+      "CHIP_HISTONE": 0.0734,
+      "DNASE": 0.0824,
+      "RNA_SEQ": 0.3314,
+      "SPLICE_SITES": 0.1055
+    },
+    "status": "ok"
+  },
+  {
+    "rsid": "rs80357914",
+    "genes": [
+      "BRCA1"
+    ],
+    "sources": [
+      "health"
+    ],
+    "scored_variant": "chr17:43124027:ACT>A",
+    "alt_choice": "gnomAD-indel",
+    "n_scores": 32707,
+    "top_expr": {
+      "gene": "CCDC200",
+      "tissue": "testis",
+      "quantile": 1.0,
+      "raw": 0.2753
+    },
+    "max_expr_raw": 0.381,
+    "n_expr_q99": 10669,
+    "own_gene": {
+      "gene": "BRCA1",
+      "tissue": "uterus",
+      "quantile": 1.0,
+      "raw": 0.0562
+    },
+    "max_raw_by_modality": {
+      "CHIP_HISTONE": 0.0734,
+      "DNASE": 0.0438,
+      "RNA_SEQ": 0.381,
+      "SPLICE_SITES": 0.0801
+    },
+    "status": "ok"
+  },
+  {
+    "rsid": "rs80357713",
+    "genes": [
+      "BRCA1"
+    ],
+    "sources": [
+      "health"
+    ],
+    "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
+  },
+  {
+    "rsid": "rs121909001",
+    "genes": [
+      "CFTR"
+    ],
+    "sources": [
+      "health"
+    ],
+    "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
+  },
+  {
+    "rsid": "rs113993960",
+    "genes": [
+      "CFTR"
+    ],
+    "sources": [
+      "health"
+    ],
+    "scored_variant": "chr7:117559590:ATCT>A",
+    "alt_choice": "gnomAD-indel",
+    "n_scores": 10531,
+    "top_expr": {
+      "gene": "ENSG00000083622",
+      "tissue": "kidney",
+      "quantile": -1.0,
+      "raw": -0.1992
+    },
+    "max_expr_raw": 0.1992,
+    "n_expr_q99": 1557,
+    "own_gene": {
+      "gene": "CFTR",
+      "tissue": "epithelial cell of proximal tubule",
+      "quantile": -1.0,
+      "raw": -0.1031
+    },
+    "max_raw_by_modality": {
+      "CHIP_HISTONE": 0.0768,
+      "DNASE": 0.0574,
+      "RNA_SEQ": 0.1992,
+      "SPLICE_SITES": 0.1094
+    },
+    "status": "ok"
+  },
+  {
+    "rsid": "rs1799752",
+    "genes": [
+      "ACE"
+    ],
+    "sources": [
+      "trait"
+    ],
+    "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
+  },
+  {
+    "rsid": "rs57875989",
+    "genes": [
+      "DEC2/BHLHE41"
+    ],
+    "sources": [
+      "trait"
+    ],
+    "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
+  },
+  {
+    "rsid": "rs333",
+    "genes": [
+      "CCR5"
+    ],
+    "sources": [
+      "trait"
+    ],
+    "scored_variant": "chr3:46373452:TACAGTCAGTATCAATTCTGGAAGAATTTCCAG>T",
+    "alt_choice": "gnomAD-indel",
+    "n_scores": 20035,
+    "top_expr": {
+      "gene": "LTF",
+      "tissue": "endothelial cell",
+      "quantile": -1.0,
+      "raw": -0.2159
+    },
+    "max_expr_raw": 0.5537,
+    "n_expr_q99": 10334,
+    "own_gene": {
+      "gene": "CCR5",
+      "tissue": "placenta",
+      "quantile": -1.0,
+      "raw": -0.1884
+    },
+    "max_raw_by_modality": {
+      "CHIP_HISTONE": 0.1374,
+      "DNASE": 0.2311,
+      "RNA_SEQ": 0.5537,
+      "SPLICE_SITES": 0.0078
+    },
+    "status": "ok"
+  },
+  {
+    "rsid": "rs11385942",
+    "genes": [
+      "LZTFL1"
+    ],
+    "sources": [
+      "trait"
+    ],
+    "scored_variant": "chr3:45834967:G>GA",
+    "alt_choice": "gnomAD-indel",
+    "n_scores": 11719,
+    "top_expr": {
+      "gene": "CCR2",
+      "tissue": "CD4-positive, alpha-beta T cell",
+      "quantile": 1.0,
+      "raw": 0.2203
+    },
+    "max_expr_raw": 0.2573,
+    "n_expr_q99": 5135,
+    "own_gene": {
+      "gene": "LZTFL1",
+      "tissue": "mammary stem cell",
+      "quantile": -1.0,
+      "raw": -0.0817
+    },
+    "max_raw_by_modality": {
+      "CHIP_HISTONE": 0.5541,
+      "DNASE": 0.7584,
+      "RNA_SEQ": 0.2573,
+      "SPLICE_SITES": 0.0527
+    },
+    "status": "ok"
+  },
+  {
+    "rsid": "rs2066847",
+    "genes": [],
+    "sources": [
+      "prs"
+    ],
+    "scored_variant": "chr16:50729867:G>GC",
+    "alt_choice": "gnomAD-indel",
+    "n_scores": 14491,
+    "top_expr": {
+      "gene": "CYLD-AS2",
+      "tissue": "testis",
+      "quantile": 1.0,
+      "raw": 0.2177
+    },
+    "max_expr_raw": 0.2918,
+    "n_expr_q99": 4042,
+    "max_raw_by_modality": {
+      "CHIP_HISTONE": 0.1018,
+      "DNASE": 0.4313,
+      "RNA_SEQ": 0.2918,
+      "SPLICE_SITES": 0.0352
+    },
+    "status": "ok"
+  },
+  {
+    "rsid": "rs5030655",
+    "genes": [
+      "CYP2D6"
+    ],
+    "sources": [
+      "pharma"
+    ],
+    "scored_variant": "chr22:42129083:CA>C",
+    "alt_choice": "gnomAD-indel",
+    "n_scores": 25579,
+    "top_expr": {
+      "gene": "NFAM1",
+      "tissue": "B cell",
+      "quantile": 1.0,
+      "raw": 0.2726
+    },
+    "max_expr_raw": 0.5245,
+    "n_expr_q99": 9335,
+    "own_gene": {
+      "gene": "CYP2D6",
+      "tissue": "ascending aorta",
+      "quantile": 1.0,
+      "raw": 0.0894
+    },
+    "max_raw_by_modality": {
+      "CHIP_HISTONE": 0.2287,
+      "DNASE": 0.1424,
+      "RNA_SEQ": 0.5245,
+      "SPLICE_SITES": 0.0303
+    },
+    "status": "ok"
+  },
+  {
+    "rsid": "rs8175347",
+    "genes": [
+      "UGT1A1"
+    ],
+    "sources": [
+      "pharma"
+    ],
+    "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
+  },
+  {
+    "rsid": "rs9332131",
+    "genes": [
+      "CYP2C9"
+    ],
+    "sources": [
+      "pharma"
+    ],
+    "scored_variant": "chr10:94949281:GA>G",
+    "alt_choice": "gnomAD-indel",
+    "n_scores": 10927,
+    "top_expr": {
+      "gene": "CYP2C8",
+      "tissue": "glutamatergic neuron",
+      "quantile": 1.0,
+      "raw": 0.1508
+    },
+    "max_expr_raw": 0.2315,
+    "n_expr_q99": 3981,
+    "own_gene": {
+      "gene": "CYP2C9",
+      "tissue": "left renal pelvis",
+      "quantile": 1.0,
+      "raw": 0.0656
+    },
+    "max_raw_by_modality": {
+      "CHIP_HISTONE": 0.0567,
+      "DNASE": 0.0707,
+      "RNA_SEQ": 0.2315,
+      "SPLICE_SITES": 0.0864
+    },
+    "status": "ok"
+  },
+  {
+    "rsid": "rs72558188",
+    "genes": [
+      "CYP2C19"
+    ],
+    "sources": [
+      "pharma"
+    ],
+    "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
   }
 ]

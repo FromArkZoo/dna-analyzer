@@ -82,7 +82,7 @@ Schema normalisation across the three TSV sources is non-trivial: different chro
 The `scripts/` directory uses Google DeepMind's open-source [**science-skills**](https://github.com/google-deepmind/science-skills) (run via `uv`) to validate and enrich the curated reference data. These run **at build/curation time only** — they query *public reference variants by rsID*, never user genotypes — so the app's offline/privacy guarantee is unchanged. The app reads only the resulting local files at runtime.
 
 - **Reference validation** (`validate_health_variants.py`) cross-checks every curated health variant against live **ClinVar**, **gnomAD** and **dbSNP**: confirming current pathogenicity classifications, attaching real population allele frequencies (allele-pinned and rsID-confirmed, with reverse-complement handling for minus-strand genes), and flagging drift. This caught and fixed a benign variant mislabeled CRITICAL and a protective variant mislabeled pathogenic, and added a `clinvar_xref` provenance field to each entry.
-- **Regulatory pre-compute** (`alphagenome_score_curated.py`) scores each curated SNV through **AlphaGenome**, aggregating thousands of per-track predictions into a compact per-variant summary (top affected gene + tissue, own-gene effect, per-modality magnitude) saved to `data/curated/alphagenome_scores.json`. 488 variants are scored; 81% of gene-annotated variants show a significant predicted effect on their own gene (e.g. APOE→neuron, HBB→smooth muscle, ADIPOQ→adipocyte). The app surfaces this as a *"Predicted regulatory impact"* line on findings.
+- **Regulatory pre-compute** (`alphagenome_score_curated.py`) scores each curated SNV through **AlphaGenome**, aggregating thousands of per-track predictions into a compact per-variant summary (top affected gene + tissue, own-gene effect, per-modality magnitude) saved to `data/curated/alphagenome_scores.json`. 496 variants are scored (SNVs + gnomAD-present indels); ~80% of gene-annotated variants show a significant predicted effect on their own gene (e.g. APOE→neuron, HBB→smooth muscle, CCR5-Δ32→↓CCR5, F508del→↓CFTR). The app surfaces this as a *"Predicted regulatory impact"* line on findings.
 
 AlphaGenome requires a free (non-commercial) API key, used only during this offline pre-compute step; see the [AlphaGenome docs](https://deepmind.google.com/science/alphagenome/).
 
@@ -114,7 +114,7 @@ No ML models or external APIs **at runtime** — AlphaGenome scoring and referen
 **Rougher edges**
 - Polygenic risk score computation needs more sophisticated handling of LD (linkage disequilibrium) for accurate effect-size summation
 - `population_frequency` currently does double duty (display + absolute-risk baseline); the risk model should use disease prevalence as the baseline instead
-- AlphaGenome scoring covers SNVs only — 14 curated indels (e.g. CFTR F508del, CCR5-Δ32) are not yet scored
+- AlphaGenome scoring covers SNVs and indels present in gnomAD (incl. CFTR F508del, CCR5-Δ32, NOD2, the 3p21.31 COVID-severity locus); 6 indels absent from gnomAD (e.g. the ACE Alu insertion, UGT1A1 TA-repeat) remain unscored
 - No support for 23andMe or other consumer file formats yet (AncestryDNA only)
 
 **Privacy / disclaimers**
