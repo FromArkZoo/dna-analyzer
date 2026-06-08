@@ -412,7 +412,7 @@ function renderHealth(risks) {
                     <p>Your genotype is <strong>${esc(r.your_genotype || '')}</strong>
                     (you carry ${r.zygosity === 'homozygous' ? 'two copies' : 'one copy'} of this variant).
                     ${inheritance ? ` Inheritance: ${escPlain(inheritance)}.` : ''}
-                    ${absRisk && absRisk !== '0.00%' && absRisk !== '1.00%' ? ` Based on population data, the estimated lifetime risk is about ${esc(absRisk)}.` : ''}</p>
+                    ${(absRisk && absRisk !== 'N/A' && r.baseline_risk) ? ` Against a population baseline of <strong>${esc(r.baseline_risk)}</strong>${r.baseline_condition ? ` for ${escPlain(r.baseline_condition)}` : ''}, your estimated risk is about <strong>${esc(absRisk)}</strong>.` : ''}</p>
                 </div>
                 <div class="result-detail-grid" style="margin-top:12px">
                     ${popFreq != null ? `

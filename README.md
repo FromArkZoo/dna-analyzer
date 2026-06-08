@@ -110,10 +110,10 @@ No ML models or external APIs **at runtime** — AlphaGenome scoring and referen
 - Flask web UI with in-memory upload
 - Curated health data validated against live ClinVar / gnomAD / dbSNP (with provenance)
 - AlphaGenome regulatory predictions pre-computed offline and surfaced on findings
+- Absolute-risk estimates computed from disease-prevalence baselines (not allele frequency), with the population baseline shown for context
 
 **Rougher edges**
 - Polygenic risk score computation needs more sophisticated handling of LD (linkage disequilibrium) for accurate effect-size summation
-- `population_frequency` currently does double duty (display + absolute-risk baseline); the risk model should use disease prevalence as the baseline instead
 - AlphaGenome scoring covers SNVs and indels present in gnomAD (incl. CFTR F508del, CCR5-Δ32, NOD2, the 3p21.31 COVID-severity locus); 6 indels absent from gnomAD (e.g. the ACE Alu insertion, UGT1A1 TA-repeat) remain unscored
 - No support for 23andMe or other consumer file formats yet (AncestryDNA only)
 

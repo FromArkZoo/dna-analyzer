@@ -19,6 +19,7 @@ from analyzers.risk_calculator import (
     format_risk_percentage,
 )
 from analyzers.alphagenome_scores import get_regulatory
+from analyzers.disease_prevalence import disease_baseline
 
 # APOE allele definitions: rs429358 + rs7412
 APOE_SNPS = {
@@ -97,9 +98,20 @@ def _analyze_curated_variants(
         zygosity = "homozygous" if risk_count == 2 else "heterozygous"
         severity = variant.get("severity", "MODERATE")
         odds_ratio = variant.get("odds_ratio") or 1.0
-        baseline_rate = variant.get("population_frequency") or 0.01
+        allele_freq = variant.get("population_frequency") or 0.01
 
-        risk_info = calculate_absolute_risk(baseline_rate, odds_ratio, zygosity)
+        # Absolute risk must start from the population DISEASE prevalence, not the
+        # variant's allele frequency. Resolve the condition to a disease baseline;
+        # if there is none (e.g. trait / drug-response findings), report N/A rather
+        # than fabricate a number from the wrong baseline.
+        base_name, base_rate = disease_baseline(variant.get("condition", ""))
+        if base_rate is not None:
+            risk_info = calculate_absolute_risk(base_rate, odds_ratio, zygosity)
+            absolute_risk = risk_info["absolute_risk_pct"]
+            baseline_risk = f"{base_rate * 100:g}%"
+        else:
+            absolute_risk = "N/A"
+            baseline_risk = None
 
         # Pick the zygosity-specific description if available
         if zygosity == "homozygous":
@@ -125,8 +137,10 @@ def _analyze_curated_variants(
             "confidence_stars": variant.get("confidence_stars", 1),
             "confidence_label": confidence_descriptor(variant.get("confidence_stars", 1)),
             "odds_ratio": odds_ratio,
-            "population_frequency": baseline_rate,
-            "absolute_risk": risk_info["absolute_risk_pct"],
+            "population_frequency": allele_freq,
+            "baseline_risk": baseline_risk,
+            "baseline_condition": base_name,
+            "absolute_risk": absolute_risk,
             "regulatory": get_regulatory(rsid),
         })
 
