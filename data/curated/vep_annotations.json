@@ -24,24 +24,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs28897696",
-    "genes": [
-      "BRCA2"
-    ],
-    "consequence": "missense_variant",
-    "gene": "BRCA1",
-    "impact": "MODERATE",
-    "amino_acids": "A/V",
-    "alphamissense": {
-      "class": "likely_pathogenic",
-      "score": 0.6381
-    },
-    "sift": "deleterious",
-    "polyphen": "benign",
-    "loeuf": 0.833,
-    "status": "ok"
-  },
-  {
     "rsid": "rs80357713",
     "genes": [
       "BRCA1"
@@ -1438,13 +1420,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs57875989",
-    "genes": [
-      "DEC2/BHLHE41"
-    ],
-    "status": "skipped (no VEP result)"
-  },
-  {
     "rsid": "rs228697",
     "genes": [
       "PER3"
@@ -1842,13 +1817,6 @@
     "polyphen": "benign",
     "loeuf": 0.711,
     "status": "ok"
-  },
-  {
-    "rsid": "rs4646994",
-    "genes": [
-      "ACE"
-    ],
-    "status": "skipped (no VEP result)"
   },
   {
     "rsid": "rs4253778",
@@ -4704,13 +4672,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs8175347",
-    "genes": [
-      "UGT1A1"
-    ],
-    "status": "skipped (no VEP result)"
-  },
-  {
     "rsid": "rs2231142",
     "genes": [
       "ABCG2"
@@ -5163,13 +5124,6 @@
     "impact": "HIGH",
     "loeuf": 1.377,
     "status": "ok"
-  },
-  {
-    "rsid": "rs72558188",
-    "genes": [
-      "CYP2C19"
-    ],
-    "status": "skipped (no VEP result)"
   },
   {
     "rsid": "rs17884712",
@@ -5753,5 +5707,45 @@
     "impact": "MODIFIER",
     "loeuf": 1.012,
     "status": "ok"
+  },
+  {
+    "rsid": "rs80359550",
+    "genes": [
+      "BRCA2"
+    ],
+    "consequence": "frameshift_variant",
+    "gene": "BRCA2",
+    "impact": "HIGH",
+    "amino_acids": "S/X",
+    "loeuf": 0.803,
+    "status": "ok"
+  },
+  {
+    "rsid": "rs57875989",
+    "genes": [
+      "DEC2/BHLHE41"
+    ],
+    "status": "skipped (no VEP result)"
+  },
+  {
+    "rsid": "rs4646994",
+    "genes": [
+      "ACE"
+    ],
+    "status": "skipped (no VEP result)"
+  },
+  {
+    "rsid": "rs8175347",
+    "genes": [
+      "UGT1A1"
+    ],
+    "status": "skipped (no VEP result)"
+  },
+  {
+    "rsid": "rs72558188",
+    "genes": [
+      "CYP2C19"
+    ],
+    "status": "skipped (no VEP result)"
   }
 ]

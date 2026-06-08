@@ -56,7 +56,7 @@
     "gnomad_af_source": "gnomAD v4 joint (allele-pinned, rsID-confirmed via GDM science-skills), retrieved 2026-06-07"
   },
   {
-    "rsid": "rs28897696",
+    "rsid": "rs80359550",
     "gene": "BRCA2",
     "variant_name": "BRCA2 6174delT",
     "condition": "Hereditary Breast and Ovarian Cancer Syndrome",
@@ -73,15 +73,15 @@
     "population_frequency": 0.001,
     "source": "ClinVar, ACMG",
     "clinvar_xref": {
-      "classification": "Conflicting classifications of pathogenicity",
-      "review_status": "criteria provided, conflicting classifications",
-      "last_evaluated": "2025/08/18 00:00",
-      "retrieved": "2026-06-07"
+      "classification": "Pathogenic",
+      "review_status": "reviewed by expert panel",
+      "last_evaluated": "2024/06/11 00:00",
+      "retrieved": "2026-06-08"
     },
-    "gnomad_af": 1.9829220835553792e-05,
-    "gnomad_af_popmax": 0.00019869999999999998,
-    "gnomad_af_popmax_pop": "afr",
-    "gnomad_af_source": "gnomAD v4 joint (allele-pinned, rsID-confirmed via GDM science-skills), retrieved 2026-06-07"
+    "gnomad_af": 0.00013941574270174079,
+    "gnomad_af_popmax": 2.154e-05,
+    "gnomad_af_popmax_pop": "nfe",
+    "gnomad_af_source": "gnomAD v4 joint (by-rsID, rsID-confirmed via GDM science-skills), retrieved 2026-06-08"
   },
   {
     "rsid": "rs80357713",

@@ -1,32 +1,5 @@
 [
   {
-    "rsid": "rs28897696",
-    "genes": [
-      "BRCA2"
-    ],
-    "sources": [
-      "health"
-    ],
-    "scored_variant": "chr17:43063903:G>A",
-    "alt_choice": "first-alt",
-    "n_scores": 35875,
-    "top_expr": {
-      "gene": "BRCA1",
-      "tissue": "myometrial cell",
-      "quantile": -0.999,
-      "raw": -0.02
-    },
-    "max_expr_raw": 0.02,
-    "n_expr_q99": 482,
-    "max_raw_by_modality": {
-      "CHIP_HISTONE": 0.1605,
-      "DNASE": 0.1839,
-      "RNA_SEQ": 0.02,
-      "SPLICE_SITES": 0.0193
-    },
-    "status": "ok"
-  },
-  {
     "rsid": "rs429358",
     "genes": [
       "APOE"
@@ -13848,26 +13821,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs80357713",
-    "genes": [
-      "BRCA1"
-    ],
-    "sources": [
-      "health"
-    ],
-    "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
-  },
-  {
-    "rsid": "rs121909001",
-    "genes": [
-      "CFTR"
-    ],
-    "sources": [
-      "health"
-    ],
-    "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
-  },
-  {
     "rsid": "rs113993960",
     "genes": [
       "CFTR"
@@ -13899,26 +13852,6 @@
       "SPLICE_SITES": 0.1094
     },
     "status": "ok"
-  },
-  {
-    "rsid": "rs1799752",
-    "genes": [
-      "ACE"
-    ],
-    "sources": [
-      "trait"
-    ],
-    "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
-  },
-  {
-    "rsid": "rs57875989",
-    "genes": [
-      "DEC2/BHLHE41"
-    ],
-    "sources": [
-      "trait"
-    ],
-    "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
   },
   {
     "rsid": "rs333",
@@ -14045,16 +13978,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs8175347",
-    "genes": [
-      "UGT1A1"
-    ],
-    "sources": [
-      "pharma"
-    ],
-    "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
-  },
-  {
     "rsid": "rs9332131",
     "genes": [
       "CYP2C9"
@@ -14086,6 +14009,89 @@
       "SPLICE_SITES": 0.0864
     },
     "status": "ok"
+  },
+  {
+    "rsid": "rs80359550",
+    "genes": [
+      "BRCA2"
+    ],
+    "sources": [
+      "health"
+    ],
+    "scored_variant": "chr13:32340300:GT>G",
+    "alt_choice": "gnomAD-indel",
+    "n_scores": 8947,
+    "top_expr": {
+      "gene": "ATP8A2P2",
+      "tissue": "skeletal muscle myoblast",
+      "quantile": 1.0,
+      "raw": 0.3596
+    },
+    "max_expr_raw": 0.3832,
+    "n_expr_q99": 2996,
+    "own_gene": {
+      "gene": "BRCA2",
+      "tissue": "cerebellar hemisphere",
+      "quantile": -0.999,
+      "raw": -0.0342
+    },
+    "max_raw_by_modality": {
+      "CHIP_HISTONE": 0.1045,
+      "DNASE": 0.1034,
+      "RNA_SEQ": 0.3832,
+      "SPLICE_SITES": 0.0664
+    },
+    "status": "ok"
+  },
+  {
+    "rsid": "rs80357713",
+    "genes": [
+      "BRCA1"
+    ],
+    "sources": [
+      "health"
+    ],
+    "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
+  },
+  {
+    "rsid": "rs121909001",
+    "genes": [
+      "CFTR"
+    ],
+    "sources": [
+      "health"
+    ],
+    "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
+  },
+  {
+    "rsid": "rs1799752",
+    "genes": [
+      "ACE"
+    ],
+    "sources": [
+      "trait"
+    ],
+    "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
+  },
+  {
+    "rsid": "rs57875989",
+    "genes": [
+      "DEC2/BHLHE41"
+    ],
+    "sources": [
+      "trait"
+    ],
+    "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
+  },
+  {
+    "rsid": "rs8175347",
+    "genes": [
+      "UGT1A1"
+    ],
+    "sources": [
+      "pharma"
+    ],
+    "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
   },
   {
     "rsid": "rs72558188",
