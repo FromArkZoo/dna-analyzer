@@ -1372,24 +1372,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs2760118",
-    "genes": [
-      "CLOCK"
-    ],
-    "consequence": "missense_variant",
-    "gene": "ALDH5A1",
-    "impact": "MODERATE",
-    "amino_acids": "H/Y",
-    "alphamissense": {
-      "class": "likely_benign",
-      "score": 0.0529
-    },
-    "sift": "tolerated",
-    "polyphen": "benign",
-    "loeuf": 0.771,
-    "status": "ok"
-  },
-  {
     "rsid": "rs1801260",
     "genes": [
       "CLOCK"
@@ -1842,18 +1824,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs4626",
-    "genes": [
-      "DIO1"
-    ],
-    "consequence": "synonymous_variant",
-    "gene": "TOB1",
-    "impact": "LOW",
-    "amino_acids": "K",
-    "loeuf": 0.266,
-    "status": "ok"
-  },
-  {
     "rsid": "rs225014",
     "genes": [
       "DIO2"
@@ -1976,18 +1946,6 @@
     "consequence": "intron_variant",
     "gene": "TEX41",
     "impact": "MODIFIER",
-    "status": "ok"
-  },
-  {
-    "rsid": "rs2166975",
-    "genes": [
-      "MYH9"
-    ],
-    "consequence": "synonymous_variant",
-    "gene": "TGFA",
-    "impact": "LOW",
-    "amino_acids": "V",
-    "loeuf": 0.926,
     "status": "ok"
   },
   {
@@ -2226,23 +2184,6 @@
     "sift": "tolerated_low_confidence",
     "polyphen": "benign",
     "loeuf": 0.894,
-    "status": "ok"
-  },
-  {
-    "rsid": "rs2229456",
-    "genes": [
-      "COL5A1"
-    ],
-    "consequence": "missense_variant",
-    "gene": "ACTN3",
-    "impact": "MODERATE",
-    "amino_acids": "E/A",
-    "alphamissense": {
-      "class": "likely_benign",
-      "score": 0.2297
-    },
-    "sift": "deleterious_low_confidence",
-    "loeuf": 0.9,
     "status": "ok"
   },
   {
@@ -4795,24 +4736,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs1058930",
-    "genes": [
-      "CYP2C9"
-    ],
-    "consequence": "missense_variant",
-    "gene": "CYP2C8",
-    "impact": "MODERATE",
-    "amino_acids": "I/M",
-    "alphamissense": {
-      "class": "likely_benign",
-      "score": 0.214
-    },
-    "sift": "deleterious_low_confidence",
-    "polyphen": "probably_damaging",
-    "loeuf": 1.502,
-    "status": "ok"
-  },
-  {
     "rsid": "rs28371685",
     "genes": [
       "CYP2C9"
@@ -5126,24 +5049,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs17884712",
-    "genes": [
-      "CYP2C9"
-    ],
-    "consequence": "missense_variant",
-    "gene": "CYP2C19",
-    "impact": "MODERATE",
-    "amino_acids": "R/H",
-    "alphamissense": {
-      "class": "likely_benign",
-      "score": 0.1736
-    },
-    "sift": "deleterious_low_confidence",
-    "polyphen": "benign",
-    "loeuf": 1.377,
-    "status": "ok"
-  },
-  {
     "rsid": "rs7294",
     "genes": [
       "VKORC1"
@@ -5291,18 +5196,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs10264272",
-    "genes": [
-      "CYP2C9"
-    ],
-    "consequence": "synonymous_variant",
-    "gene": "CYP3A5",
-    "impact": "LOW",
-    "amino_acids": "K",
-    "loeuf": 1.028,
-    "status": "ok"
-  },
-  {
     "rsid": "rs1041983",
     "genes": [
       "NAT2"
@@ -5400,18 +5293,6 @@
     "sift": "deleterious_low_confidence",
     "polyphen": "benign",
     "loeuf": 0.8,
-    "status": "ok"
-  },
-  {
-    "rsid": "rs10873531",
-    "genes": [
-      "CYP2C19"
-    ],
-    "consequence": "synonymous_variant",
-    "gene": "HSP90AA1",
-    "impact": "LOW",
-    "amino_acids": "T",
-    "loeuf": 0.362,
     "status": "ok"
   },
   {
@@ -5735,6 +5616,17 @@
     "status": "skipped (no VEP result)"
   },
   {
+    "rsid": "rs2235544",
+    "genes": [
+      "DIO1"
+    ],
+    "consequence": "intron_variant",
+    "gene": "DIO1",
+    "impact": "MODIFIER",
+    "loeuf": 0.887,
+    "status": "ok"
+  },
+  {
     "rsid": "rs8175347",
     "genes": [
       "UGT1A1"
@@ -5747,5 +5639,23 @@
       "CYP2C19"
     ],
     "status": "skipped (no VEP result)"
+  },
+  {
+    "rsid": "rs72558189",
+    "genes": [
+      "CYP2C9"
+    ],
+    "consequence": "missense_variant",
+    "gene": "CYP2C9",
+    "impact": "MODERATE",
+    "amino_acids": "R/H",
+    "alphamissense": {
+      "class": "likely_benign",
+      "score": 0.1793
+    },
+    "sift": "tolerated_low_confidence",
+    "polyphen": "possibly_damaging",
+    "loeuf": 1.428,
+    "status": "ok"
   }
 ]

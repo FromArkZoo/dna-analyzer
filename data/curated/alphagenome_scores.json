@@ -2906,33 +2906,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs2760118",
-    "genes": [
-      "CLOCK"
-    ],
-    "sources": [
-      "trait"
-    ],
-    "scored_variant": "chr6:24503362:C>T",
-    "alt_choice": "curated",
-    "n_scores": 12511,
-    "top_expr": {
-      "gene": "ALDH5A1",
-      "tissue": "IMR-90",
-      "quantile": 0.999,
-      "raw": 0.0217
-    },
-    "max_expr_raw": 0.0217,
-    "n_expr_q99": 427,
-    "max_raw_by_modality": {
-      "CHIP_HISTONE": 0.1497,
-      "DNASE": 0.255,
-      "RNA_SEQ": 0.0217,
-      "SPLICE_SITES": 0.0273
-    },
-    "status": "ok"
-  },
-  {
     "rsid": "rs1801260",
     "genes": [
       "CLOCK"
@@ -4028,33 +4001,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs4626",
-    "genes": [
-      "DIO1"
-    ],
-    "sources": [
-      "trait"
-    ],
-    "scored_variant": "chr17:50863061:T>G",
-    "alt_choice": "curated",
-    "n_scores": 22411,
-    "top_expr": {
-      "gene": "TOB1",
-      "tissue": "IMR-90",
-      "quantile": 0.999,
-      "raw": 0.0133
-    },
-    "max_expr_raw": 0.0133,
-    "n_expr_q99": 64,
-    "max_raw_by_modality": {
-      "CHIP_HISTONE": 0.0479,
-      "DNASE": 0.2329,
-      "RNA_SEQ": 0.0133,
-      "SPLICE_SITES": 0.0049
-    },
-    "status": "ok"
-  },
-  {
     "rsid": "rs225014",
     "genes": [
       "DIO2"
@@ -4336,33 +4282,6 @@
       "CHIP_HISTONE": 0.027,
       "DNASE": 0.0378,
       "RNA_SEQ": 0.0113
-    },
-    "status": "ok"
-  },
-  {
-    "rsid": "rs2166975",
-    "genes": [
-      "MYH9"
-    ],
-    "sources": [
-      "trait"
-    ],
-    "scored_variant": "chr2:70450862:G>A",
-    "alt_choice": "curated(comp)",
-    "n_scores": 15283,
-    "top_expr": {
-      "gene": "TGFA",
-      "tissue": "sigmoid colon",
-      "quantile": 1.0,
-      "raw": 0.0373
-    },
-    "max_expr_raw": 0.0373,
-    "n_expr_q99": 472,
-    "max_raw_by_modality": {
-      "CHIP_HISTONE": 0.6705,
-      "DNASE": 0.8221,
-      "RNA_SEQ": 0.0373,
-      "SPLICE_SITES": 0.0176
     },
     "status": "ok"
   },
@@ -4916,33 +4835,6 @@
       "DNASE": 0.0374,
       "RNA_SEQ": 0.0153,
       "SPLICE_SITES": 0.0112
-    },
-    "status": "ok"
-  },
-  {
-    "rsid": "rs2229456",
-    "genes": [
-      "COL5A1"
-    ],
-    "sources": [
-      "trait"
-    ],
-    "scored_variant": "chr11:66561270:A>T",
-    "alt_choice": "curated",
-    "n_scores": 26767,
-    "top_expr": {
-      "gene": "ENSG00000250105",
-      "tissue": "muscle of leg",
-      "quantile": -0.999,
-      "raw": -0.0202
-    },
-    "max_expr_raw": 0.0202,
-    "n_expr_q99": 215,
-    "max_raw_by_modality": {
-      "CHIP_HISTONE": 0.0367,
-      "DNASE": 0.0753,
-      "RNA_SEQ": 0.0202,
-      "SPLICE_SITES": 0.0576
     },
     "status": "ok"
   },
@@ -11712,39 +11604,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs1058930",
-    "genes": [
-      "CYP2C9"
-    ],
-    "sources": [
-      "pharma"
-    ],
-    "scored_variant": "chr10:95058362:G>A",
-    "alt_choice": "first-alt",
-    "n_scores": 10927,
-    "top_expr": {
-      "gene": "CYP2C8",
-      "tissue": "colonic mucosa",
-      "quantile": -0.999,
-      "raw": -0.0199
-    },
-    "max_expr_raw": 0.0203,
-    "n_expr_q99": 188,
-    "own_gene": {
-      "gene": "CYP2C9",
-      "tissue": "lower leg skin",
-      "quantile": -0.997,
-      "raw": -0.0098
-    },
-    "max_raw_by_modality": {
-      "CHIP_HISTONE": 0.0776,
-      "DNASE": 0.4403,
-      "RNA_SEQ": 0.0203,
-      "SPLICE_SITES": 0.0176
-    },
-    "status": "ok"
-  },
-  {
     "rsid": "rs28371685",
     "genes": [
       "CYP2C9"
@@ -12424,39 +12283,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs17884712",
-    "genes": [
-      "CYP2C9"
-    ],
-    "sources": [
-      "pharma"
-    ],
-    "scored_variant": "chr10:94775489:G>A",
-    "alt_choice": "first-alt",
-    "n_scores": 12117,
-    "top_expr": {
-      "gene": "CYP2C19",
-      "tissue": "keratinocyte",
-      "quantile": -0.999,
-      "raw": -0.0215
-    },
-    "max_expr_raw": 0.0216,
-    "n_expr_q99": 276,
-    "own_gene": {
-      "gene": "CYP2C9",
-      "tissue": "luminal epithelial cell of mammary gland",
-      "quantile": 0.991,
-      "raw": 0.0072
-    },
-    "max_raw_by_modality": {
-      "CHIP_HISTONE": 0.1288,
-      "DNASE": 0.122,
-      "RNA_SEQ": 0.0216,
-      "SPLICE_SITES": 0.0078
-    },
-    "status": "ok"
-  },
-  {
     "rsid": "rs7294",
     "genes": [
       "VKORC1"
@@ -12806,33 +12632,6 @@
     "status": "ok"
   },
   {
-    "rsid": "rs10264272",
-    "genes": [
-      "CYP2C9"
-    ],
-    "sources": [
-      "pharma"
-    ],
-    "scored_variant": "chr7:99665212:C>T",
-    "alt_choice": "first-alt",
-    "n_scores": 29143,
-    "top_expr": {
-      "gene": "CYP3A5",
-      "tissue": "tracheal epithelial cell",
-      "quantile": -1.0,
-      "raw": -0.0511
-    },
-    "max_expr_raw": 0.0603,
-    "n_expr_q99": 460,
-    "max_raw_by_modality": {
-      "CHIP_HISTONE": 0.0578,
-      "DNASE": 0.0495,
-      "RNA_SEQ": 0.0603,
-      "SPLICE_SITES": 0.2061
-    },
-    "status": "ok"
-  },
-  {
     "rsid": "rs1041983",
     "genes": [
       "NAT2"
@@ -13054,33 +12853,6 @@
       "DNASE": 0.0454,
       "RNA_SEQ": 0.1718,
       "SPLICE_SITES": 0.0156
-    },
-    "status": "ok"
-  },
-  {
-    "rsid": "rs10873531",
-    "genes": [
-      "CYP2C19"
-    ],
-    "sources": [
-      "pharma"
-    ],
-    "scored_variant": "chr14:102101959:G>A",
-    "alt_choice": "first-alt",
-    "n_scores": 14095,
-    "top_expr": {
-      "gene": "ENSG00000289862",
-      "tissue": "A549",
-      "quantile": -0.995,
-      "raw": -0.0083
-    },
-    "max_expr_raw": 0.0105,
-    "n_expr_q99": 30,
-    "max_raw_by_modality": {
-      "CHIP_HISTONE": 0.2312,
-      "DNASE": 0.773,
-      "RNA_SEQ": 0.0105,
-      "SPLICE_SITES": 0.082
     },
     "status": "ok"
   },
@@ -14084,6 +13856,39 @@
     "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
   },
   {
+    "rsid": "rs2235544",
+    "genes": [
+      "DIO1"
+    ],
+    "sources": [
+      "trait"
+    ],
+    "scored_variant": "chr1:53909897:C>G",
+    "alt_choice": "curated(comp)",
+    "n_scores": 13303,
+    "top_expr": {
+      "gene": "DIO1",
+      "tissue": "hepatocyte",
+      "quantile": -1.0,
+      "raw": -0.0821
+    },
+    "max_expr_raw": 0.0891,
+    "n_expr_q99": 449,
+    "own_gene": {
+      "gene": "DIO1",
+      "tissue": "hepatocyte",
+      "quantile": -1.0,
+      "raw": -0.0821
+    },
+    "max_raw_by_modality": {
+      "CHIP_HISTONE": 0.077,
+      "DNASE": 0.0967,
+      "RNA_SEQ": 0.0891,
+      "SPLICE_SITES": 0.043
+    },
+    "status": "ok"
+  },
+  {
     "rsid": "rs8175347",
     "genes": [
       "UGT1A1"
@@ -14102,5 +13907,38 @@
       "pharma"
     ],
     "status": "skipped (indel: no rsID-confirmed gnomAD VCF)"
+  },
+  {
+    "rsid": "rs72558189",
+    "genes": [
+      "CYP2C9"
+    ],
+    "sources": [
+      "pharma"
+    ],
+    "scored_variant": "chr10:94942234:G>A",
+    "alt_choice": "first-alt",
+    "n_scores": 10927,
+    "top_expr": {
+      "gene": "CYP2C9",
+      "tissue": "esophagus",
+      "quantile": -0.999,
+      "raw": -0.0209
+    },
+    "max_expr_raw": 0.0242,
+    "n_expr_q99": 157,
+    "own_gene": {
+      "gene": "CYP2C9",
+      "tissue": "esophagus",
+      "quantile": -0.999,
+      "raw": -0.0209
+    },
+    "max_raw_by_modality": {
+      "CHIP_HISTONE": 0.0555,
+      "DNASE": 0.1199,
+      "RNA_SEQ": 0.0242,
+      "SPLICE_SITES": 0.0117
+    },
+    "status": "ok"
   }
 ]
