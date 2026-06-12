@@ -385,9 +385,10 @@ def test_resolve_key_strand_flipped():
     assert status == "strand_flipped"
 
 
-def test_resolve_key_palindromic_not_flipped():
-    # A/T keys, user C/C — must not fabricate via flip.
-    key, status = resolve_genotype_key(("C", "C"), ["AA", "AT", "TT"])
+def test_resolve_key_palindromic_heterozygote_not_flipped():
+    # User A/T is a palindromic genotype — its reverse-complement is itself, so a flip
+    # can't resolve strand. Against an A/G site it has no direct match → flagged, not flipped.
+    key, status = resolve_genotype_key(("A", "T"), ["AA", "AG", "GG"])
     assert key is None
     assert status == "ambiguous_palindromic"
 
@@ -512,6 +513,20 @@ def test_match_indel_missing_when_not_indel_genotype():
 def test_match_indel_unrecognized_risk_allele():
     r = match_indel(("D", "D"), risk_allele="A")
     assert r.status == "no_match"
+
+
+def test_match_indel_dash_risk_allele_is_no_match():
+    # '-' is the curated *normal* allele (reference / no-indel), not a risk allele.
+    r = match_indel(("I", "I"), risk_allele="-")
+    assert r.status == "no_match"
+
+
+def test_match_snv_palindromic_flip_of_alleles_not_fabricated():
+    # A/T site, user C/C: C/C is the complement set of... nothing in {A,T}; a naive
+    # flip must not manufacture a call. Stronger probe than the A/A vs C/G case.
+    r = match_snv(("C", "C"), effect_allele="A", other_allele="T")
+    assert r.status == "ambiguous_palindromic"
+    assert r.matched is False
 ```
 
 - [ ] **Step 2: Run tests to verify they fail**
@@ -656,14 +671,31 @@ The existing finding dict already uses `zygosity`, `allele1`, `allele2`, `risk_a
 
 - [ ] **Step 4: Refactor the ClinVar loop**
 
-Replace lines 190-202 (from `allele1, allele2 = genotypes[rsid]` through the `zygosity = ...` line) with:
+First, add `ref_allele` to the ClinVar SELECT so the matcher can detect palindromic sites
+(without the reference allele, `match_snv` falls back to its unknown-`other` path, which
+*can* flip an A/T or C/G site and fabricate a call — passing `ref_allele` prevents that).
+Change the query's column list (around line 179-180) from:
+```python
+                SELECT rsid, gene, phenotype, clinical_significance,
+                       review_status, alt_allele
+```
+to:
+```python
+                SELECT rsid, gene, phenotype, clinical_significance,
+                       review_status, ref_allele, alt_allele
+```
+Then replace lines 190-202 (from `allele1, allele2 = genotypes[rsid]` through the
+`zygosity = ...` line) with:
 ```python
                 allele1, allele2 = genotypes[rsid]
                 risk_allele = (row["alt_allele"] or "").upper()
+                ref_allele = (row["ref_allele"] or "").upper() or None
                 if not risk_allele:
                     continue
 
-                match = match_snv((allele1, allele2), risk_allele)
+                # Pass ref as other_allele so palindromic (A/T, C/G) ClinVar sites are
+                # matched direct-only and never strand-flipped into a fabricated finding.
+                match = match_snv((allele1, allele2), risk_allele, other_allele=ref_allele)
                 if not match.matched or not match.dosage:
                     continue
 
@@ -673,6 +705,8 @@ Add to that finding dict (after `"your_genotype": ...`):
 ```python
                     "match_status": match.status,
 ```
+Note: `ref_allele` is a column in the `clinvar` table; if it is empty/NULL for a row, the
+matcher degrades to the unknown-`other` path for that row only.
 
 - [ ] **Step 5: Refactor the APOE reads**
 
@@ -1128,11 +1162,25 @@ git commit -m "parser+app: in-memory zip unwrapping for 23andMe uploads"
 
 - [ ] **Step 1: Write the regression test**
 
+This covers the seams the matcher's own unit tests can't reach: the curated loop, the
+ClinVar loop (incl. its `ref_allele` palindrome plumbing — the subtlest line in Unit B),
+and the APOE strand normalization.
+
 Create `tests/test_analyzers_integration.py`:
 ```python
-"""The Tier 1 regression test: a reverse-complement carrier must surface the same finding
-as a forward-strand carrier — the bug Tier 1 exists to fix."""
-from analyzers.health_risks import _analyze_curated_variants
+"""Tier 1 integration regression tests: strand correctness must hold end-to-end through the
+analyzers, not only in the matcher's unit tests. The headline case — a reverse-complement
+carrier surfacing the same finding as a forward-strand carrier — is the bug Tier 1 fixes."""
+import sqlite3
+
+import pytest
+
+from analyzers.health_risks import (
+    _analyze_apoe,
+    _analyze_clinvar,
+    _analyze_curated_variants,
+)
+from config import PATHOGENIC_SIGNIFICANCES
 
 
 PATHOGENIC = [{
@@ -1152,6 +1200,12 @@ def test_forward_and_reverse_strand_carriers_match():
     assert reverse[0]["match_status"] == "strand_flipped"
 
 
+def test_curated_homozygous_carrier():
+    out = _analyze_curated_variants({"rs80357906": ("C", "C")}, PATHOGENIC)
+    assert len(out) == 1
+    assert out[0]["zygosity"] == "homozygous"
+
+
 def test_palindromic_carrier_not_fabricated():
     palindromic = [{
         "rsid": "rs1", "gene": "X", "condition": "Y", "risk_allele": "A",
@@ -1161,6 +1215,64 @@ def test_palindromic_carrier_not_fabricated():
     # User C/C can't be a strand-resolved call at an A/T site → no fabricated finding.
     out = _analyze_curated_variants({"rs1": ("C", "C")}, palindromic)
     assert out == []
+
+
+def test_curated_indel_routing():
+    indel = [{
+        "rsid": "rs_indel", "gene": "BRCA1", "condition": "Hereditary breast cancer",
+        "risk_allele": "delAG", "normal_allele": "-", "severity": "HIGH",
+        "odds_ratio": 5.0, "population_frequency": 0.001, "description": "d",
+    }]
+    # AncestryDNA reports indels as I/D; feed that directly to prove the routing branch.
+    out = _analyze_curated_variants({"rs_indel": ("D", "I")}, indel)
+    assert len(out) == 1
+    assert out[0]["zygosity"] == "heterozygous"
+
+
+def test_apoe_strand_flipped_e4_is_normalized():
+    # ε4/ε4 is rs429358=C/C, rs7412=C/C; on the opposite strand that's G/G, G/G.
+    # to_reference_strand must normalize it back so the ε4/ε4 call still fires.
+    flipped = _analyze_apoe({"rs429358": ("G", "G"), "rs7412": ("G", "G")})
+    assert flipped is not None
+    assert flipped["zygosity"] == "ε4/ε4"
+    assert flipped["severity"] == "HIGH"
+
+
+@pytest.fixture
+def clinvar_db(tmp_path):
+    db = tmp_path / "ref.db"
+    con = sqlite3.connect(db)
+    con.execute(
+        "CREATE TABLE clinvar (rsid TEXT, gene TEXT, clinical_significance TEXT, "
+        "phenotype TEXT, chromosome TEXT, position INTEGER, ref_allele TEXT, "
+        "alt_allele TEXT, review_status TEXT)"
+    )
+    sig = PATHOGENIC_SIGNIFICANCES[0]
+    con.executemany(
+        "INSERT INTO clinvar VALUES (?,?,?,?,?,?,?,?,?)",
+        [
+            # non-palindromic C/T site (ref C, alt T)
+            ("rs_np", "GENE1", sig, "Cond1", "1", 100, "C", "T", "reviewed by expert panel"),
+            # palindromic A/T site (ref A, alt T)
+            ("rs_pal", "GENE2", sig, "Cond2", "2", 200, "A", "T", "reviewed by expert panel"),
+        ],
+    )
+    con.commit()
+    con.close()
+    return str(db)
+
+
+def test_clinvar_strand_flipped_carrier_surfaces(clinvar_db):
+    # alt=T at a C/T site; a carrier reported on the opposite strand is A/G (rc of T/C).
+    findings = _analyze_clinvar({"rs_np": ("A", "G")}, clinvar_db)
+    assert len(findings) == 1
+    assert findings[0]["match_status"] == "strand_flipped"
+
+
+def test_clinvar_palindromic_not_fabricated(clinvar_db):
+    # A/T site (ref A, alt T): user C/C can't be strand-resolved → must not fabricate.
+    findings = _analyze_clinvar({"rs_pal": ("C", "C")}, clinvar_db)
+    assert findings == []
 ```
 
 - [ ] **Step 2: Run the full suite**
@@ -1172,7 +1284,7 @@ Expected: PASS — all tests across every test file.
 
 ```bash
 git add tests/test_analyzers_integration.py
-git commit -m "Add strand-flip regression + palindromic-safety integration tests"
+git commit -m "Add strand-flip regression + ClinVar/APOE/indel integration tests"
 ```
 
 ---
