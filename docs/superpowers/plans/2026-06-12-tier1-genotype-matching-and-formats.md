@@ -975,13 +975,25 @@ def test_dedup_prefers_result_with_drugs(monkeypatch):
 ```
 
 Run: `python -m pytest tests/test_pharmacogenomics.py -v`
-Expected: PASS (2 tests).
+Expected: PASS.
+
+- [ ] **Step 5b: Fix the frontend metabolism chart (end-to-end honesty)**
+
+`static/js/app.js` `renderMetabolismInsight` buckets every non-poor/intermediate/rapid
+status into "Normal" (and defaults a missing status to 'Normal') — so "Not assessed" genes
+re-appear as Normal Metabolizers in the chart, undoing the backend fix. Add a `notAssessed`
+bucket, route `not assessed`/`na`/empty into it (before the other checks), drop the
+`|| 'Normal'` default, and add a "Not assessed" bar. (See Unit D implementation for the
+exact diff.) Also pin the inert curated path and the DB-path default with tests:
+`test_curated_pharma_does_not_fabricate_normal_metabolizer` asserts `drugs_affected == []`;
+add `test_dedup_prefers_drugs_when_curated_has_them` and a temp-DB
+`test_db_path_not_assessed_default_and_keeps_drug`.
 
 - [ ] **Step 6: Commit**
 
 ```bash
-git add analyzers/pharmacogenomics.py tests/test_pharmacogenomics.py
-git commit -m "pharma: stop fabricating Normal Metabolizer; keep DB drug annotations"
+git add analyzers/pharmacogenomics.py tests/test_pharmacogenomics.py static/js/app.js
+git commit -m "pharma: stop fabricating Normal Metabolizer (backend + chart); keep DB drugs"
 ```
 
 ---
