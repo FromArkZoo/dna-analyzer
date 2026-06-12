@@ -38,15 +38,35 @@ The fix is to centralise matching in one module that tries the reverse-complemen
 direct match fails — *except* for palindromic SNPs, where a flip can't be disambiguated
 and would risk fabricating a call (see decision D2).
 
+### Second defect found during planning: pharma analyzer/data drift
+
+`pharma_variants.json` (85 entries, reworked 2026-06-08) carries `star_allele` and a flat
+`drugs` string-list. `pharmacogenomics.py` (last touched 2026-04-10) still reads
+`variant_allele` and `phenotype_map` fields that **no entry has**. Result:
+`variant_count` is always 0, the curated metabolizer status is hardcoded to
+"Normal Metabolizer / *1/*1" for every pharmacogene the user carries, no curated drugs
+attach, and (because curated wins dedup) DB drugs for the same gene are discarded. The app
+currently shows a *falsely reassuring* "Normal Metabolizer" regardless of genotype.
+
+This is analyzer/data drift, not a strand bug, and it cannot be fixed by routing through
+the matcher because the data holds no allele to match against. Per decision D5, Tier 1
+applies an **honesty stopgap** only; the full reconnection is a separate validated
+follow-up (see "Tier 1.5 follow-up").
+
 ## Scope
 
 ### In scope
 - New module `analyzers/genotype_match.py`.
-- Refactor `health_risks.py`, `pharmacogenomics.py`, `traits.py` to use it.
+- Refactor `health_risks.py` (curated + ClinVar + APOE) and `traits.py` to use it.
+- `pharmacogenomics.py` **honesty stopgap only** (stop fabricating "Normal Metabolizer";
+  show "not assessed" for the curated path — see D5).
 - 23andMe parsing + in-memory `.zip` handling.
 - `tests/` directory with pytest; `pytest` as a dev dependency.
 
 ### Out of scope (deliberately)
+- **Full pharma reconnection** — re-authoring `pharma_variants.json` with defining alleles
+  + phenotype maps and wiring it through the matcher. Deferred to Tier 1.5 (needs data
+  authoring + validation, not just a refactor).
 - `analyzers/ancestry.py` — the AIM path already handles strand correctly
   (`ancestry.py:244-273`); haplogroup placement is a Tier 2/3 science issue, not a strand
   bug. Untouched to keep the blast radius small.
@@ -64,6 +84,10 @@ and would risk fabricating a call (see decision D2).
   analyzer refactor; the refactor must keep the suite green.
 - **D4 — Privacy preserved:** Zip handling reads from `io.BytesIO` in memory and never
   writes to disk, consistent with the existing in-memory upload contract.
+- **D5 — Pharma honesty stopgap:** The curated pharma path is structurally dead (see above).
+  Tier 1 makes it *honest* rather than fixing it: the curated metabolizer status becomes
+  "Not assessed" (not a fabricated "Normal Metabolizer"), and DB-sourced drugs are no longer
+  discarded by an empty curated result. Real star-allele calling is Tier 1.5.
 
 ## Component 1 — `analyzers/genotype_match.py`
 
@@ -140,8 +164,11 @@ severity/phenotype logic; only the allele-counting step changes.
   future trust layer. A `strand_flipped` match now correctly *surfaces* a finding that is
   silently dropped today. Indel-style curated risk alleles (`insC`, `delAG`, `-`, …) route
   to `match_indel`.
-- **`pharmacogenomics.py`** — star-allele copy counting (`:~118-120`) goes through
-  `match_snv`; zygosity → `*1/*1`, `*1/variant`, `variant/variant` mapping is unchanged.
+- **`pharmacogenomics.py`** — **honesty stopgap only** (D5). The curated path stops
+  defaulting to "Normal Metabolizer / *1/*1" and instead reports "Not assessed" for the
+  metabolizer status when it cannot make a real call (which, with the current data, is
+  always). The dedup is adjusted so a DB result with real drug annotations is not displaced
+  by an empty curated stub. No matcher routing here until the data is re-authored.
 - **`traits.py`** — genotype-key lookup (`:~179-206`) goes through `resolve_genotype_key`,
   adding strand-flipped key resolution while preserving the existing ordering fallbacks.
 
@@ -173,6 +200,17 @@ but its two single-SNP reads route through `match_snv` for consistency.
   real genetic data enters the repo.
 - `pytest` added to a dev dependency list (`requirements-dev.txt` or a `[dev]` extra).
 
+## Tier 1.5 follow-up (out of scope here, recorded so it isn't lost)
+
+Reconnect pharmacogenomics properly:
+1. Add a `defining_allele` (the SNV allele that tags the star allele) and a het/hom
+   `phenotype` mapping to each of the 85 `pharma_variants.json` entries.
+2. Validate those defining alleles against PharmVar / PharmGKB / CPIC star-allele
+   definitions (mirroring the existing `scripts/validate_*` discipline).
+3. Update `pharmacogenomics.py` to route through `match_snv` (already strand-ready) and
+   compute real metabolizer status.
+4. Add pharma tests with known star-allele carriers, incl. strand-flipped.
+
 ## Success criteria
 
 1. A reverse-complement carrier of a known pathogenic SNV produces the same finding as the
@@ -180,9 +218,11 @@ but its two single-SNP reads route through `match_snv` for consistency.
 2. A palindromic A/T or C/G genotype that doesn't directly match is flagged
    `ambiguous_palindromic`, never a fabricated flip.
 3. A 23andMe file (txt and zipped) parses to the same genotype dict shape as AncestryDNA.
-4. All analyzers produce identical output to today on the existing AncestryDNA happy path
-   (no regressions where direct matching already worked).
-5. `pytest` runs green; no real genetic data in the repo.
+4. The curated pharma path no longer reports a fabricated "Normal Metabolizer"; it reports
+   "Not assessed", and DB drug annotations survive.
+5. Health and traits output is unchanged on the existing AncestryDNA happy path where direct
+   matching already worked (no regressions).
+6. `pytest` runs green; no real genetic data in the repo.
 
 ## Risks & mitigations
 
