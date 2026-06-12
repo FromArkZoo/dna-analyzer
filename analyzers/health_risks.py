@@ -21,6 +21,7 @@ from analyzers.risk_calculator import (
 from analyzers.alphagenome_scores import get_regulatory
 from analyzers.disease_prevalence import disease_baseline
 from analyzers.vep_annotations import get_consequence
+from analyzers.genotype_match import match_snv, match_indel, to_reference_strand
 
 # APOE allele definitions: rs429358 + rs7412
 APOE_SNPS = {
@@ -90,13 +91,16 @@ def _analyze_curated_variants(
         if not risk_allele:
             continue
 
-        risk_count = (1 if allele1 == risk_allele else 0) + (
-            1 if allele2 == risk_allele else 0
-        )
-        if risk_count == 0:
+        normal_allele = variant.get("normal_allele")
+        if risk_allele.startswith(("INS", "DEL")) or risk_allele in ("I", "D"):
+            match = match_indel((allele1, allele2), risk_allele, normal_allele)
+        else:
+            match = match_snv((allele1, allele2), risk_allele, normal_allele)
+
+        if not match.matched or not match.dosage:
             continue
 
-        zygosity = "homozygous" if risk_count == 2 else "heterozygous"
+        zygosity = "homozygous" if match.dosage == 2 else "heterozygous"
         severity = variant.get("severity", "MODERATE")
         odds_ratio = variant.get("odds_ratio") or 1.0
         allele_freq = variant.get("population_frequency") or 0.01
@@ -130,6 +134,7 @@ def _analyze_curated_variants(
             "zygosity": zygosity,
             "risk_allele": risk_allele,
             "your_genotype": f"{allele1}/{allele2}",
+            "match_status": match.status,
             "risk_description": general_desc,
             "what_this_means": specific_desc or general_desc,
             "inheritance": variant.get("inheritance", ""),
@@ -177,7 +182,7 @@ def _analyze_clinvar(
             placeholders = ",".join("?" * len(batch))
             query = f"""
                 SELECT rsid, gene, phenotype, clinical_significance,
-                       review_status, alt_allele
+                       review_status, ref_allele, alt_allele
                 FROM clinvar
                 WHERE rsid IN ({placeholders})
                   AND clinical_significance IN ({','.join('?' * len(PATHOGENIC_SIGNIFICANCES))})
@@ -189,17 +194,17 @@ def _analyze_clinvar(
                 rsid = row["rsid"]
                 allele1, allele2 = genotypes[rsid]
                 risk_allele = (row["alt_allele"] or "").upper()
-
+                ref_allele = (row["ref_allele"] or "").upper() or None
                 if not risk_allele:
                     continue
 
-                risk_count = (1 if allele1 == risk_allele else 0) + (
-                    1 if allele2 == risk_allele else 0
-                )
-                if risk_count == 0:
+                # Pass ref as other_allele so palindromic (A/T, C/G) ClinVar sites are
+                # matched direct-only and never strand-flipped into a fabricated finding.
+                match = match_snv((allele1, allele2), risk_allele, other_allele=ref_allele)
+                if not match.matched or not match.dosage:
                     continue
 
-                zygosity = "homozygous" if risk_count == 2 else "heterozygous"
+                zygosity = "homozygous" if match.dosage == 2 else "heterozygous"
                 stars = _review_status_to_stars(row["review_status"])
                 odds_ratio = 1.0
 
@@ -216,6 +221,7 @@ def _analyze_clinvar(
                     "zygosity": zygosity,
                     "risk_allele": risk_allele,
                     "your_genotype": f"{allele1}/{allele2}",
+                    "match_status": match.status,
                     "risk_description": f"{row['clinical_significance']} variant in {row['gene'] or 'unknown gene'}",
                     "recommendation": "Discuss this finding with a genetic counselor.",
                     "confidence_stars": stars,
@@ -286,6 +292,11 @@ def _analyze_apoe(genotypes: Dict[str, Tuple[str, str]]) -> dict | None:
             return "ε4"
         else:
             return "ε?"  # rare C/T at both — shouldn't normally occur
+
+    # Normalise each SNP onto its reference strand (rs429358 C/T, rs7412 C/T) so a
+    # strand-flipped array doesn't misread the APOE haplotype.
+    rs429358 = to_reference_strand(rs429358, "C", "T") or rs429358
+    rs7412 = to_reference_strand(rs7412, "C", "T") or rs7412
 
     hap1 = _apoe_haplotype(rs429358[0], rs7412[0])
     hap2 = _apoe_haplotype(rs429358[1], rs7412[1])
