@@ -248,7 +248,7 @@ function renderOverview(data) {
         const top3 = pharma.slice(0, 3);
         if (top3.length > 0) {
             pharmaPreview.innerHTML = top3.map(p => {
-                const status = (p.metabolizer_status || 'Normal').toLowerCase();
+                const status = (p.metabolizer_status || '').toLowerCase();
                 let dotColor = 'bg-stone-500';
                 if (status.includes('poor')) dotColor = 'bg-error';
                 else if (status.includes('intermediate')) dotColor = 'bg-secondary';

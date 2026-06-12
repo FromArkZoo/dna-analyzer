@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 from config import CURATED_DIR
 from analyzers.alphagenome_scores import get_regulatory
 from analyzers.vep_annotations import get_consequence
-from analyzers.genotype_match import resolve_genotype_key
+from analyzers.genotype_match import match_snv, resolve_genotype_key
 
 TRAIT_CATEGORIES = ["Nutrition", "Physical", "Athletic", "Sleep", "Behavioral"]
 
@@ -157,14 +157,14 @@ def _analyze_trait_db(
                 allele1, allele2 = genotypes[rsid]
                 effect_allele = (row["risk_allele"] or "").upper()
 
-                effect_count = 0
+                # Allele-gated traits go through the strand-aware matcher; traits with no
+                # risk allele are informational and always surface.
+                match_status = None
                 if effect_allele:
-                    effect_count = (1 if allele1 == effect_allele else 0) + (
-                        1 if allele2 == effect_allele else 0
-                    )
-
-                if effect_allele and effect_count == 0:
-                    continue
+                    match = match_snv((allele1, allele2), effect_allele)
+                    if not match.matched or not match.dosage:
+                        continue
+                    match_status = match.status
 
                 findings.append({
                     "rsid": rsid,
@@ -172,6 +172,7 @@ def _analyze_trait_db(
                     "gene": row["gene"] or "",
                     "category": row["category"] or "Physical",
                     "your_genotype": f"{allele1}/{allele2}",
+                    "match_status": match_status,
                     "result": row["effect"] or "Variant detected",
                     "explanation": "",
                     "population_frequency": row["population_frequency"] or 0.0,
