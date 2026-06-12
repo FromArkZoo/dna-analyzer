@@ -65,14 +65,15 @@ def analyze_pharmacogenomics(
         results.extend(_analyze_curated_pharma(genotypes, pharma_data))
 
     # 2. Query PharmGKB database tables
-    if os.path.exists(db_path):
-        results.extend(_analyze_pharmgkb_db(genotypes, db_path))
+    results.extend(_analyze_pharmgkb_db(genotypes, db_path))
 
-    # Deduplicate by gene (keep curated over DB)
+    # Prefer the result that actually carries drug annotations; with the current data the
+    # curated path is "Not assessed" with no drugs, so a DB result should win.
     seen_genes = {}
     for r in results:
         gene = r["gene"]
-        if gene not in seen_genes:
+        existing = seen_genes.get(gene)
+        if existing is None or (not existing["drugs_affected"] and r["drugs_affected"]):
             seen_genes[gene] = r
     results = list(seen_genes.values())
 
@@ -105,9 +106,9 @@ def _analyze_curated_pharma(
             gene_results[gene] = {
                 "gene": gene,
                 "tested_variants": [],
-                "star_alleles": "*1/*1",  # default reference
-                "metabolizer_status": "Normal Metabolizer",
-                "metabolizer_code": "NM",
+                "star_alleles": "Not assessed",
+                "metabolizer_status": "Not assessed",
+                "metabolizer_code": "NA",
                 "drugs_affected": [],
                 "is_critical": False,
                 "critical_warning": None,
@@ -164,6 +165,8 @@ def _analyze_pharmgkb_db(
 ) -> list[dict]:
     """Query PharmGKB tables in the reference database."""
     results = []
+    if not os.path.exists(db_path):
+        return results
     try:
         conn = sqlite3.connect(db_path)
         conn.row_factory = sqlite3.Row
@@ -201,9 +204,9 @@ def _analyze_pharmgkb_db(
                     gene_data[gene] = {
                         "gene": gene,
                         "tested_variants": [],
-                        "star_alleles": "*1/*1",
-                        "metabolizer_status": "Normal Metabolizer",
-                        "metabolizer_code": "NM",
+                        "star_alleles": "Not assessed",
+                        "metabolizer_status": "Not assessed",
+                        "metabolizer_code": "NA",
                         "drugs_affected": [],
                         "is_critical": False,
                         "critical_warning": None,
