@@ -6,6 +6,7 @@ Returns a dict mapping rsid → (allele1, allele2).
 
 import io
 import re
+import zipfile
 from typing import Dict, Tuple
 
 # Columns expected in AncestryDNA files (current format)
@@ -32,6 +33,31 @@ NO_CALL_VALUES = {"0", "--", "-", "00", "II", "DD", "DI", ""}
 VALID_ALLELES = set("ACGTDI")
 
 RSID_PATTERN = re.compile(r"^rs\d+$", re.IGNORECASE)
+
+
+def read_genotype_text(raw_bytes: bytes, filename: str) -> str:
+    """Decode uploaded bytes to text, transparently unwrapping a .zip in memory.
+
+    23andMe (and others) export a zipped single text file. Everything stays in memory —
+    nothing is written to disk, preserving the app's privacy guarantee.
+    """
+    if filename.lower().endswith(".zip"):
+        try:
+            with zipfile.ZipFile(io.BytesIO(raw_bytes)) as z:
+                data_members = [n for n in z.namelist() if not n.endswith("/")]
+                if not data_members:
+                    raise ValueError("Zip archive is empty.")
+                member = next(
+                    (n for n in data_members if n.lower().endswith((".txt", ".csv", ".tsv"))),
+                    data_members[0],
+                )
+                raw_bytes = z.read(member)
+        except zipfile.BadZipFile:
+            raise ValueError("Uploaded .zip file is corrupt or not a valid archive.")
+    try:
+        return raw_bytes.decode("utf-8")
+    except UnicodeDecodeError:
+        return raw_bytes.decode("latin-1")
 
 
 def parse_ancestry_file(file_obj: io.StringIO) -> Dict[str, Tuple[str, str]]:
@@ -68,9 +94,9 @@ def parse_ancestry_file(file_obj: io.StringIO) -> Dict[str, Tuple[str, str]]:
             if col_indices:
                 header_found = True
                 continue
-            # If first non-comment line looks like data (starts with rs), assume default columns
+            # If first non-comment line looks like data (starts with rs), infer columns
             if line.lower().startswith("rs"):
-                col_indices = _default_column_indices()
+                col_indices = _infer_columns_from_data(line)
                 header_found = True
                 # Fall through to parse this line as data
             else:
@@ -163,6 +189,21 @@ def _default_column_indices() -> Dict[str, int]:
         "allele1": 3,
         "allele2": 4,
     }
+
+
+def _infer_columns_from_data(line: str) -> Dict[str, int]:
+    """Infer column layout from the first data row when there is no detectable header.
+
+    AncestryDNA: rsid, chromosome, position, allele1, allele2 (5 cols, split alleles).
+    23andMe:     rsid, chromosome, position, genotype       (4 cols, combined genotype).
+    """
+    for delimiter in ("\t", ","):
+        fields = line.split(delimiter)
+        if len(fields) >= 5:
+            return {"rsid": 0, "chromosome": 1, "position": 2, "allele1": 3, "allele2": 4}
+        if len(fields) == 4:
+            return {"rsid": 0, "chromosome": 1, "position": 2, "genotype": 3}
+    return _default_column_indices()
 
 
 def _parse_data_line(
