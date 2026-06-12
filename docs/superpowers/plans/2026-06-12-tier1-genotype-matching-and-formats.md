@@ -1280,6 +1280,7 @@ def test_forward_and_reverse_strand_carriers_match():
     assert len(reverse) == 1
     assert forward[0]["gene"] == reverse[0]["gene"] == "BRCA1"
     assert forward[0]["zygosity"] == reverse[0]["zygosity"] == "heterozygous"
+    assert forward[0]["match_status"] == "direct"
     assert reverse[0]["match_status"] == "strand_flipped"
 
 
@@ -1287,6 +1288,16 @@ def test_curated_homozygous_carrier():
     out = _analyze_curated_variants({"rs80357906": ("C", "C")}, PATHOGENIC)
     assert len(out) == 1
     assert out[0]["zygosity"] == "homozygous"
+    assert out[0]["match_status"] == "direct"
+
+
+def test_strand_flipped_homozygous_carrier():
+    # G/G is the reverse-complement of C/C; a homozygous risk carrier on the opposite
+    # strand must surface as homozygous (dosage 2), not be dropped.
+    out = _analyze_curated_variants({"rs80357906": ("G", "G")}, PATHOGENIC)
+    assert len(out) == 1
+    assert out[0]["zygosity"] == "homozygous"
+    assert out[0]["match_status"] == "strand_flipped"
 
 
 def test_palindromic_carrier_not_fabricated():
@@ -1310,6 +1321,7 @@ def test_curated_indel_routing():
     out = _analyze_curated_variants({"rs_indel": ("D", "I")}, indel)
     assert len(out) == 1
     assert out[0]["zygosity"] == "heterozygous"
+    assert out[0]["match_status"] == "direct"
 
 
 def test_apoe_strand_flipped_e4_is_normalized():
@@ -1319,6 +1331,15 @@ def test_apoe_strand_flipped_e4_is_normalized():
     assert flipped is not None
     assert flipped["zygosity"] == "ε4/ε4"
     assert flipped["severity"] == "HIGH"
+
+
+def test_apoe_strand_flipped_mixed_e3_e4():
+    # ε3/ε4: forward rs429358=T/C, rs7412=C/C. On the opposite strand: rs429358=A/G,
+    # rs7412=G/G. Per-allele normalization must still yield ε3/ε4 (not ε?).
+    flipped = _analyze_apoe({"rs429358": ("A", "G"), "rs7412": ("G", "G")})
+    assert flipped is not None
+    assert flipped["zygosity"] == "ε3/ε4"
+    assert flipped["severity"] == "MODERATE"
 
 
 @pytest.fixture
