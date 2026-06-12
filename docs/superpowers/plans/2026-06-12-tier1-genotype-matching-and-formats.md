@@ -771,6 +771,34 @@ def test_trait_strand_flipped_lookup():
     # Opposite strand of A/G is T/C; must resolve to the AG bucket.
     findings = _analyze_curated_traits({"rs4988235": ("T", "C")}, TRAITS)
     assert findings[0]["result"] == "Partial"
+
+
+def test_trait_homozygous_lookup():
+    findings = _analyze_curated_traits({"rs4988235": ("G", "G")}, TRAITS)
+    assert findings[0]["result"] == "Intolerant"
+
+
+def test_trait_indel_lookup():
+    indel_trait = [{
+        "rsid": "rs1799752", "gene": "ACE", "trait": "ACE I/D",
+        "category": "Athletic",
+        "genotype_results": {"II": "Endurance", "ID": "Mixed", "DD": "Power"},
+        "confidence": "moderate",
+    }]
+    findings = _analyze_curated_traits({"rs1799752": ("D", "D")}, indel_trait)
+    assert findings[0]["result"] == "Power"
+
+
+def test_trait_no_match_falls_back_to_default():
+    variant = [{
+        "rsid": "rs4988235", "gene": "MCM6", "trait": "Lactose tolerance",
+        "category": "Nutrition",
+        "genotype_results": {"AA": "Tolerant", "AG": "Partial", "GG": "Intolerant"},
+        "default_phenotype": "Unknown", "confidence": "high",
+    }]
+    # A/C fits neither the A/G map nor its reverse-complement → genuine no-match → default.
+    findings = _analyze_curated_traits({"rs4988235": ("A", "C")}, variant)
+    assert findings[0]["result"] == "Unknown"
 ```
 
 - [ ] **Step 2: Run to verify the strand test fails**
@@ -798,18 +826,27 @@ with:
 ```python
         phenotype_map = variant.get("genotype_results", variant.get("phenotype_map", {}))
         matched_key, _status = resolve_genotype_key((allele1, allele2), list(phenotype_map.keys()))
+        if not matched_key:
+            # Indel-keyed maps (e.g. ACE I/D: II/ID/DD) use markers the strand-aware
+            # resolver doesn't handle; fall back to a direct concat/slash lookup for them.
+            for cand in (f"{allele1}{allele2}", f"{allele2}{allele1}",
+                         f"{allele1}/{allele2}", f"{allele2}/{allele1}"):
+                if cand in phenotype_map:
+                    matched_key = cand
+                    break
         result = phenotype_map.get(matched_key) if matched_key else None
         genotype_key = matched_key or "/".join(sorted([allele1, allele2]))
         if not result:
             result = variant.get("default_phenotype", "Typical")
 ```
 Then delete the now-unused `_make_genotype_key` (lines 179-181) and `_lookup_phenotype`
-(lines 184-212) functions.
+(lines 184-212) functions. The `resolve_genotype_key` import only accepts ACGT, so the indel
+fallback above preserves the old `_lookup_phenotype`'s I/D concat matching (ACE etc.).
 
 - [ ] **Step 4: Run tests to verify they pass**
 
 Run: `python -m pytest tests/test_traits.py -v`
-Expected: PASS (2 tests).
+Expected: PASS (4 tests).
 
 - [ ] **Step 5: Commit**
 
