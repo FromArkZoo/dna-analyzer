@@ -1151,34 +1151,67 @@ def read_genotype_text(raw_bytes: bytes, filename: str) -> str:
     nothing is written to disk, preserving the app's privacy guarantee.
     """
     if filename.lower().endswith(".zip"):
-        with zipfile.ZipFile(io.BytesIO(raw_bytes)) as z:
-            data_members = [n for n in z.namelist() if not n.endswith("/")]
-            if not data_members:
-                raise ValueError("Zip archive is empty.")
-            # Prefer a text-like member; fall back to the first.
-            member = next(
-                (n for n in data_members if n.lower().endswith((".txt", ".csv", ".tsv"))),
-                data_members[0],
-            )
-            raw_bytes = z.read(member)
+        try:
+            with zipfile.ZipFile(io.BytesIO(raw_bytes)) as z:
+                data_members = [n for n in z.namelist() if not n.endswith("/")]
+                if not data_members:
+                    raise ValueError("Zip archive is empty.")
+                # Prefer a text-like member; fall back to the first.
+                member = next(
+                    (n for n in data_members if n.lower().endswith((".txt", ".csv", ".tsv"))),
+                    data_members[0],
+                )
+                raw_bytes = z.read(member)
+        except zipfile.BadZipFile:
+            # A corrupt/truncated upload is a user error (400), not a server error (500).
+            raise ValueError("Uploaded .zip file is corrupt or not a valid archive.")
     try:
         return raw_bytes.decode("utf-8")
     except UnicodeDecodeError:
         return raw_bytes.decode("latin-1")
 ```
+(The empty-archive `ValueError` is raised inside the `try` but is not swallowed — the
+`except` only catches `BadZipFile`.)
 
-- [ ] **Step 4: Run the parser tests**
+- [ ] **Step 4: Add the end-to-end + error tests** (append to `tests/test_parser.py`)
 
-Run: `python -m pytest tests/test_parser.py -v`
-Expected: PASS (5 tests).
+```python
+def test_zip_roundtrip_parses_genotypes():
+    from analyzers.parser import read_genotype_text
+    with open("tests/fixtures/23andme_sample.txt", "rb") as f:
+        inner = f.read()
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as z:
+        z.writestr("genome.txt", inner)
+    text = read_genotype_text(buf.getvalue(), "genome.zip")
+    g = parse_ancestry_file(io.StringIO(text))
+    assert g["rs1801133"] == ("A", "G")
+    assert g["rs4988235"] == ("A", "A")
 
-- [ ] **Step 5: Wire it into `app.py`**
 
-In `app.py`, replace lines 47-58 (the read/decode/parse block) with:
+def test_corrupt_zip_raises_valueerror():
+    import pytest
+    from analyzers.parser import read_genotype_text
+    with pytest.raises(ValueError):
+        read_genotype_text(b"this is not a zip file", "broken.zip")
+```
+
+Run: `python -m pytest tests/test_parser.py -v` — expect PASS (7 tests).
+
+- [ ] **Step 5: Wire it into `app.py`** (with top-level import + accurate error message)
+
+Change the top import `from analyzers.parser import parse_ancestry_file` to:
+```python
+from analyzers.parser import parse_ancestry_file, read_genotype_text
+```
+Add `.zip` to the unsupported-file-type error message (around line 43-45):
+```python
+            "error": f"Unsupported file type '{ext}'. Please upload a .txt, .csv, .tsv, or .zip file from AncestryDNA or 23andMe."
+```
+Then replace the read/decode/parse block (around lines 47-58) with:
 ```python
     try:
-        from analyzers.parser import read_genotype_text
-
+        # Read file content into memory (never write to disk); unwrap .zip in memory
         raw_content = file.read()
         text_content = read_genotype_text(raw_content, file.filename)
 
@@ -1188,7 +1221,8 @@ In `app.py`, replace lines 47-58 (the read/decode/parse block) with:
         genotypes = parse_ancestry_file(file_obj)
 ```
 Leave the rest of the `try` block (the `if not genotypes:` check onward) unchanged. The
-bare `decode` lines are now handled inside `read_genotype_text`.
+bare `decode` lines are now handled inside `read_genotype_text`; a corrupt zip raises
+`ValueError`, which the existing `except ValueError` turns into a clean 400.
 
 - [ ] **Step 6: Sanity-check the app imports**
 
@@ -1198,8 +1232,8 @@ Expected: prints `ok` (no import or syntax errors).
 - [ ] **Step 7: Commit**
 
 ```bash
-git add analyzers/parser.py app.py tests/test_parser.py
-git commit -m "parser+app: in-memory zip unwrapping for 23andMe uploads"
+git add analyzers/parser.py app.py tests/test_parser.py tests/fixtures/ancestry_sample.txt tests/fixtures/23andme_sample.txt
+git commit -m "parser+app: 23andMe adaptive columns and in-memory zip unwrapping"
 ```
 
 ---
