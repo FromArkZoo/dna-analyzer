@@ -15,6 +15,7 @@ logger = logging.getLogger(__name__)
 from config import CURATED_DIR
 from analyzers.alphagenome_scores import get_regulatory
 from analyzers.vep_annotations import get_consequence
+from analyzers.genotype_match import match_snv, resolve_genotype_key
 
 TRAIT_CATEGORIES = ["Nutrition", "Physical", "Athletic", "Sleep", "Behavioral"]
 
@@ -75,11 +76,19 @@ def _analyze_curated_traits(
             continue
 
         allele1, allele2 = genotypes[rsid]
-        genotype_key = _make_genotype_key(allele1, allele2)
 
-        # Look up phenotype — try both "genotype_results" and "phenotype_map" keys
         phenotype_map = variant.get("genotype_results", variant.get("phenotype_map", {}))
-        result = _lookup_phenotype(genotype_key, allele1, allele2, phenotype_map)
+        matched_key, _status = resolve_genotype_key((allele1, allele2), list(phenotype_map.keys()))
+        if not matched_key:
+            # Indel-keyed maps (e.g. ACE I/D: II/ID/DD) use markers the strand-aware
+            # resolver doesn't handle; fall back to a direct concat/slash lookup for them.
+            for cand in (f"{allele1}{allele2}", f"{allele2}{allele1}",
+                         f"{allele1}/{allele2}", f"{allele2}/{allele1}"):
+                if cand in phenotype_map:
+                    matched_key = cand
+                    break
+        result = phenotype_map.get(matched_key) if matched_key else None
+        genotype_key = matched_key or "/".join(sorted([allele1, allele2]))
         if not result:
             result = variant.get("default_phenotype", "Typical")
 
@@ -148,14 +157,14 @@ def _analyze_trait_db(
                 allele1, allele2 = genotypes[rsid]
                 effect_allele = (row["risk_allele"] or "").upper()
 
-                effect_count = 0
+                # Allele-gated traits go through the strand-aware matcher; traits with no
+                # risk allele are informational and always surface.
+                match_status = None
                 if effect_allele:
-                    effect_count = (1 if allele1 == effect_allele else 0) + (
-                        1 if allele2 == effect_allele else 0
-                    )
-
-                if effect_allele and effect_count == 0:
-                    continue
+                    match = match_snv((allele1, allele2), effect_allele)
+                    if not match.matched or not match.dosage:
+                        continue
+                    match_status = match.status
 
                 findings.append({
                     "rsid": rsid,
@@ -163,6 +172,7 @@ def _analyze_trait_db(
                     "gene": row["gene"] or "",
                     "category": row["category"] or "Physical",
                     "your_genotype": f"{allele1}/{allele2}",
+                    "match_status": match_status,
                     "result": row["effect"] or "Variant detected",
                     "explanation": "",
                     "population_frequency": row["population_frequency"] or 0.0,
@@ -174,39 +184,3 @@ def _analyze_trait_db(
         logger.exception("Trait DB analysis failed: %s", e)
 
     return findings
-
-
-def _make_genotype_key(a1: str, a2: str) -> str:
-    """Create a normalized genotype key (alphabetically sorted)."""
-    return "/".join(sorted([a1, a2]))
-
-
-def _lookup_phenotype(
-    genotype_key: str,
-    allele1: str,
-    allele2: str,
-    phenotype_map: dict,
-) -> str | None:
-    """Look up phenotype from a genotype → phenotype map.
-
-    Tries exact match first, then sorted key, then individual allele patterns.
-    """
-    # Try all possible key formats:
-    # "A/G" (sorted slash), "G/A" (unsorted slash), "AG" (concat), "GA" (reverse concat), "GG" (homo concat)
-    candidates = [
-        genotype_key,                              # A/G (sorted slash)
-        f"{allele1}/{allele2}",                    # original order slash
-        f"{allele2}/{allele1}",                    # reversed slash
-        f"{allele1}{allele2}",                     # concat original
-        f"{allele2}{allele1}",                     # concat reversed
-        "".join(sorted([allele1, allele2])),        # concat sorted
-    ]
-    for key in candidates:
-        if key in phenotype_map:
-            return phenotype_map[key]
-
-    # Try homozygous shorthand (single allele as key)
-    if allele1 == allele2 and allele1 in phenotype_map:
-        return phenotype_map[allele1]
-
-    return None

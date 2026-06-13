@@ -248,7 +248,7 @@ function renderOverview(data) {
         const top3 = pharma.slice(0, 3);
         if (top3.length > 0) {
             pharmaPreview.innerHTML = top3.map(p => {
-                const status = (p.metabolizer_status || 'Normal').toLowerCase();
+                const status = (p.metabolizer_status || '').toLowerCase();
                 let dotColor = 'bg-stone-500';
                 if (status.includes('poor')) dotColor = 'bg-error';
                 else if (status.includes('intermediate')) dotColor = 'bg-secondary';
@@ -618,26 +618,25 @@ function renderMetabolismInsight(pharma) {
     const container = document.getElementById('metabolism-insight');
     if (!container) return;
 
-    const counts = { poor: 0, intermediate: 0, normal: 0, rapid: 0 };
+    const counts = { poor: 0, intermediate: 0, normal: 0, rapid: 0, notAssessed: 0 };
     pharma.forEach(p => {
-        const status = (p.metabolizer_status || 'Normal').toLowerCase();
-        if (status.includes('poor')) counts.poor++;
+        const status = (p.metabolizer_status || '').toLowerCase();
+        if (status.includes('not assessed') || status === 'na' || status === '') counts.notAssessed++;
+        else if (status.includes('poor')) counts.poor++;
         else if (status.includes('intermediate')) counts.intermediate++;
         else if (status.includes('rapid') || status.includes('ultra')) counts.rapid++;
         else counts.normal++;
     });
 
     const total = pharma.length || 1;
-    const pctPoor = Math.round(counts.poor / total * 100);
-    const pctIntermediate = Math.round(counts.intermediate / total * 100);
-    const pctNormal = Math.round(counts.normal / total * 100);
-    const pctRapid = Math.round(counts.rapid / total * 100);
+    const pct = n => Math.round(n / total * 100);
 
     const bars = [
-        { label: 'Poor Metabolizer', pct: pctPoor, color: 'bg-error' },
-        { label: 'Intermediate', pct: pctIntermediate, color: 'bg-secondary' },
-        { label: 'Normal', pct: pctNormal, color: 'bg-stone-950' },
-        { label: 'Rapid', pct: pctRapid, color: 'bg-secondary-container' },
+        { label: 'Poor Metabolizer', pct: pct(counts.poor), color: 'bg-error' },
+        { label: 'Intermediate', pct: pct(counts.intermediate), color: 'bg-secondary' },
+        { label: 'Normal', pct: pct(counts.normal), color: 'bg-stone-950' },
+        { label: 'Rapid', pct: pct(counts.rapid), color: 'bg-secondary-container' },
+        { label: 'Not assessed', pct: pct(counts.notAssessed), color: 'bg-stone-300' },
     ];
 
     container.innerHTML = `

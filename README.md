@@ -107,10 +107,10 @@ No ML models or external APIs **at runtime** — AlphaGenome scoring and referen
 ## Current state
 
 **Working**
-- AncestryDNA file parser (rsid / chromosome / position / genotype)
+- AncestryDNA **and 23andMe** file parsing (txt and zipped), with `.zip` unwrapped in memory
+- **Strand-aware variant matching** — health, ClinVar, trait, and APOE lookups reverse-complement when a genotype is reported on the opposite strand, so a real carrier is no longer silently dropped; palindromic (A/T, C/G) sites are matched direct-only and never flipped into a fabricated call (`analyzers/genotype_match.py`)
 - Reference database build pipeline (all four sources)
-- ClinVar health-risk cross-reference
-- PharmGKB pharmacogenomic lookup
+- ClinVar health-risk cross-reference (palindrome-safe via `ref_allele`)
 - Haplogroup placement
 - Trait variant lookup
 - Polygenic risk score skeleton
@@ -119,11 +119,13 @@ No ML models or external APIs **at runtime** — AlphaGenome scoring and referen
 - AlphaGenome regulatory predictions pre-computed offline and surfaced on findings
 - Ensembl VEP molecular-consequence + AlphaMissense annotations pre-computed and surfaced on findings
 - Absolute-risk estimates computed from disease-prevalence baselines (not allele frequency), with the population baseline shown for context
+- A `pytest` suite (`tests/`) covering the matcher, parsers, and end-to-end strand-flip regressions (no real genetic data in the repo)
 
 **Rougher edges**
 - Polygenic risk score computation needs more sophisticated handling of LD (linkage disequilibrium) for accurate effect-size summation
 - AlphaGenome scoring covers SNVs and indels present in gnomAD (incl. CFTR F508del, CCR5-Δ32, NOD2, the 3p21.31 COVID-severity locus); 6 indels absent from gnomAD (e.g. the ACE Alu insertion, UGT1A1 TA-repeat) remain unscored
-- No support for 23andMe or other consumer file formats yet (AncestryDNA only)
+- **Pharmacogenomics metabolizer calls are being reconnected.** The curated `pharma_variants.json` was re-authored without the defining-allele / phenotype-map fields the analyzer needs, so it cannot currently call a metabolizer phenotype. Rather than report a misleading default, it now reports *"Not assessed"* (the prior code defaulted to a fabricated "Normal Metabolizer"). Drug associations from PharmGKB are still surfaced. Re-authoring the panel with validated defining alleles and routing it through the strand-aware matcher is the next step.
+- No VCF / MyHeritage / FamilyTreeDNA parsing yet
 
 **Privacy / disclaimers**
 - This is a personal tool, not a clinical product. Every output is reference-database lookup + simple statistics. Nothing here is medical advice.

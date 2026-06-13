@@ -9,7 +9,7 @@ import os
 from flask import Flask, jsonify, render_template, request
 
 from config import DB_PATH, FLASK_HOST, FLASK_PORT, MAX_CONTENT_LENGTH
-from analyzers.parser import parse_ancestry_file
+from analyzers.parser import parse_ancestry_file, read_genotype_text
 from analyzers.report_generator import generate_report
 
 app = Flask(__name__)
@@ -41,16 +41,13 @@ def analyze():
     ext = os.path.splitext(file.filename)[1].lower()
     if ext not in allowed_extensions:
         return jsonify({
-            "error": f"Unsupported file type '{ext}'. Please upload a .txt, .csv, or .tsv file from AncestryDNA."
+            "error": f"Unsupported file type '{ext}'. Please upload a .txt, .csv, .tsv, or .zip file from AncestryDNA or 23andMe."
         }), 400
 
     try:
-        # Read file content into memory (never write to disk)
+        # Read file content into memory (never write to disk); unwrap .zip in memory
         raw_content = file.read()
-        try:
-            text_content = raw_content.decode("utf-8")
-        except UnicodeDecodeError:
-            text_content = raw_content.decode("latin-1")
+        text_content = read_genotype_text(raw_content, file.filename)
 
         file_obj = io.StringIO(text_content)
 

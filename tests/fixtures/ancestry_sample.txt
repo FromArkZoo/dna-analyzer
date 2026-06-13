@@ -1,0 +1,4 @@
+#AncestryDNA raw data
+rsid	chromosome	position	allele1	allele2
+rs1801133	1	11856378	A	G
+rs4988235	2	136608646	A	A
